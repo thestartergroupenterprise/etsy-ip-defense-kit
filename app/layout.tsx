@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: "Etsy IP Defense Kit — Stop Copycats in 15 Minutes",
     description:
       "5 fill-in-the-blank templates that let Etsy sellers file a DMCA takedown on any copycat in 15 minutes — without a lawyer, without spinning your wheels. For Etsy sellers losing revenue to copycat shops on Etsy, Temu, AliExpress, and Amazon.",
-    url: "https://etsy-ip-kit.com",
+    url: "https://etsydefensekit.com",
     siteName: "Etsy IP Defense Kit",
     images: [
       {
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
       "5 fill-in-the-blank templates that let Etsy sellers file a DMCA takedown on any copycat in 15 minutes — without a lawyer.",
     images: ["/og-image.png"],
   },
-  metadataBase: new URL("https://etsy-ip-kit.com"),
+  metadataBase: new URL("https://etsydefensekit.com"),
 };
 
 export default function RootLayout({

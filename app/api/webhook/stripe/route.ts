@@ -86,7 +86,7 @@ export async function POST(req: NextRequest) {
       await resend.emails.send({
         from: fromEmail,
         to: customerEmail,
-        reply_to: "thestartergroupenterprise@gmail.com",
+        replyTo: "thestartergroupenterprise@gmail.com",
         subject: "Your Etsy IP Defense Kit is ready — download link inside",
         html: buildEmailHtml(downloadUrl),
         text: buildEmailText(downloadUrl),

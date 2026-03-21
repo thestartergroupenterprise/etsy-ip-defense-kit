@@ -27,8 +27,8 @@ export async function POST(req: NextRequest) {
   const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
   const resendApiKey = process.env.RESEND_API_KEY;
   const downloadSecretPath = process.env.DOWNLOAD_SECRET_PATH;
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://etsydefensekit.com";
-  const fromEmail = process.env.FROM_EMAIL || "noreply@etsydefensekit.com";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://sellerdefensekit.com";
+  const fromEmail = process.env.FROM_EMAIL || "noreply@sellerdefensekit.com";
 
   // Guard: fail loudly if credentials are missing
   if (!webhookSecret) {

@@ -15,7 +15,7 @@ import { readFile } from "fs/promises";
 import path from "path";
 
 export async function GET(
-  _req: NextRequest,
+  req: NextRequest,
   { params }: { params: Promise<{ token: string }> }
 ) {
   const { token } = await params;
@@ -29,21 +29,109 @@ export async function GET(
     return NextResponse.json({ error: "Not found" }, { status: 404 });
   }
 
-  // Serve the ZIP file
-  try {
-    const filePath = path.join(process.cwd(), "public", "downloads", "etsy-ip-defense-kit.zip");
-    const fileBuffer = await readFile(filePath);
+  // If ?file=1 is present, serve the raw ZIP
+  const url = new URL(req.url);
+  if (url.searchParams.get("file") === "1") {
+    try {
+      const filePath = path.join(process.cwd(), "public", "downloads", "etsy-ip-defense-kit.zip");
+      const fileBuffer = await readFile(filePath);
 
-    return new NextResponse(fileBuffer, {
-      status: 200,
-      headers: {
-        "Content-Type": "application/zip",
-        "Content-Disposition": 'attachment; filename="Etsy-IP-Defense-Kit.zip"',
-        "Cache-Control": "no-store",
-      },
-    });
-  } catch {
-    console.error("[download] ZIP file not found at expected path");
-    return NextResponse.json({ error: "File not available" }, { status: 500 });
+      return new NextResponse(fileBuffer, {
+        status: 200,
+        headers: {
+          "Content-Type": "application/zip",
+          "Content-Disposition": 'attachment; filename="Etsy-IP-Defense-Kit.zip"',
+          "Cache-Control": "no-store",
+          "X-Content-Type-Options": "nosniff",
+        },
+      });
+    } catch {
+      console.error("[download] ZIP file not found at expected path");
+      return NextResponse.json({ error: "File not available" }, { status: 500 });
+    }
   }
+
+  // Default: serve an intermediate page that auto-starts the download
+  const fileUrl = `/api/download/${token}?file=1`;
+  const html = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Downloading your Etsy IP Defense Kit…</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #fffbeb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 24px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 48px 40px;
+      max-width: 520px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    }
+    .icon { font-size: 48px; margin-bottom: 16px; }
+    h1 { color: #111; font-size: 22px; margin-bottom: 12px; }
+    p { color: #555; font-size: 15px; line-height: 1.6; margin-bottom: 20px; }
+    .btn {
+      display: inline-block;
+      background: #f59e0b;
+      color: white;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 8px;
+    }
+    .btn:hover { background: #d97706; }
+    .note { font-size: 13px; color: #999; margin-top: 24px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="icon">📦</div>
+    <h1>Your download is starting…</h1>
+    <p>Your <strong>Etsy IP Defense Kit</strong> (5 templates) is downloading now.<br>
+    If it doesn't start automatically, click the button below.</p>
+    <a class="btn" href="${fileUrl}" download="Etsy-IP-Defense-Kit.zip">
+      Download Now
+    </a>
+    <p class="note">
+      Questions? Email us at
+      <a href="mailto:thestartergroupenterprise@gmail.com" style="color:#d97706;">
+        thestartergroupenterprise@gmail.com
+      </a>
+    </p>
+  </div>
+  <script>
+    // Auto-trigger download after a short delay
+    setTimeout(function() {
+      var a = document.createElement('a');
+      a.href = '${fileUrl}';
+      a.download = 'Etsy-IP-Defense-Kit.zip';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }, 800);
+  </script>
+</body>
+</html>`;
+
+  return new NextResponse(html, {
+    status: 200,
+    headers: {
+      "Content-Type": "text/html; charset=utf-8",
+      "Cache-Control": "no-store",
+    },
+  });
 }

@@ -93,6 +93,12 @@ export async function POST(req: NextRequest) {
 
     const downloadPageUrl = `${DOWNLOAD_BASE}/${downloadToken}`;
 
+    // DEBUG: log full URL so we can verify token integrity in Vercel logs
+    console.log("[webhook] downloadToken length:", downloadToken.length);
+    console.log("[webhook] downloadToken dots:", (downloadToken.match(/\./g) || []).length);
+    console.log("[webhook] downloadToken prefix:", downloadToken.substring(0, 40));
+    console.log("[webhook] downloadPageUrl:", downloadPageUrl.substring(0, 120));
+
     // Send delivery email via Resend
     try {
       const { Resend } = await import("resend");

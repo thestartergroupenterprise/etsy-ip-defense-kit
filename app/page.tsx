@@ -245,6 +245,14 @@ export default function Home() {
         <p className="mb-2">
           © {new Date().getFullYear()} Etsy IP Defense Kit. All rights reserved.
         </p>
+        <p className="mb-2">
+          <a
+            href="mailto:thestartergroupenterprise@gmail.com"
+            className="text-amber-400 hover:text-amber-300 underline"
+          >
+            Support
+          </a>
+        </p>
         <p className="text-xs text-gray-500 max-w-md mx-auto">
           Not legal advice. These templates are provided for informational
           purposes. For complex IP disputes, consult a qualified attorney.

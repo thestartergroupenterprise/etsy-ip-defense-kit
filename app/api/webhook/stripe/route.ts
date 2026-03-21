@@ -86,6 +86,7 @@ export async function POST(req: NextRequest) {
       await resend.emails.send({
         from: fromEmail,
         to: customerEmail,
+        reply_to: "thestartergroupenterprise@gmail.com",
         subject: "Your Etsy IP Defense Kit is ready — download link inside",
         html: buildEmailHtml(downloadUrl),
         text: buildEmailText(downloadUrl),
@@ -147,7 +148,8 @@ function buildEmailHtml(downloadUrl: string): string {
   </ul>
 
   <p style="font-size: 13px; color: #999; margin-top: 32px;">
-    Questions? Just reply to this email.<br>
+    Questions? Reply to this email or contact us at
+    <a href="mailto:thestartergroupenterprise@gmail.com" style="color: #d97706;">thestartergroupenterprise@gmail.com</a>.<br>
     30-day money-back guarantee — if you can't file your first DMCA in 15 minutes, we'll refund you. No questions asked.
   </p>
 
@@ -170,7 +172,7 @@ What's in your kit:
 - Multi-Platform Filing Guide
 - Listing Reinstatement Appeal
 
-Questions? Just reply to this email.
+Questions? Reply to this email or contact us at thestartergroupenterprise@gmail.com.
 30-day money-back guarantee — email within 30 days for a full refund.
 `;
 }

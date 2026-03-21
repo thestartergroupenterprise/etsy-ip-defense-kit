@@ -1,24 +1,31 @@
 /**
  * Stripe Webhook Handler
- * Fires on payment_intent.succeeded → sends delivery email via Resend
  *
- * Required environment variables:
- *   STRIPE_WEBHOOK_SECRET   — from Stripe Dashboard → Webhooks
- *   RESEND_API_KEY          — from resend.com (request from Orchestrator)
- *   DOWNLOAD_SECRET_PATH    — long random string for the private download URL
- *   NEXT_PUBLIC_SITE_URL    — e.g. https://etsy-ip-kit.com
- *   FROM_EMAIL              — e.g. noreply@etsy-ip-kit.com
+ * Fires on payment_intent.succeeded:
+ *   1. Verifies Stripe signature
+ *   2. Extracts customer email from the PaymentIntent
+ *   3. Mints a signed, time-limited download token (30 days) tied to this payment
+ *   4. Sends delivery email via Resend with the unique download link
  *
- * NOTE: This handler is CODE-COMPLETE but NOT ACTIVE.
- * It will not fire until:
- *   1. Stripe approval is granted and a live Stripe product/webhook is configured
- *   2. RESEND_API_KEY is set in Vercel environment variables
+ * Fires on refund.created:
+ *   (logged for future revocation support — no action yet)
+ *
+ * Architecture:
+ *   - No filesystem access. ZIP is served from Vercel Blob Storage.
+ *   - Each payment gets a unique signed token — can't be guessed or shared indefinitely.
+ *   - Future: add Vercel KV to enforce hard download count limits.
+ *
+ * Required env vars:
+ *   STRIPE_WEBHOOK_SECRET      Stripe webhook signing secret
+ *   DOWNLOAD_SIGNING_SECRET    Secret for HMAC-signing download tokens
+ *   PRODUCT_BLOB_URL           Vercel Blob URL of the product ZIP
+ *   RESEND_API_KEY             Resend API key
+ *   NEXT_PUBLIC_SITE_URL       e.g. https://sellerdefensekit.com
+ *   FROM_EMAIL                 e.g. noreply@sellerdefensekit.com
  */
 
 import { NextRequest, NextResponse } from "next/server";
-
-// Stripe and Resend are installed as dependencies (see package.json)
-// They are imported lazily to avoid runtime errors before credentials are set
+import { generateDownloadToken } from "@/lib/download-token";
 
 export async function POST(req: NextRequest) {
   const rawBody = await req.text();
@@ -26,11 +33,10 @@ export async function POST(req: NextRequest) {
 
   const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
   const resendApiKey = process.env.RESEND_API_KEY;
-  const downloadSecretPath = process.env.DOWNLOAD_SECRET_PATH;
+  const blobUrl = process.env.PRODUCT_BLOB_URL;
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://sellerdefensekit.com";
   const fromEmail = process.env.FROM_EMAIL || "noreply@sellerdefensekit.com";
 
-  // Guard: fail loudly if credentials are missing
   if (!webhookSecret) {
     console.error("[webhook] STRIPE_WEBHOOK_SECRET not set");
     return NextResponse.json({ error: "Webhook not configured" }, { status: 500 });
@@ -39,9 +45,9 @@ export async function POST(req: NextRequest) {
     console.error("[webhook] RESEND_API_KEY not set");
     return NextResponse.json({ error: "Email provider not configured" }, { status: 500 });
   }
-  if (!downloadSecretPath) {
-    console.error("[webhook] DOWNLOAD_SECRET_PATH not set");
-    return NextResponse.json({ error: "Download path not configured" }, { status: 500 });
+  if (!blobUrl) {
+    console.error("[webhook] PRODUCT_BLOB_URL not set");
+    return NextResponse.json({ error: "Product file not configured" }, { status: 500 });
   }
   if (!signature) {
     return NextResponse.json({ error: "Missing stripe-signature header" }, { status: 400 });
@@ -61,7 +67,6 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Invalid signature" }, { status: 400 });
   }
 
-  // Handle the event
   if (event.type === "payment_intent.succeeded") {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const paymentIntent = event.data.object as any;
@@ -71,12 +76,20 @@ export async function POST(req: NextRequest) {
       null;
 
     if (!customerEmail) {
-      console.error("[webhook] No customer email found on payment_intent:", paymentIntent);
-      // Return 200 to prevent Stripe retries — log for manual follow-up
+      console.error("[webhook] No customer email on payment_intent:", paymentIntent.id);
       return NextResponse.json({ received: true, note: "No email on record" });
     }
 
-    const downloadUrl = `${siteUrl}/api/download/${downloadSecretPath}`;
+    // Mint a unique signed download token for this payment (30-day expiry)
+    let downloadToken: string;
+    try {
+      downloadToken = generateDownloadToken(paymentIntent.id, blobUrl, 30);
+    } catch (err) {
+      console.error("[webhook] Failed to generate download token:", err);
+      return NextResponse.json({ error: "Token generation failed" }, { status: 500 });
+    }
+
+    const downloadPageUrl = `${siteUrl}/api/download/${downloadToken}`;
 
     // Send delivery email via Resend
     try {
@@ -88,24 +101,29 @@ export async function POST(req: NextRequest) {
         to: customerEmail,
         replyTo: "thestartergroupenterprise@gmail.com",
         subject: "Your Etsy IP Defense Kit is ready — download link inside",
-        html: buildEmailHtml(downloadUrl),
-        text: buildEmailText(downloadUrl),
+        html: buildEmailHtml(downloadPageUrl),
+        text: buildEmailText(downloadPageUrl),
       });
 
-      console.log(`[webhook] Delivery email sent to ${customerEmail}`);
+      console.log(`[webhook] Delivery email sent to ${customerEmail} for ${paymentIntent.id}`);
     } catch (emailErr) {
       console.error("[webhook] Failed to send delivery email:", emailErr);
-      // Return 500 so Stripe retries (email failure is retriable)
       return NextResponse.json({ error: "Email delivery failed" }, { status: 500 });
     }
+  }
+
+  if (event.type === "refund.created") {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const refund = event.data.object as any;
+    console.log(`[webhook] Refund created: ${refund.id} for payment ${refund.payment_intent}`);
+    // Future: look up the token by payment intent ID in Vercel KV and revoke it
   }
 
   return NextResponse.json({ received: true });
 }
 
-function buildEmailHtml(downloadUrl: string): string {
-  return `
-<!DOCTYPE html>
+function buildEmailHtml(downloadPageUrl: string): string {
+  return `<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
@@ -119,11 +137,11 @@ function buildEmailHtml(downloadUrl: string): string {
   </h1>
 
   <p style="font-size: 16px; color: #555; margin-bottom: 24px;">
-    Thank you for your purchase. Your 5-document toolkit is ready to download.
+    Thank you for your purchase. Your 5-document PDF toolkit is ready to download.
   </p>
 
   <div style="text-align: center; margin: 32px 0;">
-    <a href="${downloadUrl}"
+    <a href="${downloadPageUrl}"
        style="background-color: #f59e0b; color: white; padding: 16px 32px;
               border-radius: 8px; text-decoration: none; font-size: 18px;
               font-weight: bold; display: inline-block;">
@@ -133,12 +151,12 @@ function buildEmailHtml(downloadUrl: string): string {
 
   <p style="font-size: 14px; color: #777;">
     Or copy this link into your browser:<br>
-    <a href="${downloadUrl}" style="color: #d97706; word-break: break-all;">${downloadUrl}</a>
+    <a href="${downloadPageUrl}" style="color: #d97706; word-break: break-all;">${downloadPageUrl}</a>
   </p>
 
   <hr style="border: none; border-top: 1px solid #eee; margin: 32px 0;">
 
-  <h2 style="font-size: 16px; color: #111;">What's in your kit:</h2>
+  <h2 style="font-size: 16px; color: #111;">What's in your kit (PDF format):</h2>
   <ul style="color: #555; font-size: 14px; line-height: 1.8;">
     <li>📄 DMCA Takedown Notice — for Etsy, Temu, AliExpress &amp; web</li>
     <li>✉️ Cease &amp; Desist Letter — direct seller contact template</li>
@@ -148,22 +166,25 @@ function buildEmailHtml(downloadUrl: string): string {
   </ul>
 
   <p style="font-size: 13px; color: #999; margin-top: 32px;">
+    This download link is valid for 30 days.<br>
     Questions? Reply to this email or contact us at
-    <a href="mailto:thestartergroupenterprise@gmail.com" style="color: #d97706;">thestartergroupenterprise@gmail.com</a>.<br>
-    30-day money-back guarantee — if you can't file your first DMCA in 15 minutes, we'll refund you. No questions asked.
+    <a href="mailto:thestartergroupenterprise@gmail.com" style="color: #d97706;">
+      thestartergroupenterprise@gmail.com
+    </a>.<br>
+    30-day money-back guarantee — if you can't file your first DMCA in 15 minutes, we'll refund you.
   </p>
 
 </body>
-</html>
-`;
+</html>`;
 }
 
-function buildEmailText(downloadUrl: string): string {
-  return `
-Your Etsy IP Defense Kit is ready.
+function buildEmailText(downloadPageUrl: string): string {
+  return `Your Etsy IP Defense Kit is ready.
 
-Thank you for your purchase. Download your kit here:
-${downloadUrl}
+Thank you for your purchase. Download your 5-document PDF kit here:
+${downloadPageUrl}
+
+This link is valid for 30 days.
 
 What's in your kit:
 - DMCA Takedown Notice (for Etsy, Temu, AliExpress & web)
@@ -173,6 +194,5 @@ What's in your kit:
 - Listing Reinstatement Appeal
 
 Questions? Reply to this email or contact us at thestartergroupenterprise@gmail.com.
-30-day money-back guarantee — email within 30 days for a full refund.
-`;
+30-day money-back guarantee.`;
 }

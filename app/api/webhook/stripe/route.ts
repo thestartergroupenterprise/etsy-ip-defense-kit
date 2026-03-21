@@ -34,8 +34,10 @@ export async function POST(req: NextRequest) {
   const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
   const resendApiKey = process.env.RESEND_API_KEY;
   const blobUrl = process.env.PRODUCT_BLOB_URL;
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://sellerdefensekit.com";
   const fromEmail = process.env.FROM_EMAIL || "noreply@sellerdefensekit.com";
+  // Hardcode the download base — NEXT_PUBLIC_ vars are build-time inlined
+  // and unreliable in serverless API routes at runtime.
+  const DOWNLOAD_BASE = "https://sellerdefensekit.com/api/download";
 
   if (!webhookSecret) {
     console.error("[webhook] STRIPE_WEBHOOK_SECRET not set");
@@ -89,7 +91,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Token generation failed" }, { status: 500 });
     }
 
-    const downloadPageUrl = `${siteUrl}/api/download/${downloadToken}`;
+    const downloadPageUrl = `${DOWNLOAD_BASE}/${downloadToken}`;
 
     // Send delivery email via Resend
     try {

@@ -32,7 +32,7 @@ export async function GET(
   const url = new URL(req.url);
   if (url.searchParams.get("file") === "1") {
     try {
-      const filePath = path.join(process.cwd(), "public", "downloads", "etsy-ip-defense-kit.zip");
+      const filePath = path.join(process.cwd(), "_files", "etsy-ip-defense-kit.zip");
       const fileBuffer = await readFile(filePath);
 
       return new NextResponse(fileBuffer, {

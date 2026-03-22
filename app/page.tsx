@@ -245,7 +245,10 @@ export default function Home() {
         <p className="mb-2">
           © {new Date().getFullYear()} Etsy IP Defense Kit. All rights reserved.
         </p>
-        <p className="mb-2">
+        <p className="mb-3">
+          <Link href="/blog" className="text-amber-400 hover:text-amber-300 underline mr-4">
+            Blog
+          </Link>
           <a
             href="mailto:thestartergroupenterprise@gmail.com"
             className="text-amber-400 hover:text-amber-300 underline"

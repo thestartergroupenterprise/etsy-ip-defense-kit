@@ -23,7 +23,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
 const SITE_URL = "https://sellerdefensekit.com";
-const SENDER_NAME = "The Starter Group";
+const SENDER_NAME = "Seller Defense Kit, a product of The Starter Group";
 
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);

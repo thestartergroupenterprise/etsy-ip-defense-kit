@@ -186,7 +186,7 @@ function buildEmailHtml(downloadPageUrl: string, customerEmail: string): string 
   <hr style="border: none; border-top: 1px solid #eee; margin: 24px 0;">
 
   <p style="font-size: 11px; color: #bbb; line-height: 1.6;">
-    This email was sent by <strong>The Starter Group</strong><br>
+    This email was sent by <strong>Seller Defense Kit, a product of The Starter Group</strong><br>
     2967 Dundas St W, Toronto, ON M6P 1Z2, Canada<br>
     You received this email because you purchased the Etsy IP Defense Kit.<br>
     <a href="${unsubscribeUrl}" style="color: #bbb;">Unsubscribe</a>
@@ -216,7 +216,7 @@ Questions? Reply to this email or contact us at thestartergroupenterprise@gmail.
 30-day money-back guarantee.
 
 ---
-This email was sent by The Starter Group
+This email was sent by Seller Defense Kit, a product of The Starter Group
 2967 Dundas St W, Toronto, ON M6P 1Z2, Canada
 You received this email because you purchased the Etsy IP Defense Kit.
 Unsubscribe: ${unsubscribeUrl}`;

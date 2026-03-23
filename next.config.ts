@@ -8,6 +8,32 @@ const nextConfig: NextConfig = {
   outputFileTracingIncludes: {
     "/api/download/[token]": ["./_files/**"],
   },
+
+  // 301 redirects for SEO slug migration (stop-word cleanup 2026-03-22)
+  async redirects() {
+    return [
+      {
+        source: "/blog/how-to-file-dmca-on-etsy",
+        destination: "/blog/file-dmca-etsy",
+        permanent: true,
+      },
+      {
+        source: "/blog/etsy-listing-stolen-what-to-do",
+        destination: "/blog/etsy-listing-stolen",
+        permanent: true,
+      },
+      {
+        source: "/blog/how-to-report-copyright-infringement-on-etsy",
+        destination: "/blog/copyright-infringement-etsy",
+        permanent: true,
+      },
+      {
+        source: "/blog/etsy-ip-theft-how-to-fight-back",
+        destination: "/blog/etsy-ip-theft",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

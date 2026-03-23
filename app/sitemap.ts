@@ -3,11 +3,11 @@ import { MetadataRoute } from "next";
 const BASE_URL = "https://sellerdefensekit.com";
 
 const blogSlugs = [
-  "how-to-file-dmca-on-etsy",
-  "etsy-listing-stolen-what-to-do",
+  "file-dmca-etsy",
+  "etsy-listing-stolen",
   "dmca-takedown-notice-etsy-template",
-  "how-to-report-copyright-infringement-on-etsy",
-  "etsy-ip-theft-how-to-fight-back",
+  "copyright-infringement-etsy",
+  "etsy-ip-theft",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

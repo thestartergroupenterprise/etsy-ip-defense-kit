@@ -36,8 +36,38 @@ export default async function BlogPostPage({ params }: Props) {
   // Related posts (exclude current)
   const related = blogPosts.filter((p) => p.slug !== post.slug).slice(0, 3);
 
+  // Article schema (JSON-LD)
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": post.title,
+    "description": post.metaDescription,
+    "datePublished": post.date,
+    "dateModified": post.date,
+    "author": {
+      "@type": "Organization",
+      "name": "Seller Defense Kit",
+      "url": "https://sellerdefensekit.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Seller Defense Kit",
+      "url": "https://sellerdefensekit.com"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://sellerdefensekit.com/blog/${post.slug}`
+    }
+  };
+
   return (
     <main className="min-h-screen bg-white text-gray-900">
+      {/* Article Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+
       {/* Header */}
       <header className="bg-amber-50 border-b border-amber-100 px-5 py-6">
         <div className="max-w-3xl mx-auto flex items-center justify-between">

@@ -256,58 +256,33 @@ export const blogPosts: BlogPost[] = [
   <li><strong>Identification of the copyrighted work</strong>  -  Specifically describe what you own and where it can be found</li>
   <li><strong>Identification of the infringing material</strong>  -  The exact URL(s) where the infringing content appears</li>
   <li><strong>Your contact information</strong>  -  Name, address, phone number, and email (a PO box is fine for the address)</li>
-  <li><strong>Good faith statement</strong>  -  "I have a good faith belief that use of the material in the manner complained of is not authorized by the copyright owner, its agent, or the law."</li>
-  <li><strong>Accuracy and authority statement</strong>  -  "I swear, under penalty of perjury, that the information in this notification is accurate and that I am the copyright owner, or am authorized to act on behalf of the owner."</li>
+  <li><strong>Good faith statement</strong>  -  A specific declaration that you believe the use is unauthorized. The exact wording is prescribed by the DMCA statute. Using different language or paraphrasing can invalidate the notice.</li>
+  <li><strong>Accuracy and authority statement</strong>  -  A sworn declaration under penalty of perjury that the information is accurate and you are the copyright owner or authorized to act. This is the most legally sensitive element. The language must track the statute precisely.</li>
   <li><strong>Signature</strong>  -  Physical or electronic (typing your full legal name counts)</li>
 </ol>
 <p>Every single one of these is required. A notice missing #4 or #5 is legally defective and Etsy can (and will) reject it.</p>
 
-<h2>DMCA Takedown Notice Template for Etsy</h2>
-<p>Here is a template you can adapt. Replace all bracketed sections with your specific information:</p>
+<h2>What a Complete DMCA Notice for Etsy Actually Looks Like</h2>
+<p>A valid DMCA notice has six sections, each with a specific purpose. Understanding what goes in each section helps you file correctly -- and helps you recognize why a pre-written template is so much faster than drafting from scratch.</p>
 
-<div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:8px;padding:24px;font-family:monospace;font-size:14px;line-height:1.7;white-space:pre-wrap;">
-<strong>DMCA TAKEDOWN NOTICE</strong>
+<p><strong>Section 1 -- Your contact information.</strong> Your full legal name, physical address (a PO box works), email, and phone. All four are required. A notice without a physical address is technically defective under the statute.</p>
 
-Date: [DATE]
+<p><strong>Section 2 -- Description of your copyrighted work.</strong> A specific description of what you created and where it exists online. Vague language like "my photos" is not enough. You need to identify the work with enough specificity that Etsy's team can unambiguously understand what you're claiming ownership of, including where the original can be found and approximately when it was created.</p>
 
-To: Etsy, Inc.  -  Trust & Safety / IP Compliance Team
-Via: etsy.com/legal/ip/report
+<p><strong>Section 3 -- Location of the infringing material.</strong> The full URL of the infringing listing, the specific listing ID, and a description of exactly which elements are copied. The more precise this section, the harder it is for Etsy to claim uncertainty about what's being alleged.</p>
 
-<strong>I. CONTACT INFORMATION</strong>
-Legal Name: [YOUR FULL LEGAL NAME]
-Address: [YOUR STREET ADDRESS OR PO BOX]
-City, State, ZIP: [CITY, STATE, ZIP]
-Country: [COUNTRY]
-Email: [YOUR EMAIL ADDRESS]
-Phone: [YOUR PHONE NUMBER]
+<p><strong>Section 4 -- Good faith statement.</strong> A legal declaration using specific statutory language that you believe the use is unauthorized. Paraphrasing this statement creates a defective notice. The exact wording is prescribed by 17 U.S.C. § 512(c)(3) and must be reproduced correctly.</p>
 
-<strong>II. DESCRIPTION OF COPYRIGHTED WORK</strong>
-I am the owner of the following original copyrighted work(s):
+<p><strong>Section 5 -- Accuracy and authority statement.</strong> A sworn declaration under penalty of perjury. This is the most legally sensitive section. It must use precise statutory language -- not a summary, not a paraphrase. This is the element most sellers get wrong when drafting their own notices, and it's the reason Etsy can dismiss an otherwise well-intentioned filing.</p>
 
-[Describe your work specifically. Example: "A series of original product photographs depicting [product description], taken by me on approximately [date]. These photographs are published on my Etsy shop at [URL] and have been displayed publicly since [date]. The images depict [brief description of what's shown]."]
+<p><strong>Section 6 -- Signature.</strong> Your full legal name as an electronic signature, plus the date.</p>
 
-<strong>III. LOCATION OF INFRINGING MATERIAL</strong>
-The following Etsy listing(s) unlawfully reproduce my copyrighted work without my authorization:
-
-Listing URL: [FULL URL TO INFRINGING LISTING]
-Listing ID: [LISTING ID NUMBER FROM URL]
-Specific infringing elements: [Describe exactly which elements are copied  -  "all product photos," "the written listing description beginning with '[first few words]'," etc.]
-
-<strong>IV. GOOD FAITH STATEMENT</strong>
-I have a good faith belief that use of the material in the manner complained of is not authorized by the copyright owner, its agent, or the law.
-
-<strong>V. ACCURACY AND AUTHORITY STATEMENT</strong>
-I swear, under penalty of perjury, that the information in this notification is accurate and that I am the copyright owner, or am authorized to act on behalf of the owner of an exclusive right that is allegedly infringed.
-
-<strong>VI. SIGNATURE</strong>
-Electronic Signature: /s/ [YOUR FULL LEGAL NAME]
-Date: [DATE]
-</div>
+<p>The structure is straightforward. The challenge is that sections 4 and 5 require exact statutory language that most sellers have never seen before -- and one wrong word makes the whole notice legally defective. That's the core problem the <a href="https://sellerdefensekit.com?utm_source=blog&utm_medium=organic&utm_campaign=seo">Etsy IP Defense Kit</a> solves: all six sections, with the correct language already written, ready to fill in your specifics and submit.</p>
 
 <h2>Tips for Making Your Notice More Effective</h2>
 
 <h3>Be Specific About What Was Copied</h3>
-<p>Don't just say "my photos were stolen." Say: "My original product photographs, visible at [your listing URL], images 1 through 4, have been reproduced without authorization in the infringing listing. The identical photos appear as images 1, 3, and 5 of the infringing listing."</p>
+<p>Vague descriptions get notices rejected. Instead of "my photos were stolen," your notice needs to name the specific images by number, reference the URL where your originals appear, and identify which images in the infringing listing correspond to each of yours.</p>
 <p>The more specific you are, the harder it is for Etsy's team to claim uncertainty about what's actually being alleged.</p>
 
 <h3>Provide Evidence of Your Ownership Date</h3>
@@ -419,23 +394,16 @@ Date: [DATE]
 <p>Select <strong>Copyright</strong>. Selecting the wrong category means your notice will be evaluated under the wrong legal framework and may be dismissed.</p>
 
 <h3>Step 4: Describe Your Copyrighted Work</h3>
-<p>Be specific. Don't write "my photos." Write:</p>
-<blockquote style="border-left:4px solid #d97706;padding-left:16px;margin:16px 0;color:#374151;font-style:italic">
-"Original product photography I created on [approximate date], depicting [describe the item photographed]. These images are published on my Etsy shop at [URL] and have been publicly available since [date]. The photographs are original creative works showing [describe composition, lighting, props, or other distinctive creative choices]."
-</blockquote>
-<p>The more detail you provide, the clearer it is that you own the original and the other seller copied it.</p>
+<p>Be specific. "My photos" is not enough. Your description needs to identify the specific works you own, where they exist online, approximately when they were created, and enough detail about the creative choices involved that Etsy's team can unambiguously understand what you're claiming.</p>
+<p>The stronger your description of the original work, the clearer it is that you created it first and the other seller copied it.</p>
 
 <h3>Step 5: Identify the Infringing Material</h3>
-<p>Paste the full URL of the infringing listing. Specify exactly which elements are copied:</p>
-<blockquote style="border-left:4px solid #d97706;padding-left:16px;margin:16px 0;color:#374151;font-style:italic">
-"Images 1, 2, and 4 in the infringing listing are identical to my original photos. The listing description beginning with '[first 5-10 words]' is copied verbatim from my original listing at [URL]."
-</blockquote>
+<p>Paste the full URL of the infringing listing. Then describe specifically which elements are copied -- name individual image numbers, quote the first few words of copied text, identify which design elements appear in both listings. Vague statements give platforms room to claim they couldn't determine what was actually alleged.</p>
 
 <h3>Step 6: Complete the Sworn Statements</h3>
-<p>This is non-negotiable. Your notice must include two specific statements:</p>
-<p><strong>Good faith statement:</strong> "I have a good faith belief that the use of the material in the manner complained of is not authorized by the copyright owner, its agent, or the law."</p>
-<p><strong>Accuracy statement:</strong> "Under penalty of perjury, I declare that the information in this notification is accurate and that I am the copyright owner or authorized to act on behalf of the copyright owner."</p>
-<p>Etsy's form usually has checkboxes for these. Check both. If submitting via email, include both statements in full.</p>
+<p>This is the section most sellers get wrong -- and it's why valid infringement reports get dismissed on a technicality.</p>
+<p>Your notice must include two specific sworn statements: a <strong>good faith belief statement</strong> and an <strong>accuracy and authority declaration under penalty of perjury</strong>. Both are required by statute. Both must use language that tracks the exact wording of 17 U.S.C. § 512(c)(3). Paraphrasing either one creates a legally defective notice.</p>
+<p>Etsy's form has checkboxes for these when you use their portal. If you file any other way, you need to include the full statutory language in writing. The exact required language is included in the <a href="https://sellerdefensekit.com?utm_source=blog&utm_medium=organic&utm_campaign=seo">Etsy IP Defense Kit</a> templates.</p>
 
 <h3>Step 7: Provide Your Contact Information and Sign</h3>
 <p>Include your full legal name, physical address (PO box accepted), email, and phone number. Type your full name as an electronic signature.</p>

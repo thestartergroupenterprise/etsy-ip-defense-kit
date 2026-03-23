@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { blogPosts } from "@/lib/blog-posts";
 
+const sortedPosts = [...blogPosts].sort(
+  (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+);
+
 export const metadata: Metadata = {
   title: "Etsy IP & DMCA Help — Blog | Seller Defense Kit",
   description:
@@ -53,7 +57,7 @@ export default function BlogIndex() {
       <section className="px-5 py-12">
         <div className="max-w-3xl mx-auto">
           <div className="space-y-6">
-            {blogPosts.map((post) => (
+            {sortedPosts.map((post) => (
               <article
                 key={post.slug}
                 className="border border-gray-200 rounded-xl p-6 hover:border-amber-300 hover:shadow-sm transition-all"

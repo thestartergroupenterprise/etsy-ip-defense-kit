@@ -45,14 +45,18 @@ export default async function BlogPostPage({ params }: Props) {
   // Related posts (exclude current)
   const related = blogPosts.filter((p) => p.slug !== post.slug).slice(0, 3);
 
+  // Ensure dates include timezone for valid schema (ISO 8601 with Z suffix)
+  const toISODate = (d: string) =>
+    d.includes("T") ? d : `${d}T00:00:00+00:00`;
+
   // Article schema (JSON-LD)
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": post.title,
     "description": post.metaDescription,
-    "datePublished": post.date,
-    "dateModified": post.date,
+    "datePublished": toISODate(post.date),
+    "dateModified": toISODate(post.date),
     "image": "https://sellerdefensekit.com/og-image.png",
     "author": {
       "@type": "Organization",

@@ -15,6 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = getBlogPost(slug);
   if (!post) return {};
+  const ogImage = `https://sellerdefensekit.com/og-image.png`;
   return {
     title: post.metaTitle,
     description: post.metaDescription,
@@ -24,6 +25,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `https://sellerdefensekit.com/blog/${post.slug}`,
       type: "article",
       publishedTime: post.date,
+      siteName: "Seller Defense Kit",
+      images: [{ url: ogImage, width: 1200, height: 630, alt: post.metaTitle }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.metaTitle,
+      description: post.metaDescription,
+      images: [ogImage],
     },
   };
 }
@@ -44,6 +53,7 @@ export default async function BlogPostPage({ params }: Props) {
     "description": post.metaDescription,
     "datePublished": post.date,
     "dateModified": post.date,
+    "image": "https://sellerdefensekit.com/og-image.png",
     "author": {
       "@type": "Organization",
       "name": "Seller Defense Kit",
@@ -52,13 +62,45 @@ export default async function BlogPostPage({ params }: Props) {
     "publisher": {
       "@type": "Organization",
       "name": "Seller Defense Kit",
-      "url": "https://sellerdefensekit.com"
+      "url": "https://sellerdefensekit.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://sellerdefensekit.com/og-image.png"
+      }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": `https://sellerdefensekit.com/blog/${post.slug}`
     }
   };
+
+  // FAQ schema (JSON-LD)
+  const faqSchema = post.faq && post.faq.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": post.faq.map((item) => ({
+      "@type": "Question",
+      "name": item.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.a
+      }
+    }))
+  } : null;
+
+  // HowTo schema (JSON-LD)
+  const howToSchema = post.steps && post.steps.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": post.title,
+    "description": post.metaDescription,
+    "step": post.steps.map((step, i) => ({
+      "@type": "HowToStep",
+      "position": i + 1,
+      "name": step.name,
+      "text": step.text
+    }))
+  } : null;
 
   return (
     <main className="min-h-screen bg-white text-gray-900">
@@ -67,6 +109,22 @@ export default async function BlogPostPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
+
+      {/* FAQ Schema */}
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
+
+      {/* HowTo Schema */}
+      {howToSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+        />
+      )}
 
       {/* Header */}
       <header className="bg-amber-50 border-b border-amber-100 px-5 py-6">
@@ -130,6 +188,29 @@ export default async function BlogPostPage({ params }: Props) {
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
 
+          {/* Key Takeaway Box */}
+          {post.keyTakeaway && (
+            <div className="mt-10 bg-amber-50 border border-amber-200 rounded-xl p-6">
+              <h2 className="text-lg font-bold text-amber-900 mb-3">Key Takeaway</h2>
+              <p className="text-amber-800 leading-relaxed">{post.keyTakeaway}</p>
+            </div>
+          )}
+
+          {/* FAQ Section */}
+          {post.faq && post.faq.length > 0 && (
+            <section className="mt-10">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+              <div className="space-y-4">
+                {post.faq.map((item, i) => (
+                  <div key={i} className="border border-gray-200 rounded-xl p-5">
+                    <h3 className="font-semibold text-gray-900 mb-2">{item.q}</h3>
+                    <p className="text-gray-600 leading-relaxed">{item.a}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+
           {/* Divider */}
           <hr className="my-10 border-gray-200" />
 
@@ -169,13 +250,13 @@ export default async function BlogPostPage({ params }: Props) {
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-2xl font-bold text-gray-900 mb-3">Protect Your Shop Today</h2>
           <p className="text-gray-600 mb-6">
-            The Etsy IP Defense Kit gives you 5 fill-in-the-blank templates to shut down copycats fast — no lawyer required.
+            The Etsy IP Defense Kit gives you 5 fill-in-the-blank templates to shut down copycats fast -- no lawyer required.
           </p>
           <a
             href="https://buy.stripe.com/bJe6oH7PnfHfbXbc1O2Fa00"
             className="inline-block bg-amber-500 hover:bg-amber-600 text-white font-bold px-8 py-4 rounded-xl shadow-md transition-colors"
           >
-            Get the Kit — $27
+            Get the Kit -- $27
           </a>
           <p className="text-sm text-gray-500 mt-3">Instant download. No account needed.</p>
         </div>

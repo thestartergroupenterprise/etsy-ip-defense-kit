@@ -1,3 +1,13 @@
+export interface FaqItem {
+  q: string;
+  a: string;
+}
+
+export interface HowToStep {
+  name: string;
+  text: string;
+}
+
 export interface BlogPost {
   slug: string;
   metaTitle: string;
@@ -7,6 +17,9 @@ export interface BlogPost {
   readingTime: string;
   intro: string;
   content: string; // HTML string rendered inside article
+  keyTakeaway?: string;
+  faq?: FaqItem[];
+  steps?: HowToStep[];
 }
 
 export const blogPosts: BlogPost[] = [
@@ -20,6 +33,36 @@ export const blogPosts: BlogPost[] = [
     readingTime: "7 min read",
     intro:
       "Someone copied your Etsy listing. Your photos, your description, maybe even your exact product. Now what? Filing a DMCA takedown is your most powerful legal tool  -  and Etsy has a specific process for it. Here's exactly how to do it.",
+    keyTakeaway: "Filing a DMCA on Etsy works -- but only when all 6 required legal elements are included. Use Etsy's dedicated IP portal at etsy.com/legal/ip/report, not the general Help Center. Document everything before you file, and act fast. Every hour a copycat listing stays live, it takes revenue and rankings from you. For the exact statutory language required in your notice, the Etsy IP Defense Kit at sellerdefensekit.com has everything pre-written and ready to file.",
+    faq: [
+      {
+        q: "How long does it take Etsy to process a DMCA notice?",
+        a: "Etsy typically reviews and removes infringing listings within 24 to 72 hours for straightforward cases. Complex cases or situations where the seller disputes the claim can take 3 to 5 business days. If the infringing seller files a counter-notice, the process can extend to 10 to 14 business days before Etsy is required to make a final decision."
+      },
+      {
+        q: "Do I need a copyright registration to file a DMCA on Etsy?",
+        a: "No. In the United States, copyright attaches automatically when you create an original work. You do not need to register your copyright to file a DMCA notice on Etsy or any other platform. However, registering your copyright at copyright.gov gives you access to statutory damages and attorney fees if you ever need to go to court, which significantly increases your legal leverage."
+      },
+      {
+        q: "What happens if the infringing seller files a counter-notice?",
+        a: "If the seller files a counter-notice, Etsy is legally required to restore the listing within 10 to 14 business days unless you file a lawsuit against the seller first. Counter-notices require the seller to swear under penalty of perjury that they have rights to the content. Most sellers who genuinely copied your work will not risk a false counter-notice, so most takedowns are resolved without this happening."
+      },
+      {
+        q: "Can I file a DMCA on Etsy if my work was also copied on other platforms?",
+        a: "Yes. Each platform -- Etsy, Amazon, Temu, AliExpress -- has its own IP reporting process. Filing a DMCA with Etsy only covers the infringing content on Etsy. You will need to file separate notices with each platform where you find copied content. The core DMCA notice framework is similar across platforms, but each has its own submission method and specific requirements."
+      },
+      {
+        q: "How many DMCA violations does it take for Etsy to ban a seller?",
+        a: "Etsy's Repeat Infringer Policy does not specify a fixed number of violations before account termination. However, sellers with multiple substantiated IP violations are subject to account suspension. If you have successfully had listings removed from the same seller more than once, explicitly reference the prior violations and their case numbers in your new notices to create a documented pattern."
+      }
+    ],
+    steps: [
+      { name: "Document the infringement", text: "Screenshot the infringing listing with the full URL visible. Note the listing ID from the URL. Save your original files with timestamps. Capture evidence before proceeding." },
+      { name: "Navigate to Etsy's IP Reporting Tool", text: "Go directly to etsy.com/legal/ip/report. Do not use the generic Help Center or the Report Listing button on the listing itself. Log in to your Etsy account when prompted." },
+      { name: "Select Copyright as your infringement type", text: "Select Copyright from the infringement type options. Choosing the wrong category (such as Trademark when the issue is Copyright) will cause your notice to be evaluated under the wrong legal framework." },
+      { name: "Complete all 6 required elements of the DMCA notice", text: "Provide your contact information, a specific description of your original work, the URL of the infringing content, a good faith statement, an accuracy statement under penalty of perjury, and your electronic signature." },
+      { name: "Submit and record your case number", text: "After submitting, Etsy sends a confirmation email with a case number. Keep this number. You will need it for any follow-up or escalation." }
+    ],
     content: `
 <h2>What Is a DMCA Takedown and Why Does It Work on Etsy?</h2>
 <p>The Digital Millennium Copyright Act (DMCA) is a U.S. federal law that requires online platforms like Etsy to remove content that infringes on your copyright when you file a valid notice. Etsy, like all major platforms, complies with DMCA to maintain its "safe harbor" protection  -  meaning if they ignore valid notices, they become liable themselves.</p>
@@ -231,8 +274,34 @@ export const blogPosts: BlogPost[] = [
 </ul>
 </div>
 
-<p>For background on copyright law protections, see the <a href="https://www.copyright.gov/help/faq/faq-general.html" target="_blank" rel="noopener noreferrer">U.S. Copyright Office FAQ</a>. To register your copyrights, visit <a href="https://www.copyright.gov/registration/" target="_blank" rel="noopener noreferrer">copyright.gov/registration</a>.</p>
+<p>For background on copyright law protections, see the <a href="https://www.copyright.gov/help/faq/faq-general.html" target="_blank" rel="noopener noreferrer">U.S. Copyright Office FAQ</a>. To register your copyrights, visit <a href="https://www.copyright.gov/registration/" target="_blank" rel="noopener noreferrer">copyright.gov/registration</a>. For the full toolkit to protect your shop, see the <a href="/">Etsy IP Defense Kit homepage</a>.</p>
     `,
+    faq: [
+      {
+        q: "What should I do first if I find someone copied my Etsy listing?",
+        a: "Document everything before you do anything else. Screenshot the infringing listing with the full URL visible, save your original design files with metadata intact, and email them to yourself for a timestamped record. This takes 5 to 10 minutes and protects your legal position no matter what happens next. Then file your DMCA notice through Etsy's IP portal at etsy.com/legal/ip/report."
+      },
+      {
+        q: "Can I file a DMCA notice if I never registered my copyright?",
+        a: "Yes. In the United States, copyright attaches automatically when you create an original work. You do not need to register to file a DMCA takedown. Registration at copyright.gov gives you stronger options if you ever go to court -- including statutory damages up to $150,000 per willful infringement -- but for removing a stolen listing, registration is not required."
+      },
+      {
+        q: "How do I find out if my Etsy photos have been stolen on other platforms?",
+        a: "Use Google Reverse Image Search at images.google.com to check where your product photos appear online. Upload your image or paste your image URL to see all pages where it appears. For ongoing monitoring, tools like TinEye and PIXSY can alert you when new copies of your images appear. It is worth running this check monthly on your best-selling products."
+      },
+      {
+        q: "What if the same seller keeps reposting my stolen listing after takedowns?",
+        a: "If a seller repeatedly reposted your stolen content after DMCA takedowns, you can invoke Etsy's Repeat Infringer Policy. Reference all prior case numbers in your new DMCA filings and explicitly note the pattern. After two or more successful takedowns from the same seller, email ip@etsy.com with a comprehensive report documenting the pattern and requesting account-level action. Sellers with multiple substantiated violations face account termination."
+      }
+    ],
+    steps: [
+      { name: "Confirm it is actually your content that was copied", text: "Verify that your specific photos, text, or digital files were copied -- not just a similar product. Copyright protects your specific creative expression, not the idea or product category." },
+      { name: "Document everything before it disappears", text: "Screenshot every image in the infringing listing, copy the full URL, screenshot the seller shop page, and save all evidence in a dated folder. Platforms sometimes remove listings proactively." },
+      { name: "Gather proof of original ownership", text: "Collect original image files with EXIF metadata, early social media posts showing your work, your Etsy listing's original publication date, and any order history predating the copycat listing." },
+      { name: "File your DMCA takedown on Etsy", text: "Go to etsy.com/legal/ip/report and file a copyright infringement notice. Include all 6 required legal elements. Do not use the general Report Listing button." },
+      { name: "Search and report on every platform simultaneously", text: "Use Google Reverse Image Search to find your photos on other platforms. File reports on Temu, AliExpress, Amazon, and eBay wherever you find copies. Each platform has its own IP reporting portal." },
+      { name: "Set up monitoring to catch future theft faster", text: "Set Google Alerts for your shop name and product names. Use TinEye or PIXSY for ongoing image monitoring. Save the infringing seller's shop URL and check it periodically." }
+    ],
   },
   {
     slug: "dmca-takedown-notice-etsy-template",
@@ -329,8 +398,26 @@ export const blogPosts: BlogPost[] = [
 </ul>
 </div>
 
-<p>The legal requirements for DMCA notices come from <a href="https://www.law.cornell.edu/uscode/text/17/512" target="_blank" rel="noopener noreferrer">17 U.S.C. Section 512</a>. Read Etsy's IP policy at <a href="https://www.etsy.com/legal/intellectual-property/" target="_blank" rel="noopener noreferrer">etsy.com/legal/intellectual-property</a>.</p>
+<p>The legal requirements for DMCA notices come from <a href="https://www.law.cornell.edu/uscode/text/17/512" target="_blank" rel="noopener noreferrer">17 U.S.C. Section 512</a>. Read Etsy's IP policy at <a href="https://www.etsy.com/legal/intellectual-property/" target="_blank" rel="noopener noreferrer">etsy.com/legal/intellectual-property</a>. For ready-to-file templates with the correct statutory language, visit the <a href="/">Etsy IP Defense Kit homepage</a>.</p>
     `,
+    faq: [
+      {
+        q: "What are the 6 required elements of a DMCA notice?",
+        a: "A valid DMCA notice under U.S. law requires: (1) your contact information including a physical address, (2) identification of the copyrighted work you own, (3) the location of the infringing material including the exact URL, (4) a good faith belief statement using statutory language, (5) an accuracy and authority statement under penalty of perjury using statutory language, and (6) your physical or electronic signature. All six are required. Missing any single element allows the platform to reject the notice."
+      },
+      {
+        q: "Why does Etsy reject DMCA notices?",
+        a: "The most common reasons Etsy rejects DMCA notices are: missing the good faith belief statement, missing the accuracy and authority sworn statement, vague identification of the original work, missing physical address, using the wrong reporting channel (general Help tickets instead of the IP portal at etsy.com/legal/ip/report), and selecting the wrong infringement type. The sworn statements in items four and five must track the exact language of 17 U.S.C. Section 512 -- paraphrasing them creates a defective notice."
+      },
+      {
+        q: "Can I file a DMCA notice for free on Etsy?",
+        a: "Yes. Filing a DMCA notice through Etsy's IP reporting portal is free. You do not need a lawyer and Etsy does not charge a fee. However, drafting a legally complete notice from scratch requires knowing the exact statutory language required under 17 U.S.C. Section 512. Many sellers use pre-written templates to ensure all required elements are correct before submitting."
+      },
+      {
+        q: "What is the difference between a DMCA notice and a cease and desist letter?",
+        a: "A DMCA notice is filed with the platform (Etsy, Amazon, etc.) and requests the platform to remove the infringing content. A cease and desist letter is sent directly to the infringing seller and demands they stop the infringing activity. Both can be used together. The DMCA notice targets the listing. The cease and desist letter targets the seller directly and creates a paper trail establishing willful infringement, which matters if you ever need to escalate to legal action."
+      }
+    ],
   },
   {
     slug: "copyright-infringement-etsy",
@@ -451,8 +538,35 @@ export const blogPosts: BlogPost[] = [
 </ul>
 </div>
 
-<p>For DMCA procedures and seller rights, see <a href="https://www.copyright.gov/dmca/" target="_blank" rel="noopener noreferrer">copyright.gov/dmca</a>. Etsy's full IP reporting policy is at <a href="https://www.etsy.com/legal/intellectual-property/" target="_blank" rel="noopener noreferrer">etsy.com/legal/intellectual-property</a>.</p>
+<p>For DMCA procedures and seller rights, see <a href="https://www.copyright.gov/dmca/" target="_blank" rel="noopener noreferrer">copyright.gov/dmca</a>. Etsy's full IP reporting policy is at <a href="https://www.etsy.com/legal/intellectual-property/" target="_blank" rel="noopener noreferrer">etsy.com/legal/intellectual-property</a>. For step-by-step templates for every stage of the process, visit the <a href="/">Etsy IP Defense Kit homepage</a>.</p>
     `,
+    faq: [
+      {
+        q: "How do I report copyright infringement on Etsy?",
+        a: "Go directly to etsy.com/legal/ip/report (not the general Help Center). Select Copyright as the infringement type. Complete all 6 required elements of your DMCA notice: your contact information, identification of your original work, the URL of the infringing listing, a good faith belief statement, an accuracy and authority statement under penalty of perjury, and your signature. Submit through the portal and save the case number from your confirmation email."
+      },
+      {
+        q: "What is the difference between the Report Listing button and Etsy's IP portal?",
+        a: "The Report Listing button on a listing page is for general community standard violations. It does not generate a formal DMCA notice and does not carry the same legal weight. Etsy's IP portal at etsy.com/legal/ip/report generates a formal copyright infringement report that triggers Etsy's legal obligations under the DMCA. For copyright issues, always use the IP portal."
+      },
+      {
+        q: "What happens to the seller after a valid copyright report is filed?",
+        a: "When Etsy receives a valid DMCA notice, the infringing listing is removed and the seller is notified. The seller can file a counter-notice disputing the claim. A record of the IP violation is added to their account. Sellers with multiple substantiated violations face account suspension under Etsy's Repeat Infringer Policy. If the seller files a valid counter-notice and you do not respond with a lawsuit within 10 to 14 business days, Etsy may restore the listing."
+      },
+      {
+        q: "How long does Etsy take to respond to copyright infringement reports?",
+        a: "Etsy's stated response time is 10 business days, though many straightforward cases are resolved within 24 to 72 hours. If you have not received a resolution within 5 business days, email copyright@etsy.com with your case number in the subject line. If two submissions go unanswered, try emailing legal@etsy.com directly with a summary of your case and all prior case numbers."
+      }
+    ],
+    steps: [
+      { name: "Log in to your Etsy account", text: "Navigate to etsy.com and log in. Your contact information will be pre-filled in the reporting form, but only if you are logged in." },
+      { name: "Go to the IP Reporting Portal", text: "Navigate to etsy.com/legal/ip/report. Do not use the Report Listing button on the listing page or the general Help Center. Those channels do not generate formal DMCA notices." },
+      { name: "Select Copyright as your infringement type", text: "Choose Copyright, then select the option to report specific content. Choosing Trademark or another category will route your report to the wrong review team." },
+      { name: "Describe your original copyrighted work", text: "Provide a specific description of what you own, where your original can be found online, and approximately when you created it. Be precise about the specific elements -- photo numbers, text passages, design file names." },
+      { name: "Identify the infringing listing with exact URLs", text: "Paste the full URL of the infringing listing. Describe which specific elements are copied. Name the specific photos, text, or design files that were stolen." },
+      { name: "Complete both required sworn statements", text: "Include the good faith belief statement and the accuracy and authority declaration. Both must use the exact statutory language from 17 U.S.C. Section 512. Paraphrasing either statement creates a defective notice." },
+      { name: "Sign and submit, then record your case number", text: "Type your full legal name as an electronic signature. Submit the form. Save the case number from your confirmation email for any follow-up." }
+    ],
   },
   {
     slug: "etsy-ip-theft",
@@ -562,8 +676,26 @@ export const blogPosts: BlogPost[] = [
 </ul>
 </div>
 
-<p>File Google DMCA notices at <a href="https://reportcontent.google.com/forms/dmca" target="_blank" rel="noopener noreferrer">reportcontent.google.com</a>. Learn about the Copyright Claims Board at <a href="https://ccb.gov" target="_blank" rel="noopener noreferrer">ccb.gov</a>.</p>
+<p>File Google DMCA notices at <a href="https://reportcontent.google.com/forms/dmca" target="_blank" rel="noopener noreferrer">reportcontent.google.com</a>. Learn about the Copyright Claims Board at <a href="https://ccb.gov" target="_blank" rel="noopener noreferrer">ccb.gov</a>. For ready-to-file legal templates for every stage of the escalation process, see the <a href="/">Etsy IP Defense Kit homepage</a>.</p>
     `,
+    faq: [
+      {
+        q: "What can I do if Etsy keeps restoring a stolen listing?",
+        a: "If Etsy restores a listing after a valid DMCA takedown, it typically means the infringing seller filed a counter-notice. If they filed a counter-notice falsely, they have committed perjury -- document this and consult an attorney. You can also invoke Etsy's Repeat Infringer Policy by referencing all prior case numbers in a new report to ip@etsy.com. For persistent non-response from Etsy, email legal@etsy.com with a comprehensive record of all filings."
+      },
+      {
+        q: "Can I sue someone for copying my Etsy listing?",
+        a: "Yes. If your copyright was registered before the infringement occurred (or within 3 months of the work's first publication), you can sue for statutory damages up to $150,000 per willful infringement plus attorney fees. If your copyright was not registered, you can still sue but only for actual damages (your proven lost revenue), which is harder to quantify. The Copyright Claims Board at ccb.gov offers a low-cost small claims option for copyright cases under $30,000."
+      },
+      {
+        q: "What is the Copyright Claims Board and can it help Etsy sellers?",
+        a: "The Copyright Claims Board (CCB) is a small claims tribunal at the U.S. Copyright Office that handles copyright disputes involving less than $30,000 in damages. Filing fees range from $40 to $100, and the process is designed to be accessible without a lawyer. It is a good option for Etsy sellers who want more than a listing takedown but cannot afford federal court litigation. Visit ccb.gov for case filing requirements."
+      },
+      {
+        q: "How do I prevent my Etsy listings from being copied in the first place?",
+        a: "No method prevents determined copying, but you can make it harder and protect yourself for when it happens. Register your copyrights at copyright.gov to unlock full legal remedies. Add a visible copyright notice to your listing photos. Use subtle watermarks on non-purchase images. Email your original design files to yourself before launch for a timestamped record. Set up Google Alerts for your shop name and run reverse image searches on your best-selling products monthly."
+      }
+    ],
   },
 ];
 

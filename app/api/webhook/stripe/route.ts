@@ -99,6 +99,26 @@ export async function POST(req: NextRequest) {
     console.log("[webhook] downloadToken prefix:", downloadToken.substring(0, 40));
     console.log("[webhook] downloadPageUrl:", downloadPageUrl.substring(0, 120));
 
+    // Store nurture queue entry in Vercel Blob
+    try {
+      const { put } = await import("@vercel/blob");
+      const record = JSON.stringify({
+        email: customerEmail,
+        paymentIntentId: paymentIntent.id,
+        purchasedAt: new Date().toISOString(),
+        sent48h: false,
+        sent7d: false,
+      });
+      await put(`nurture/${paymentIntent.id}.json`, record, {
+        access: "public",
+        addRandomSuffix: false,
+      });
+      console.log(`[webhook] Nurture queue entry created for ${customerEmail}`);
+    } catch (err) {
+      // Non-fatal — delivery email still sends
+      console.error("[webhook] Failed to write nurture queue entry:", err);
+    }
+
     // Send delivery email via Resend
     try {
       const { Resend } = await import("resend");

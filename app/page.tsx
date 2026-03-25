@@ -249,8 +249,11 @@ export default function Home() {
           <Link href="/blog" className="text-amber-400 hover:text-amber-300 underline mr-4">
             Blog
           </Link>
+          <Link href="/privacy" className="text-amber-400 hover:text-amber-300 underline mr-4">
+            Privacy Policy
+          </Link>
           <a
-            href="mailto:thestartergroupenterprise@gmail.com"
+            href="mailto:hello@sellerdefensekit.com"
             className="text-amber-400 hover:text-amber-300 underline"
           >
             Support

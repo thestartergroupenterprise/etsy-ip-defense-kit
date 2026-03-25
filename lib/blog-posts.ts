@@ -697,6 +697,171 @@ export const blogPosts: BlogPost[] = [
       }
     ],
   },
+  {
+    slug: "dmca-takedown-notice-guide",
+    metaTitle: "DMCA Takedown Notice: Complete Guide for Etsy Sellers | Seller Defense Kit",
+    metaDescription:
+      "Learn exactly what a DMCA takedown notice requires, all 6 legal elements, how to send one to Etsy, and what to do when you get ignored. No lawyer required.",
+    title: "DMCA Takedown Notice: Complete Guide for Etsy Sellers",
+    date: "2026-03-25",
+    readingTime: "9 min read",
+    intro:
+      "A DMCA takedown notice is your fastest legal tool for removing copied content from Etsy and other platforms. But only if it includes all 6 required elements. Miss one and your notice is legally defective - and the copycat listing stays up. This guide covers exactly what goes into a valid DMCA takedown notice, how to send it, and what happens after.",
+    keyTakeaway:
+      "A valid DMCA takedown notice requires all 6 statutory elements under 17 U.S.C. 512(c)(3). Missing any one of them gives the platform legal grounds to ignore your notice. The two most commonly omitted elements are the good faith statement and the sworn accuracy statement. If writing notices from scratch sounds like a lot, the Etsy IP Defense Kit at sellerdefensekit.com includes pre-written DMCA notices with all required language already in place.",
+    faq: [
+      {
+        q: "Does a DMCA takedown notice need to be notarized?",
+        a: "No. A DMCA takedown notice does not require notarization. It does require a signature, which can be an electronic signature - your typed full legal name counts. The notice must include a statement made under penalty of perjury that the information in the notice is accurate and that you are authorized to act on behalf of the copyright owner. That sworn statement carries legal weight without notarization."
+      },
+      {
+        q: "Can I send a DMCA takedown notice by email?",
+        a: "It depends on the platform. Most major platforms including Etsy, Amazon, and TikTok have online submission portals rather than email-based processes. For websites and smaller platforms without a portal, you can email the site's designated DMCA agent directly. Every platform covered by the DMCA is required to register a designated agent with the U.S. Copyright Office. You can look up any platform's registered DMCA agent at copyright.gov/dmca-directory."
+      },
+      {
+        q: "How long does a DMCA takedown notice take to work?",
+        a: "On major platforms like Etsy and Amazon, a properly submitted DMCA takedown notice typically results in removal within 24 to 72 hours for clear-cut cases. If the infringing seller disputes the notice or files a counter-notice, the process can extend to 10 to 14 business days. Smaller websites have no legally mandated timeline but most respond within 5 to 7 business days to avoid liability exposure."
+      },
+      {
+        q: "What if my DMCA takedown notice is ignored?",
+        a: "If a platform ignores a valid DMCA takedown notice, it risks losing its safe harbor protection under the DMCA - meaning it becomes directly liable for the infringing content. In practice, if a major platform like Etsy ignores your notice, first check that all 6 required elements are present and resubmit. If a smaller website ignores it, contact their web host directly using the same DMCA notice format, since hosts are also covered by safe harbor requirements and are highly motivated to respond."
+      },
+      {
+        q: "Do I need a lawyer to send a DMCA takedown notice?",
+        a: "No. The DMCA was designed to be usable by individual copyright holders without legal representation. You do need to understand the 6 required elements and include the sworn statements accurately. Submitting a false DMCA takedown notice carries legal penalties, so accuracy matters. For most Etsy sellers dealing with copied listings or stolen photos, a properly formatted notice template covers everything needed without attorney involvement."
+      },
+      {
+        q: "Can I file a DMCA takedown notice if I have not registered my copyright?",
+        a: "Yes. Copyright registration is not required to file a DMCA takedown notice. In the U.S., copyright attaches automatically when you create an original work. You own the copyright on your photos, designs, and written descriptions from the moment of creation. However, copyright registration at copyright.gov unlocks statutory damages and attorney fees if you ever pursue litigation, which significantly increases your negotiating leverage against infringers."
+      }
+    ],
+    steps: [
+      {
+        name: "Document the infringing content",
+        text: "Screenshot the infringing listing with the full URL visible. Record the listing ID from the URL. Save copies of your original files with timestamps. Take screenshots before filing because sellers sometimes remove content once they know a notice is coming."
+      },
+      {
+        name: "Confirm your ownership of the original work",
+        text: "Identify the specific original work that was copied: your product photos, written description, design files, or artwork. Gather proof of creation date - original file metadata, earlier social media posts, order records, or email timestamps. You need to be able to describe your original work precisely in the notice."
+      },
+      {
+        name: "Write the 6 required elements of the notice",
+        text: "Include: (1) your full legal name, address, email, and phone number; (2) a specific description of your copyrighted work; (3) the exact URL of the infringing content; (4) a good faith statement that you believe the use is unauthorized; (5) a statement under penalty of perjury that the information is accurate and you are authorized to act; (6) your physical or electronic signature."
+      },
+      {
+        name: "Locate the correct submission method for the platform",
+        text: "Most major platforms use online portals. Etsy uses etsy.com/legal/ip/report. Amazon uses the Brand Registry or Report Infringement form. For smaller websites without a portal, find their designated DMCA agent at copyright.gov/dmca-directory and submit by email."
+      },
+      {
+        name: "Submit the notice and record your case number",
+        text: "Submit through the platform's official channel. Save the confirmation email and case number immediately. You will need this for any follow-up, escalation, or future notices against the same seller."
+      },
+      {
+        name: "Follow up if there is no response within 5 business days",
+        text: "For Etsy, email copyright@etsy.com with your case number if the listing has not been removed. For other platforms, contact the platform's trust and safety team or submit the notice to the web host directly. Recheck that all 6 elements are present before resubmitting."
+      }
+    ],
+    content: `
+<h2>What Is a DMCA Takedown Notice?</h2>
+<p>A DMCA takedown notice is a formal legal request to remove infringing content from an online platform. It is authorized under the Digital Millennium Copyright Act (DMCA), specifically 17 U.S.C. 512(c)(3), which is the U.S. federal law that governs copyright on the internet.</p>
+<p>When you find your product photos, designs, or written content copied on Etsy, a DMCA takedown notice is the standard mechanism for getting it removed fast. Etsy, Amazon, TikTok, and every major online platform must comply with valid DMCA notices or risk losing their legal immunity for user-uploaded content.</p>
+<p>That legal immunity - called safe harbor - is what motivates platforms to act quickly. If Etsy ignores a valid notice, it becomes liable for the infringement itself. That is why a properly formatted notice almost always results in removal within 24 to 72 hours.</p>
+
+<h2>The 6 Required Legal Elements of a Valid DMCA Takedown Notice</h2>
+<p>This is where most self-filed notices fail. Under 17 U.S.C. 512(c)(3), a DMCA takedown notice must contain all six of the following elements to be legally valid. Platforms are permitted to ignore notices that are missing any element.</p>
+
+<h3>1. Your Contact Information</h3>
+<p>Your full legal name, mailing address, telephone number, and email address. This must be accurate. Submitting a notice with false contact information can void the notice and expose you to legal liability.</p>
+
+<h3>2. Identification of the Copyrighted Work</h3>
+<p>A specific description of the original work you own the copyright to. "My product photos" is not sufficient. A valid description includes: the nature of the work (original photograph, original graphic design, original written description), when and how it was created, and where a reference copy can be found (a URL to your original listing, your social media post showing the original, or a cloud storage link).</p>
+
+<h3>3. Identification of the Infringing Content</h3>
+<p>The exact URL of the infringing content - the full listing URL, not just the seller's profile. On Etsy this looks like: etsy.com/listing/XXXXXXXXX/listing-title. Include the listing ID. If the same seller has multiple infringing listings, include each URL separately.</p>
+
+<h3>4. The Good Faith Statement</h3>
+<p>A statement that you have a good faith belief that the use of the material is not authorized by the copyright owner, its agent, or the law. This is often missing from notices drafted without a template. The exact language matters here.</p>
+
+<h3>5. The Accuracy Statement (Sworn Under Penalty of Perjury)</h3>
+<p>A statement that the information in the notice is accurate and, under penalty of perjury, that you are authorized to act on behalf of the owner of the exclusive right that is allegedly being infringed. This must use sworn language - the "under penalty of perjury" phrasing is a legal requirement, not a formality.</p>
+
+<h3>6. Your Signature</h3>
+<p>Your physical or electronic signature. Typing your full legal name at the bottom of an online form counts as an electronic signature. It must match the name listed in your contact information.</p>
+
+<h2>How to Write a DMCA Takedown Notice Step by Step</h2>
+<p>Before you write anything, gather your evidence:</p>
+<ul>
+  <li>Screenshot the infringing listing with the full URL visible in the browser bar</li>
+  <li>Record the listing ID from the URL (the number after /listing/)</li>
+  <li>Note when you first discovered the infringement</li>
+  <li>Locate your original file with its creation timestamp, or an earlier social post showing your original work</li>
+</ul>
+<p>Then draft the notice in plain language using this structure:</p>
+<ol>
+  <li><strong>Opening:</strong> State that this is a DMCA takedown notice under 17 U.S.C. 512(c)(3)</li>
+  <li><strong>Your info:</strong> Full name, address, phone, email</li>
+  <li><strong>Your original work:</strong> Describe it specifically. Include a link to the original.</li>
+  <li><strong>The infringing content:</strong> Paste the full URL. List the listing ID. Describe what was copied.</li>
+  <li><strong>Good faith statement:</strong> "I have a good faith belief that the use of the material described above is not authorized by the copyright owner, its agent, or the law."</li>
+  <li><strong>Accuracy statement:</strong> "I swear, under penalty of perjury, that the information in this notification is accurate and that I am the copyright owner or am authorized to act on behalf of the owner of the exclusive right that is allegedly infringed."</li>
+  <li><strong>Signature:</strong> Your typed full legal name and date</li>
+</ol>
+<p>Writing this from scratch for every infringing listing takes 20 to 30 minutes per notice. For Etsy sellers dealing with repeat infringers or multiple platforms, having a pre-written template with the correct statutory language ready to fill in is the faster path. The Etsy IP Defense Kit at <a href="https://sellerdefensekit.com">sellerdefensekit.com</a> includes a complete DMCA takedown notice template with all required language pre-written.</p>
+
+<h2>Where to Send Your DMCA Takedown Notice</h2>
+<p>Each platform has its own submission process. Using the wrong channel slows down removal and can result in your notice being lost.</p>
+
+<h3>Etsy</h3>
+<p>Use Etsy's dedicated IP reporting portal: <strong>etsy.com/legal/ip/report</strong>. Do not use the Report Listing button on the listing page - that route goes to a different team and is not treated as a formal DMCA notice. Select Copyright from the infringement type options, then complete all fields in the form.</p>
+
+<h3>Amazon</h3>
+<p>Use Amazon Brand Registry if you have a registered trademark. If you do not, use the Report Infringement form at <strong>amazon.com/report/infringement</strong>. Amazon's process is more document-intensive than Etsy's but follows the same DMCA structure.</p>
+
+<h3>TikTok and Instagram</h3>
+<p>Both platforms have copyright reporting forms built into their reporting flows. Access them through the specific piece of content you want to report, then select Copyright as the infringement type.</p>
+
+<h3>Websites and Smaller Platforms</h3>
+<p>Look up the site's registered DMCA agent at <strong>copyright.gov/dmca-directory</strong>. Send your notice directly to that agent by email. If no agent is registered, contact the site's web host instead - most major hosting providers (GoDaddy, Cloudflare, WP Engine) have abuse teams that respond to DMCA notices.</p>
+
+<h2>Common Mistakes That Get DMCA Notices Rejected</h2>
+
+<h3>Missing the sworn accuracy statement</h3>
+<p>This is the most common defect. The "under penalty of perjury" language is not optional. Without it, the notice does not meet the statutory requirements and the platform can dismiss it.</p>
+
+<h3>Vague description of the original work</h3>
+<p>"My listing was copied" is not sufficient. You need to identify the specific creative work being infringed: the photograph, the design file, the written description. Include a URL to the original.</p>
+
+<h3>Wrong infringement category</h3>
+<p>Submitting a copyright notice when the issue is actually trademark (someone using your brand name or logo) sends your complaint to the wrong team. Know which type of IP you are claiming before you file.</p>
+
+<h3>Using the general Help Center instead of the IP portal</h3>
+<p>Etsy's general Help Center contact routes to customer service, not the IP compliance team. Only notices submitted through etsy.com/legal/ip/report are processed as formal DMCA notices.</p>
+
+<h3>Filing for something copyright does not cover</h3>
+<p>Copyright protects specific creative expression, not ideas, styles, or general product concepts. If another seller is making similar items but using their own photos and descriptions, copyright law may not provide a remedy. See our guide on <a href="/blog/etsy-ip-theft">Etsy IP theft</a> for alternatives including trademark and design patent.</p>
+
+<h2>What Happens After You Send a DMCA Takedown Notice</h2>
+<p>Once Etsy receives a valid notice, the platform notifies the accused seller and removes or disables access to the infringing content. On Etsy, the infringing listing is typically taken down within 24 to 72 hours.</p>
+<p>The accused seller then has the option to file a counter-notice. A counter-notice is a sworn statement from the seller claiming they have the right to use the content. If a counter-notice is filed, Etsy notifies you and the listing may be restored after 10 to 14 business days unless you initiate litigation against the seller.</p>
+<p>Most sellers who genuinely copied your work will not file a counter-notice because doing so requires swearing under penalty of perjury that they have rights to the content. Filing a false counter-notice carries serious legal consequences.</p>
+<p>If the same seller infringes again after a successful takedown, include the prior case number in your new notice. Documenting a pattern of infringement by the same seller supports account suspension under Etsy's Repeat Infringer Policy.</p>
+
+<h2>DMCA Takedown Notices for Etsy Sellers: Special Considerations</h2>
+<p>Etsy sellers face a few situations that come up repeatedly:</p>
+
+<h3>Copycat listings using your photos</h3>
+<p>This is the most clear-cut DMCA case. You took the photos, you hold the copyright. Use Etsy's IP portal and identify the specific photos being used without authorization.</p>
+
+<h3>Stolen SVG files, printables, and digital designs</h3>
+<p>Digital products are frequently copied. When someone purchases your digital file and re-lists it, that is both copyright infringement and a violation of Etsy's terms. Your DMCA notice should identify the original design file and link to your original listing or product page showing the earlier publication date.</p>
+
+<h3>False DMCA notices filed against you</h3>
+<p>If your own listing is taken down due to a false DMCA notice, you have the right to file a counter-notice. A properly submitted counter-notice requires the person who filed the false takedown to initiate litigation within 10 to 14 business days or your listing is restored. The Etsy IP Defense Kit includes a DMCA counter-notice template for exactly this situation.</p>
+
+<h3>Same seller on multiple platforms</h3>
+<p>Infringers rarely stop at one platform. If you confirm the same seller is copying your work on Etsy, Amazon, and social media simultaneously, file on all platforms in the same week. Cross-platform enforcement creates a documented record and increases the pressure on the infringing seller to stop.</p>
+`,
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPost | undefined {

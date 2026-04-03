@@ -8,6 +8,7 @@ const blogSlugs = [
   "dmca-takedown-notice-etsy-template",
   "copyright-infringement-etsy",
   "etsy-ip-theft",
+  "etsy-seller-protection",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

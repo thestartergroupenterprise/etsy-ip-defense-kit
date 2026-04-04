@@ -11,22 +11,23 @@ export default function Home() {
         <div className="max-w-2xl mx-auto text-center">
 
           {/* Badge */}
-          <p className="inline-block bg-amber-200 text-amber-900 text-sm font-semibold px-4 py-1 rounded-full mb-6">
-            For Etsy sellers losing revenue to copycat shops
+          <p className="inline-block bg-amber-200 text-amber-900 text-sm font-semibold px-4 py-1 rounded-lg mb-6">
+            For independent sellers and small creative businesses protecting original work
           </p>
 
           {/* Headline */}
           <h1 className="text-3xl md:text-5xl font-extrabold leading-tight text-gray-900 mb-5">
-            5 fill-in-the-blank templates that let Etsy sellers file a DMCA
-            takedown on any copycat in{" "}
-            <span className="text-amber-600">15 minutes</span> — without a
+            5 fill-in-the-blank templates that let independent sellers and
+            small creative businesses file a DMCA takedown on any copycat in{" "}
+            <span className="text-amber-600">15 minutes</span>, without a
             lawyer, without spinning your wheels.
           </h1>
 
           {/* Subheadline */}
           <p className="text-lg md:text-xl text-gray-600 mb-8">
-            For Etsy sellers losing revenue to copycat shops on Etsy, Temu,
-            AliExpress, and Amazon.
+            For independent sellers and small creative businesses selling on
+            any platform or through their own website, without the cost of
+            legal fees.
           </p>
 
           {/* Price + CTA */}

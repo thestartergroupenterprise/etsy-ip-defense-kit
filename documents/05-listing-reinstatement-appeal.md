@@ -203,5 +203,5 @@ If Etsy denies your appeal and you believe the denial is in error:
 
 ---
 
-*Etsy IP Defense Kit — Document 5 of 5*
+*Seller Defense Kit — Document 5 of 5*
 *Not legal advice. This template provides a starting framework. For complex disputes involving counter-notices, court proceedings, or significant revenue impact, consult a qualified intellectual property attorney. The DMCA Counter-Notice section creates legal obligations — read it carefully before including it.*

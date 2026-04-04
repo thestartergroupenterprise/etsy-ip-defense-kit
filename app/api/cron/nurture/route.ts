@@ -150,7 +150,7 @@ function build48hHtml(customerEmail: string): string {
   <p style="font-size: 16px;">Hey,</p>
 
   <p style="font-size: 16px;">
-    Just checking in. You picked up the Etsy IP Defense Kit a couple of days ago and
+    Just checking in. You picked up the Seller Defense Kit a couple of days ago and
     I wanted to make sure it actually worked for your situation.
   </p>
 
@@ -184,7 +184,7 @@ function build48hHtml(customerEmail: string): string {
   <p style="font-size: 11px; color: #bbb; line-height: 1.6;">
     This email was sent by <strong>Seller Defense Kit, a product of The Starter Group</strong><br>
     2967 Dundas St W, Toronto, ON M6P 1Z2, Canada<br>
-    You received this email because you purchased the Etsy IP Defense Kit.<br>
+    You received this email because you purchased the Seller Defense Kit.<br>
     <a href="${unsubUrl}" style="color: #bbb;">Unsubscribe</a>
   </p>
 
@@ -196,7 +196,7 @@ function build48hText(customerEmail: string): string {
   const unsubUrl = `${SITE_URL}/unsubscribe?email=${encodeURIComponent(customerEmail)}`;
   return `Hey,
 
-Just checking in. You picked up the Etsy IP Defense Kit a couple of days ago and I wanted to make sure it actually worked for your situation.
+Just checking in. You picked up the Seller Defense Kit a couple of days ago and I wanted to make sure it actually worked for your situation.
 
 Did you get a chance to use any of the templates? Did the DMCA notice cover what you needed, or did something not quite fit?
 
@@ -211,7 +211,7 @@ P.S. If your download link expired or you cannot find the email, just reply here
 
 This email was sent by Seller Defense Kit, a product of The Starter Group
 2967 Dundas St W, Toronto, ON M6P 1Z2, Canada
-You received this email because you purchased the Etsy IP Defense Kit.
+You received this email because you purchased the Seller Defense Kit.
 Unsubscribe: ${unsubUrl}`;
 }
 
@@ -230,7 +230,7 @@ function build7dHtml(customerEmail: string): string {
   <p style="font-size: 16px;">Hey,</p>
 
   <p style="font-size: 16px;">
-    It has been a week since you got the Etsy IP Defense Kit. Hopefully you have had a chance
+    It has been a week since you got the Seller Defense Kit. Hopefully you have had a chance
     to run through the IP Theft Monitoring Checklist. If not, that one is worth 30 minutes of
     your time this week. Most sellers find at least one violation they did not know existed.
   </p>
@@ -267,7 +267,7 @@ function build7dHtml(customerEmail: string): string {
   <p style="font-size: 11px; color: #bbb; line-height: 1.6;">
     This email was sent by <strong>Seller Defense Kit, a product of The Starter Group</strong><br>
     2967 Dundas St W, Toronto, ON M6P 1Z2, Canada<br>
-    You received this email because you purchased the Etsy IP Defense Kit.<br>
+    You received this email because you purchased the Seller Defense Kit.<br>
     <a href="${unsubUrl}" style="color: #bbb;">Unsubscribe</a>
   </p>
 
@@ -279,7 +279,7 @@ function build7dText(customerEmail: string): string {
   const unsubUrl = `${SITE_URL}/unsubscribe?email=${encodeURIComponent(customerEmail)}`;
   return `Hey,
 
-It has been a week since you got the Etsy IP Defense Kit. Hopefully you have had a chance to run through the IP Theft Monitoring Checklist. If not, that one is worth 30 minutes of your time this week. Most sellers find at least one violation they did not know existed.
+It has been a week since you got the Seller Defense Kit. Hopefully you have had a chance to run through the IP Theft Monitoring Checklist. If not, that one is worth 30 minutes of your time this week. Most sellers find at least one violation they did not know existed.
 
 The DMCA notice handles the immediate problem. But the harder part is staying ahead of it. Copycats come back. New ones find you. The sellers who protect their shops long-term are the ones who make monitoring a habit, not a crisis response.
 
@@ -295,6 +295,6 @@ Seller Defense Kit, a product of The Starter Group
 
 This email was sent by Seller Defense Kit, a product of The Starter Group
 2967 Dundas St W, Toronto, ON M6P 1Z2, Canada
-You received this email because you purchased the Etsy IP Defense Kit.
+You received this email because you purchased the Seller Defense Kit.
 Unsubscribe: ${unsubUrl}`;
 }

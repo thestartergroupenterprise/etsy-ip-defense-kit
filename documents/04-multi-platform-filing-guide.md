@@ -276,5 +276,5 @@ Set a reminder for 7 days after filing. If you haven't received a resolution, se
 
 ---
 
-*Etsy IP Defense Kit — Document 4 of 5*
+*Seller Defense Kit — Document 4 of 5*
 *Not legal advice. Platform processes change over time. If a URL no longer works, search "[Platform name] IP infringement report" to find the current form. For persistent or large-scale infringement, consult a qualified intellectual property attorney.*

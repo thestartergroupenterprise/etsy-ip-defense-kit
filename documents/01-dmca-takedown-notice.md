@@ -159,5 +159,5 @@ After filing, immediately log the following in your monitoring tracker:
 
 ---
 
-*Etsy IP Defense Kit — Document 1 of 5*
+*Seller Defense Kit — Document 1 of 5*
 *Not legal advice. This template provides a starting framework for copyright enforcement. For complex disputes or repeated infringement, consult a qualified intellectual property attorney.*

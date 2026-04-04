@@ -143,7 +143,7 @@ export default async function BlogPostPage({ params }: Props) {
               href="https://buy.stripe.com/bJe6oH7PnfHfbXbc1O2Fa00"
               className="bg-amber-500 hover:bg-amber-600 text-white px-4 py-1.5 rounded-lg transition-colors"
             >
-              Get the Kit — $27
+              Get the IP Defense Kit — $27
             </Link>
           </nav>
         </div>
@@ -252,15 +252,15 @@ export default async function BlogPostPage({ params }: Props) {
       {/* CTA */}
       <section className="bg-amber-50 border-t border-amber-100 px-5 py-12">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-3">Protect Your Shop Today</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-3">Ready to Protect Your Original Work?</h2>
           <p className="text-gray-600 mb-6">
-            The Etsy IP Defense Kit gives you 5 fill-in-the-blank templates to shut down copycats fast -- no lawyer required.
+            Seller Defense Kit includes 5 fill-in-the-blank templates so independent sellers and small creative businesses can file takedowns in minutes, not hours. Works for any platform or standalone website.
           </p>
           <a
             href="https://buy.stripe.com/bJe6oH7PnfHfbXbc1O2Fa00"
             className="inline-block bg-amber-500 hover:bg-amber-600 text-white font-bold px-8 py-4 rounded-xl shadow-md transition-colors"
           >
-            Get the Kit -- $27
+            Get the IP Defense Kit -- $27
           </a>
           <p className="text-sm text-gray-500 mt-3">Instant download. No account needed.</p>
         </div>
@@ -273,6 +273,7 @@ export default async function BlogPostPage({ params }: Props) {
           <nav className="flex gap-4">
             <Link href="/" className="hover:text-gray-700 transition-colors">Home</Link>
             <Link href="/blog" className="hover:text-gray-700 transition-colors">Blog</Link>
+            <Link href="/privacy" className="hover:text-gray-700 transition-colors">Privacy Policy</Link>
           </nav>
         </div>
       </footer>

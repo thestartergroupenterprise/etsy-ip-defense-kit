@@ -7,13 +7,13 @@ const sortedPosts = [...blogPosts].sort(
 );
 
 export const metadata: Metadata = {
-  title: "Etsy IP & DMCA Help — Blog | Seller Defense Kit",
+  title: "DMCA and Copyright Guides — Blog | Seller Defense Kit",
   description:
-    "Expert guides for Etsy sellers on DMCA takedowns, copyright infringement reporting, and fighting IP theft. Protect your shop with the right tools.",
+    "Step-by-step guides for independent sellers and small creative businesses on DMCA takedowns, copyright infringement reporting, and fighting IP theft on any platform.",
   openGraph: {
-    title: "Etsy IP & DMCA Help — Blog | Seller Defense Kit",
+    title: "DMCA and Copyright Guides — Blog | Seller Defense Kit",
     description:
-      "Expert guides for Etsy sellers on DMCA takedowns, copyright infringement reporting, and fighting IP theft.",
+      "Step-by-step guides for independent sellers on DMCA takedowns, copyright infringement reporting, and fighting IP theft on any platform.",
     url: "https://sellerdefensekit.com/blog",
   },
 };
@@ -34,7 +34,7 @@ export default function BlogIndex() {
               href="https://buy.stripe.com/bJe6oH7PnfHfbXbc1O2Fa00"
               className="bg-amber-500 hover:bg-amber-600 text-white px-4 py-1.5 rounded-lg transition-colors"
             >
-              Get the Kit — $27
+              Get the IP Defense Kit — $27
             </Link>
           </nav>
         </div>
@@ -43,12 +43,12 @@ export default function BlogIndex() {
       {/* Hero */}
       <section className="bg-amber-50 px-5 py-12">
         <div className="max-w-3xl mx-auto">
-          <p className="text-sm font-semibold text-amber-700 uppercase tracking-wide mb-3">Resources for Etsy Sellers</p>
+          <p className="text-sm font-semibold text-amber-700 uppercase tracking-wide mb-3">IP Protection Resources</p>
           <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
-            Etsy IP &amp; DMCA Guides
+            DMCA and Copyright Guides
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl">
-            Step-by-step guides to filing DMCA takedowns, reporting copyright infringement, and fighting back against copycats — written for Etsy sellers who need real answers, not legal runaround.
+            Step-by-step guides to filing DMCA takedowns, reporting copyright infringement, and fighting back against copycats, written for independent sellers and small creative businesses who need real answers, not legal runaround.
           </p>
         </div>
       </section>
@@ -97,15 +97,15 @@ export default function BlogIndex() {
       {/* CTA */}
       <section className="bg-amber-50 border-t border-amber-100 px-5 py-12">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-3">Ready to Protect Your Shop?</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-3">Ready to Protect Your Original Work?</h2>
           <p className="text-gray-600 mb-6">
-            The Etsy IP Defense Kit includes 5 fill-in-the-blank templates so you can file takedowns in minutes, not hours.
+            Seller Defense Kit includes 5 fill-in-the-blank templates so independent sellers and small creative businesses can file takedowns in minutes, not hours. Works for any platform or standalone website.
           </p>
           <a
             href="https://buy.stripe.com/bJe6oH7PnfHfbXbc1O2Fa00"
             className="inline-block bg-amber-500 hover:bg-amber-600 text-white font-bold px-8 py-4 rounded-xl shadow-md transition-colors"
           >
-            Get the Kit — $27
+            Get the IP Defense Kit — $27
           </a>
           <p className="text-sm text-gray-500 mt-3">Instant download. No account needed.</p>
         </div>
@@ -118,6 +118,7 @@ export default function BlogIndex() {
           <nav className="flex gap-4">
             <Link href="/" className="hover:text-gray-700 transition-colors">Home</Link>
             <Link href="/blog" className="hover:text-gray-700 transition-colors">Blog</Link>
+            <Link href="/privacy" className="hover:text-gray-700 transition-colors">Privacy Policy</Link>
           </nav>
         </div>
       </footer>

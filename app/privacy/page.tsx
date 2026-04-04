@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — Etsy IP Defense Kit",
+  title: "Privacy Policy — Seller Defense Kit",
   description: "Privacy policy for sellerdefensekit.com.",
   robots: { index: false },
 };
@@ -15,7 +15,7 @@ export default function PrivacyPage() {
       <header className="bg-amber-50 px-5 py-8 border-b border-amber-100">
         <div className="max-w-2xl mx-auto">
           <Link href="/" className="text-amber-600 hover:text-amber-700 text-sm font-medium">
-            &larr; Back to Etsy IP Defense Kit
+            &larr; Back to Seller Defense Kit
           </Link>
         </div>
       </header>
@@ -76,7 +76,7 @@ export default function PrivacyPage() {
                   delivery. Your email address is passed to Resend for the sole purpose of delivering
                   your order confirmation and download link. Resend&apos;s privacy policy is available
                   at{" "}
-                  <a href="https://resend.com/privacy" target="_blank" rel="noopener noreferrer"
+                  <a href="https://resend.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer"
                     className="text-amber-600 hover:text-amber-700 underline">
                     resend.com/privacy
                   </a>.
@@ -134,7 +134,7 @@ export default function PrivacyPage() {
       {/* Footer */}
       <footer className="bg-gray-900 text-gray-400 text-sm px-5 py-8 text-center mt-12">
         <p className="mb-2">
-          &copy; {new Date().getFullYear()} Etsy IP Defense Kit. All rights reserved.
+          &copy; {new Date().getFullYear()} Seller Defense Kit. All rights reserved.
         </p>
         <p className="mb-3">
           <Link href="/" className="text-amber-400 hover:text-amber-300 underline mr-4">

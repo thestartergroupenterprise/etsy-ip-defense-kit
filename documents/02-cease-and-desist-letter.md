@@ -153,5 +153,5 @@ Immediately after sending, log:
 
 ---
 
-*Etsy IP Defense Kit — Document 2 of 5*
+*Seller Defense Kit — Document 2 of 5*
 *Not legal advice. This template provides a starting framework for copyright enforcement. For complex disputes, repeated infringement, or if you receive a counter-notice, consult a qualified intellectual property attorney.*

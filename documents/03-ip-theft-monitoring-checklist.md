@@ -222,5 +222,5 @@ Set a recurring reminder (calendar, phone, task app) for:
 
 ---
 
-*Etsy IP Defense Kit — Document 3 of 5*
+*Seller Defense Kit — Document 3 of 5*
 *Not legal advice. For persistent or large-scale infringement, consult a qualified intellectual property attorney.*

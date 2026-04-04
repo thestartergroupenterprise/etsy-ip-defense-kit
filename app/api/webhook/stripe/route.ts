@@ -128,7 +128,7 @@ export async function POST(req: NextRequest) {
         from: fromEmail,
         to: customerEmail,
         replyTo: "thestartergroupenterprise@gmail.com",
-        subject: "Your Etsy IP Defense Kit is ready — download link inside",
+        subject: "Your Seller Defense Kit is ready — download link inside",
         html: buildEmailHtml(downloadPageUrl, customerEmail),
         text: buildEmailText(downloadPageUrl, customerEmail),
       });
@@ -157,12 +157,12 @@ function buildEmailHtml(downloadPageUrl: string, customerEmail: string): string 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Your Etsy IP Defense Kit</title>
+  <title>Your Seller Defense Kit</title>
 </head>
 <body style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; color: #111;">
 
   <h1 style="color: #d97706; font-size: 24px; margin-bottom: 8px;">
-    Your Etsy IP Defense Kit is ready.
+    Your Seller Defense Kit is ready.
   </h1>
 
   <p style="font-size: 16px; color: #555; margin-bottom: 24px;">
@@ -208,7 +208,7 @@ function buildEmailHtml(downloadPageUrl: string, customerEmail: string): string 
   <p style="font-size: 11px; color: #bbb; line-height: 1.6;">
     This email was sent by <strong>Seller Defense Kit, a product of The Starter Group</strong><br>
     2967 Dundas St W, Toronto, ON M6P 1Z2, Canada<br>
-    You received this email because you purchased the Etsy IP Defense Kit.<br>
+    You received this email because you purchased the Seller Defense Kit.<br>
     <a href="${unsubscribeUrl}" style="color: #bbb;">Unsubscribe</a>
   </p>
 
@@ -218,7 +218,7 @@ function buildEmailHtml(downloadPageUrl: string, customerEmail: string): string 
 
 function buildEmailText(downloadPageUrl: string, customerEmail: string): string {
   const unsubscribeUrl = `https://sellerdefensekit.com/unsubscribe?email=${encodeURIComponent(customerEmail)}`;
-  return `Your Etsy IP Defense Kit is ready.
+  return `Your Seller Defense Kit is ready.
 
 Thank you for your purchase. Download your 5-document PDF kit here:
 ${downloadPageUrl}
@@ -238,6 +238,6 @@ Questions? Reply to this email or contact us at thestartergroupenterprise@gmail.
 ---
 This email was sent by Seller Defense Kit, a product of The Starter Group
 2967 Dundas St W, Toronto, ON M6P 1Z2, Canada
-You received this email because you purchased the Etsy IP Defense Kit.
+You received this email because you purchased the Seller Defense Kit.
 Unsubscribe: ${unsubscribeUrl}`;
 }

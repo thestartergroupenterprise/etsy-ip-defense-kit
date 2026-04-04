@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Creates the Etsy IP Defense Kit download bundle.
+ * Creates the Seller Defense Kit download bundle.
  * Packages all 5 documents as a ZIP file in public/downloads/
  * 
  * This script converts markdown to clean HTML pages that print to PDF natively
@@ -70,7 +70,7 @@ function mdToHtml(content, docNumber, title) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${title} — Etsy IP Defense Kit</title>
+  <title>${title} — Seller Defense Kit</title>
   <style>
     @page { margin: 2cm; }
     body {
@@ -136,7 +136,7 @@ const documents = [
   { file: '05-listing-reinstatement-appeal.md', num: 5, title: 'Listing Reinstatement Appeal', outName: '05-Listing-Reinstatement-Appeal.html' },
 ];
 
-console.log('🔨 Building Etsy IP Defense Kit bundle...\n');
+console.log('🔨 Building Seller Defense Kit bundle...\n');
 
 documents.forEach(doc => {
   const mdContent = fs.readFileSync(path.join(DOCS_DIR, doc.file), 'utf8');

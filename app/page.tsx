@@ -36,7 +36,7 @@ export default function Home() {
               href={STRIPE_PAYMENT_LINK}
               className="inline-block bg-amber-500 hover:bg-amber-600 active:bg-amber-700 text-white text-xl font-bold px-10 py-5 rounded-xl shadow-lg transition-colors w-full sm:w-auto"
             >
-              Get the Kit — $27
+              Get the IP Defense Kit — $27
             </a>
           </div>
 
@@ -64,9 +64,9 @@ export default function Home() {
                   DMCA Takedown Notice
                 </p>
                 <p className="text-gray-600 text-sm">
-                  Fill-in-the-blank legal template calibrated for Etsy&apos;s
-                  actual IP portal (not the broken Help Center link), Temu,
-                  AliExpress, and the open web. File a valid notice in minutes,
+                  Fill-in-the-blank legal template valid for any platform,
+                  marketplace, or standalone website. Includes the six required
+                  elements under US federal law. File a valid notice in minutes,
                   not hours.
                 </p>
               </div>
@@ -94,9 +94,11 @@ export default function Home() {
                 </p>
                 <p className="text-gray-600 text-sm">
                   Step-by-step system to find stolen photos and copied listings
-                  across Etsy, Temu, AliExpress, Pinterest, and Amazon — using
-                  reverse image search, keyword search, and text matching.
-                  Weekly sweep takes under 30 minutes.
+                  across Etsy, Temu, AliExpress, Pinterest, Amazon, and the
+                  open web. Covers reverse image search across any website,
+                  Google image search for stolen photos on standalone sites,
+                  competitor website monitoring, and keyword search across all
+                  platforms. Weekly sweep takes under 30 minutes.
                 </p>
               </div>
             </li>
@@ -108,10 +110,11 @@ export default function Home() {
                   Multi-Platform Filing Guide
                 </p>
                 <p className="text-gray-600 text-sm">
-                  Exact steps for filing on each platform — Etsy IP portal, Temu
-                  takedown form, AliExpress IP center, Amazon Brand
-                  Registry/report. Every field explained. No more going in
-                  circles.
+                  Exact steps for filing on every platform and channel — Etsy
+                  IP portal, Temu takedown form, AliExpress IP center, Amazon
+                  Brand Registry, and standalone websites via hosting provider
+                  DMCA agent (includes WHOIS lookup process). Every field
+                  explained. No more going in circles.
                 </p>
               </div>
             </li>
@@ -148,7 +151,7 @@ export default function Home() {
             href={STRIPE_PAYMENT_LINK}
             className="inline-block bg-amber-500 hover:bg-amber-600 active:bg-amber-700 text-white text-xl font-bold px-10 py-5 rounded-xl shadow-lg transition-colors w-full sm:w-auto"
           >
-            Get the Kit — $27
+            Get the IP Defense Kit — $27
           </a>
 
           <p className="text-sm text-gray-500 mt-4">
@@ -183,19 +186,53 @@ export default function Home() {
                 Do I need to be a lawyer to use these?
               </p>
               <p className="text-gray-600 text-sm">
-                No. The templates are written for regular sellers, not attorneys.
-                Every field is labeled with exactly what to put there.
+                No. The templates are written for independent sellers and small
+                business owners, not attorneys. Every field is labeled with
+                exactly what to put there. If you know the details of the
+                infringement, you have everything you need to file.
               </p>
             </div>
             <div className="bg-white rounded-xl p-5 shadow-sm">
               <p className="font-semibold text-gray-900 mb-2">
-                Do these work for all types of IP theft?
+                Do these work if I sell through my own website, not a
+                marketplace?
               </p>
               <p className="text-gray-600 text-sm">
-                These templates are optimized for copyright infringement —
-                stolen photos, copied listing descriptions, and unauthorized use
-                of your original creative work. For trademark or patent issues,
-                consult an attorney.
+                Yes. The kit covers standalone websites explicitly. The
+                Multi-Platform Filing Guide includes the full process for
+                filing against content on any website via the hosting
+                provider&apos;s DMCA agent, including how to do a WHOIS lookup
+                to identify the host. US-based hosting providers are legally
+                required to respond to valid DMCA notices regardless of the
+                platform.
+              </p>
+            </div>
+            <div className="bg-white rounded-xl p-5 shadow-sm">
+              <p className="font-semibold text-gray-900 mb-2">
+                What platforms and channels do these templates cover?
+              </p>
+              <p className="text-gray-600 text-sm">
+                Etsy, Amazon, Temu, AliExpress, Pinterest, Shopify, Gumroad,
+                standalone websites, and any other DMCA-compliant platform or
+                hosting provider. The DMCA notice template uses the standard
+                six-element legal format required under 17 U.S.C. Section 512,
+                which applies equally across all of them. You fill in the
+                platform-specific details; the legal structure is the same
+                everywhere.
+              </p>
+            </div>
+            <div className="bg-white rounded-xl p-5 shadow-sm">
+              <p className="font-semibold text-gray-900 mb-2">
+                Does this work for a small business with staff, not just a
+                solo seller?
+              </p>
+              <p className="text-gray-600 text-sm">
+                Yes. The templates are designed for any independent seller or
+                small creative business, whether you are running everything
+                yourself or have a small team. The legal format and process are
+                the same regardless of business size. Many small businesses
+                with 2 to 10 staff members use these to handle IP enforcement
+                without outsourcing to a law firm.
               </p>
             </div>
             <div className="bg-white rounded-xl p-5 shadow-sm">
@@ -215,11 +252,25 @@ export default function Home() {
             </div>
             <div className="bg-white rounded-xl p-5 shadow-sm">
               <p className="font-semibold text-gray-900 mb-2">
+                What types of IP theft do these templates cover?
+              </p>
+              <p className="text-gray-600 text-sm">
+                These templates are optimized for copyright infringement:
+                stolen product photos, copied listing descriptions, unauthorized
+                use of original digital designs, and resale of digital products
+                without permission. For trademark or design patent issues,
+                consult an attorney. For copyright on any original creative
+                work you made, this kit covers the full enforcement process.
+              </p>
+            </div>
+            <div className="bg-white rounded-xl p-5 shadow-sm">
+              <p className="font-semibold text-gray-900 mb-2">
                 How do I get the kit after purchasing?
               </p>
               <p className="text-gray-600 text-sm">
                 Instantly. After your purchase, you&apos;ll receive an email
                 with a download link. No account needed, no login required.
+                Works on any device.
               </p>
             </div>
           </div>
@@ -239,7 +290,7 @@ export default function Home() {
             href={STRIPE_PAYMENT_LINK}
             className="inline-block bg-white hover:bg-gray-100 text-amber-600 text-xl font-bold px-10 py-5 rounded-xl shadow-lg transition-colors w-full sm:w-auto"
           >
-            Get the Kit — $27
+            Get the IP Defense Kit — $27
           </a>
           <p className="text-amber-100 text-sm mt-4">
             Instant download · 30-day money-back guarantee
@@ -250,7 +301,7 @@ export default function Home() {
       {/* ── FOOTER ── */}
       <footer className="bg-gray-900 text-gray-400 text-sm px-5 py-8 text-center">
         <p className="mb-2">
-          © {new Date().getFullYear()} Etsy IP Defense Kit. All rights reserved.
+          © {new Date().getFullYear()} Seller Defense Kit. All rights reserved.
         </p>
         <p className="mb-3">
           <Link href="/blog" className="text-amber-400 hover:text-amber-300 underline mr-4">

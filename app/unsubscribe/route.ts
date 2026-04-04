@@ -107,7 +107,7 @@ function buildConfirmationHtml(email: string): string {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Unsubscribed | Etsy IP Defense Kit</title>
+  <title>Unsubscribed | Seller Defense Kit</title>
   <style>
     body { font-family: Arial, sans-serif; max-width: 560px; margin: 80px auto; padding: 20px; color: #333; text-align: center; }
     h1 { color: #111; font-size: 24px; margin-bottom: 12px; }
@@ -127,7 +127,7 @@ function buildConfirmationHtml(email: string): string {
     you have already made (e.g. download links, receipts).
   </p>
   <p class="note">
-    <a href="${SITE_URL}">Return to Etsy IP Defense Kit</a>
+    <a href="${SITE_URL}">Return to Seller Defense Kit</a>
   </p>
 </body>
 </html>`;
@@ -139,7 +139,7 @@ function buildErrorHtml(message: string): string {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Unsubscribe Error | Etsy IP Defense Kit</title>
+  <title>Unsubscribe Error | Seller Defense Kit</title>
   <style>
     body { font-family: Arial, sans-serif; max-width: 560px; margin: 80px auto; padding: 20px; color: #333; text-align: center; }
     h1 { color: #c00; font-size: 22px; }

@@ -33,7 +33,7 @@ export const blogPosts: BlogPost[] = [
     readingTime: "7 min read",
     intro:
       "Someone copied your Etsy listing. Your photos, your description, maybe even your exact product. Now what? Filing a DMCA takedown is your most powerful legal tool  -  and Etsy has a specific process for it. Here's exactly how to do it.",
-    keyTakeaway: "Filing a DMCA on Etsy works -- but only when all 6 required legal elements are included. Use Etsy's dedicated IP portal at etsy.com/legal/ip/report, not the general Help Center. Document everything before you file, and act fast. Every hour a copycat listing stays live, it takes revenue and rankings from you. For the exact statutory language required in your notice, the Etsy IP Defense Kit at sellerdefensekit.com has everything pre-written and ready to file.",
+    keyTakeaway: "Filing a DMCA on Etsy works -- but only when all 6 required legal elements are included. Use Etsy's dedicated IP portal at etsy.com/legal/ip/report, not the general Help Center. Document everything before you file, and act fast. Every hour a copycat listing stays live, it takes revenue and rankings from you. For the exact statutory language required in your notice, Seller Defense Kit at sellerdefensekit.com has everything pre-written and ready to file.",
     faq: [
       {
         q: "How long does it take Etsy to process a DMCA notice?",
@@ -713,7 +713,7 @@ export const blogPosts: BlogPost[] = [
     intro:
       "A DMCA takedown notice is your fastest legal tool for removing copied content from Etsy and other platforms. But only if it includes all 6 required elements. Miss one and your notice is legally defective - and the copycat listing stays up. This guide covers exactly what goes into a valid DMCA takedown notice, how to send it, and what happens after.",
     keyTakeaway:
-      "A valid DMCA takedown notice requires all 6 statutory elements under 17 U.S.C. 512(c)(3). Missing any one of them gives the platform legal grounds to ignore your notice. The two most commonly omitted elements are the good faith statement and the sworn accuracy statement. If writing notices from scratch sounds like a lot, the Etsy IP Defense Kit at sellerdefensekit.com includes pre-written DMCA notices with all required language already in place.",
+      "A valid DMCA takedown notice requires all 6 statutory elements under 17 U.S.C. 512(c)(3). Missing any one of them gives the platform legal grounds to ignore your notice. The two most commonly omitted elements are the good faith statement and the sworn accuracy statement. If writing notices from scratch sounds like a lot, Seller Defense Kit at sellerdefensekit.com includes pre-written DMCA notices with all required language already in place.",
     faq: [
       {
         q: "Does a DMCA takedown notice need to be notarized?",
@@ -878,7 +878,7 @@ export const blogPosts: BlogPost[] = [
     intro:
       "Someone copied your Etsy listing and now you're looking at options. Professional DMCA takedown services exist. So do templates. The price difference is enormous and the outcome is often identical. Here is how to know which one your situation actually requires.",
     keyTakeaway:
-      "Professional DMCA services charge $300 to $2,000 per filing and make sense for complex litigation, mass infringement across dozens of platforms, or cases where legal representation is required. For standard Etsy takedowns involving copied photos, listings, or digital products, a properly structured template gets the same result for a fraction of the cost. The Etsy IP Defense Kit at sellerdefensekit.com includes five platform-specific templates that cover the situations most Etsy sellers actually face.",
+      "Professional DMCA services charge $300 to $2,000 per filing and make sense for complex litigation, mass infringement across dozens of platforms, or cases where legal representation is required. For standard Etsy takedowns involving copied photos, listings, or digital products, a properly structured template gets the same result for a fraction of the cost. Seller Defense Kit at sellerdefensekit.com includes five platform-specific templates that cover the situations most independent sellers and small creative businesses actually face.",
     faq: [
       {
         q: "What does a professional DMCA takedown service cost?",

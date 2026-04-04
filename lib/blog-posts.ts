@@ -133,6 +133,8 @@ export const blogPosts: BlogPost[] = [
 </ul>
 <p>The core DMCA notice language is the same across all platforms  -  you just reformat the submission for each portal.</p>
 
+<p>When copied content appears on an independent website rather than a marketplace, the process works differently. Use a WHOIS lookup service to identify the site's hosting provider by searching the domain name and reviewing the registrar and nameserver information in the results. Once you have the hosting company, locate their designated DMCA agent through the Copyright Office's DMCA agent registry. Send your standard DMCA notice directly to that agent by email, referencing the specific page URLs where the infringing content appears. Most hosting providers respond within 5 to 10 business days and will either remove the content themselves or require the site owner to take it down to maintain their service account.</p>
+
 <h2>Common DMCA Mistakes That Get Notices Rejected</h2>
 <ul>
   <li><strong>No sworn statements</strong>  -  Both the good faith and accuracy statements are legally required</li>
@@ -384,6 +386,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>When One Template Isn't Enough</h2>
 <p>The DMCA Notice is just one of several tools available to you. Depending on your situation, you may also need a Cease &amp; Desist letter to the seller, a counter-notice if someone files against you falsely, or an escalation letter for platforms that don't respond.</p>
+<p>The template structure in this guide is recognized by every DMCA-compliant platform and hosting provider, not just Etsy. The six required elements under 17 U.S.C. Section 512 apply identically whether you are filing against a marketplace listing on Amazon or Temu, a post on a social platform, or content hosted on a standalone website. The sworn statement language does not change based on where you are filing. You fill in the platform-specific details and the infringing URLs, but the legal structure and required declarations are identical across all of these situations.</p>
 <p>The Etsy IP Defense Kit (<a href="https://sellerdefensekit.com?utm_source=blog&utm_medium=organic&utm_campaign=seo">sellerdefensekit.com</a>) includes 5 ready-to-file templates  -  DMCA Notice, Cease &amp; Desist, Counter-Notice, Platform Escalation Letter, and Repeat Infringer Warning  -  all pre-loaded with the exact legal language required. $27 one-time, instant download.</p>
 <p>Also read: <a href="/blog/file-dmca-etsy">How to File a DMCA on Etsy</a> and <a href="/blog/copyright-infringement-etsy">How to Report Copyright Infringement on Etsy</a>.</p>
 
@@ -456,6 +459,8 @@ export const blogPosts: BlogPost[] = [
   <li>Work created by someone else that you purchased the physical product from</li>
 </ul>
 <p>If someone is selling a visually similar product but took their own photos and wrote their own description, copyright won't help you. Look into trade dress, trademark, or design patent instead.</p>
+
+<p>One important point: this copyright protection applies regardless of where you sell or where the copying occurs. Whether your original work appears in an Etsy shop, on your own independent website, through a Shopify store, or sold through any other channel, the same automatic copyright covers it everywhere. The enforcement process described in this article is not limited to marketplace infringement. Sellers operating their own websites have the same rights and can use the same DMCA framework to file against copying on competing sites, on platforms, and on any online channel where their work appears without authorization.</p>
 
 <h2>Step-by-Step: Reporting Copyright Infringement on Etsy</h2>
 

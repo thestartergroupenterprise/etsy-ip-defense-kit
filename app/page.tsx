@@ -125,7 +125,8 @@ export default function Home() {
                   For the scenario where{" "}
                   <em>your</em> listing gets suspended when a thief files a
                   report using your own photos. This appeal template is unique
-                  to this kit — and to a problem Etsy sellers face every day.
+                  to this kit, and to a problem independent sellers and small
+                  creative businesses face every day.
                 </p>
               </div>
             </li>
@@ -198,12 +199,17 @@ export default function Home() {
             </div>
             <div className="bg-white rounded-xl p-5 shadow-sm">
               <p className="font-semibold text-gray-900 mb-2">
-                What if Etsy doesn&apos;t respond?
+                What if the platform doesn&apos;t respond?
               </p>
               <p className="text-gray-600 text-sm">
-                Document 4 includes escalation steps and follow-up email
-                templates for exactly that situation. You won&apos;t be left
-                wondering what to do next.
+                Document 4 includes escalation steps for every major platform.
+                For Etsy, escalate directly to legal@etsy.com with your case
+                number. For Amazon, escalate through Brand Registry&apos;s
+                escalation path. If the content is on a standalone website,
+                contact the site&apos;s hosting provider directly using the
+                same DMCA notice format. Hosts are equally required to respond
+                under safe harbor rules and most act within 5 to 10 business
+                days.
               </p>
             </div>
             <div className="bg-white rounded-xl p-5 shadow-sm">

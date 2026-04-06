@@ -146,7 +146,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Ready to File? Use a Pre-Written Template</h2>
 <p>The Etsy IP Defense Kit (<a href="https://sellerdefensekit.com?utm_source=blog&utm_medium=organic&utm_campaign=seo">sellerdefensekit.com</a>) includes 5 ready-to-file templates  -  DMCA Notice, Cease &amp; Desist, Counter-Notice, Platform Escalation Letter, and Repeat Infringer Warning  -  all pre-loaded with the legally required language. Fill in your details, submit, and protect your shop. $27 one-time, instant download.</p>
-<p>Also read: <a href="/blog/dmca-takedown-notice-etsy-template">DMCA Takedown Notice Etsy Template</a> and <a href="/blog/copyright-infringement-etsy">How to Report Copyright Infringement on Etsy</a>.</p>
+<p>Also read: <a href="/blog/dmca-takedown-notice-etsy-template">DMCA Takedown Notice Etsy Template</a>, <a href="/blog/copyright-infringement-etsy">How to Report Copyright Infringement on Etsy</a>, and the <a href="/blog/dmca-takedown-notice-guide">complete DMCA takedown notice guide</a>.</p>
 
 <div style="background:#fef3c7;border:1px solid #fbbf24;border-radius:8px;padding:20px;margin:32px 0;">
 <strong>Key Takeaways</strong>
@@ -263,7 +263,7 @@ export const blogPosts: BlogPost[] = [
 <h2>Protect Yourself Going Forward</h2>
 <p>The best defense is a documented offense. Keep dated records of all original creative work. Consider copyright registration for your most valuable products ($35–$55 at copyright.gov)  -  registered works allow you to sue for statutory damages and attorney's fees, which dramatically increases your leverage.</p>
 <p>The Etsy IP Defense Kit (<a href="https://sellerdefensekit.com?utm_source=blog&utm_medium=organic&utm_campaign=seo">sellerdefensekit.com</a>) includes 5 ready-to-file templates  -  DMCA Notice, Cease &amp; Desist, Counter-Notice, Platform Escalation Letter, and Repeat Infringer Warning. Everything you need to shut down a copycat fast, with the legally required language already written in. $27 one-time, instant download.</p>
-<p>Also see: <a href="/blog/dmca-takedown-notice-etsy-template">DMCA Takedown Notice Etsy Template</a> and <a href="/blog/copyright-infringement-etsy">How to Report Copyright Infringement on Etsy</a>.</p>
+<p>Also see: <a href="/blog/dmca-takedown-notice-etsy-template">DMCA Takedown Notice Etsy Template</a>, <a href="/blog/copyright-infringement-etsy">How to Report Copyright Infringement on Etsy</a>, and <a href="/blog/dmca-takedown-notice-guide">how to file a DMCA notice: complete guide</a>.</p>
 
 <div style="background:#fef3c7;border:1px solid #fbbf24;border-radius:8px;padding:20px;margin:32px 0;">
 <strong>Key Takeaways</strong>
@@ -388,7 +388,7 @@ export const blogPosts: BlogPost[] = [
 <p>The DMCA Notice is just one of several tools available to you. Depending on your situation, you may also need a Cease &amp; Desist letter to the seller, a counter-notice if someone files against you falsely, or an escalation letter for platforms that don't respond.</p>
 <p>The template structure in this guide is recognized by every DMCA-compliant platform and hosting provider, not just Etsy. The six required elements under 17 U.S.C. Section 512 apply identically whether you are filing against a marketplace listing on Amazon or Temu, a post on a social platform, or content hosted on a standalone website. The sworn statement language does not change based on where you are filing. You fill in the platform-specific details and the infringing URLs, but the legal structure and required declarations are identical across all of these situations.</p>
 <p>The Etsy IP Defense Kit (<a href="https://sellerdefensekit.com?utm_source=blog&utm_medium=organic&utm_campaign=seo">sellerdefensekit.com</a>) includes 5 ready-to-file templates  -  DMCA Notice, Cease &amp; Desist, Counter-Notice, Platform Escalation Letter, and Repeat Infringer Warning  -  all pre-loaded with the exact legal language required. $27 one-time, instant download.</p>
-<p>Also read: <a href="/blog/file-dmca-etsy">How to File a DMCA on Etsy</a> and <a href="/blog/copyright-infringement-etsy">How to Report Copyright Infringement on Etsy</a>.</p>
+<p>Also read: <a href="/blog/file-dmca-etsy">How to File a DMCA on Etsy</a>, <a href="/blog/copyright-infringement-etsy">How to Report Copyright Infringement on Etsy</a>, and the <a href="/blog/dmca-takedown-notice-guide">DMCA takedown notice complete guide</a>.</p>
 
 <div style="background:#fef3c7;border:1px solid #fbbf24;border-radius:8px;padding:20px;margin:32px 0;">
 <strong>Key Takeaways</strong>
@@ -530,7 +530,7 @@ export const blogPosts: BlogPost[] = [
 <h2>Speed Up Your Process With Pre-Written Templates</h2>
 <p>Writing a legally complete DMCA notice from scratch takes time and legal knowledge most sellers don't have. One wrong phrase and the whole notice is rejected.</p>
 <p>The Etsy IP Defense Kit (<a href="https://sellerdefensekit.com?utm_source=blog&utm_medium=organic&utm_campaign=seo">sellerdefensekit.com</a>) includes 5 ready-to-file templates  -  DMCA Notice, Cease &amp; Desist, Counter-Notice, Platform Escalation Letter, and Repeat Infringer Warning  -  each pre-loaded with required legal language. Fill in your specifics, submit, done. $27 one-time, instant download.</p>
-<p>Also read: <a href="/blog/file-dmca-etsy">How to File a DMCA on Etsy</a> and <a href="/blog/dmca-takedown-notice-etsy-template">DMCA Takedown Notice Etsy Template</a>.</p>
+<p>Also read: <a href="/blog/file-dmca-etsy">How to File a DMCA on Etsy</a>, <a href="/blog/dmca-takedown-notice-etsy-template">DMCA Takedown Notice Etsy Template</a>, and the <a href="/blog/dmca-takedown-notice-guide">DMCA takedown notice guide</a>.</p>
 
 <div style="background:#fef3c7;border:1px solid #fbbf24;border-radius:8px;padding:20px;margin:32px 0;">
 <strong>Key Takeaways</strong>
@@ -668,7 +668,7 @@ export const blogPosts: BlogPost[] = [
 <h2>Have the Right Tools Ready Before You Need Them</h2>
 <p>When a copycat strikes, speed matters. Having your documents pre-written means you're filing within an hour, not a week.</p>
 <p>The Etsy IP Defense Kit (<a href="https://sellerdefensekit.com?utm_source=blog&utm_medium=organic&utm_campaign=seo">sellerdefensekit.com</a>) includes 5 ready-to-file templates  -  DMCA Notice, Cease &amp; Desist, Counter-Notice, Platform Escalation Letter, and Repeat Infringer Warning  -  all pre-loaded with required legal language and ready to adapt for your specific situation. $27 one-time, instant download. Don't wait until your work is stolen to be prepared.</p>
-<p>Also read: <a href="/blog/etsy-listing-stolen">Etsy Listing Stolen? Here Is What to Do</a> and <a href="/blog/copyright-infringement-etsy">How to Report Copyright Infringement on Etsy</a>.</p>
+<p>Also read: <a href="/blog/etsy-listing-stolen">Etsy Listing Stolen? Here Is What to Do</a>, <a href="/blog/copyright-infringement-etsy">How to Report Copyright Infringement on Etsy</a>, and the <a href="/blog/dmca-takedown-notice-guide">complete DMCA takedown notice guide</a>.</p>
 
 <div style="background:#fef3c7;border:1px solid #fbbf24;border-radius:8px;padding:20px;margin:32px 0;">
 <strong>Key Takeaways</strong>

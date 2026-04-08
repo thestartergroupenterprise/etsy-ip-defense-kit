@@ -18,7 +18,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { unstable_cache } from "next/cache";
-import SiteFooter from "@/components/SiteFooter";
 
 export const metadata: Metadata = {
   title: "Thank You, Trademark Protection Kit | Seller Defense Kit",
@@ -263,8 +262,6 @@ export default async function ThankYouTrademark({ searchParams }: Props) {
 
         </div>
       </section>
-
-      <SiteFooter />
     </main>
   );
 }

@@ -132,27 +132,6 @@ export default function PrivacyPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-gray-400 text-sm px-5 py-8 text-center mt-12">
-        <p className="mb-2">
-          &copy; {new Date().getFullYear()} Seller Defense Kit. All rights reserved.
-        </p>
-        <p className="mb-3">
-          <Link href="/" className="text-amber-400 hover:text-amber-300 underline mr-4">
-            Home
-          </Link>
-          <Link href="/blog" className="text-amber-400 hover:text-amber-300 underline mr-4">
-            Blog
-          </Link>
-          <a href="mailto:hello@sellerdefensekit.com"
-            className="text-amber-400 hover:text-amber-300 underline">
-            Support
-          </a>
-        </p>
-        <p className="text-xs text-gray-500 max-w-md mx-auto">
-          Not legal advice. These templates are provided for informational purposes. For complex IP
-          disputes, consult a qualified attorney.
-        </p>
-      </footer>
 
     </main>
   );

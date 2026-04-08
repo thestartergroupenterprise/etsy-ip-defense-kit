@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import SiteFooter from "@/components/SiteFooter";
 
 export const metadata: Metadata = {
   title: "Thank You, DMCA Enforcement Kit | Seller Defense Kit",
@@ -104,8 +103,6 @@ export default function ThankYou() {
 
         </div>
       </section>
-
-      <SiteFooter />
     </main>
   );
 }

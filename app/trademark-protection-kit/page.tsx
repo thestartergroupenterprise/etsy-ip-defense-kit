@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import SiteFooter from "@/components/SiteFooter";
 
 // NOTE: Keywords pending DataForSEO validation when funded.
 // Primary keyword: "trademark protection for online sellers" (working estimate)
@@ -269,8 +268,6 @@ export default function TrademarkProtectionKit() {
           </p>
         </div>
       </section>
-
-      <SiteFooter />
 
     </main>
   );

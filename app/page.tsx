@@ -306,29 +306,7 @@ export default function Home() {
       </section>
 
       {/* ── FOOTER ── */}
-      <footer className="bg-gray-900 text-gray-400 text-sm px-5 py-8 text-center">
-        <p className="mb-2">
-          © {new Date().getFullYear()} Seller Defense Kit. All rights reserved.
-        </p>
-        <p className="mb-3">
-          <Link href="/blog" className="text-amber-400 hover:text-amber-300 underline mr-4">
-            Blog
-          </Link>
-          <Link href="/privacy" className="text-amber-400 hover:text-amber-300 underline mr-4">
-            Privacy Policy
-          </Link>
-          <a
-            href="mailto:hello@sellerdefensekit.com"
-            className="text-amber-400 hover:text-amber-300 underline"
-          >
-            Support
-          </a>
-        </p>
-        <p className="text-xs text-gray-500 max-w-md mx-auto">
-          Not legal advice. These templates are provided for informational
-          purposes. For complex IP disputes, consult a qualified attorney.
-        </p>
-      </footer>
+
 
     </main>
   );

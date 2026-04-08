@@ -115,16 +115,6 @@ export default function BlogIndex() {
       </section>
 
       {/* Footer */}
-      <footer className="px-5 py-8 border-t border-gray-100">
-        <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-500">
-          <p>© {new Date().getFullYear()} Seller Defense Kit. All rights reserved.</p>
-          <nav className="flex gap-4">
-            <Link href="/" className="hover:text-gray-700 transition-colors">Home</Link>
-            <Link href="/blog" className="hover:text-gray-700 transition-colors">Blog</Link>
-            <Link href="/privacy" className="hover:text-gray-700 transition-colors">Privacy Policy</Link>
-          </nav>
-        </div>
-      </footer>
     </main>
   );
 }

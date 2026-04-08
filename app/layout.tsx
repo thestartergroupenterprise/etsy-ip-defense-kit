@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
+import SiteFooter from "@/components/SiteFooter";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
@@ -59,7 +60,10 @@ export default function RootLayout({
           gtag('config', 'G-TSLSGCB5QX');
         `}</Script>
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        <SiteFooter />
+      </body>
     </html>
   );
 }

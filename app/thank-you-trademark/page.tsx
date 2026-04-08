@@ -82,9 +82,8 @@ const checkP1Purchase = unstable_cache(
 
     for (const s of sessions.data) {
       if (s.payment_status !== "paid") continue;
-      const sessionEmail =
-        s.customer_details?.email ||
-        (typeof s.customer === "object" ? s.customer?.email : null);
+      // Use customer_details.email only -- never access .customer.email (DeletedCustomer has no email)
+      const sessionEmail = s.customer_details?.email ?? null;
       if (sessionEmail?.toLowerCase() !== email.toLowerCase()) continue;
 
       // Check line items for P1 product

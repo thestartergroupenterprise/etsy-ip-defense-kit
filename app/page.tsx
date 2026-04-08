@@ -41,7 +41,7 @@ export default function Home() {
           <div className="mb-4">
             <a
               href={STRIPE_PAYMENT_LINK}
-              className="inline-block bg-amber-500 hover:bg-amber-600 active:bg-amber-700 text-white text-xl font-bold px-10 py-5 rounded-xl shadow-lg transition-colors w-full sm:w-auto"
+              className="inline-block bg-amber-600 hover:bg-amber-700 active:bg-amber-800 text-white text-xl font-bold px-10 py-5 rounded-xl shadow-lg transition-colors w-full sm:w-auto"
             >
               Get the IP Defense Kit — $27
             </a>
@@ -156,7 +156,7 @@ export default function Home() {
 
           <a
             href={STRIPE_PAYMENT_LINK}
-            className="inline-block bg-amber-500 hover:bg-amber-600 active:bg-amber-700 text-white text-xl font-bold px-10 py-5 rounded-xl shadow-lg transition-colors w-full sm:w-auto"
+            className="inline-block bg-amber-600 hover:bg-amber-700 active:bg-amber-800 text-white text-xl font-bold px-10 py-5 rounded-xl shadow-lg transition-colors w-full sm:w-auto"
           >
             Get the IP Defense Kit — $27
           </a>
@@ -285,7 +285,7 @@ export default function Home() {
       </section>
 
       {/* ── FINAL CTA ── */}
-      <section className="bg-amber-500 px-5 py-14 text-center">
+      <section className="bg-amber-700 px-5 py-14 text-center">
         <div className="max-w-xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-extrabold text-white mb-3">
             Stop watching copycats profit from your work.

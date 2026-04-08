@@ -144,7 +144,7 @@ export default async function BlogPostPage({ params }: Props) {
             <Link href="/blog" className="hover:text-amber-600 transition-colors">Blog</Link>
             <Link
               href="https://buy.stripe.com/bJe6oH7PnfHfbXbc1O2Fa00"
-              className="bg-amber-500 hover:bg-amber-600 text-white px-4 py-1.5 rounded-lg transition-colors"
+              className="bg-amber-600 hover:bg-amber-700 text-white px-4 py-1.5 rounded-lg transition-colors"
             >
               Get the IP Defense Kit — $27
             </Link>
@@ -261,7 +261,7 @@ export default async function BlogPostPage({ params }: Props) {
           </p>
           <a
             href="https://buy.stripe.com/bJe6oH7PnfHfbXbc1O2Fa00"
-            className="inline-block bg-amber-500 hover:bg-amber-600 text-white font-bold px-8 py-4 rounded-xl shadow-md transition-colors"
+            className="inline-block bg-amber-600 hover:bg-amber-700 text-white font-bold px-8 py-4 rounded-xl shadow-md transition-colors"
           >
             Get the IP Defense Kit -- $27
           </a>

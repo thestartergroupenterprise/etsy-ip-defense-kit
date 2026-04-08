@@ -39,12 +39,10 @@ const getStripeSession = unstable_cache(
     const session = await stripe.checkout.sessions.retrieve(sessionId, {
       expand: ["customer"],
     });
+    // customer_details.email is always the reliable source for checkout sessions.
+    // Do not access session.customer.email -- Customer | DeletedCustomer union lacks email on DeletedCustomer.
     return {
-      customerEmail:
-        session.customer_details?.email ||
-        (typeof session.customer === "object" && session.customer?.email
-          ? session.customer.email
-          : null),
+      customerEmail: session.customer_details?.email ?? null,
     };
   },
   ["stripe-session"],

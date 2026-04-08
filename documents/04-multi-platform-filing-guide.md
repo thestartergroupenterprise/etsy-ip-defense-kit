@@ -2,14 +2,14 @@
 
 ---
 
-**ETSY IP DEFENSE KIT — Document 4 of 5**
+**ETSY IP DEFENSE KIT, Document 4 of 5**
 *Professional IP Protection Templates for Etsy Sellers*
 
 ---
 
 ## HOW TO USE THIS GUIDE
 
-This is the step-by-step "no more spinning your wheels" guide. Each section gives you the exact URL, exact form fields, and what to paste where — for every major platform. Use this alongside Document 1 (DMCA Takedown Notice) as your source material. Read the platform section before you open the form so you know what's coming. Most platforms respond within 3–7 business days. File, log your case number, and move on.
+This is the step-by-step "no more spinning your wheels" guide. Each section gives you the exact URL, exact form fields, and what to paste where, for every major platform. Use this alongside Document 1 (DMCA Takedown Notice) as your source material. Read the platform section before you open the form so you know what's coming. Most platforms respond within 3–7 business days. File, log your case number, and move on.
 
 ---
 
@@ -20,13 +20,13 @@ This is the step-by-step "no more spinning your wheels" guide. Each section give
 Etsy has TWO different IP reporting paths. One works. One doesn't.
 
 - ❌ **The broken path:** Etsy Help Center → "Report a problem" → leads to a loop that goes nowhere
-- ✅ **The working path:** https://www.etsy.com/legal/ip/ — Etsy's official IP reporting portal
+- ✅ **The working path:** https://www.etsy.com/legal/ip/, Etsy's official IP reporting portal
 
 **Always use:** https://www.etsy.com/legal/ip/
 
 ---
 
-### Etsy Filing — Step by Step
+### Etsy Filing, Step by Step
 
 **Time required:** 10–15 minutes per report
 
@@ -47,7 +47,7 @@ Go to: https://www.etsy.com/legal/ip/
 |-------|--------------|
 | **Your Name** | [YOUR FULL LEGAL NAME] |
 | **Company Name** | [YOUR SHOP NAME or leave blank if sole trader] |
-| **Email Address** | [YOUR EMAIL ADDRESS — use one you check daily] |
+| **Email Address** | [YOUR EMAIL ADDRESS, use one you check daily] |
 | **Country** | [YOUR COUNTRY] |
 | **Describe your copyright** | "I am the creator and copyright owner of original product photography for my handmade [PRODUCT TYPE]. I took these photographs on or around [DATE]. My original listing is at [YOUR ETSY LISTING URL]." |
 | **Infringing content URL** | [PASTE THE FULL URL OF THEIR INFRINGING LISTING] |
@@ -76,13 +76,13 @@ Body: "I submitted a copyright infringement report on [DATE] regarding [INFRINGI
 - **The infringer has 10 days** to file a counter-notice.
 - **If no counter-notice:** Etsy removes the content. You get a resolution email.
 - **If counter-notice filed:** Etsy notifies you. You then have 10 business days to file a court action or the content goes back up.
-- **If your listing gets suspended instead** (it happens — see Document 5 for the appeal template).
+- **If your listing gets suspended instead** (it happens, see Document 5 for the appeal template).
 
 ---
 
 ### Multiple Listings on Etsy
 
-You can file multiple infringing URLs in a single report — paste each URL on a separate line in the "Infringing content URL" field, or use the "Add another URL" button if the form provides one.
+You can file multiple infringing URLs in a single report, paste each URL on a separate line in the "Infringing content URL" field, or use the "Add another URL" button if the form provides one.
 
 If reporting against multiple different sellers, file a separate report for each seller.
 
@@ -92,13 +92,13 @@ If reporting against multiple different sellers, file a separate report for each
 
 ### The One Thing You Must Know First
 
-Temu's IP portal requires no account to file. However, your contact information must be accurate — they may need to reach you for follow-up, and false filings can result in your own account being flagged.
+Temu's IP portal requires no account to file. However, your contact information must be accurate, they may need to reach you for follow-up, and false filings can result in your own account being flagged.
 
 **Temu IP Protection Portal:** https://www.temu.com/ip-protect.html
 
 ---
 
-### Temu Filing — Step by Step
+### Temu Filing, Step by Step
 
 **Time required:** 15–20 minutes per report
 
@@ -118,7 +118,7 @@ Go to: https://www.temu.com/ip-protect.html
 | **Rights Owner** | [YOUR NAME or SHOP NAME] |
 | **Description of original work** | "Original product photographs created by me on or around [DATE], depicting [DESCRIBE PRODUCT]. These photographs are copyright protected from the moment of creation." |
 | **Your original work location** | [YOUR ETSY LISTING URL or portfolio URL] |
-| **Infringing Product URL(s)** | [PASTE TEMU PRODUCT URL(s) — one per line] |
+| **Infringing Product URL(s)** | [PASTE TEMU PRODUCT URL(s), one per line] |
 | **Description of infringement** | "The Temu listing(s) above display my original photographs without my authorization. I have not licensed these images to Temu or to the seller. The images are identical/substantially similar to my copyrighted original." |
 
 **Step 4: Upload evidence**
@@ -147,7 +147,7 @@ AliExpress requires a free account to file. You cannot submit a report without o
 
 ---
 
-### AliExpress Filing — Step by Step
+### AliExpress Filing, Step by Step
 
 **Time required:** 20–30 minutes first time (account creation + report); 10–15 minutes after that
 
@@ -169,7 +169,7 @@ AliExpress requires a free account to file. You cannot submit a report without o
 | **Rights Type** | Copyright |
 | **Description of Rights** | "Original product photography created by me, [YOUR NAME], on or around [DATE]. These photographs depict [DESCRIBE YOUR PRODUCT]. Copyright owned by [YOUR NAME / BUSINESS NAME]." |
 | **Proof of Rights** | Upload: screenshot of your original listing with date visible, or original image file with EXIF metadata showing creation date |
-| **Infringing URLs** | [PASTE ALIEXPRESS PRODUCT URL(s) — one per line] |
+| **Infringing URLs** | [PASTE ALIEXPRESS PRODUCT URL(s), one per line] |
 | **Infringement Description** | "The AliExpress listing(s) above display my original copyrighted photographs without authorization. I have not licensed these images to AliExpress, Alibaba, or the listed seller. The photographs are substantially identical to my original work." |
 | **Your Contact Info** | [COMPLETE ALL FIELDS] |
 
@@ -178,7 +178,7 @@ AliExpress requires a free account to file. You cannot submit a report without o
 AliExpress IPP typically responds within **5–7 business days** for copyright complaints.
 
 **Escalation email:** aliexpress.ip@alibaba-inc.com
-Subject line: "Copyright Infringement — Case #[YOUR CASE NUMBER] — Follow-up"
+Subject line: "Copyright Infringement, Case #[YOUR CASE NUMBER], Follow-up"
 
 ---
 
@@ -195,7 +195,7 @@ Both options are covered below.
 
 ---
 
-### Amazon Filing — Step by Step (Without Brand Registry)
+### Amazon Filing, Step by Step (Without Brand Registry)
 
 **Amazon IP Infringement Report Form:** https://www.amazon.com/report/infringement
 
@@ -227,7 +227,7 @@ Check all required declaration boxes and submit.
 
 ---
 
-### Amazon Filing — Step by Step (With Brand Registry)
+### Amazon Filing, Step by Step (With Brand Registry)
 
 If you have an Amazon Seller account with Brand Registry enrolled:
 
@@ -248,7 +248,7 @@ Brand Registry reports are reviewed faster (often 24–48 hours) and receive hig
 
 Set a reminder for 7 days after filing. If you haven't received a resolution, send a follow-up:
 
-**Subject:** `Copyright Infringement Follow-up — [Platform] Case #[YOUR CASE NUMBER] — [DATE FILED]`
+**Subject:** `Copyright Infringement Follow-up, [Platform] Case #[YOUR CASE NUMBER], [DATE FILED]`
 
 **Body:**
 > I filed a copyright infringement report on [DATE] regarding [INFRINGING URL]. My case number is [CASE NUMBER]. The infringing content remains live as of today, [FOLLOW-UP DATE]. Please advise on the current status and expected resolution timeline.
@@ -260,7 +260,7 @@ Set a reminder for 7 days after filing. If you haven't received a resolution, se
 1. **Re-file the report** from scratch with additional evidence (new screenshots, side-by-side comparisons)
 2. **File with the platform's DMCA agent** directly via email (see Document 1 for agent contacts)
 3. **Report the seller to the platform's Trust & Safety / Abuse team** separately (this is a different queue from IP reports)
-4. **For Etsy:** Post in the Etsy seller community forums documenting the issue — community visibility sometimes accelerates platform action
+4. **For Etsy:** Post in the Etsy seller community forums documenting the issue, community visibility sometimes accelerates platform action
 5. **Consult an IP attorney** if infringement is large-scale or causing significant revenue loss
 
 ---
@@ -276,5 +276,5 @@ Set a reminder for 7 days after filing. If you haven't received a resolution, se
 
 ---
 
-*Seller Defense Kit — Document 4 of 5*
+*Seller Defense Kit, Document 4 of 5*
 *Not legal advice. Platform processes change over time. If a URL no longer works, search "[Platform name] IP infringement report" to find the current form. For persistent or large-scale infringement, consult a qualified intellectual property attorney.*

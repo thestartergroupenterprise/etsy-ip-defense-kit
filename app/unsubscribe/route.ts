@@ -1,5 +1,5 @@
 /**
- * Unsubscribe Route — CASL Compliance
+ * Unsubscribe Route, CASL Compliance
  *
  * Handles unsubscribe requests from email footer links.
  * Format: GET /unsubscribe?email=encoded@example.com
@@ -12,7 +12,7 @@
  *
  * Required env vars:
  *   RESEND_API_KEY           Resend API key (already used by webhook)
- *   RESEND_AUDIENCE_ID       Resend audience ID (optional — set when audience is created)
+ *   RESEND_AUDIENCE_ID       Resend audience ID (optional, set when audience is created)
  *   UNSUBSCRIBE_BLOB_TOKEN   Vercel Blob token for writing the audit log (optional)
  *
  * CASL note:
@@ -57,13 +57,13 @@ export async function GET(req: NextRequest) {
       results.push("resend:ok");
       console.log(`[unsubscribe] Resend suppression added for ${email}`);
     } catch (err) {
-      // Non-fatal — log and continue
+      // Non-fatal, log and continue
       results.push("resend:error");
       console.error("[unsubscribe] Resend contacts.create failed:", err);
     }
   } else {
     results.push("resend:skipped (RESEND_AUDIENCE_ID not set)");
-    console.log(`[unsubscribe] RESEND_AUDIENCE_ID not set — skipping Resend suppression for ${email}`);
+    console.log(`[unsubscribe] RESEND_AUDIENCE_ID not set, skipping Resend suppression for ${email}`);
   }
 
   // 2. Append to Vercel Blob audit log
@@ -89,7 +89,7 @@ export async function GET(req: NextRequest) {
     console.error("[unsubscribe] Blob write failed:", err);
   }
 
-  console.log(`[unsubscribe] ${email} — results: ${results.join(", ")}`);
+  console.log(`[unsubscribe] ${email}, results: ${results.join(", ")}`);
 
   return htmlResponse(buildConfirmationHtml(email), 200);
 }

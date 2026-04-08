@@ -4,7 +4,7 @@
  * Packages all 5 documents as a ZIP file in public/downloads/
  * 
  * This script converts markdown to clean HTML pages that print to PDF natively
- * (buyers can File > Print > Save as PDF from any browser — no extra software needed)
+ * (buyers can File > Print > Save as PDF from any browser, no extra software needed)
  */
 
 const fs = require('fs');
@@ -70,7 +70,7 @@ function mdToHtml(content, docNumber, title) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${title} — Seller Defense Kit</title>
+  <title>${title}, Seller Defense Kit</title>
   <style>
     @page { margin: 2cm; }
     body {
@@ -117,7 +117,7 @@ function mdToHtml(content, docNumber, title) {
 <body>
 
 <div class="kit-header">
-  <strong>ETSY IP DEFENSE KIT</strong> — Document ${docNumber} of 5 &nbsp;|&nbsp; 
+  <strong>ETSY IP DEFENSE KIT</strong>, Document ${docNumber} of 5 &nbsp;|&nbsp; 
   Professional IP Protection Templates for Etsy Sellers &nbsp;|&nbsp;
   <em>To save as PDF: File → Print → Save as PDF</em>
 </div>
@@ -156,7 +156,7 @@ These are HTML files that open in any web browser. To convert to PDF:
   1. Open the file in your browser (Chrome, Safari, or Firefox)
   2. Press Ctrl+P (Windows) or Cmd+P (Mac)
   3. Select "Save as PDF" as the printer
-  4. Save — you now have a clean PDF
+  4. Save, you now have a clean PDF
 
 YOUR 5 DOCUMENTS:
 
@@ -172,8 +172,8 @@ YOUR 5 DOCUMENTS:
    30-minute weekly sweep. Step-by-step.
 
 4. 04-Multi-Platform-Filing-Guide.html
-   Step-by-step filing guide for every platform — no more going in circles.
-   Etsy, Temu, AliExpress, Amazon — every form field explained.
+   Step-by-step filing guide for every platform, no more going in circles.
+   Etsy, Temu, AliExpress, Amazon, every form field explained.
 
 5. 05-Listing-Reinstatement-Appeal.html
    For when YOUR listing gets suspended after a thief files against you.
@@ -186,7 +186,7 @@ WHERE TO START:
   - Want to find theft proactively? → Follow document 3 weekly
 
 QUESTIONS?
-Reply to your purchase receipt email — 30-day money-back guarantee, no questions asked.
+Reply to your purchase receipt email, 30-day money-back guarantee, no questions asked.
 
 Not legal advice. For complex disputes, consult a qualified attorney.
 `;

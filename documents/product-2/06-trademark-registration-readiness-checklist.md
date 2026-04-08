@@ -2,14 +2,14 @@
 
 ---
 
-**TRADEMARK PROTECTION RESOURCE TOOLKIT — Document 6 of 6**
+**TRADEMARK PROTECTION RESOURCE TOOLKIT, Document 6 of 6**
 *Brand Protection Tools for Independent Sellers and Small Creative Businesses*
 
 ---
 
 ## HOW TO USE THIS DOCUMENT
 
-This checklist walks you through everything you need to gather before filing a trademark application with the USPTO. You can file yourself through the USPTO TEAS system (Trademark Electronic Application System) at https://www.uspto.gov/trademarks/apply — the filing fee is $250 to $350 per class. Alternatively, use this checklist to be fully prepared before your first consultation with a trademark attorney, reducing billable hours significantly.
+This checklist walks you through everything you need to gather before filing a trademark application with the USPTO. You can file yourself through the USPTO TEAS system (Trademark Electronic Application System) at https://www.uspto.gov/trademarks/apply, the filing fee is $250 to $350 per class. Alternatively, use this checklist to be fully prepared before your first consultation with a trademark attorney, reducing billable hours significantly.
 
 **Complete Document 2 (Trademark Search and Clearance Checklist) before completing this checklist.** Filing without a proper clearance search is the most expensive mistake a seller can make.
 
@@ -25,17 +25,17 @@ This checklist walks you through everything you need to gather before filing a t
 
 ---
 
-### SECTION 1 — ELIGIBILITY BASICS
+### SECTION 1, ELIGIBILITY BASICS
 
 Before filing, confirm your mark meets minimum USPTO requirements.
 
 **Is your mark distinctive?** A mark must be distinctive to be registered. Check which category applies:
 
-[ ] **Fanciful** — Invented word with no prior meaning (e.g., "Kodak," "Etsy") — STRONGEST, easiest to register
-[ ] **Arbitrary** — Real word applied to unrelated goods (e.g., "Apple" for computers) — STRONG
-[ ] **Suggestive** — Hints at a quality without describing it directly — REGISTRABLE
-[ ] **Descriptive** — Directly describes the goods or services — DIFFICULT, requires proof of acquired distinctiveness
-[ ] **Generic** — The common name for the product itself — CANNOT be registered
+[ ] **Fanciful**, Invented word with no prior meaning (e.g., "Kodak," "Etsy"), STRONGEST, easiest to register
+[ ] **Arbitrary**, Real word applied to unrelated goods (e.g., "Apple" for computers), STRONG
+[ ] **Suggestive**, Hints at a quality without describing it directly, REGISTRABLE
+[ ] **Descriptive**, Directly describes the goods or services, DIFFICULT, requires proof of acquired distinctiveness
+[ ] **Generic**, The common name for the product itself, CANNOT be registered
 
 **If your mark falls in the Descriptive or Generic category:** consult a trademark attorney before filing. Registration will likely be refused without additional evidence.
 
@@ -48,10 +48,10 @@ Before filing, confirm your mark meets minimum USPTO requirements.
 
 ---
 
-### SECTION 2 — MARK DETAILS
+### SECTION 2, MARK DETAILS
 
 **Exact form of the mark you are filing:**
-[ ] Standard Characters (word mark — protects the brand name regardless of font or design)
+[ ] Standard Characters (word mark, protects the brand name regardless of font or design)
 [ ] Stylized or Design (protects a specific logo or visual presentation)
 [ ] Sound mark
 [ ] Other: [DESCRIBE]
@@ -62,11 +62,11 @@ Before filing, confirm your mark meets minimum USPTO requirements.
 [ ] You have rights to the design (it was created by you, or you have an assignment from the designer)
 
 **Mark description (required for design marks):**
-[DESCRIBE THE MARK — e.g., "The mark consists of a stylized letter S in amber with a shield outline behind it"]
+[DESCRIBE THE MARK, e.g., "The mark consists of a stylized letter S in amber with a shield outline behind it"]
 
 ---
 
-### SECTION 3 — GOODS AND SERVICES CLASSIFICATION
+### SECTION 3, GOODS AND SERVICES CLASSIFICATION
 
 The USPTO organizes trademarks into 45 international classes. You pay a filing fee per class. File only the classes that describe what you actually sell.
 
@@ -85,36 +85,36 @@ The USPTO organizes trademarks into 45 international classes. You pay a filing f
 | 42 | Software, technology services, SaaS | | [ ] Yes [ ] No |
 | Other: | | | [ ] Yes [ ] No |
 
-**Identification of goods/services (write your exact description — USPTO will review this):**
+**Identification of goods/services (write your exact description, USPTO will review this):**
 
-Class [NUMBER]: [EXACT DESCRIPTION — e.g., "Handmade jewelry, namely, rings, earrings, necklaces, and bracelets"]
+Class [NUMBER]: [EXACT DESCRIPTION, e.g., "Handmade jewelry, namely, rings, earrings, necklaces, and bracelets"]
 Class [NUMBER]: [EXACT DESCRIPTION]
 
 **Tip:** The USPTO ID Manual at https://idm-tmng.uspto.gov/id-master-list-public.html lists pre-approved descriptions. Using an approved description reduces the likelihood of an office action.
 
 ---
 
-### SECTION 4 — BASIS FOR FILING
+### SECTION 4, BASIS FOR FILING
 
 **Which filing basis applies?**
 
-[ ] **Use in Commerce (Section 1(a))** — You are already selling products under this brand name across state lines. This is the strongest basis.
+[ ] **Use in Commerce (Section 1(a))**, You are already selling products under this brand name across state lines. This is the strongest basis.
 
 Required: Specimen showing the mark as used in commerce (see Section 5 below)
 Date of first use anywhere: [DATE]
 Date of first use in interstate commerce: [DATE]
 
-[ ] **Intent to Use (Section 1(b))** — You have not yet used the mark commercially but have a bona fide intent to do so.
+[ ] **Intent to Use (Section 1(b))**, You have not yet used the mark commercially but have a bona fide intent to do so.
 
 Note: You will need to file a Statement of Use after you begin commercial use.
 
-[ ] **Foreign Registration (Section 44(e))** — You have a registration in your home country.
+[ ] **Foreign Registration (Section 44(e))**, You have a registration in your home country.
 
-[ ] **Foreign Application (Section 44(d))** — You filed in your home country within the last 6 months.
+[ ] **Foreign Application (Section 44(d))**, You filed in your home country within the last 6 months.
 
 ---
 
-### SECTION 5 — SPECIMEN (required for Use in Commerce filings)
+### SECTION 5, SPECIMEN (required for Use in Commerce filings)
 
 A specimen shows the USPTO how you use your mark in commerce. It must show the mark as consumers encounter it.
 
@@ -131,16 +131,16 @@ A specimen shows the USPTO how you use your mark in commerce. It must show the m
 - Ads or promotional materials that don't show the product for sale
 - Internal documents
 
-**Specimen prepared:** [ ] Yes — [DESCRIBE: e.g., "Screenshot of Etsy shop homepage showing brand name in shop header, saved as specimen-[BRAND]-[DATE].jpg"] [ ] Still needed
+**Specimen prepared:** [ ] Yes, [DESCRIBE: e.g., "Screenshot of Etsy shop homepage showing brand name in shop header, saved as specimen-[BRAND]-[DATE].jpg"] [ ] Still needed
 
 ---
 
-### SECTION 6 — APPLICANT INFORMATION
+### SECTION 6, APPLICANT INFORMATION
 
 **Applicant type:**
 [ ] Individual
-[ ] LLC — State of organization: [STATE]
-[ ] Corporation — State of incorporation: [STATE]
+[ ] LLC, State of organization: [STATE]
+[ ] Corporation, State of incorporation: [STATE]
 [ ] Partnership
 [ ] Other: [DESCRIBE]
 
@@ -156,36 +156,36 @@ A specimen shows the USPTO how you use your mark in commerce. It must show the m
 [EMAIL]
 
 **Do you have a USPTO account?**
-[ ] Yes — USPTO ID: [ID]
-[ ] No — Create one at: https://my.uspto.gov
+[ ] Yes, USPTO ID: [ID]
+[ ] No, Create one at: https://my.uspto.gov
 
 ---
 
-### SECTION 7 — FILING READINESS SUMMARY
+### SECTION 7, FILING READINESS SUMMARY
 
 Before filing, confirm all of the following:
 
 [ ] Trademark search completed with no blocking conflicts (Document 2)
-[ ] Mark is distinctive — not generic or primarily descriptive
+[ ] Mark is distinctive, not generic or primarily descriptive
 [ ] Filing basis confirmed (use in commerce or intent to use)
 [ ] Goods/services description written and cross-checked against ID Manual
 [ ] Correct class(es) identified
 [ ] Specimen prepared (if filing on use in commerce basis)
 [ ] Applicant legal name and address confirmed
 [ ] USPTO.gov account created
-[ ] Filing fee confirmed: $250 TEAS Plus per class OR $350 TEAS Standard per class (as of 2026 — verify current fees at https://www.uspto.gov/trademarks/apply/fees)
+[ ] Filing fee confirmed: $250 TEAS Plus per class OR $350 TEAS Standard per class (as of 2026, verify current fees at https://www.uspto.gov/trademarks/apply/fees)
 
 **Total estimated filing fee:**
 [ ] Number of classes: [NUMBER] x $[FEE] = $[TOTAL]
 
 ---
 
-### SECTION 8 — AFTER FILING
+### SECTION 8, AFTER FILING
 
 Once your application is submitted:
 
 **Confirmation:** Save your USPTO serial number. You will need it for everything related to this application.
-Your serial number: [NUMBER — save after filing]
+Your serial number: [NUMBER, save after filing]
 
 **Expected timeline:**
 - Initial review: 3 to 4 months
@@ -195,8 +195,8 @@ Your serial number: [NUMBER — save after filing]
 
 **Monitoring your application:**
 Check status at: https://tsdr.uspto.gov
-Check every 30 days for Office Actions — you have 3 months to respond to an Office Action.
-Set calendar reminder: [DATE 3 MONTHS AFTER FILING] — review for Office Actions
+Check every 30 days for Office Actions, you have 3 months to respond to an Office Action.
+Set calendar reminder: [DATE 3 MONTHS AFTER FILING], review for Office Actions
 
 ---
 

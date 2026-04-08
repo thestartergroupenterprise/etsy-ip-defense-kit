@@ -69,7 +69,7 @@ export async function GET(req: NextRequest) {
         const age = now - new Date(record.purchasedAt).getTime();
         let updated = false;
 
-        // Email 2 — 48-hour check-in
+        // Email 2, 48-hour check-in
         if (!record.sent48h && age >= HOURS_48) {
           try {
             await resend.emails.send({
@@ -90,7 +90,7 @@ export async function GET(req: NextRequest) {
           }
         }
 
-        // Email 3 — 7-day tip + Facebook group
+        // Email 3, 7-day tip + Facebook group
         if (!record.sent7d && age >= DAYS_7) {
           try {
             await resend.emails.send({
@@ -114,7 +114,7 @@ export async function GET(req: NextRequest) {
         // Update or clean up the blob record
         if (updated) {
           if (record.sent48h && record.sent7d) {
-            // Both emails sent — remove from queue
+            // Both emails sent, remove from queue
             await del(blob.url);
             console.log(`[nurture-cron] Queue entry removed for ${record.email} (sequence complete)`);
           } else {

@@ -2,14 +2,14 @@
 
 ---
 
-**TRADEMARK PROTECTION RESOURCE TOOLKIT — Document 1 of 6**
+**TRADEMARK PROTECTION RESOURCE TOOLKIT, Document 1 of 6**
 *Brand Protection Tools for Independent Sellers and Small Creative Businesses*
 
 ---
 
 ## HOW TO USE THIS DOCUMENT
 
-Fill in every field marked with [BRACKETS] as completely as possible. The more detail you provide, the stronger your evidence of priority — courts and trademark examiners look for the earliest verifiable date of use. Keep this log updated whenever you use your brand in a new context. This is your evidence of common law trademark rights before formal USPTO registration.
+Fill in every field marked with [BRACKETS] as completely as possible. The more detail you provide, the stronger your evidence of priority, courts and trademark examiners look for the earliest verifiable date of use. Keep this log updated whenever you use your brand in a new context. This is your evidence of common law trademark rights before formal USPTO registration.
 
 ---
 
@@ -25,13 +25,13 @@ Fill in every field marked with [BRACKETS] as completely as possible. The more d
 
 ---
 
-### SECTION 1 — DATES OF FIRST USE
+### SECTION 1, DATES OF FIRST USE
 
 **Date you first used this brand name in connection with your products or services:**
-[DATE — as specific as possible, e.g., March 15, 2022]
+[DATE, as specific as possible, e.g., March 15, 2022]
 
 **Context of first use:**
-[DESCRIBE — e.g., "First listed products on Etsy under this shop name"]
+[DESCRIBE, e.g., "First listed products on Etsy under this shop name"]
 
 **Evidence of first use (list all you have):**
 - [ ] Original listing screenshots with timestamp
@@ -46,11 +46,11 @@ Fill in every field marked with [BRACKETS] as completely as possible. The more d
 [DATE]
 
 **Evidence of first interstate sale:**
-[DESCRIBE — e.g., "First out-of-state order shipped March 22, 2022 — order confirmation attached"]
+[DESCRIBE, e.g., "First out-of-state order shipped March 22, 2022, order confirmation attached"]
 
 ---
 
-### SECTION 2 — TRADEMARK USE RECORD
+### SECTION 2, TRADEMARK USE RECORD
 
 Fill in every platform where your brand name appears. This establishes the scope of your rights.
 
@@ -67,22 +67,22 @@ Fill in every platform where your brand name appears. This establishes the scope
 
 ---
 
-### SECTION 3 — GOODS AND SERVICES DESCRIPTION
+### SECTION 3, GOODS AND SERVICES DESCRIPTION
 
 Describe what you sell under this brand name. Use specific, plain-language descriptions. This maps to USPTO "goods and services" classes.
 
 **Primary product or service category:**
-[DESCRIBE — e.g., "Handmade silver jewelry including rings, earrings, and necklaces"]
+[DESCRIBE, e.g., "Handmade silver jewelry including rings, earrings, and necklaces"]
 
 **Secondary categories (if applicable):**
-[DESCRIBE — e.g., "Digital design files for personal use"]
+[DESCRIBE, e.g., "Digital design files for personal use"]
 
 **Do your products cross into multiple categories?** [ ] Yes [ ] No
 If yes, list each: [DESCRIBE]
 
 ---
 
-### SECTION 4 — BRAND IDENTITY ELEMENTS
+### SECTION 4, BRAND IDENTITY ELEMENTS
 
 List every element that makes up your brand identity. This matters if a copycat adopts a confusingly similar logo, color scheme, or name.
 
@@ -98,7 +98,7 @@ List every element that makes up your brand identity. This matters if a copycat 
 
 ---
 
-### SECTION 5 — EXISTING REGISTRATIONS
+### SECTION 5, EXISTING REGISTRATIONS
 
 | Registration Type | Status | Number | Jurisdiction | Filed Date |
 |------------------|--------|--------|--------------|------------|
@@ -109,7 +109,7 @@ List every element that makes up your brand identity. This matters if a copycat 
 
 ---
 
-### SECTION 6 — KNOWN PRIOR ART / SEARCHES CONDUCTED
+### SECTION 6, KNOWN PRIOR ART / SEARCHES CONDUCTED
 
 Document any trademark searches you have run so there is no gap in your due diligence record.
 
@@ -122,11 +122,11 @@ Document any trademark searches you have run so there is no gap in your due dili
 
 **Conclusion of searches:**
 [ ] No identical or confusingly similar marks found
-[ ] Similar marks found — noted here: [DESCRIBE WHAT YOU FOUND AND HOW DIFFERENT YOUR MARK IS]
+[ ] Similar marks found, noted here: [DESCRIBE WHAT YOU FOUND AND HOW DIFFERENT YOUR MARK IS]
 
 ---
 
-### SECTION 7 — UPDATE LOG
+### SECTION 7, UPDATE LOG
 
 Add a new row every time you use your brand in a new context or take a significant action to protect it.
 

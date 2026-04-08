@@ -2,24 +2,24 @@
 
 ---
 
-**ETSY IP DEFENSE KIT — Document 2 of 5**
+**ETSY IP DEFENSE KIT, Document 2 of 5**
 *Professional IP Protection Templates for Etsy Sellers*
 
 ---
 
 ## HOW TO USE THIS TEMPLATE
 
-This Cease & Desist letter is for direct contact with the copycat seller — a person-to-person demand before or alongside your platform takedown filing. Fill in every [BRACKETED] field. Send via the seller's Etsy "Contact Seller" button, their listed email (if visible), or their business contact if you can find it. Keep a copy of everything you send and any response you receive. Filing this alongside a DMCA notice increases removal speed — platforms give more weight to complaints that show direct prior notice.
+This Cease & Desist letter is for direct contact with the copycat seller, a person-to-person demand before or alongside your platform takedown filing. Fill in every [BRACKETED] field. Send via the seller's Etsy "Contact Seller" button, their listed email (if visible), or their business contact if you can find it. Keep a copy of everything you send and any response you receive. Filing this alongside a DMCA notice increases removal speed, platforms give more weight to complaints that show direct prior notice.
 
 ---
 
 ## CEASE AND DESIST LETTER
 
-**DATE:** [DATE — e.g., March 20, 2026]
+**DATE:** [DATE, e.g., March 20, 2026]
 
 **TO:**
 [INFRINGING SELLER'S NAME OR SHOP NAME]
-[THEIR ETSY SHOP URL — e.g., https://www.etsy.com/shop/TheirShopName]
+[THEIR ETSY SHOP URL, e.g., https://www.etsy.com/shop/TheirShopName]
 [THEIR EMAIL ADDRESS, if available]
 
 **FROM:**
@@ -43,12 +43,12 @@ I am writing to notify you that you are currently infringing my intellectual pro
 I am the sole creator and copyright owner of the following original work(s):
 
 **Work(s) at issue:**
-[DESCRIBE YOUR WORK IN DETAIL — e.g., "Original product photography of my handmade sterling silver moon ring, including [NUMBER] photos taken by me on or around [DATE]. These photos are protected by copyright from the moment of creation under U.S. copyright law (17 U.S.C. § 102)."]
+[DESCRIBE YOUR WORK IN DETAIL, e.g., "Original product photography of my handmade sterling silver moon ring, including [NUMBER] photos taken by me on or around [DATE]. These photos are protected by copyright from the moment of creation under U.S. copyright law (17 U.S.C. § 102)."]
 
 **Location of my original work:**
-[YOUR ETSY LISTING URL — e.g., https://www.etsy.com/listing/123456789/your-listing-title]
+[YOUR ETSY LISTING URL, e.g., https://www.etsy.com/listing/123456789/your-listing-title]
 
-[OPTIONAL — if you have other proof of original ownership:]
+[OPTIONAL, if you have other proof of original ownership:]
 [Link to original file, portfolio, website, social media post with earlier date, etc.]
 
 ---
@@ -61,10 +61,10 @@ Your shop, [THEIR SHOP NAME], is currently using my copyrighted work without aut
 [FULL URL OF THEIR INFRINGING LISTING]
 
 **Description of infringement:**
-[BE SPECIFIC — e.g., "Your listing at the URL above uses my original photographs without my permission. These images are substantially identical to my original photos and were clearly copied from my Etsy listing. I did not grant you a license, permission, or any authorization to use these images."]
+[BE SPECIFIC, e.g., "Your listing at the URL above uses my original photographs without my permission. These images are substantially identical to my original photos and were clearly copied from my Etsy listing. I did not grant you a license, permission, or any authorization to use these images."]
 
 **Infringing listing #2 (if applicable):**
-[FULL URL — delete this block if not needed]
+[FULL URL, delete this block if not needed]
 
 **Description:**
 [DESCRIBE]
@@ -87,10 +87,10 @@ I hereby demand that you take ALL of the following actions **within 48 hours** o
 
 If you do not comply with these demands within 48 hours, I will take the following steps without further notice:
 
-- File a formal DMCA takedown notice with Etsy, which may result in your listing — and potentially your entire shop — being suspended
+- File a formal DMCA takedown notice with Etsy, which may result in your listing, and potentially your entire shop, being suspended
 - File copyright infringement complaints with any other platforms where your infringing content appears (Temu, AliExpress, Amazon, etc.)
 - Report the infringement to Etsy Trust & Safety
-- [OPTIONAL — only include if you are actually willing to do this:] Pursue legal remedies in federal court, including statutory damages of up to $150,000 per work for willful infringement under 17 U.S.C. § 504(c)
+- [OPTIONAL, only include if you are actually willing to do this:] Pursue legal remedies in federal court, including statutory damages of up to $150,000 per work for willful infringement under 17 U.S.C. § 504(c)
 
 Please understand that I take protection of my creative work seriously. I have created a detailed record of your infringing activity, including screenshots and timestamps, which I am preserving.
 
@@ -98,7 +98,7 @@ Please understand that I take protection of my creative work seriously. I have c
 
 ### GOOD FAITH RESOLUTION
 
-I am open to a reasonable resolution if you contact me promptly. However, contact does not suspend the 48-hour deadline — you must still remove the content immediately.
+I am open to a reasonable resolution if you contact me promptly. However, contact does not suspend the 48-hour deadline, you must still remove the content immediately.
 
 ---
 
@@ -110,7 +110,7 @@ Nothing in this letter constitutes a waiver of any of my rights or remedies, all
 
 **Sincerely,**
 
-[YOUR SIGNATURE — handwritten if printing, or typed name if sending electronically]
+[YOUR SIGNATURE, handwritten if printing, or typed name if sending electronically]
 
 [YOUR FULL LEGAL NAME]
 [YOUR BUSINESS/SHOP NAME]
@@ -130,7 +130,7 @@ Nothing in this letter constitutes a waiver of any of my rights or remedies, all
 
 **Via email (if their address is visible):**
 - Send from an email you check regularly (not a throwaway)
-- Use subject line: **"URGENT: Copyright Infringement Notice — Immediate Action Required"**
+- Use subject line: **"URGENT: Copyright Infringement Notice, Immediate Action Required"**
 - Request read receipt if your email client supports it
 - BCC yourself for records
 
@@ -153,5 +153,5 @@ Immediately after sending, log:
 
 ---
 
-*Seller Defense Kit — Document 2 of 5*
+*Seller Defense Kit, Document 2 of 5*
 *Not legal advice. This template provides a starting framework for copyright enforcement. For complex disputes, repeated infringement, or if you receive a counter-notice, consult a qualified intellectual property attorney.*

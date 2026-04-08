@@ -146,7 +146,7 @@ export default async function BlogPostPage({ params }: Props) {
               href="https://buy.stripe.com/bJe6oH7PnfHfbXbc1O2Fa00"
               className="bg-amber-600 hover:bg-amber-700 text-white px-4 py-1.5 rounded-lg transition-colors"
             >
-              Get the IP Defense Kit — $27
+              Get the IP Defense Kit ($27)
             </Link>
           </nav>
         </div>

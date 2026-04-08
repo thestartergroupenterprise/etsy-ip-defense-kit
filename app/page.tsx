@@ -43,7 +43,7 @@ export default function Home() {
               href={STRIPE_PAYMENT_LINK}
               className="inline-block bg-amber-600 hover:bg-amber-700 active:bg-amber-800 text-white text-xl font-bold px-10 py-5 rounded-xl shadow-lg transition-colors w-full sm:w-auto"
             >
-              Get the IP Defense Kit — $27
+              Get the IP Defense Kit ($27)
             </a>
           </div>
 
@@ -117,7 +117,7 @@ export default function Home() {
                   Multi-Platform Filing Guide
                 </p>
                 <p className="text-gray-600 text-sm">
-                  Exact steps for filing on every platform and channel — Etsy
+                  Exact steps for filing on every platform and channel: Etsy
                   IP portal, Temu takedown form, AliExpress IP center, Amazon
                   Brand Registry, and standalone websites via hosting provider
                   DMCA agent (includes WHOIS lookup process). Every field
@@ -158,7 +158,7 @@ export default function Home() {
             href={STRIPE_PAYMENT_LINK}
             className="inline-block bg-amber-600 hover:bg-amber-700 active:bg-amber-800 text-white text-xl font-bold px-10 py-5 rounded-xl shadow-lg transition-colors w-full sm:w-auto"
           >
-            Get the IP Defense Kit — $27
+            Get the IP Defense Kit ($27)
           </a>
 
           <p className="text-sm text-gray-500 mt-4">
@@ -297,7 +297,7 @@ export default function Home() {
             href={STRIPE_PAYMENT_LINK}
             className="inline-block bg-white hover:bg-gray-100 text-amber-600 text-xl font-bold px-10 py-5 rounded-xl shadow-lg transition-colors w-full sm:w-auto"
           >
-            Get the IP Defense Kit — $27
+            Get the IP Defense Kit ($27)
           </a>
           <p className="text-amber-100 text-sm mt-4">
             Instant download · 30-day money-back guarantee

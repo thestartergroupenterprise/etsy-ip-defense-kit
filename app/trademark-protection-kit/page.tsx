@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import SiteFooter from "@/components/SiteFooter";
 
 // NOTE: Keywords pending DataForSEO validation when funded.
 // Primary keyword: "trademark protection for online sellers" (working estimate)
@@ -8,14 +8,14 @@ import Link from "next/link";
 const STRIPE_P2_PAYMENT_LINK = process.env.NEXT_PUBLIC_STRIPE_P2_PAYMENT_LINK || "#";
 
 export const metadata: Metadata = {
-  title: "Trademark Protection Kit for Online Sellers — Seller Defense Kit",
+  title: "Trademark Protection Kit for Online Sellers | Seller Defense Kit",
   description:
-    "6 fill-in-the-blank tools to document your brand rights, monitor for trademark violations, and file platform reports — before someone else claims your brand name. $47.",
+    "6 fill-in-the-blank tools to document your brand rights, monitor for trademark violations, and file platform reports, before someone else claims your brand name. $47.",
   alternates: {
     canonical: "https://sellerdefensekit.com/trademark-protection-kit",
   },
   openGraph: {
-    title: "Trademark Protection Kit for Online Sellers — Seller Defense Kit",
+    title: "Trademark Protection Kit for Online Sellers | Seller Defense Kit",
     description:
       "Someone could file a trademark on your brand name before you do. 6 tools to document, monitor, and protect your brand on Etsy, Amazon, Shopify, and beyond.",
     url: "https://sellerdefensekit.com/trademark-protection-kit",
@@ -42,7 +42,7 @@ export default function TrademarkProtectionKit() {
 
           <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-xl mx-auto">
             You built the brand. You own the name. But until it is documented and monitored,
-            anyone — including a trademark troll — can file a claim on it first.
+            anyone, including a trademark troll, can file a claim on it first.
             Once that happens, you may lose the right to use your own brand name on{" "}
             <span className="font-semibold text-gray-900">every platform you sell on.</span>
           </p>
@@ -51,7 +51,7 @@ export default function TrademarkProtectionKit() {
             href={STRIPE_P2_PAYMENT_LINK}
             className="inline-block bg-amber-600 hover:bg-amber-700 active:bg-amber-800 text-white text-xl font-bold px-10 py-5 rounded-xl shadow-lg transition-colors w-full sm:w-auto"
           >
-            Get the Trademark Protection Kit — $47
+            Get the Trademark Protection Kit ($47)
           </a>
 
           <p className="text-sm text-gray-500 mt-4">
@@ -69,14 +69,14 @@ export default function TrademarkProtectionKit() {
           <div className="space-y-5 text-gray-700 text-base md:text-lg leading-relaxed">
             <p>
               A seller builds a shop name that becomes recognizable. Customers start
-              searching for it by name. Sales grow. Then someone else — sometimes a
+              searching for it by name. Sales grow. Then someone else, sometimes a
               competitor, sometimes a patent or trademark troll with no legitimate
-              claim — files a trademark on that name with the USPTO.
+              claim, files a trademark on that name with the USPTO.
             </p>
             <p>
               Once the trademark is registered to someone else, the original seller gets
               cease and desist letters. Their listings get reported. Their accounts on
-              Etsy, Amazon, and Shopify get flagged for trademark infringement — using
+              Etsy, Amazon, and Shopify get flagged for trademark infringement, using
               a name they created.
             </p>
             <p>
@@ -108,7 +108,7 @@ export default function TrademarkProtectionKit() {
                 number: "01",
                 title: "Brand Rights Documentation Log",
                 description:
-                  "A structured log to record dates, evidence, and history of your brand use. Establishes common law trademark rights before formal USPTO registration — and gives you documentation you can act on immediately if someone challenges your name.",
+                  "A structured log to record dates, evidence, and history of your brand use. Establishes common law trademark rights before formal USPTO registration. Use it to act immediately if someone challenges your name.",
               },
               {
                 number: "02",
@@ -126,7 +126,7 @@ export default function TrademarkProtectionKit() {
                 number: "04",
                 title: "Trademark Monitoring Workflow",
                 description:
-                  "A weekly 20-minute sweep and monthly deep scan protocol covering all major platforms, USPTO new filings, domain registrations, and image search. Catches infringement early — before a copycat builds sales history under your brand name.",
+                  "A weekly 20-minute sweep and monthly deep scan protocol covering all major platforms, USPTO new filings, domain registrations, and image search. Catches infringement early, before a copycat builds sales history under your brand name.",
               },
               {
                 number: "05",
@@ -168,7 +168,7 @@ export default function TrademarkProtectionKit() {
             A full trademark clearance search and filing preparation costs $800 to $1,500
             in professional fees before you even submit the application. The kit gives you
             the documentation tools, the monitoring workflow, and the platform enforcement
-            templates for $47 — so you can protect what you have built before you need to
+            templates for $47, so you can protect what you have built before you need to
             pay a lawyer to defend it.
           </p>
           <p className="text-gray-700 text-base md:text-lg leading-relaxed">
@@ -186,7 +186,7 @@ export default function TrademarkProtectionKit() {
             href={STRIPE_P2_PAYMENT_LINK}
             className="inline-block bg-amber-600 hover:bg-amber-700 active:bg-amber-800 text-white text-xl font-bold px-10 py-5 rounded-xl shadow-lg transition-colors w-full sm:w-auto"
           >
-            Get the Trademark Protection Kit — $47
+            Get the Trademark Protection Kit ($47)
           </a>
           <p className="text-sm text-gray-500 mt-4">
             Instant download. 30-day money-back guarantee. No subscription.
@@ -204,23 +204,23 @@ export default function TrademarkProtectionKit() {
             {[
               {
                 q: "Do I need a registered trademark to use these tools?",
-                a: "No. Most of the tools in the kit work regardless of whether you have a registered trademark. The Brand Rights Documentation Log and Monitoring Workflow are designed specifically for sellers who have not yet registered — documenting common law rights that exist the moment you start using a brand name commercially. The Marketplace Violation Report Template has versions for both registered and unregistered trademark holders.",
+                a: "No. Most of the tools in the kit work regardless of whether you have a registered trademark. The Brand Rights Documentation Log and Monitoring Workflow are designed specifically for sellers who have not yet registered, documenting common law rights that exist the moment you start using a brand name commercially. The Marketplace Violation Report Template has versions for both registered and unregistered trademark holders.",
               },
               {
                 q: "I sell on Etsy. Is this kit for me?",
-                a: "Yes, but the kit is not Etsy-specific. It covers Etsy, Amazon, Shopify, Temu, AliExpress, and independent websites with platform-specific guidance for each. If you sell on multiple platforms — or plan to — the monitoring workflow and violation report templates cover all of them.",
+                a: "Yes, but the kit is not Etsy-specific. It covers Etsy, Amazon, Shopify, Temu, AliExpress, and independent websites with platform-specific guidance for each. If you sell on multiple platforms (or plan to), the monitoring workflow and violation report templates cover all of them.",
               },
               {
                 q: "How is this different from the IP Defense Kit?",
-                a: "The IP Defense Kit (Product 1) is built around copyright enforcement — specifically DMCA takedown notices for copied listings, photos, and original creative work. The Trademark Protection Kit addresses brand identity: your shop name, logo, and brand recognition. Many sellers need both — copyright protection for their creative work and trademark protection for their brand. They are complementary, not overlapping.",
+                a: "The IP Defense Kit (Product 1) is built around copyright enforcement, specifically DMCA takedown notices for copied listings, photos, and original creative work. The Trademark Protection Kit addresses brand identity: your shop name, logo, and brand recognition. Many sellers need both: copyright protection for their creative work and trademark protection for their brand. They are complementary, not overlapping.",
               },
               {
                 q: "Can I use this to file a trademark application myself?",
-                a: "Document 6 (Trademark Registration Readiness Checklist) prepares you to file through the USPTO TEAS portal yourself if you choose. The USPTO filing fee is $250 to $350 per class. The kit gives you the preparation tools — not the filing service itself. For complex situations, the checklist also reduces billable attorney time by getting your documentation in order before the first consultation.",
+                a: "Document 6 (Trademark Registration Readiness Checklist) prepares you to file through the USPTO TEAS portal yourself if you choose. The USPTO filing fee is $250 to $350 per class. The kit gives you the preparation tools, not the filing service itself. For complex situations, the checklist also reduces billable attorney time by getting your documentation in order before the first consultation.",
               },
               {
                 q: "What if someone already filed a trademark on my brand name?",
-                a: "Document 1 (Brand Rights Documentation Log) is your starting point — it helps you build the evidence record of prior use that matters in a dispute. Document 3 (Marketplace Brand Violation Report Template) covers platform-specific enforcement steps. For disputes involving active USPTO applications or registrations, consult a trademark attorney. The kit gives you the documentation foundation; a trademark attorney handles the legal strategy for active disputes.",
+                a: "Document 1 (Brand Rights Documentation Log) is your starting point. It helps you build the evidence record of prior use that matters in a dispute. Document 3 (Marketplace Brand Violation Report Template) covers platform-specific enforcement steps. For disputes involving active USPTO applications or registrations, consult a trademark attorney. The kit gives you the documentation foundation; a trademark attorney handles the legal strategy for active disputes.",
               },
               {
                 q: "What is the refund policy?",
@@ -262,7 +262,7 @@ export default function TrademarkProtectionKit() {
             href={STRIPE_P2_PAYMENT_LINK}
             className="inline-block bg-white hover:bg-gray-100 text-amber-600 text-xl font-bold px-10 py-5 rounded-xl shadow-lg transition-colors w-full sm:w-auto"
           >
-            Get the Trademark Protection Kit — $47
+            Get the Trademark Protection Kit ($47)
           </a>
           <p className="text-amber-200 text-sm mt-4">
             Instant download. 30-day money-back guarantee. No subscription.
@@ -270,28 +270,7 @@ export default function TrademarkProtectionKit() {
         </div>
       </section>
 
-      {/* ── FOOTER NAV ── */}
-      <footer className="px-5 py-8 bg-gray-900 text-center">
-        <p className="text-gray-400 text-sm">
-          <Link href="/" className="hover:text-white transition-colors">
-            Seller Defense Kit
-          </Link>
-          {" · "}
-          <Link href="/privacy" className="hover:text-white transition-colors">
-            Privacy Policy
-          </Link>
-          {" · "}
-          <a
-            href="mailto:thestartergroupenterprise@gmail.com"
-            className="hover:text-white transition-colors"
-          >
-            Contact
-          </a>
-        </p>
-        <p className="text-gray-600 text-xs mt-2">
-          Seller Defense Kit, a product of The Starter Group · 2967 Dundas St W, Toronto, ON M6P 1Z2, Canada
-        </p>
-      </footer>
+      <SiteFooter />
 
     </main>
   );

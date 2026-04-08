@@ -1,31 +1,56 @@
 /**
- * Stripe Webhook Handler
+ * Stripe Webhook Handler, Product 1: Etsy IP Defense Kit
  *
  * Fires on payment_intent.succeeded:
- *   1. Verifies Stripe signature
- *   2. Extracts customer email from the PaymentIntent
- *   3. Mints a signed, time-limited download token (30 days) tied to this payment
- *   4. Sends delivery email via Resend with the unique download link
+ *   1. Verifies Stripe signature using STRIPE_WEBHOOK_SECRET (Product 1 only, never shared)
+ *   2. Validates Stripe product ID via checkout session lookup:
+ *        if payload product ID does not match STRIPE_P1_PRODUCT_ID, reject and alert Founder
+ *   3. Extracts customer email from the PaymentIntent
+ *   4. Mints a signed, time-limited download token (30 days) tied to this payment
+ *   5. Sends Product 1 delivery email via Resend with the unique download link
+ *   6. Writes nurture queue entry to Vercel Blob for follow-up sequence
  *
  * Fires on refund.created:
- *   (logged for future revocation support — no action yet)
+ *   (logged for future revocation support, no action yet)
  *
- * Architecture:
- *   - No filesystem access. ZIP is served from Vercel Blob Storage.
- *   - Each payment gets a unique signed token — can't be guessed or shared indefinitely.
- *   - Future: add Vercel KV to enforce hard download count limits.
+ * DELIVERY ISOLATION RULES (permanent, Founder-set 2026-04-08):
+ *   - This webhook handles ONLY Product 1. Cross-triggering is impossible by architecture.
+ *   - Uses STRIPE_WEBHOOK_SECRET (not shared with any other product)
+ *   - Reads PRODUCT_BLOB_URL (not shared with any other product)
+ *   - Validates against STRIPE_P1_PRODUCT_ID (not shared with any other product)
+ *   - If product ID in payload does not match STRIPE_P1_PRODUCT_ID: reject, alert, stop.
  *
- * Required env vars:
- *   STRIPE_WEBHOOK_SECRET      Stripe webhook signing secret
- *   DOWNLOAD_SIGNING_SECRET    Secret for HMAC-signing download tokens
- *   PRODUCT_BLOB_URL           Vercel Blob URL of the product ZIP
+ * Required env vars (all Product 1 dedicated, no sharing):
+ *   STRIPE_WEBHOOK_SECRET      Product 1 Stripe webhook signing secret
+ *   STRIPE_P1_PRODUCT_ID       Product 1 Stripe product ID (prod_UBj6Q3NT9DQNhr)
+ *   PRODUCT_BLOB_URL           Product 1 Vercel Blob URL (dedicated path)
+ *   DOWNLOAD_SIGNING_SECRET    HMAC secret for download token minting
  *   RESEND_API_KEY             Resend API key
- *   NEXT_PUBLIC_SITE_URL       e.g. https://sellerdefensekit.com
- *   FROM_EMAIL                 e.g. noreply@sellerdefensekit.com
+ *   FROM_EMAIL                 e.g. hello@sellerdefensekit.com
+ *   TELEGRAM_BOT_TOKEN         For Founder mismatch alerts
+ *   TELEGRAM_CHAT_ID           Founder chat ID (8493404368)
  */
 
 import { NextRequest, NextResponse } from "next/server";
 import { generateDownloadToken } from "@/lib/download-token";
+
+const DOWNLOAD_BASE = "https://sellerdefensekit.com/api/download";
+const FOUNDER_CHAT_ID = "8493404368";
+
+async function alertFounder(message: string): Promise<void> {
+  const token = process.env.TELEGRAM_BOT_TOKEN;
+  if (!token) return;
+  try {
+    await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ chat_id: FOUNDER_CHAT_ID, text: message }),
+    });
+  } catch {
+    // Telegram alert failure is logged but never fatal to the request lifecycle
+    console.error("[webhook-p1] Telegram alert failed");
+  }
+}
 
 export async function POST(req: NextRequest) {
   const rawBody = await req.text();
@@ -34,21 +59,19 @@ export async function POST(req: NextRequest) {
   const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
   const resendApiKey = process.env.RESEND_API_KEY;
   const blobUrl = process.env.PRODUCT_BLOB_URL;
-  const fromEmail = process.env.FROM_EMAIL || "noreply@sellerdefensekit.com";
-  // Hardcode the download base — NEXT_PUBLIC_ vars are build-time inlined
-  // and unreliable in serverless API routes at runtime.
-  const DOWNLOAD_BASE = "https://sellerdefensekit.com/api/download";
+  const expectedProductId = process.env.STRIPE_P1_PRODUCT_ID;
+  const fromEmail = process.env.FROM_EMAIL || "hello@sellerdefensekit.com";
 
   if (!webhookSecret) {
-    console.error("[webhook] STRIPE_WEBHOOK_SECRET not set");
+    console.error("[webhook-p1] STRIPE_WEBHOOK_SECRET not set");
     return NextResponse.json({ error: "Webhook not configured" }, { status: 500 });
   }
   if (!resendApiKey) {
-    console.error("[webhook] RESEND_API_KEY not set");
+    console.error("[webhook-p1] RESEND_API_KEY not set");
     return NextResponse.json({ error: "Email provider not configured" }, { status: 500 });
   }
   if (!blobUrl) {
-    console.error("[webhook] PRODUCT_BLOB_URL not set");
+    console.error("[webhook-p1] PRODUCT_BLOB_URL not set");
     return NextResponse.json({ error: "Product file not configured" }, { status: 500 });
   }
   if (!signature) {
@@ -58,27 +81,61 @@ export async function POST(req: NextRequest) {
   // Verify Stripe signature
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   let event: any;
+  let stripeClient: any; // eslint-disable-line @typescript-eslint/no-explicit-any
   try {
     const stripe = (await import("stripe")).default;
-    const stripeClient = new stripe(process.env.STRIPE_SECRET_KEY || "", {
+    stripeClient = new stripe(process.env.STRIPE_SECRET_KEY || "", {
       apiVersion: "2026-02-25.clover",
     });
     event = stripeClient.webhooks.constructEvent(rawBody, signature, webhookSecret);
   } catch (err) {
-    console.error("[webhook] Signature verification failed:", err);
+    console.error("[webhook-p1] Signature verification failed:", err);
     return NextResponse.json({ error: "Invalid signature" }, { status: 400 });
   }
 
   if (event.type === "payment_intent.succeeded") {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const paymentIntent = event.data.object as any;
+
+    // ── PRODUCT ID VALIDATION ──────────────────────────────────────────────
+    // Look up the Checkout Session for this PaymentIntent to verify product ID.
+    // If STRIPE_P1_PRODUCT_ID is set and does not match the payload, reject immediately.
+    if (expectedProductId) {
+      try {
+        const sessions = await stripeClient.checkout.sessions.list({
+          payment_intent: paymentIntent.id,
+          limit: 1,
+          expand: ["data.line_items"],
+        });
+        if (sessions.data.length > 0) {
+          const session = sessions.data[0];
+          const lineItems: any[] = session.line_items?.data ?? []; // eslint-disable-line @typescript-eslint/no-explicit-any
+          const productIds = lineItems
+            .map((item: any) => item.price?.product) // eslint-disable-line @typescript-eslint/no-explicit-any
+            .filter(Boolean);
+
+          if (productIds.length > 0 && !productIds.includes(expectedProductId)) {
+            const alert = `WEBHOOK PRODUCT ID MISMATCH [P1]\nExpected: ${expectedProductId}\nFound: ${productIds.join(", ")}\nPayment Intent: ${paymentIntent.id}\nAction: delivery BLOCKED`;
+            console.error("[webhook-p1]", alert);
+            await alertFounder(alert);
+            return NextResponse.json({ error: "Product ID mismatch, delivery blocked" }, { status: 400 });
+          }
+        }
+      } catch (validationErr) {
+        // If the Stripe API call to fetch the session fails, log and continue.
+        // We do not block delivery on a validation-check network failure.
+        console.warn("[webhook-p1] Product ID validation lookup failed (continuing):", validationErr);
+      }
+    }
+    // ── END PRODUCT ID VALIDATION ──────────────────────────────────────────
+
     const customerEmail: string | null =
       paymentIntent.receipt_email ||
       paymentIntent.customer_details?.email ||
       null;
 
     if (!customerEmail) {
-      console.error("[webhook] No customer email on payment_intent:", paymentIntent.id);
+      console.error("[webhook-p1] No customer email on payment_intent:", paymentIntent.id);
       return NextResponse.json({ received: true, note: "No email on record" });
     }
 
@@ -87,19 +144,16 @@ export async function POST(req: NextRequest) {
     try {
       downloadToken = generateDownloadToken(paymentIntent.id, blobUrl, 30);
     } catch (err) {
-      console.error("[webhook] Failed to generate download token:", err);
+      console.error("[webhook-p1] Failed to generate download token:", err);
       return NextResponse.json({ error: "Token generation failed" }, { status: 500 });
     }
 
     const downloadPageUrl = `${DOWNLOAD_BASE}/${downloadToken}`;
 
-    // DEBUG: log full URL so we can verify token integrity in Vercel logs
-    console.log("[webhook] downloadToken length:", downloadToken.length);
-    console.log("[webhook] downloadToken dots:", (downloadToken.match(/\./g) || []).length);
-    console.log("[webhook] downloadToken prefix:", downloadToken.substring(0, 40));
-    console.log("[webhook] downloadPageUrl:", downloadPageUrl.substring(0, 120));
+    console.log("[webhook-p1] downloadToken length:", downloadToken.length);
+    console.log("[webhook-p1] downloadPageUrl prefix:", downloadPageUrl.substring(0, 80));
 
-    // Store nurture queue entry in Vercel Blob
+    // Write nurture queue entry to Vercel Blob
     try {
       const { put } = await import("@vercel/blob");
       const record = JSON.stringify({
@@ -113,10 +167,10 @@ export async function POST(req: NextRequest) {
         access: "public",
         addRandomSuffix: false,
       });
-      console.log(`[webhook] Nurture queue entry created for ${customerEmail}`);
+      console.log(`[webhook-p1] Nurture queue entry created for ${customerEmail}`);
     } catch (err) {
-      // Non-fatal — delivery email still sends
-      console.error("[webhook] Failed to write nurture queue entry:", err);
+      // Non-fatal, delivery email still sends
+      console.error("[webhook-p1] Failed to write nurture queue entry:", err);
     }
 
     // Send delivery email via Resend
@@ -128,14 +182,14 @@ export async function POST(req: NextRequest) {
         from: fromEmail,
         to: customerEmail,
         replyTo: "thestartergroupenterprise@gmail.com",
-        subject: "Your Seller Defense Kit is ready — download link inside",
+        subject: "Your Seller Defense Kit is ready, download link inside",
         html: buildEmailHtml(downloadPageUrl, customerEmail),
         text: buildEmailText(downloadPageUrl, customerEmail),
       });
 
-      console.log(`[webhook] Delivery email sent to ${customerEmail} for ${paymentIntent.id}`);
+      console.log(`[webhook-p1] Delivery email sent to ${customerEmail} for ${paymentIntent.id}`);
     } catch (emailErr) {
-      console.error("[webhook] Failed to send delivery email:", emailErr);
+      console.error("[webhook-p1] Failed to send delivery email:", emailErr);
       return NextResponse.json({ error: "Email delivery failed" }, { status: 500 });
     }
   }
@@ -143,8 +197,8 @@ export async function POST(req: NextRequest) {
   if (event.type === "refund.created") {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const refund = event.data.object as any;
-    console.log(`[webhook] Refund created: ${refund.id} for payment ${refund.payment_intent}`);
-    // Future: look up the token by payment intent ID in Vercel KV and revoke it
+    console.log(`[webhook-p1] Refund created: ${refund.id} for payment ${refund.payment_intent}`);
+    // Future: look up token by payment intent ID in Vercel KV and revoke it
   }
 
   return NextResponse.json({ received: true });
@@ -171,7 +225,7 @@ function buildEmailHtml(downloadPageUrl: string, customerEmail: string): string 
 
   <div style="text-align: center; margin: 32px 0;">
     <a href="${downloadPageUrl}"
-       style="background-color: #f59e0b; color: white; padding: 16px 32px;
+       style="background-color: #d97706; color: white; padding: 16px 32px;
               border-radius: 8px; text-decoration: none; font-size: 18px;
               font-weight: bold; display: inline-block;">
       Download Your Kit Now
@@ -187,11 +241,11 @@ function buildEmailHtml(downloadPageUrl: string, customerEmail: string): string 
 
   <h2 style="font-size: 16px; color: #111;">What's in your kit (PDF format):</h2>
   <ul style="color: #555; font-size: 14px; line-height: 1.8;">
-    <li>📄 DMCA Takedown Notice — for Etsy, Temu, AliExpress &amp; web</li>
-    <li>✉️ Cease &amp; Desist Letter — direct seller contact template</li>
-    <li>🔍 IP Theft Monitoring Checklist — find theft on 5 platforms</li>
-    <li>🗺️ Multi-Platform Filing Guide — step-by-step for every portal</li>
-    <li>🛡️ Listing Reinstatement Appeal — for when YOUR listing gets suspended</li>
+    <li>&#128196; DMCA Takedown Notice, for Etsy, Temu, AliExpress and web</li>
+    <li>&#9993; Cease and Desist Letter, direct seller contact template</li>
+    <li>&#128269; IP Theft Monitoring Checklist, find theft on 5 platforms</li>
+    <li>&#128506; Multi-Platform Filing Guide, step-by-step for every portal</li>
+    <li>&#128737; Listing Reinstatement Appeal, for when your own listing gets suspended</li>
   </ul>
 
   <p style="font-size: 13px; color: #999; margin-top: 32px;">
@@ -200,7 +254,7 @@ function buildEmailHtml(downloadPageUrl: string, customerEmail: string): string 
     <a href="mailto:thestartergroupenterprise@gmail.com" style="color: #d97706;">
       thestartergroupenterprise@gmail.com
     </a>.<br>
-    30-day money-back guarantee — if you can't file your first DMCA in 15 minutes, we'll refund you.
+    30-day money-back guarantee. If you cannot file your first DMCA in 15 minutes, we will refund you.
   </p>
 
   <hr style="border: none; border-top: 1px solid #eee; margin: 24px 0;">
@@ -226,8 +280,8 @@ ${downloadPageUrl}
 This link is valid for 30 days.
 
 What's in your kit:
-- DMCA Takedown Notice (for Etsy, Temu, AliExpress & web)
-- Cease & Desist Letter
+- DMCA Takedown Notice (for Etsy, Temu, AliExpress and web)
+- Cease and Desist Letter
 - IP Theft Monitoring Checklist
 - Multi-Platform Filing Guide
 - Listing Reinstatement Appeal
@@ -236,7 +290,7 @@ Questions? Reply to this email or contact us at thestartergroupenterprise@gmail.
 30-day money-back guarantee.
 
 ---
-This email was sent by Seller Defense Kit, a product of The Starter Group
+Seller Defense Kit, a product of The Starter Group
 2967 Dundas St W, Toronto, ON M6P 1Z2, Canada
 You received this email because you purchased the Seller Defense Kit.
 Unsubscribe: ${unsubscribeUrl}`;

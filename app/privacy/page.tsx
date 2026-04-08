@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — Seller Defense Kit",
+  title: "Privacy Policy | Seller Defense Kit",
   description: "Privacy policy for sellerdefensekit.com.",
   robots: { index: false },
 };
@@ -62,7 +62,7 @@ export default function PrivacyPage() {
               </p>
               <ul className="list-disc list-inside text-gray-600 space-y-2 ml-2">
                 <li>
-                  <span className="font-medium text-gray-800">Stripe</span> — payment processing.
+                  <span className="font-medium text-gray-800">Stripe</span>, payment processing.
                   Your payment details are entered directly on Stripe&apos;s secure checkout and are
                   never transmitted to or stored on our servers. Stripe&apos;s privacy policy is
                   available at{" "}
@@ -72,7 +72,7 @@ export default function PrivacyPage() {
                   </a>.
                 </li>
                 <li>
-                  <span className="font-medium text-gray-800">Resend</span> — transactional email
+                  <span className="font-medium text-gray-800">Resend</span>, transactional email
                   delivery. Your email address is passed to Resend for the sole purpose of delivering
                   your order confirmation and download link. Resend&apos;s privacy policy is available
                   at{" "}
@@ -82,7 +82,7 @@ export default function PrivacyPage() {
                   </a>.
                 </li>
                 <li>
-                  <span className="font-medium text-gray-800">Google Analytics</span> — anonymous
+                  <span className="font-medium text-gray-800">Google Analytics</span>, anonymous
                   site analytics (page views, sessions, traffic sources). No personally identifiable
                   information is collected through analytics.
                 </li>

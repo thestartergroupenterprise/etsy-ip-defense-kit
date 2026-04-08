@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 
 const BASE_URL = "https://sellerdefensekit.com";
 
-// Pinned lastmod dates — update when content changes (not on every build)
+// Pinned lastmod dates, update when content changes (not on every build)
 const HOMEPAGE_LAST_MOD = "2026-04-08";
 const BLOG_INDEX_LAST_MOD = "2026-04-08";
 const TRADEMARK_KIT_LAST_MOD = "2026-04-08"; // Product 2 landing page

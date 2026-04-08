@@ -61,12 +61,17 @@ export default function SiteFooter() {
           </a>
         </p>
 
-        {/* Row 4: Company info */}
+        {/* Row 4: Copyright */}
         <p className="text-xs text-gray-500">
-          Seller Defense Kit, a product of The Starter Group. 2967 Dundas St W, Toronto, ON M6P 1Z2, Canada.
+          &copy; {new Date().getFullYear()} Seller Defense Kit, a product of The Starter Group. All rights reserved.
         </p>
 
-        {/* Row 5: Legal disclaimer */}
+        {/* Row 5: Address */}
+        <p className="text-xs text-gray-500 mt-1">
+          2967 Dundas St W, Toronto, ON M6P 1Z2, Canada.
+        </p>
+
+        {/* Row 6: Legal disclaimer */}
         <p className="text-xs text-gray-600 mt-1">
           Not legal advice. These templates are provided for informational purposes. For complex IP disputes, consult a qualified attorney.
         </p>

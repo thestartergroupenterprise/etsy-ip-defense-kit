@@ -2,34 +2,38 @@ import { MetadataRoute } from "next";
 
 const BASE_URL = "https://sellerdefensekit.com";
 
-const blogSlugs = [
-  "file-dmca-etsy",
-  "etsy-listing-stolen",
-  "dmca-takedown-notice-etsy-template",
-  "copyright-infringement-etsy",
-  "etsy-ip-theft",
-  "etsy-seller-protection",
+// Pinned lastmod dates — update when content changes (not on every build)
+const HOMEPAGE_LAST_MOD = "2026-04-08";
+const BLOG_INDEX_LAST_MOD = "2026-04-08";
+
+const blogSlugs: { slug: string; lastMod: string }[] = [
+  { slug: "file-dmca-etsy", lastMod: "2026-04-04" },
+  { slug: "etsy-listing-stolen", lastMod: "2026-04-04" },
+  { slug: "dmca-takedown-notice-etsy-template", lastMod: "2026-04-04" },
+  { slug: "copyright-infringement-etsy", lastMod: "2026-04-04" },
+  { slug: "etsy-ip-theft", lastMod: "2026-04-04" },
+  { slug: "etsy-seller-protection", lastMod: "2026-04-04" },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     {
-      url: BASE_URL,
-      lastModified: new Date(),
+      url: `${BASE_URL}/`,
+      lastModified: new Date(HOMEPAGE_LAST_MOD),
       changeFrequency: "weekly",
       priority: 1.0,
     },
     {
       url: `${BASE_URL}/blog`,
-      lastModified: new Date(),
+      lastModified: new Date(BLOG_INDEX_LAST_MOD),
       changeFrequency: "weekly",
       priority: 0.8,
     },
   ];
 
-  const blogPages: MetadataRoute.Sitemap = blogSlugs.map((slug) => ({
+  const blogPages: MetadataRoute.Sitemap = blogSlugs.map(({ slug, lastMod }) => ({
     url: `${BASE_URL}/blog/${slug}`,
-    lastModified: new Date(),
+    lastModified: new Date(lastMod),
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }));

@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 
 const STRIPE_PAYMENT_LINK = process.env.NEXT_PUBLIC_STRIPE_PAYMENT_LINK || "#";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://sellerdefensekit.com/",
+  },
+};
 
 export default function Home() {
   return (

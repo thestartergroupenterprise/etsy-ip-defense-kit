@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: "DMCA and Copyright Guides — Blog | Seller Defense Kit",
   description:
     "Step-by-step guides for independent sellers and small creative businesses on DMCA takedowns, copyright infringement reporting, and fighting IP theft on any platform.",
+  alternates: {
+    canonical: "https://sellerdefensekit.com/blog",
+  },
   openGraph: {
     title: "DMCA and Copyright Guides — Blog | Seller Defense Kit",
     description:

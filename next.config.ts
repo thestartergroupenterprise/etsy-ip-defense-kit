@@ -10,8 +10,16 @@ const nextConfig: NextConfig = {
   },
 
   // 301 redirects for SEO slug migration (stop-word cleanup 2026-03-22)
+  // and www -> non-www canonical redirect (added 2026-04-08)
   async redirects() {
     return [
+      // www -> non-www: eliminates duplicate content on https://www.sellerdefensekit.com
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.sellerdefensekit.com" }],
+        destination: "https://sellerdefensekit.com/:path*",
+        permanent: true,
+      },
       {
         source: "/blog/how-to-file-dmca-on-etsy",
         destination: "/blog/file-dmca-etsy",

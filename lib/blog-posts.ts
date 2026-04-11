@@ -1242,7 +1242,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-04-11",
     readingTime: "9 min read",
     intro:
-      "When someone challenges your Digital Millennium Copyright Act (DMCA) notice, they are filing a counter-notice. What happens next determines whether your listing stays down, goes back up, or gets both parties into a legal dispute neither can afford. Most independent sellers do not realize that a counter-notice is not just a reply -- it is a legal document. If the original DMCA filer decides to sue, your counter-notice becomes evidence in court. Filing it wrong has real consequences.",
+      "When someone challenges your Digital Millennium Copyright Act (DMCA) notice, they are filing a counter-notice. What happens next determines whether your listing stays down, goes back up, or gets both parties into a legal dispute neither can afford. Most independent sellers do not realize that a counter-notice is not just a reply: it is a legal document. If the original DMCA filer decides to sue, your counter-notice becomes evidence in court. Filing it wrong has real consequences.",
     keyTakeaway: "",
     faq: [
       {
@@ -1251,11 +1251,11 @@ export const blogPosts: BlogPost[] = [
       },
       {
         q: "If I file a counter-notice, will the original DMCA filer definitely sue me?",
-        a: "Not always. Many filers are fishing -- they file DMCA claims hoping sellers will not respond. A counter-notice often scares them away because it signals you are prepared to defend yourself legally. But serious filers, such as legitimate brand holders, may pursue it further. There is no way to know for certain until they decide."
+        a: "Not always. Many filers are fishing. They file DMCA claims hoping sellers will not respond. A counter-notice often scares them away because it signals you are prepared to defend yourself legally. But serious filers, such as legitimate brand holders, may pursue it further. There is no way to know for certain until they decide."
       },
       {
         q: "Can I file a counter-notice anonymously or under my business name instead of my legal name?",
-        a: "No. A counter-notice requires your full legal name and address. Using only a business name or a fake name makes the counter-notice legally invalid in court. A business address or PO box is acceptable if that is your actual mailing address -- but your full legal name is required."
+        a: "No. A counter-notice requires your full legal name and address. Using only a business name or a fake name makes the counter-notice legally invalid in court. A business address or PO box is acceptable if that is your actual mailing address, but your full legal name is required."
       },
       {
         q: "What if I file a counter-notice and then realize I do not actually have the right to use the content?",
@@ -1267,13 +1267,13 @@ export const blogPosts: BlogPost[] = [
       },
       {
         q: "If the original DMCA filer does not respond to my counter-notice at all, what does that mean?",
-        a: "It typically means they are not willing to pursue legal action. After 10 business days with no lawsuit filing, your listing automatically goes back live depending on the platform. Confirm this with the platform directly -- do not assume your listing is restored until you can verify it is actually live again."
+        a: "It typically means they are not willing to pursue legal action. After 10 business days with no lawsuit filing, your listing automatically goes back live depending on the platform. Confirm this with the platform directly. Do not assume your listing is restored until you can verify it is actually live again."
       }
     ],
     content: `
 <h2>What Is a DMCA Counter-Notice (And When Does It Arrive)?</h2>
 <p>A counter-notice is a legal claim filed by a seller who disputes your DMCA takedown: "I have the right to use this content, and the DMCA notice was wrong."</p>
-<p>After you file a <a href="/blog/file-dmca-etsy">DMCA takedown notice</a> on a platform -- Etsy, Amazon, AliExpress, or any major marketplace -- the platform removes the infringing content under its safe harbor obligations and notifies the seller. The seller then has <strong>14 days</strong> to submit a counter-notice if they want to dispute your claim.</p>
+<p>After you file a <a href="/blog/file-dmca-etsy">DMCA takedown notice</a> on a platform (Etsy, Amazon, AliExpress, or any major marketplace), the platform removes the infringing content under its safe harbor obligations and notifies the seller. The seller then has <strong>14 days</strong> to submit a counter-notice if they want to dispute your claim.</p>
 <p>If they file a counter-notice:</p>
 <ul>
   <li>The platform restores the listing to live</li>
@@ -1281,7 +1281,7 @@ export const blogPosts: BlogPost[] = [
   <li>If you file for court action, both parties are locked in a legal dispute</li>
 </ul>
 <p>This is the moment most independent sellers panic. They either try to file a counter-counter-notice (not a real legal document) or hire a lawyer at $500-$2,000 just to respond.</p>
-<p>Here is what happens if you do nothing: your DMCA takedown is reversed, the listing goes back up, and the seller can file a fee-shifting counter-claim -- meaning you could owe their legal fees if they win.</p>
+<p>Here is what happens if you do nothing: your DMCA takedown is reversed, the listing goes back up, and the seller can file a fee-shifting counter-claim, meaning you could owe their legal fees if they win.</p>
 
 <h2>Mistake #1: Misidentifying Yourself in the Counter-Notice</h2>
 <p>A counter-notice must identify you by your full legal name and address. Most sellers interpret this as their shop name or first name only.</p>
@@ -1303,18 +1303,18 @@ export const blogPosts: BlogPost[] = [
   <li>"I bought it and can resell it" (not automatic)</li>
   <li>"I have a license agreement" (sometimes valid, depends on the agreement)</li>
   <li>"I created it myself" (the strongest claim)</li>
-  <li>"It is not actually copyright infringement -- it just looks similar" (not a legal claim)</li>
+  <li>"It is not actually copyright infringement: it just looks similar" (not a legal claim)</li>
 </ul>
 <p>Filing a counter-notice with a weak or false claim is perjury. You are signing a legal document under penalty of perjury.</p>
-<p><strong>The consequence:</strong> If the original DMCA filer sues, they will request proof of your right to use the content. If you cannot provide it -- or if it is false -- you are liable for the filer's legal fees plus damages of up to $150,000 per work.</p>
+<p><strong>The consequence:</strong> If the original DMCA filer sues, they will request proof of your right to use the content. If you cannot provide it, or if it is false, you are liable for the filer's legal fees plus damages of up to $150,000 per work.</p>
 <p><strong>The correct approach:</strong></p>
 <ul>
   <li>File a counter-notice ONLY if you created the work yourself, licensed it with explicit resale rights, or legitimately obtained it through a verified legal agreement</li>
-  <li>If you are not 100% certain you have the right to use the content, do not file -- let the listing stay down or negotiate with the filer directly</li>
+  <li>If you are not 100% certain you have the right to use the content, do not file. Let the listing stay down or negotiate with the filer directly</li>
   <li>If you licensed the work: attach the license agreement as supporting documentation</li>
   <li>If you created it: state clearly that you are the original creator and provide evidence such as upload dates, original design files, or listing history</li>
 </ul>
-<p>For small creative businesses on Etsy, Shopify, or Gumroad: your strongest claim is that you created the work yourself. If you are reselling someone else's work -- even legally -- a counter-notice puts you at significant risk.</p>
+<p>For small creative businesses on Etsy, Shopify, or Gumroad: your strongest claim is that you created the work yourself. If you are reselling someone else's work (even legally), a counter-notice puts you at significant risk.</p>
 
 <h2>Mistake #3: Filing a Counter-Notice Too Quickly (Before Understanding the DMCA)</h2>
 <p>Some sellers receive notice that their listing was removed and immediately panic-file a counter-notice without reading the original DMCA claim.</p>
@@ -1337,7 +1337,7 @@ export const blogPosts: BlogPost[] = [
 <p>For independent sellers: if the DMCA claim has even a small point of validity, treat it as a warning. Modify the listing or take it down and relaunch with fully original content.</p>
 
 <h2>Mistake #4: Ignoring the 10-Day Window (Or Not Understanding What Happens After)</h2>
-<p>Most sellers do not know that once a counter-notice is filed, their listing goes back live -- but only if the original DMCA filer does not file for court action within 10 business days.</p>
+<p>Most sellers do not know that once a counter-notice is filed, their listing goes back live, but only if the original DMCA filer does not file for court action within 10 business days.</p>
 <p>Here is what actually happens:</p>
 <ul>
   <li><strong>Day 0:</strong> You receive notice that a counter-notice has been filed against your DMCA takedown</li>
@@ -1352,7 +1352,7 @@ export const blogPosts: BlogPost[] = [
   <li>Mark your calendar the moment a counter-notice is filed against you</li>
   <li>Wait the full 10 business days to confirm whether the filer pursues court action</li>
   <li>Contact the platform to verify whether a lawsuit was actually filed</li>
-  <li>If a lawsuit IS filed, consult a lawyer immediately -- at this point professional help is essential</li>
+  <li>If a lawsuit IS filed, consult a lawyer immediately. At this point, professional help is essential</li>
   <li>If no lawsuit is filed and the listing goes back up, confirm the outcome directly with the platform</li>
 </ul>
 
@@ -1397,22 +1397,22 @@ export const blogPosts: BlogPost[] = [
 <h2>What Happens After You File a Counter-Notice?</h2>
 <p>Once filed, you have signaled to the original filer that you are willing to fight over this.</p>
 <p>Some filers back down. They were filing DMCA claims casually, hoping sellers would not respond. A counter-notice proves you are serious and they abandon the claim.</p>
-<p>Other filers escalate. A counter-notice tells them you are willing to go to court -- and that invites a lawsuit.</p>
+<p>Other filers escalate. A counter-notice tells them you are willing to go to court, and that invites a lawsuit.</p>
 <p>If a lawsuit is filed within the 10-day window, your options are:</p>
 <ol>
-  <li><strong>Hire a lawyer and defend the lawsuit</strong> -- cost: $2,000-$10,000 or more for initial defense</li>
-  <li><strong>Settle with the filer</strong> -- cost: typically $500-$2,000 in settlement fees</li>
-  <li><strong>Ignore the lawsuit</strong> -- consequence: lose by default, your listing stays down, you owe damages and their legal fees</li>
+  <li><strong>Hire a lawyer and defend the lawsuit</strong> (cost: $2,000-$10,000 or more for initial defense)</li>
+  <li><strong>Settle with the filer</strong> (cost: typically $500-$2,000 in settlement fees)</li>
+  <li><strong>Ignore the lawsuit</strong> (consequence: lose by default, your listing stays down, you owe damages and their legal fees)</li>
 </ol>
 <p>For most independent sellers, settling becomes the realistic choice. Even if you believe you are legally right, the cost of defense often exceeds the revenue from the disputed listing.</p>
 
 <div style="background:#fef3c7;border:1px solid #fbbf24;border-radius:8px;padding:20px;margin:32px 0;">
 <strong>Key Takeaways</strong>
 <ul style="margin:8px 0 0 0;padding-left:20px;">
-<li>A DMCA counter-notice is a legal document filed under penalty of perjury -- not a casual platform dispute</li>
+<li>A DMCA counter-notice is a legal document filed under penalty of perjury, not a casual platform dispute</li>
 <li>Use your full legal name and address: anything vague makes the counter-notice legally worthless in court</li>
 <li>Only file if you can honestly and provably defend your right to the content</li>
-<li>Monitor the 10-day window after a counter-notice is filed against you -- missing it costs you the case by default</li>
+<li>Monitor the 10-day window after a counter-notice is filed against you. Missing it costs you the case by default</li>
 <li>A false counter-notice exposes you to $150,000 in damages plus the filer's legal fees</li>
 </ul>
 </div>

@@ -263,7 +263,7 @@ export default async function BlogPostPage({ params }: Props) {
             href="https://buy.stripe.com/bJe6oH7PnfHfbXbc1O2Fa00"
             className="inline-block bg-amber-600 hover:bg-amber-700 text-white font-bold px-8 py-4 rounded-xl shadow-md transition-colors"
           >
-            Get the IP Defense Kit -- $27
+            Get the IP Defense Kit: $27
           </a>
           <p className="text-sm text-gray-500 mt-3">Instant download. No account needed.</p>
         </div>

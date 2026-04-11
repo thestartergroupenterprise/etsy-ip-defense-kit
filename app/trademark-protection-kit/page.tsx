@@ -242,8 +242,7 @@ export default function TrademarkProtectionKit() {
             Used by independent sellers and small creative businesses
           </h2>
           <p className="text-gray-500 text-sm">
-            {/* Testimonials will appear here as buyers share results */}
-            Customer reviews coming soon. Purchase includes 30-day money-back guarantee.
+            Purchase includes 30-day money-back guarantee.
           </p>
         </div>
       </section>

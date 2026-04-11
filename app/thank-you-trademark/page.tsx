@@ -220,13 +220,7 @@ export default async function ThankYouTrademark({ searchParams }: Props) {
                   and AliExpress each have completely different enforcement requirements.
                   A notice that works on one platform gets rejected on another.
                 </p>
-                <p className="text-gray-500 text-sm">
-                  Coming soon: Platform-Specific Filing Toolkit, $67. You will be the first
-                  to know when it is available.
-                  {/* TODO (Product 3 PAGE_LIVE): Replace this plain text with a live CTA button
-                      linking to Product 3 payment link with UTM params:
-                      utm_source=thank-you&utm_medium=cross-sell&utm_campaign=product-upsell */}
-                </p>
+
               </div>
             ) : (
               // ── VARIANT B: customer does not have Product 1 (or check defaulted) ──
@@ -250,12 +244,7 @@ export default async function ThankYouTrademark({ searchParams }: Props) {
                 <p className="text-xs text-gray-500 mt-3 text-center">
                   30-day money-back guarantee.
                 </p>
-                {/* Product 3 secondary mention */}
-                <p className="text-xs text-gray-400 mt-4">
-                  Also coming soon: Platform-Specific Filing Toolkit, exact enforcement
-                  guidance for Etsy, Amazon, TikTok Shop, and AliExpress. $67.
-                  {/* TODO (Product 3 PAGE_LIVE): Replace plain text with a live link to Product 3. */}
-                </p>
+
               </div>
             )}
           </div>

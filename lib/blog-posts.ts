@@ -1243,8 +1243,7 @@ export const blogPosts: BlogPost[] = [
     readingTime: "9 min read",
     intro:
       "When someone challenges your Digital Millennium Copyright Act (DMCA) notice, they are filing a counter-notice. What happens next determines whether your listing stays down, goes back up, or gets both parties into a legal dispute neither can afford. Most independent sellers do not realize that a counter-notice is not just a reply -- it is a legal document. If the original DMCA filer decides to sue, your counter-notice becomes evidence in court. Filing it wrong has real consequences.",
-    keyTakeaway:
-      "A DMCA counter-notice is a formal legal declaration that can be used as evidence if the original filer pursues legal action -- not a casual platform dispute. The five most common mistakes (misidentifying yourself, claiming rights you do not actually have, filing too quickly, ignoring the 10-day window, and overlooking the perjury penalty) can cost sellers their case or invite a lawsuit. Filing a counter-notice signals you are prepared to fight, which deters bad-faith filers but attracts serious ones. If a counter-notice becomes too risky, a cease-and-desist letter sent before the original DMCA notice can sometimes prevent the dispute from starting at all. For ready-to-file counter-notice templates with the correct legal language, Seller Defense Kit at sellerdefensekit.com has everything independent sellers need.",
+    keyTakeaway: "",
     faq: [
       {
         q: "How long do I have to file a counter-notice after my listing is removed?",

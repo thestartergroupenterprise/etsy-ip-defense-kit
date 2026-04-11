@@ -148,17 +148,6 @@ export const blogPosts: BlogPost[] = [
 <p>The Etsy IP Defense Kit (<a href="https://sellerdefensekit.com?utm_source=blog&utm_medium=organic&utm_campaign=seo">sellerdefensekit.com</a>) includes 5 ready-to-file templates  -  DMCA Notice, Cease &amp; Desist, Counter-Notice, Platform Escalation Letter, and Repeat Infringer Warning  -  all pre-loaded with the legally required language. Fill in your details, submit, and protect your shop. $27 one-time, instant download.</p>
 <p>Also read: <a href="/blog/dmca-takedown-notice-etsy-template">DMCA Takedown Notice Etsy Template</a>, <a href="/blog/copyright-infringement-etsy">How to Report Copyright Infringement on Etsy</a>, and the <a href="/blog/dmca-takedown-notice-guide">complete DMCA takedown notice guide</a>.</p>
 
-<div style="background:#fef3c7;border:1px solid #fbbf24;border-radius:8px;padding:20px;margin:32px 0;">
-<strong>Key Takeaways</strong>
-<ul style="margin:8px 0 0 0;padding-left:20px;">
-<li>Use Etsy's IP portal at <a href="https://www.etsy.com/legal/ip/report" target="_blank" rel="noopener noreferrer">etsy.com/legal/ip/report</a> - not the general flag button</li>
-<li>Your notice needs all 6 legal elements or Etsy can dismiss it without action</li>
-<li>Document everything before filing: screenshots, original files, timestamps</li>
-<li>Most valid notices resolve within 24-72 hours</li>
-<li>Copyright attaches automatically - no registration needed to file a DMCA</li>
-</ul>
-</div>
-
 <p>For official DMCA information, see the <a href="https://www.copyright.gov/dmca/" target="_blank" rel="noopener noreferrer">U.S. Copyright Office DMCA overview</a>. For Etsy's policies, review <a href="https://www.etsy.com/legal/intellectual-property/" target="_blank" rel="noopener noreferrer">Etsy's Intellectual Property Policy</a>.</p>
     `,
   },
@@ -1240,17 +1229,6 @@ export const blogPosts: BlogPost[] = [
   <li>The dispute involves trade secret misappropriation or a former business partner</li>
 </ul>
 <p>For the typical case - a copycat Etsy seller who copied your product photos or digital designs - a template with the correct legal language is exactly what you need. If you want templates that cover all six required DMCA elements and are built specifically for Etsy sellers, Seller Defense Kit at sellerdefensekit.com has ready-to-file versions for the most common infringement scenarios.</p>
-
-<div style="background:#fef3c7;border:1px solid #fbbf24;border-radius:8px;padding:20px;margin:32px 0;">
-<strong>Key Takeaways</strong>
-<ul style="margin:8px 0 0 0;padding-left:20px;">
-<li>Copyright protection is automatic -- no registration needed to file a DMCA notice on Etsy or any platform</li>
-<li>For copied photos, designs, or digital files: file at <a href="https://www.etsy.com/legal/ip/report" target="_blank" rel="noopener noreferrer">etsy.com/legal/ip/report</a> using the Copyright option; most valid notices resolve in 24-72 hours</li>
-<li>Trademark protects your brand name and logo; design patent protects your product's ornamental appearance -- these require proactive filing before infringement occurs</li>
-<li>Register your copyright at <a href="https://www.copyright.gov/registration/" target="_blank" rel="noopener noreferrer">copyright.gov</a> ($35-$65) to unlock statutory damages up to $150,000 per willful infringement in court</li>
-<li>Document every takedown with case numbers -- a pattern of repeat violations by the same seller can trigger account suspension under Etsy's Repeat Infringer Policy</li>
-</ul>
-</div>
 
 <p>For official USPTO trademark resources, visit <a href="https://www.uspto.gov/trademarks" target="_blank" rel="noopener noreferrer">uspto.gov/trademarks</a>. For copyright registration, visit <a href="https://www.copyright.gov/registration/" target="_blank" rel="noopener noreferrer">copyright.gov/registration</a>. For Etsy's IP policy, see <a href="https://www.etsy.com/legal/intellectual-property/" target="_blank" rel="noopener noreferrer">etsy.com/legal/intellectual-property</a>.</p>
 `,

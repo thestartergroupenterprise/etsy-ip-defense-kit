@@ -4,7 +4,7 @@ const BASE_URL = "https://sellerdefensekit.com";
 
 // Pinned lastmod dates, update when content changes (not on every build)
 const HOMEPAGE_LAST_MOD = "2026-04-08";
-const BLOG_INDEX_LAST_MOD = "2026-04-08";
+const BLOG_INDEX_LAST_MOD = "2026-04-13";
 const TRADEMARK_KIT_LAST_MOD = "2026-04-08"; // Product 2 landing page
 
 const blogSlugs: { slug: string; lastMod: string }[] = [
@@ -14,6 +14,10 @@ const blogSlugs: { slug: string; lastMod: string }[] = [
   { slug: "copyright-infringement-etsy", lastMod: "2026-04-04" },
   { slug: "etsy-ip-theft", lastMod: "2026-04-04" },
   { slug: "etsy-seller-protection", lastMod: "2026-04-04" },
+  { slug: "dmca-takedown-notice-guide", lastMod: "2026-04-04" },
+  { slug: "dmca-takedown-service-vs-templates", lastMod: "2026-04-04" },
+  { slug: "dmca-counter-notice", lastMod: "2026-04-11" },
+  { slug: "copyright-registration", lastMod: "2026-04-13" },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

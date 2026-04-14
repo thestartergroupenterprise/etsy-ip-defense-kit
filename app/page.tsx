@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { UTMCaptureClient } from "@/app/components/UTMCaptureClient";
 
 const STRIPE_PAYMENT_LINK = process.env.NEXT_PUBLIC_STRIPE_PAYMENT_LINK || "#";
 
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className="min-h-screen bg-white text-gray-900">
+      <UTMCaptureClient />
 
       {/* ── HERO ── */}
       <section className="bg-amber-50 px-5 py-12 md:py-20">

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { UTMCaptureClient } from "@/app/components/UTMCaptureClient";
 
 // NOTE: Keywords pending DataForSEO validation when funded.
 // Primary keyword: "trademark protection for online sellers" (working estimate)
@@ -26,6 +27,7 @@ export const metadata: Metadata = {
 export default function TrademarkProtectionKit() {
   return (
     <main className="min-h-screen bg-white text-gray-900">
+      <UTMCaptureClient />
 
       {/* ── HERO ── */}
       <section className="bg-amber-50 px-5 py-12 md:py-20">

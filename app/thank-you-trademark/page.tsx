@@ -18,6 +18,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { unstable_cache } from "next/cache";
+import { AttributionLogger } from "@/app/components/AttributionLogger";
 
 export const metadata: Metadata = {
   title: "Thank You, Trademark Protection Kit | Seller Defense Kit",
@@ -140,6 +141,7 @@ export default async function ThankYouTrademark({ searchParams }: Props) {
 
   return (
     <main className="min-h-screen bg-white text-gray-900">
+      <AttributionLogger product="p2" amount={47} />
       <section className="px-5 py-20">
         <div className="max-w-xl mx-auto text-center">
 

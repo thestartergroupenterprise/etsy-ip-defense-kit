@@ -1,18 +1,21 @@
 /**
  * COMPONENT 3: Attribution API Endpoint
- * Updated: 2026-04-14 04:18 EDT (security fix: origin/referer validation)
+ * Updated: 2026-04-14 04:40 EDT (Upstash Redis)
  * 
  * POST /api/attribution
  * Receives attribution data from thank you pages
  * Validates request origin to prevent cross-site POST attacks
- * Appends entries to Vercel KV "email-attribution" array
+ * Appends entries to Upstash Redis "email-attribution" list
  * Never overwrites existing entries
  */
 
-import { kv } from '@vercel/kv';
+import { Redis } from '@upstash/redis';
 import { NextRequest, NextResponse } from 'next/server';
 
 export const runtime = 'nodejs';
+
+// Initialize Upstash Redis client from environment variables
+const redis = Redis.fromEnv();
 
 // Allowed origins for attribution requests
 const ALLOWED_ORIGINS = [
@@ -91,39 +94,33 @@ export async function POST(request: NextRequest) {
       id: `${data.session_id}-${Date.now()}`,
     };
 
-    // Read existing array from KV (or initialize empty)
-    let attributionArray: AttributionLogEntry[] = [];
+    // Append to Redis list using lpush (prepend to list)
+    // lpush adds to the head of the list; entries are stored as JSON strings
     try {
-      const stored = await kv.get('email-attribution');
-      if (stored && Array.isArray(stored)) {
-        attributionArray = stored as AttributionLogEntry[];
-      }
-    } catch (error) {
-      console.warn('[Attribution API] Could not read existing KV data, starting fresh', error);
-      // Continue with empty array
-    }
-
-    // Append new entry
-    attributionArray.push(entry);
-
-    // Write back to KV
-    await kv.set('email-attribution', attributionArray);
-
-    console.log(`[Attribution API] Entry logged. Total entries: ${attributionArray.length}`, {
-      id: entry.id,
-      product: entry.product,
-      utm_campaign: entry.utm_campaign,
-      amount: entry.amount,
-    });
-
-    return NextResponse.json(
-      {
-        success: true,
+      const result = await redis.lpush('email-attribution', JSON.stringify(entry));
+      
+      console.log(`[Attribution API] Entry logged. List size: ${result}`, {
         id: entry.id,
-        message: 'Attribution logged successfully',
-      },
-      { status: 200 }
-    );
+        product: entry.product,
+        utm_campaign: entry.utm_campaign,
+        amount: entry.amount,
+      });
+
+      return NextResponse.json(
+        {
+          success: true,
+          id: entry.id,
+          message: 'Attribution logged successfully',
+        },
+        { status: 200 }
+      );
+    } catch (error) {
+      console.error('[Attribution API] Error writing to Redis:', error);
+      return NextResponse.json(
+        { error: 'Internal server error' },
+        { status: 500 }
+      );
+    }
   } catch (error) {
     console.error('[Attribution API] Error processing request:', error);
     return NextResponse.json(

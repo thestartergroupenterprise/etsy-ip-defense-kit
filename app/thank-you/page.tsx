@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { AttributionLogger } from "@/app/components/AttributionLogger";
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: "Thank You, DMCA Enforcement Kit | Seller Defense Kit",
   description: "Your DMCA Enforcement Kit is on its way. Check your email for the download link.",

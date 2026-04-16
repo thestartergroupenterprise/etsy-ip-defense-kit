@@ -200,10 +200,10 @@ export default async function ThankYouTrademark({ searchParams }: Props) {
           <p className="text-gray-500 text-sm mb-10">
             Questions? Reply to your purchase email or contact us at{" "}
             <a
-              href="mailto:thestartergroupenterprise@gmail.com"
+              href="mailto:hello@sellerdefensekit.com"
               className="text-amber-600 hover:underline"
             >
-              thestartergroupenterprise@gmail.com
+              hello@sellerdefensekit.com
             </a>
             . 30-day money-back guarantee.
           </p>

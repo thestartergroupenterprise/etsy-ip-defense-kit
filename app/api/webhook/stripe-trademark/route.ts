@@ -157,7 +157,7 @@ export async function POST(req: NextRequest) {
       await resend.emails.send({
         from: fromEmail,
         to: customerEmail,
-        replyTo: "thestartergroupenterprise@gmail.com",
+        replyTo: "hello@sellerdefensekit.com",
         subject: "Your Trademark Protection Kit is ready",
         html: buildEmailHtml(downloadUrl, customerEmail),
         text: buildEmailText(downloadUrl, customerEmail),
@@ -232,8 +232,8 @@ function buildEmailHtml(downloadUrl: string, customerEmail: string): string {
   <p style="font-size: 13px; color: #999; margin-top: 32px;">
     This download link is valid for 30 days.<br>
     Questions? Reply to this email or contact us at
-    <a href="mailto:thestartergroupenterprise@gmail.com" style="color: #d97706;">
-      thestartergroupenterprise@gmail.com
+    <a href="mailto:hello@sellerdefensekit.com" style="color: #d97706;">
+      hello@sellerdefensekit.com
     </a>.<br>
     30-day money-back guarantee.
   </p>
@@ -270,7 +270,7 @@ What's in your kit:
 
 Start with Document 1. Fill in Section 1 today. Then set a weekly reminder to run the Monitoring Workflow.
 
-Questions? Reply to this email or contact us at thestartergroupenterprise@gmail.com.
+Questions? Reply to this email or contact us at hello@sellerdefensekit.com.
 30-day money-back guarantee.
 
 ---

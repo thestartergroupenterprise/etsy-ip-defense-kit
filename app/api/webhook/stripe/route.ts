@@ -181,7 +181,7 @@ export async function POST(req: NextRequest) {
       await resend.emails.send({
         from: fromEmail,
         to: customerEmail,
-        replyTo: "thestartergroupenterprise@gmail.com",
+        replyTo: "hello@sellerdefensekit.com",
         subject: "Your Seller Defense Kit is ready, download link inside",
         html: buildEmailHtml(downloadPageUrl, customerEmail),
         text: buildEmailText(downloadPageUrl, customerEmail),
@@ -251,8 +251,8 @@ function buildEmailHtml(downloadPageUrl: string, customerEmail: string): string 
   <p style="font-size: 13px; color: #999; margin-top: 32px;">
     This download link is valid for 30 days.<br>
     Questions? Reply to this email or contact us at
-    <a href="mailto:thestartergroupenterprise@gmail.com" style="color: #d97706;">
-      thestartergroupenterprise@gmail.com
+    <a href="mailto:hello@sellerdefensekit.com" style="color: #d97706;">
+      hello@sellerdefensekit.com
     </a>.<br>
     30-day money-back guarantee. If you cannot file your first DMCA in 15 minutes, we will refund you.
   </p>
@@ -286,7 +286,7 @@ What's in your kit:
 - Multi-Platform Filing Guide
 - Listing Reinstatement Appeal
 
-Questions? Reply to this email or contact us at thestartergroupenterprise@gmail.com.
+Questions? Reply to this email or contact us at hello@sellerdefensekit.com.
 30-day money-back guarantee.
 
 ---

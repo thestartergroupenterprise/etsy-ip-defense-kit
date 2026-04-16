@@ -30,7 +30,7 @@ export async function GET(
 
   if (!payload) {
     return NextResponse.json(
-      { error: "Download link is invalid or expired. Email thestartergroupenterprise@gmail.com to get a new one.", debug: { tokenLength: token.length, dots: dotCount, secretSet: !!process.env.DOWNLOAD_SIGNING_SECRET, decoded: decodedPayload?.substring(0, 80) } },
+      { error: "Download link is invalid or expired. Email hello@sellerdefensekit.com to get a new one.", debug: { tokenLength: token.length, dots: dotCount, secretSet: !!process.env.DOWNLOAD_SIGNING_SECRET, decoded: decodedPayload?.substring(0, 80) } },
       { status: 404 }
     );
   }

@@ -18,7 +18,7 @@ import { NextRequest, NextResponse } from "next/server";
 const HOURS_48 = 48 * 60 * 60 * 1000;
 const DAYS_7   =  7 * 24 * 60 * 60 * 1000;
 const FROM_EMAIL_DEFAULT = "noreply@sellerdefensekit.com";
-const REPLY_TO = "thestartergroupenterprise@gmail.com";
+const REPLY_TO = "hello@sellerdefensekit.com";
 const SITE_URL = "https://sellerdefensekit.com";
 
 export async function GET(req: NextRequest) {

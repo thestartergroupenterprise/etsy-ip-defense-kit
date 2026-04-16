@@ -225,7 +225,7 @@ export default function TrademarkProtectionKit() {
               },
               {
                 q: "What is the refund policy?",
-                a: "30-day money-back guarantee, no questions asked. If the kit does not give you what you needed, email us at thestartergroupenterprise@gmail.com within 30 days of purchase.",
+                a: "30-day money-back guarantee, no questions asked. If the kit does not give you what you needed, email us at hello@sellerdefensekit.com within 30 days of purchase.",
               },
             ].map(({ q, a }) => (
               <div key={q} className="border-b border-gray-200 pb-6">

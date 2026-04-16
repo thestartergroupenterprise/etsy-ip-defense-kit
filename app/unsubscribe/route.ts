@@ -152,7 +152,7 @@ function buildErrorHtml(message: string): string {
   <p>${escapeHtml(message)}</p>
   <p>
     Please email us directly at
-    <a href="mailto:thestartergroupenterprise@gmail.com">thestartergroupenterprise@gmail.com</a>
+    <a href="mailto:hello@sellerdefensekit.com">hello@sellerdefensekit.com</a>
     and we will remove you manually within 2 business days.
   </p>
 </body>

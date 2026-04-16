@@ -1566,14 +1566,14 @@ export const blogPosts: BlogPost[] = [
 <h2>What Is Intellectual Property?</h2>
 <p>Intellectual property is the legal term for anything you create that has value. It's not physical. You can't hold it in your hand. But it has legal weight.</p>
 <p>If you design a product and sell it online, you own that design. If you build a brand name over years of work, you own that name. If you write the product description that converts customers, you own those words.</p>
-<p>The legal system recognizes this ownership and gives you tools to defend it.</p>
-<p>The main categories include four main categories: copyright, trademark, patent, and trade secret. For independent sellers, the first two matter. The third is outside your operating model. The fourth applies only to business processes you keep confidential.</p>
-<p>This article focuses on the two tools you need: copyright and trademark.</p>
+<p>The legal system recognizes this ownership and gives you tools to defend it through intellectual property law.</p>
+<p>The main categories of intellectual property rights include four main types: copyright, trademark, patent, and trade secret. For independent sellers, the first two matter most to protect intellectual property. The third is outside your operating model. The fourth applies only to business processes you keep confidential.</p>
+<p>This article focuses on the two tools you need to exercise your intellectual property rights: copyright and trademark.</p>
 
 <h2>Copyright: Automatic Protection for Your Creative Work</h2>
-<p>Copyright is the simplest form of intellectual property protection, and it's automatic.</p>
+<p>Copyright is the simplest form of intellectual property rights protection, and it's automatic.</p>
 <p>The moment you create something original, a design, a photograph, a written description, an illustration, a piece of code, copyright protects it. You own it. No registration required. No filing. No fee.</p>
-<p>This is the law in the United States and in most countries worldwide.</p>
+<p>This protection of your intellectual property rights is the law in the United States and in most countries worldwide.</p>
 
 <h3>What Copyright Covers</h3>
 <p>Copyright protects the expression of an idea, not the idea itself.</p>
@@ -1594,7 +1594,7 @@ export const blogPosts: BlogPost[] = [
 <p>The critical word is correctly. A DMCA notice has six required legal elements. Missing even one and the platform can ignore it. Most sellers who file a DMCA notice without knowing the structure do exactly that: miss elements, file anyway, and watch the listing stay up while they wait weeks for nothing.</p>
 
 <h2>Trademark: Protection for Your Brand Name</h2>
-<p>While copyright protects your specific creative work, trademark protects your brand name and the visual symbols associated with it.</p>
+<p>While copyright protects your specific creative work, trademark is another critical component of intellectual property rights that protects your brand name and the visual symbols associated with it.</p>
 <p>Trademark prevents competitors from using a name or logo that is confusingly similar to yours. If someone uses your brand name in a product title or keyword bid, they are competing for customers searching for you, not searching for products like yours, but searching specifically for your brand.</p>
 
 <h3>What Trademark Covers</h3>
@@ -1614,10 +1614,10 @@ export const blogPosts: BlogPost[] = [
 <p>Patents protect inventions. They cover how something works, not what it looks like or what it is called.</p>
 <p>If you invent a new mechanism, process, or functional feature, a patent can protect it. But patents are expensive (typically $1,500 to $15,000 or more), take years to secure (often 3 to 7 years), and require ongoing maintenance and fees.</p>
 <p>For most independent sellers selling creative products or designs, patents are not practical. Your revenue per product does not justify the time and cost. And by the time a patent is granted, your product is often already superseded by a newer design.</p>
-<p>Patents are tools for product innovation companies, not for creative entrepreneurs. Focus on copyright and trademark, which protect your work faster and cost less.</p>
+<p>Patents are tools for product innovation companies, not for creative entrepreneurs. Focus on copyright and trademark, which are the core ip rights that protect your work faster and cost less.</p>
 
 <h2>Your Action Plan: What to Do Right Now</h2>
-<p>If you sell creative work or products online, you have exposure to intellectual property theft. Here is what you can do immediately.</p>
+<p>If you sell creative work or products online, you have exposure to intellectual property theft and your intellectual property rights are at risk. Here is what you can do immediately.</p>
 
 <p><strong>1. Protect Your Work Through Copyright</strong></p>
 <p>Your work is automatically copyrighted. But you should understand the DMCA process so you can enforce it when infringement happens.</p>
@@ -1636,7 +1636,7 @@ export const blogPosts: BlogPost[] = [
 <p>Waiting to "see if it goes away" is the mistake sellers make. It never goes away without action.</p>
 
 <h2>Summary: Protect What You Built</h2>
-<p>Intellectual property rights are the legal foundation of everything independent sellers do. The products you design, the brand you build, the descriptions you write, all of it has legal value and legal protection.</p>
+<p>Intellectual property rights are the legal foundation of everything independent sellers do, and understanding these ip rights is essential. The products you design, the brand you build, the descriptions you write, all of it has legal value and legal protection.</p>
 <p>But protection only works if you understand it and use it.</p>
 <p>Copyright protects your creative work automatically. When you find a copy, file a DMCA notice and demand removal. Trademark protects your brand name and requires registration for the strongest enforcement.</p>
 <p>Neither of these takes years. Neither requires an advanced legal degree. Both are actionable today.</p>

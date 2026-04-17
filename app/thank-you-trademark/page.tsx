@@ -20,6 +20,8 @@ import Link from "next/link";
 import { unstable_cache } from "next/cache";
 import { AttributionLogger } from "@/app/components/AttributionLogger";
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: "Thank You, Trademark Protection Kit | Seller Defense Kit",
   description:

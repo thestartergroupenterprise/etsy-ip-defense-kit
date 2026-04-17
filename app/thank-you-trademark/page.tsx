@@ -17,6 +17,7 @@
 
 import type { Metadata } from "next";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { unstable_cache } from "next/cache";
 import { AttributionLogger } from "@/app/components/AttributionLogger";
 
@@ -131,6 +132,22 @@ interface Props {
 export default async function ThankYouTrademark({ searchParams }: Props) {
   const params = await searchParams;
   const sessionId = params.session_id ?? null;
+
+  // ══════════════════════════════════════════════════════════════════════
+  // SESSION_ID VALIDATION GATE
+  // ══════════════════════════════════════════════════════════════════════
+  // Product 2 thank-you page requires session_id from Stripe redirect.
+  // If session_id is missing or empty, redirect to homepage.
+  // This ensures the page is only accessed after a successful payment.
+
+  if (!sessionId) {
+    // No session_id: redirect to homepage
+    redirect("/");
+  }
+
+  // ══════════════════════════════════════════════════════════════════════
+  // VARIANT LOGIC (runs only after session_id gate passes)
+  // ══════════════════════════════════════════════════════════════════════
 
   // Variant A if session_id present and P1 purchase confirmed; Variant B otherwise
   const variantA =

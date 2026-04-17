@@ -12,7 +12,8 @@ export const metadata: Metadata = {
 };
 
 const STRIPE_P2_PAYMENT_LINK =
-  "https://buy.stripe.com/5kQ14n6Lj9iRaT71na2Fa01?utm_source=thank-you&utm_medium=cross-sell&utm_campaign=product-upsell";
+  (process.env.NEXT_PUBLIC_STRIPE_P2_PAYMENT_LINK ?? "#") +
+  "?utm_source=thank-you&utm_medium=cross-sell&utm_campaign=product-upsell";
 
 interface Props {
   searchParams: Promise<{ session_id?: string }>;

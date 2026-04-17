@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { AttributionLogger } from "@/app/components/AttributionLogger";
 
 export const dynamic = 'force-dynamic';
@@ -13,7 +14,28 @@ export const metadata: Metadata = {
 const STRIPE_P2_PAYMENT_LINK =
   "https://buy.stripe.com/5kQ14n6Lj9iRaT71na2Fa01?utm_source=thank-you&utm_medium=cross-sell&utm_campaign=product-upsell";
 
-export default function ThankYou() {
+interface Props {
+  searchParams: Promise<{ session_id?: string }>;
+}
+
+export default async function ThankYou({ searchParams }: Props) {
+  // ══════════════════════════════════════════════════════════════════════
+  // SESSION_ID VALIDATION GATE
+  // ══════════════════════════════════════════════════════════════════════
+  // Product 1 thank-you page requires session_id from Stripe redirect.
+  // If session_id is missing or empty, redirect to homepage.
+  // This ensures the page is only accessed after a successful payment.
+  
+  const params = await searchParams;
+  const sessionId = params.session_id ?? null;
+
+  if (!sessionId) {
+    // No session_id: redirect to homepage
+    redirect("/");
+  }
+
+  // session_id present: render page normally
+  
   return (
     <main className="min-h-screen bg-white text-gray-900">
       <AttributionLogger product="p1" amount={27} />

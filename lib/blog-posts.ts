@@ -69,6 +69,7 @@ export const blogPosts: BlogPost[] = [
 <p>This gives you real leverage. A properly formatted DMCA notice submitted through Etsy's IP portal can get a copycat listing removed within 24–72 hours. No lawyer required. No lawsuit needed.</p>
 
 <h2>What Qualifies for DMCA Protection on Etsy?</h2>
+<p>Copyright infringement on Etsy means someone has copied, reproduced, or distributed your original creative work — including digital downloads, photos, patterns, or designs — without your permission.</p>
 <p>Before you file, confirm your content is actually protectable under copyright law:</p>
 <ul>
   <li><strong>Product photos you took or commissioned</strong>  -  Copyright attaches automatically at the moment of creation</li>
@@ -86,6 +87,7 @@ export const blogPosts: BlogPost[] = [
   <li><strong>Screenshot your original work</strong> with timestamps if possible (original file metadata, social media posts showing earlier dates, order confirmations)</li>
   <li><strong>Save copies of everything</strong>  -  platforms occasionally remove content before you finish filing</li>
 </ol>
+<p>Before filing, take timestamped screenshots of both your original listing and the infringing content. Screenshots with visible URLs and dates are your primary evidence if Etsy requests additional documentation.</p>
 
 <h2>Step 2: Navigate to Etsy's IP Reporting Tool</h2>
 <p>This is where most sellers get stuck. Don't use the generic Help Center  -  it routes you in circles.</p>
@@ -170,6 +172,9 @@ export const blogPosts: BlogPost[] = [
   <li>Platform algorithms may start ranking the stolen listing above yours</li>
   <li>Buyers who get inferior products from the copycat leave negative associations with your product type</li>
 </ul>
+
+<h2>Immediate Action: Secure Your Shop</h2>
+<p>Use Etsy's Shop Lockdown feature immediately if you believe your entire shop has been compromised. This temporarily hides all listings while you investigate.</p>
 
 <h2>Step 1: Confirm It's Actually Your Content (Not Just Inspiration)</h2>
 <p>Legally, copyright protects your specific creative expression  -  not ideas, styles, or product categories. Before filing anything, confirm:</p>
@@ -312,6 +317,7 @@ export const blogPosts: BlogPost[] = [
     content: `
 <h2>Why DMCA Notice Language Matters</h2>
 <p>Under 17 U.S.C. § 512(c)(3), a DMCA takedown notice is only valid if it includes specific elements. Etsy's IP team reviews these notices, and if yours is missing a required component  -  even something as small as a sworn statement  -  they can legally reject it without action.</p>
+<p>The safe harbor provision under 17 U.S.C. Section 512 protects platforms like Etsy from liability when they respond promptly to valid DMCA notices.</p>
 <p>This isn't bureaucratic gatekeeping. It protects the system from abuse (anyone could falsely claim ownership of any content without the sworn statements). But it also means you need to get it right the first time.</p>
 
 <h2>The 6 Required Elements of a Valid DMCA Notice</h2>
@@ -440,6 +446,7 @@ export const blogPosts: BlogPost[] = [
 <p>Always use the IP Reporting Tool for copyright infringement claims. It's the difference between a legally binding DMCA takedown notice and a complaint in a general moderation queue.</p>
 
 <h2>Before You Report: Confirm You Have a Valid Copyright Claim</h2>
+<p>An original work is protected by copyright the moment it is created and fixed in tangible form — no registration required. Public domain works, however, are not protected and can be used freely by anyone.</p>
 <p>Not every copycat situation is a copyright infringement case. Copyright protects:</p>
 <ul>
   <li>Original photos you took or paid a photographer to take</li>
@@ -587,6 +594,7 @@ export const blogPosts: BlogPost[] = [
       "You filed the DMCA. The listing came down. Three weeks later, it's back  -  same photos, different listing ID. Or maybe Etsy dismissed your notice entirely. When the standard process fails, the most effective next step is a formal Cease and Desist letter sent directly to the seller, citing 17 U.S.C. 501 and potential statutory damages up to $150,000 per willful infringement. For repeat offenders, document every prior case number and invoke Etsy's Repeat Infringer Policy, which can result in account termination.",
     content: `
 <h2>Why Do Etsy Copycats Keep Reposting Stolen Listings After DMCA Takedowns?</h2>
+<p>DMCA stands for the Digital Millennium Copyright Act. IP stands for intellectual property. USPTO is the United States Patent and Trademark Office, which handles trademark and patent registrations.</p>
 <p>A DMCA takedown removes a specific listing, but it doesn't remove the seller. For persistent infringers, getting one listing taken down is a minor inconvenience  -  they just repost it under a new listing ID, sometimes within hours.</p>
 <p>Fighting back effectively means moving beyond single-listing takedowns and targeting the seller's ability to operate, not just individual pieces of infringing content.</p>
 
@@ -1355,6 +1363,7 @@ export const blogPosts: BlogPost[] = [
   <li>If a lawsuit IS filed, consult a lawyer immediately. At this point, professional help is essential</li>
   <li>If no lawsuit is filed and the listing goes back up, confirm the outcome directly with the platform</li>
 </ul>
+<p>Under DMCA Section 512(g), you have exactly 30 days from the date of the takedown notice to file a counter-notice. Missing this deadline means the content stays down permanently.</p>
 
 <h2>Mistake #5: Not Understanding the Perjury Penalty</h2>
 <p>The most overlooked part of every counter-notice is the fine print: "I declare under penalty of perjury that the information in this counter-notice is true."</p>
@@ -1373,6 +1382,7 @@ export const blogPosts: BlogPost[] = [
   <li>Only sign the perjury declaration if every statement in your counter-notice is absolutely true</li>
   <li>If you are uncertain about any part of the counter-notice, do not file it</li>
 </ul>
+<p>Your counter-notice must include a digital signature and a statement made under penalty of perjury that you have a good faith belief the content was removed by mistake.</p>
 <p>For independent sellers on tight budgets: a 30-minute consultation with an IP lawyer ($50-$150) is much cheaper than the $150,000 liability of a false counter-notice. The <a href="https://sellerdefensekit.com/dmca-enforcement-kit?utm_source=blog&utm_medium=organic&utm_campaign=seo">Seller Defense Kit DMCA Enforcement Kit</a> includes counter-notice templates with the correct statutory language already written, so you can file with confidence rather than guessing at the required legal language.</p>
 
 <h2>When to File a Counter-Notice (And When Not To)</h2>
@@ -1488,7 +1498,7 @@ export const blogPosts: BlogPost[] = [
 <h2>How to Copyright Something: The Registration Process</h2>
 <p>The U.S. Copyright Office registration process happens entirely online at <a href="https://www.copyright.gov/registration/" target="_blank" rel="noopener noreferrer">copyright.gov/registration</a>. The steps are straightforward, though the interface takes some getting used to.</p>
 <p>You create an account, select the type of work (visual arts, literary work, performing arts, etc.), complete the application with authorship and publication information, pay the filing fee, and upload a copy of the work as a deposit. The Copyright Office reviews the application and issues a registration certificate.</p>
-<p>The fee for a single work filed online is $45 to $65 depending on type. For independent sellers who produce many original works, the Copyright Office allows group registration of unpublished works and group registration of published photos, which can dramatically reduce the per-work cost.</p>
+<p>Copyright registration with the U.S. Copyright Office costs $65 for a single work filed online. For works registered before infringement occurs, you are eligible for statutory damages up to $150,000 per willful infringement without needing to prove actual losses. For independent sellers who produce many original works, the Copyright Office allows group registration of unpublished works and group registration of published photos, which can dramatically reduce the per-work cost.</p>
 <p>Registration does not require a lawyer. Many sellers handle it themselves once they understand the process. The complexity comes from knowing which registration category fits your work and how to describe it accurately, not from any technical legal requirement.</p>
 
 <h2>Copyright Infringement Examples Independent Sellers Actually Face</h2>
@@ -1515,6 +1525,7 @@ export const blogPosts: BlogPost[] = [
 <h2>How Long Does the Registration Process Take?</h2>
 <p>The U.S. Copyright Office processes online registrations in roughly 3 to 11 months for straightforward applications. Complex applications or those requiring correspondence with the examiner take longer.</p>
 <p>This timeline surprises many sellers. The registration effective date is the date the Copyright Office receives a complete application, not the date the certificate arrives. This means your legal protection and the statutory damages window begin when you file, not when you receive confirmation months later.</p>
+<p>Registering your copyright within 3 months of publication preserves your right to statutory damages. Registering after infringement has already occurred limits your recovery to actual damages only, which are much harder to prove and typically much lower.</p>
 <p>For time-sensitive protection on a new product launch, file as soon as the work is complete. The effective date of registration is what courts look at when determining whether statutory damages apply, not the certificate date.</p>
 
 <h2>Common Registration Mistakes Sellers Make</h2>

@@ -1884,7 +1884,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-04-18",
     readingTime: "8 min read",
     intro: "Amazon has become the second-largest selling platform for independent sellers and small creative businesses after Etsy, but its copyright infringement reporting process works differently than Etsy's DMCA portal. If you sell on Amazon and need to report copyright infringement on amazon, you need to understand how Amazon's enforcement system works, what the copyright holder rights are, and what you can do when someone copies your original work.",
-    keyTakeaway: "",
+    keyTakeaway: "Amazon's copyright reporting process differs from Etsy's — it uses Brand Registry and Rights and Protections, not a direct DMCA portal. Document your original work before filing, gather creation files and timestamps, and expect 5-7 business days for Amazon to investigate. Registration with the U.S. Copyright Office strengthens your claim if the dispute escalates.",
     faq: [
       {
         q: "How long does it take Amazon to remove a copied listing?",
@@ -1916,15 +1916,6 @@ export const blogPosts: BlogPost[] = [
       }
     ],
     content: `
-<h2>Key Takeaways</h2>
-<ul>
-  <li>Amazon's reporting process is different from Etsy's: it uses Brand Registry and Amazon Rights and Protections, not a direct DMCA portal</li>
-  <li>You can report copyright claims through Amazon Seller Central, Amazon's Help page, or by submitting a formal notice to Amazon's legal team</li>
-  <li>The process takes 5-7 business days for Amazon to investigate after you file a report</li>
-  <li>Amazon has "safe harbor" protections for third-party sellers, which means Amazon removes listings when properly notified but doesn't monitor on its own</li>
-  <li>Documenting your original work (creation date, files, screenshots) is critical as Amazon will ask for proof of copyright ownership</li>
-</ul>
-
 <h2>What Is Copyright Infringement on Amazon?</h2>
 <p>Copyright infringement happens when someone uploads, sells, or uses your original creative work without your permission. On Amazon, this typically includes:</p>
 <ul>

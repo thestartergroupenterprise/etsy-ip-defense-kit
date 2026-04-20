@@ -106,11 +106,8 @@ function drawField(page, form, fonts, y, fieldName, label, opts = {}) {
   // Label
   page.drawText(label, { x: MARGIN, y: y - 12, size: 8, font: bold, color: GRAY });
 
-  // Field background + border
-  const fieldY = y - 16 - fh;
-  page.drawRectangle({ x: MARGIN, y: fieldY, width: CONTENT_W, height: fh, color: rgb(0.98, 0.98, 0.98), borderColor: FIELD_BORDER, borderWidth: 0.75 });
-
   // AcroForm text field
+  const fieldY = y - 16 - fh;
   const field = form.createTextField(fieldName);
   field.setText('');
   if (hint) {
@@ -122,11 +119,11 @@ function drawField(page, form, fonts, y, fieldName, label, opts = {}) {
     width: CONTENT_W - 4,
     height: fh - 4,
     textColor: DARK,
-    backgroundColor: rgb(0.98, 0.98, 0.98),
-    borderColor: FIELD_BORDER,
-    borderWidth: 0,
-    fontSize: 9,
+    backgroundColor: rgb(1, 1, 1),
+    borderColor: rgb(0.4, 0.4, 0.4),
+    borderWidth: 1,
   });
+  field.setFontSize(11);
   if (multiline) field.enableMultiline();
 
   return fieldY - 10;
@@ -245,6 +242,7 @@ async function buildP1Doc1() {
 
   drawFooter(page, fonts, 2);
 
+  form.updateFieldAppearances(fonts.regular);
   const bytes = await pdfDoc.save();
   fs.writeFileSync(path.join(DIST_P1, '01-dmca-takedown-notice.pdf'), bytes);
   console.log('  P1 Doc 1: 01-dmca-takedown-notice.pdf');
@@ -286,6 +284,7 @@ async function buildP1Doc2() {
 
   drawFooter(page, fonts, 1);
 
+  form.updateFieldAppearances(fonts.regular);
   const bytes = await pdfDoc.save();
   fs.writeFileSync(path.join(DIST_P1, '02-cease-and-desist-letter.pdf'), bytes);
   console.log('  P1 Doc 2: 02-cease-and-desist-letter.pdf');
@@ -333,6 +332,7 @@ async function buildP1Doc3() {
 
   drawFooter(page, fonts, 1);
 
+  form.updateFieldAppearances(fonts.regular);
   const bytes = await pdfDoc.save();
   fs.writeFileSync(path.join(DIST_P1, '03-ip-theft-monitoring-checklist.pdf'), bytes);
   console.log('  P1 Doc 3: 03-ip-theft-monitoring-checklist.pdf');
@@ -376,6 +376,7 @@ async function buildP1Doc4() {
 
   drawFooter(page, fonts, pdfDoc.getPageCount());
 
+  form.updateFieldAppearances(fonts.regular);
   const bytes = await pdfDoc.save();
   fs.writeFileSync(path.join(DIST_P1, '04-multi-platform-filing-guide.pdf'), bytes);
   console.log('  P1 Doc 4: 04-multi-platform-filing-guide.pdf');
@@ -419,6 +420,7 @@ async function buildP1Doc5() {
 
   drawFooter(page, fonts, 1);
 
+  form.updateFieldAppearances(fonts.regular);
   const bytes = await pdfDoc.save();
   fs.writeFileSync(path.join(DIST_P1, '05-listing-reinstatement-appeal.pdf'), bytes);
   console.log('  P1 Doc 5: 05-listing-reinstatement-appeal.pdf');
@@ -472,6 +474,7 @@ async function buildP2Doc1() {
 
   drawFooter(page, fonts, pdfDoc.getPageCount());
 
+  form.updateFieldAppearances(fonts.regular);
   const bytes = await pdfDoc.save();
   fs.writeFileSync(path.join(DIST_P2, '01-brand-rights-documentation-log.pdf'), bytes);
   console.log('  P2 Doc 1: 01-brand-rights-documentation-log.pdf');
@@ -517,6 +520,7 @@ async function buildP2Doc2() {
 
   drawFooter(page, fonts, 1);
 
+  form.updateFieldAppearances(fonts.regular);
   const bytes = await pdfDoc.save();
   fs.writeFileSync(path.join(DIST_P2, '02-trademark-search-clearance-checklist.pdf'), bytes);
   console.log('  P2 Doc 2: 02-trademark-search-clearance-checklist.pdf');
@@ -561,6 +565,7 @@ async function buildP2Doc3() {
 
   drawFooter(page, fonts, pdfDoc.getPageCount());
 
+  form.updateFieldAppearances(fonts.regular);
   const bytes = await pdfDoc.save();
   fs.writeFileSync(path.join(DIST_P2, '03-marketplace-brand-violation-report-template.pdf'), bytes);
   console.log('  P2 Doc 3: 03-marketplace-brand-violation-report-template.pdf');
@@ -612,6 +617,7 @@ async function buildP2Doc4() {
 
   drawFooter(page, fonts, 1);
 
+  form.updateFieldAppearances(fonts.regular);
   const bytes = await pdfDoc.save();
   fs.writeFileSync(path.join(DIST_P2, '04-trademark-monitoring-workflow.pdf'), bytes);
   console.log('  P2 Doc 4: 04-trademark-monitoring-workflow.pdf');
@@ -660,6 +666,7 @@ async function buildP2Doc5() {
 
   drawFooter(page, fonts, pdfDoc.getPageCount());
 
+  form.updateFieldAppearances(fonts.regular);
   const bytes = await pdfDoc.save();
   fs.writeFileSync(path.join(DIST_P2, '05-brand-identity-infringement-evidence-log.pdf'), bytes);
   console.log('  P2 Doc 5: 05-brand-identity-infringement-evidence-log.pdf');
@@ -714,6 +721,7 @@ async function buildP2Doc6() {
 
   drawFooter(page, fonts, pdfDoc.getPageCount());
 
+  form.updateFieldAppearances(fonts.regular);
   const bytes = await pdfDoc.save();
   fs.writeFileSync(path.join(DIST_P2, '06-trademark-registration-readiness-checklist.pdf'), bytes);
   console.log('  P2 Doc 6: 06-trademark-registration-readiness-checklist.pdf');

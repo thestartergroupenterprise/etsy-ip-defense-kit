@@ -1,29 +1,29 @@
 /**
- * Stripe Webhook Handler, Product 1: Etsy IP Defense Kit
+ * UNIFIED Stripe Webhook Handler — Products 1, 2, and 3
  *
  * Fires on payment_intent.succeeded:
- *   1. Verifies Stripe signature using STRIPE_WEBHOOK_SECRET (Product 1 only, never shared)
- *   2. Validates Stripe product ID via checkout session lookup:
- *        if payload product ID does not match STRIPE_P1_PRODUCT_ID, reject and alert Founder
- *   3. Extracts customer email from the PaymentIntent
- *   4. Mints a signed, time-limited download token (30 days) tied to this payment
- *   5. Sends Product 1 delivery email via Resend with the unique download link
- *   6. Writes nurture queue entry to Vercel Blob for follow-up sequence
+ *   1. Verifies Stripe signature using STRIPE_WEBHOOK_SECRET (shared for all products on same account)
+ *   2. Reads product ID from checkout session line items
+ *   3. Routes to correct product config (P1, P2, or P3)
+ *   4. Validates product is configured (if not found, alerts Founder)
+ *   5. Extracts customer email from the PaymentIntent
+ *   6. Mints a signed, time-limited download token (30 days) tied to this payment
+ *   7. Sends product-specific delivery email via Resend with the unique download link
+ *   8. (P1 only) Writes nurture queue entry to Vercel Blob for follow-up sequence
  *
  * Fires on refund.created:
  *   (logged for future revocation support, no action yet)
  *
- * DELIVERY ISOLATION RULES (permanent, Founder-set 2026-04-08):
- *   - This webhook handles ONLY Product 1. Cross-triggering is impossible by architecture.
- *   - Uses STRIPE_WEBHOOK_SECRET (not shared with any other product)
- *   - Reads PRODUCT_BLOB_URL (not shared with any other product)
- *   - Validates against STRIPE_P1_PRODUCT_ID (not shared with any other product)
- *   - If product ID in payload does not match STRIPE_P1_PRODUCT_ID: reject, alert, stop.
+ * PRODUCT CONFIGURATIONS (defined below):
+ *   P1: Etsy IP Defense Kit ($27)
+ *   P2: Trademark Protection Kit ($47)
+ *   P3: Platform IP Enforcement Kit ($67)
  *
- * Required env vars (all Product 1 dedicated, no sharing):
- *   STRIPE_WEBHOOK_SECRET      Product 1 Stripe webhook signing secret
- *   STRIPE_P1_PRODUCT_ID       Product 1 Stripe product ID (prod_UBj6Q3NT9DQNhr)
- *   PRODUCT_BLOB_URL           Product 1 Vercel Blob URL (dedicated path)
+ * Required env vars (all products use same webhook secret):
+ *   STRIPE_WEBHOOK_SECRET      Stripe webhook signing secret (shared for all products)
+ *   PRODUCT_BLOB_URL           P1 Vercel Blob URL
+ *   PRODUCT_2_BLOB_URL         P2 Vercel Blob URL
+ *   PRODUCT_3_BLOB_URL (optional)  P3 Vercel Blob URL (hardcoded fallback below)
  *   DOWNLOAD_SIGNING_SECRET    HMAC secret for download token minting
  *   RESEND_API_KEY             Resend API key
  *   FROM_EMAIL                 e.g. hello@sellerdefensekit.com
@@ -37,6 +37,44 @@ import { generateDownloadToken } from "@/lib/download-token";
 const DOWNLOAD_BASE = "https://sellerdefensekit.com/api/download";
 const FOUNDER_CHAT_ID = "8493404368";
 
+// Product Configuration Map
+const PRODUCT_CONFIG: {
+  [key: string]: {
+    name: string;
+    blobUrl: string;
+    emailSubject: string;
+    emailTemplateType: "p1" | "p2" | "p3";
+    sendNurtureQueue: boolean;
+  };
+} = {
+  // Product 1: Etsy IP Defense Kit
+  prod_UBj6Q3NT9DQNhr: {
+    name: "Etsy IP Defense Kit",
+    blobUrl: process.env.PRODUCT_BLOB_URL || "",
+    emailSubject: "Your Seller Defense Kit is ready, download link inside",
+    emailTemplateType: "p1",
+    sendNurtureQueue: true,
+  },
+  // Product 2: Trademark Protection Kit
+  prod_UIWdonnmxXAE0K: {
+    name: "Trademark Protection Kit",
+    blobUrl: process.env.PRODUCT_2_BLOB_URL || "",
+    emailSubject: "Your Trademark Protection Kit is ready — download inside",
+    emailTemplateType: "p2",
+    sendNurtureQueue: false,
+  },
+  // Product 3: Platform IP Enforcement Kit
+  prod_UMqLUXJV0Qb1DC: {
+    name: "Platform IP Enforcement Kit",
+    blobUrl:
+      process.env.PRODUCT_3_BLOB_URL ||
+      "https://mjmzu6hzzkfzgjso.public.blob.vercel-storage.com/products/p3-platform-ip-enforcement-toolkit/p3-platform-ip-enforcement-toolkit.zip",
+    emailSubject: "Your Platform IP Enforcement Kit is ready — 9 templates inside",
+    emailTemplateType: "p3",
+    sendNurtureQueue: false,
+  },
+};
+
 async function alertFounder(message: string): Promise<void> {
   const token = process.env.TELEGRAM_BOT_TOKEN;
   if (!token) return;
@@ -47,8 +85,7 @@ async function alertFounder(message: string): Promise<void> {
       body: JSON.stringify({ chat_id: FOUNDER_CHAT_ID, text: message }),
     });
   } catch {
-    // Telegram alert failure is logged but never fatal to the request lifecycle
-    console.error("[webhook-p1] Telegram alert failed");
+    console.error("[webhook-unified] Telegram alert failed");
   }
 }
 
@@ -58,21 +95,15 @@ export async function POST(req: NextRequest) {
 
   const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
   const resendApiKey = process.env.RESEND_API_KEY;
-  const blobUrl = process.env.PRODUCT_BLOB_URL;
-  const expectedProductId = process.env.STRIPE_P1_PRODUCT_ID;
   const fromEmail = process.env.FROM_EMAIL || "hello@sellerdefensekit.com";
 
   if (!webhookSecret) {
-    console.error("[webhook-p1] STRIPE_WEBHOOK_SECRET not set");
+    console.error("[webhook-unified] STRIPE_WEBHOOK_SECRET not set");
     return NextResponse.json({ error: "Webhook not configured" }, { status: 500 });
   }
   if (!resendApiKey) {
-    console.error("[webhook-p1] RESEND_API_KEY not set");
+    console.error("[webhook-unified] RESEND_API_KEY not set");
     return NextResponse.json({ error: "Email provider not configured" }, { status: 500 });
-  }
-  if (!blobUrl) {
-    console.error("[webhook-p1] PRODUCT_BLOB_URL not set");
-    return NextResponse.json({ error: "Product file not configured" }, { status: 500 });
   }
   if (!signature) {
     return NextResponse.json({ error: "Missing stripe-signature header" }, { status: 400 });
@@ -89,7 +120,7 @@ export async function POST(req: NextRequest) {
     });
     event = stripeClient.webhooks.constructEvent(rawBody, signature, webhookSecret);
   } catch (err) {
-    console.error("[webhook-p1] Signature verification failed:", err);
+    console.error("[webhook-unified] Signature verification failed:", err);
     return NextResponse.json({ error: "Invalid signature" }, { status: 400 });
   }
 
@@ -97,80 +128,103 @@ export async function POST(req: NextRequest) {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const paymentIntent = event.data.object as any;
 
-    // ── PRODUCT ID VALIDATION ──────────────────────────────────────────────
-    // Look up the Checkout Session for this PaymentIntent to verify product ID.
-    // If STRIPE_P1_PRODUCT_ID is set and does not match the payload, reject immediately.
-    if (expectedProductId) {
-      try {
-        const sessions = await stripeClient.checkout.sessions.list({
-          payment_intent: paymentIntent.id,
-          limit: 1,
-          expand: ["data.line_items"],
-        });
-        if (sessions.data.length > 0) {
-          const session = sessions.data[0];
-          const lineItems: any[] = session.line_items?.data ?? []; // eslint-disable-line @typescript-eslint/no-explicit-any
-          const productIds = lineItems
-            .map((item: any) => item.price?.product) // eslint-disable-line @typescript-eslint/no-explicit-any
-            .filter(Boolean);
+    // ── PRODUCT ID DETECTION ────────────────────────────────────────────────
+    // Look up the Checkout Session for this PaymentIntent to determine which product was purchased
+    let detectedProductId: string | null = null;
 
-          if (productIds.length > 0 && !productIds.includes(expectedProductId)) {
-            const alert = `WEBHOOK PRODUCT ID MISMATCH [P1]\nExpected: ${expectedProductId}\nFound: ${productIds.join(", ")}\nPayment Intent: ${paymentIntent.id}\nAction: delivery BLOCKED`;
-            console.error("[webhook-p1]", alert);
-            await alertFounder(alert);
-            return NextResponse.json({ error: "Product ID mismatch, delivery blocked" }, { status: 400 });
-          }
+    try {
+      const sessions = await stripeClient.checkout.sessions.list({
+        payment_intent: paymentIntent.id,
+        limit: 1,
+        expand: ["data.line_items"],
+      });
+      if (sessions.data.length > 0) {
+        const session = sessions.data[0];
+        const lineItems: any[] = session.line_items?.data ?? []; // eslint-disable-line @typescript-eslint/no-explicit-any
+        const productIds = lineItems
+          .map((item: any) => item.price?.product) // eslint-disable-line @typescript-eslint/no-explicit-any
+          .filter(Boolean);
+
+        if (productIds.length > 0) {
+          detectedProductId = productIds[0]; // Use first product ID
+          console.log(
+            `[webhook-unified] Detected product: ${detectedProductId} for payment ${paymentIntent.id}`
+          );
         }
-      } catch (validationErr) {
-        // If the Stripe API call to fetch the session fails, log and continue.
-        // We do not block delivery on a validation-check network failure.
-        console.warn("[webhook-p1] Product ID validation lookup failed (continuing):", validationErr);
       }
+    } catch (err) {
+      console.warn("[webhook-unified] Product ID detection failed (continuing):", err);
     }
-    // ── END PRODUCT ID VALIDATION ──────────────────────────────────────────
+
+    if (!detectedProductId) {
+      console.error("[webhook-unified] Could not detect product ID for payment:", paymentIntent.id);
+      return NextResponse.json({ received: true, note: "No product ID detected" });
+    }
+
+    // ── PRODUCT CONFIG LOOKUP ───────────────────────────────────────────────
+    const productConfig = PRODUCT_CONFIG[detectedProductId];
+
+    if (!productConfig) {
+      const alert = `UNKNOWN PRODUCT ID IN WEBHOOK\nProduct: ${detectedProductId}\nPayment Intent: ${paymentIntent.id}\nAction: delivery BLOCKED (product not configured)`;
+      console.error("[webhook-unified]", alert);
+      await alertFounder(alert);
+      return NextResponse.json({ error: "Product not configured" }, { status: 400 });
+    }
+
+    if (!productConfig.blobUrl) {
+      const alert = `MISSING BLOB URL FOR PRODUCT\nProduct: ${productConfig.name} (${detectedProductId})\nPayment Intent: ${paymentIntent.id}\nAction: delivery BLOCKED (no file URL)`;
+      console.error("[webhook-unified]", alert);
+      await alertFounder(alert);
+      return NextResponse.json({ error: "Product file not configured" }, { status: 500 });
+    }
+
+    // ── END PRODUCT CONFIG LOOKUP ───────────────────────────────────────────
 
     const customerEmail: string | null =
-      paymentIntent.receipt_email ||
-      paymentIntent.customer_details?.email ||
-      null;
+      paymentIntent.receipt_email || paymentIntent.customer_details?.email || null;
 
     if (!customerEmail) {
-      console.error("[webhook-p1] No customer email on payment_intent:", paymentIntent.id);
+      console.error("[webhook-unified] No customer email on payment_intent:", paymentIntent.id);
       return NextResponse.json({ received: true, note: "No email on record" });
     }
 
     // Mint a unique signed download token for this payment (30-day expiry)
     let downloadToken: string;
     try {
-      downloadToken = generateDownloadToken(paymentIntent.id, blobUrl, 30);
+      downloadToken = generateDownloadToken(paymentIntent.id, productConfig.blobUrl, 30);
     } catch (err) {
-      console.error("[webhook-p1] Failed to generate download token:", err);
+      console.error("[webhook-unified] Failed to generate download token:", err);
       return NextResponse.json({ error: "Token generation failed" }, { status: 500 });
     }
 
     const downloadPageUrl = `${DOWNLOAD_BASE}/${downloadToken}`;
 
-    console.log("[webhook-p1] downloadToken length:", downloadToken.length);
-    console.log("[webhook-p1] downloadPageUrl prefix:", downloadPageUrl.substring(0, 80));
+    console.log(
+      `[webhook-unified] ${productConfig.name} | token length: ${downloadToken.length} | email: ${customerEmail}`
+    );
 
-    // Write nurture queue entry to Vercel Blob
-    try {
-      const { put } = await import("@vercel/blob");
-      const record = JSON.stringify({
-        email: customerEmail,
-        paymentIntentId: paymentIntent.id,
-        purchasedAt: new Date().toISOString(),
-        sent48h: false,
-        sent7d: false,
-      });
-      await put(`nurture/${paymentIntent.id}.json`, record, {
-        access: "public",
-        addRandomSuffix: false,
-      });
-      console.log(`[webhook-p1] Nurture queue entry created for ${customerEmail}`);
-    } catch (err) {
-      // Non-fatal, delivery email still sends
-      console.error("[webhook-p1] Failed to write nurture queue entry:", err);
+    // Write nurture queue entry to Vercel Blob (P1 only)
+    if (productConfig.sendNurtureQueue) {
+      try {
+        const { put } = await import("@vercel/blob");
+        const record = JSON.stringify({
+          email: customerEmail,
+          paymentIntentId: paymentIntent.id,
+          purchasedAt: new Date().toISOString(),
+          sent48h: false,
+          sent7d: false,
+        });
+        await put(`nurture/${paymentIntent.id}.json`, record, {
+          access: "public",
+          addRandomSuffix: false,
+        });
+        console.log(
+          `[webhook-unified] Nurture queue entry created for ${customerEmail} (P1)`
+        );
+      } catch (err) {
+        // Non-fatal, delivery email still sends
+        console.error("[webhook-unified] Failed to write nurture queue entry:", err);
+      }
     }
 
     // Send delivery email via Resend
@@ -178,18 +232,27 @@ export async function POST(req: NextRequest) {
       const { Resend } = await import("resend");
       const resend = new Resend(resendApiKey);
 
+      const emailHtml = buildEmailHtml(
+        downloadPageUrl,
+        customerEmail,
+        productConfig.emailTemplateType
+      );
+      const emailText = buildEmailText(downloadPageUrl, customerEmail, productConfig.emailTemplateType);
+
       await resend.emails.send({
         from: fromEmail,
         to: customerEmail,
         replyTo: "hello@sellerdefensekit.com",
-        subject: "Your Seller Defense Kit is ready, download link inside",
-        html: buildEmailHtml(downloadPageUrl, customerEmail),
-        text: buildEmailText(downloadPageUrl, customerEmail),
+        subject: productConfig.emailSubject,
+        html: emailHtml,
+        text: emailText,
       });
 
-      console.log(`[webhook-p1] Delivery email sent to ${customerEmail} for ${paymentIntent.id}`);
+      console.log(
+        `[webhook-unified] Delivery email sent to ${customerEmail} for ${productConfig.name} (${detectedProductId})`
+      );
     } catch (emailErr) {
-      console.error("[webhook-p1] Failed to send delivery email:", emailErr);
+      console.error("[webhook-unified] Failed to send delivery email:", emailErr);
       return NextResponse.json({ error: "Email delivery failed" }, { status: 500 });
     }
   }
@@ -197,16 +260,25 @@ export async function POST(req: NextRequest) {
   if (event.type === "refund.created") {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const refund = event.data.object as any;
-    console.log(`[webhook-p1] Refund created: ${refund.id} for payment ${refund.payment_intent}`);
-    // Future: look up token by payment intent ID in Vercel KV and revoke it
+    console.log(
+      `[webhook-unified] Refund created: ${refund.id} for payment ${refund.payment_intent}`
+    );
+    // Future: look up token by payment intent ID and revoke it
   }
 
   return NextResponse.json({ received: true });
 }
 
-function buildEmailHtml(downloadPageUrl: string, customerEmail: string): string {
+function buildEmailHtml(
+  downloadPageUrl: string,
+  customerEmail: string,
+  templateType: "p1" | "p2" | "p3"
+): string {
   const unsubscribeUrl = `https://sellerdefensekit.com/unsubscribe?email=${encodeURIComponent(customerEmail)}`;
-  return `<!DOCTYPE html>
+
+  if (templateType === "p1") {
+    // P1: Etsy IP Defense Kit
+    return `<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
@@ -241,11 +313,11 @@ function buildEmailHtml(downloadPageUrl: string, customerEmail: string): string 
 
   <h2 style="font-size: 16px; color: #111;">What's in your kit (PDF format):</h2>
   <ul style="color: #555; font-size: 14px; line-height: 1.8;">
-    <li>&#128196; DMCA Takedown Notice, for Etsy, Temu, AliExpress and web</li>
-    <li>&#9993; Cease and Desist Letter, direct seller contact template</li>
-    <li>&#128269; IP Theft Monitoring Checklist, find theft on 5 platforms</li>
-    <li>&#128506; Multi-Platform Filing Guide, step-by-step for every portal</li>
-    <li>&#128737; Listing Reinstatement Appeal, for when your own listing gets suspended</li>
+    <li>📄 DMCA Takedown Notice, for Etsy, Temu, AliExpress and web</li>
+    <li>✉️ Cease and Desist Letter, direct seller contact template</li>
+    <li>🔍 IP Theft Monitoring Checklist, find theft on 5 platforms</li>
+    <li>📝 Multi-Platform Filing Guide, step-by-step for every portal</li>
+    <li>📋 Listing Reinstatement Appeal, for when your own listing gets suspended</li>
   </ul>
 
   <p style="font-size: 13px; color: #999; margin-top: 32px;">
@@ -268,11 +340,151 @@ function buildEmailHtml(downloadPageUrl: string, customerEmail: string): string 
 
 </body>
 </html>`;
+  } else if (templateType === "p2") {
+    // P2: Trademark Protection Kit
+    return `<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Trademark Protection Kit</title>
+</head>
+<body style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; color: #111;">
+
+  <h1 style="color: #d97706; font-size: 24px; margin-bottom: 8px;">
+    Your Trademark Protection Kit is ready.
+  </h1>
+
+  <p style="font-size: 16px; color: #555; margin-bottom: 24px;">
+    Thank you for your purchase. Your trademark protection toolkit is ready to download.
+  </p>
+
+  <div style="text-align: center; margin: 32px 0;">
+    <a href="${downloadPageUrl}"
+       style="background-color: #d97706; color: white; padding: 16px 32px;
+              border-radius: 8px; text-decoration: none; font-size: 18px;
+              font-weight: bold; display: inline-block;">
+      Download Your Kit Now
+    </a>
+  </div>
+
+  <p style="font-size: 14px; color: #777;">
+    Or copy this link into your browser:<br>
+    <a href="${downloadPageUrl}" style="color: #d97706; word-break: break-all;">${downloadPageUrl}</a>
+  </p>
+
+  <hr style="border: none; border-top: 1px solid #eee; margin: 32px 0;">
+
+  <h2 style="font-size: 16px; color: #111;">What's in your kit (PDF format):</h2>
+  <ul style="color: #555; font-size: 14px; line-height: 1.8;">
+    <li>📄 Trademark Clearance Checklist</li>
+    <li>✉️ Cease and Desist Letter Template</li>
+    <li>🔍 Marketplace Monitoring Guide</li>
+    <li>📝 Brand Identity Evidence Log</li>
+    <li>📋 Trademark Registration Readiness Checklist</li>
+    <li>📊 Multi-Platform Brand Violation Report Template</li>
+  </ul>
+
+  <p style="font-size: 13px; color: #999; margin-top: 32px;">
+    This download link is valid for 30 days.<br>
+    Questions? Reply to this email or contact us at
+    <a href="mailto:hello@sellerdefensekit.com" style="color: #d97706;">
+      hello@sellerdefensekit.com
+    </a>.<br>
+    30-day money-back guarantee. If you cannot protect your trademark in 20 minutes, we will refund you.
+  </p>
+
+  <hr style="border: none; border-top: 1px solid #eee; margin: 24px 0;">
+
+  <p style="font-size: 11px; color: #bbb; line-height: 1.6;">
+    This email was sent by <strong>Seller Defense Kit, a product of The Starter Group</strong><br>
+    2967 Dundas St W, Toronto, ON M6P 1Z2, Canada<br>
+    You received this email because you purchased the Trademark Protection Kit.<br>
+    <a href="${unsubscribeUrl}" style="color: #bbb;">Unsubscribe</a>
+  </p>
+
+</body>
+</html>`;
+  } else {
+    // P3: Platform IP Enforcement Kit
+    return `<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Platform IP Enforcement Kit</title>
+</head>
+<body style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; color: #111;">
+
+  <h1 style="color: #d97706; font-size: 24px; margin-bottom: 8px;">
+    Your Platform IP Enforcement Kit is ready.
+  </h1>
+
+  <p style="font-size: 16px; color: #555; margin-bottom: 24px;">
+    Thank you for your purchase. Your 9-template platform-specific enforcement toolkit is ready to download.
+  </p>
+
+  <div style="text-align: center; margin: 32px 0;">
+    <a href="${downloadPageUrl}"
+       style="background-color: #d97706; color: white; padding: 16px 32px;
+              border-radius: 8px; text-decoration: none; font-size: 18px;
+              font-weight: bold; display: inline-block;">
+      Download Your 9 Templates Now
+    </a>
+  </div>
+
+  <p style="font-size: 14px; color: #777;">
+    Or copy this link into your browser:<br>
+    <a href="${downloadPageUrl}" style="color: #d97706; word-break: break-all;">${downloadPageUrl}</a>
+  </p>
+
+  <hr style="border: none; border-top: 1px solid #eee; margin: 32px 0;">
+
+  <h2 style="font-size: 16px; color: #111;">What's in your kit (9 fillable PDFs):</h2>
+  <ul style="color: #555; font-size: 14px; line-height: 1.8;">
+    <li>📄 Amazon Brand Registry IP Report</li>
+    <li>📄 Amazon Rights and Protections Report</li>
+    <li>📄 TikTok Shop IPR Report</li>
+    <li>📄 AliExpress IPP Notice</li>
+    <li>📄 Pinterest IP Report</li>
+    <li>📄 Shopify and Standalone Website DMCA Notice</li>
+    <li>📄 Gumroad, Creative Market, Redbubble DMCA</li>
+    <li>📄 Other Website and Google Deindex Notice</li>
+    <li>📊 Multi-Platform Infringement Evidence Log</li>
+  </ul>
+
+  <p style="font-size: 13px; color: #999; margin-top: 32px;">
+    This download link is valid for 30 days.<br>
+    Questions? Reply to this email or contact us at
+    <a href="mailto:hello@sellerdefensekit.com" style="color: #d97706;">
+      hello@sellerdefensekit.com
+    </a>.<br>
+    30-day money-back guarantee. File correctly on the first try or get your money back.
+  </p>
+
+  <hr style="border: none; border-top: 1px solid #eee; margin: 24px 0;">
+
+  <p style="font-size: 11px; color: #bbb; line-height: 1.6;">
+    This email was sent by <strong>Seller Defense Kit, a product of The Starter Group</strong><br>
+    2967 Dundas St W, Toronto, ON M6P 1Z2, Canada<br>
+    You received this email because you purchased the Platform IP Enforcement Kit.<br>
+    <a href="${unsubscribeUrl}" style="color: #bbb;">Unsubscribe</a>
+  </p>
+
+</body>
+</html>`;
+  }
 }
 
-function buildEmailText(downloadPageUrl: string, customerEmail: string): string {
+function buildEmailText(
+  downloadPageUrl: string,
+  customerEmail: string,
+  templateType: "p1" | "p2" | "p3"
+): string {
   const unsubscribeUrl = `https://sellerdefensekit.com/unsubscribe?email=${encodeURIComponent(customerEmail)}`;
-  return `Your Seller Defense Kit is ready.
+
+  if (templateType === "p1") {
+    return `Your Seller Defense Kit is ready.
 
 Thank you for your purchase. Download your 5-document PDF kit here:
 ${downloadPageUrl}
@@ -294,4 +506,56 @@ Seller Defense Kit, a product of The Starter Group
 2967 Dundas St W, Toronto, ON M6P 1Z2, Canada
 You received this email because you purchased the Seller Defense Kit.
 Unsubscribe: ${unsubscribeUrl}`;
+  } else if (templateType === "p2") {
+    return `Your Trademark Protection Kit is ready.
+
+Thank you for your purchase. Download your toolkit here:
+${downloadPageUrl}
+
+This link is valid for 30 days.
+
+What's in your kit:
+- Trademark Clearance Checklist
+- Cease and Desist Letter Template
+- Marketplace Monitoring Guide
+- Brand Identity Evidence Log
+- Trademark Registration Readiness Checklist
+- Multi-Platform Brand Violation Report Template
+
+Questions? Reply to this email or contact us at hello@sellerdefensekit.com.
+30-day money-back guarantee.
+
+---
+Seller Defense Kit, a product of The Starter Group
+2967 Dundas St W, Toronto, ON M6P 1Z2, Canada
+You received this email because you purchased the Trademark Protection Kit.
+Unsubscribe: ${unsubscribeUrl}`;
+  } else {
+    return `Your Platform IP Enforcement Kit is ready.
+
+Thank you for your purchase. Download your 9-template enforcement toolkit here:
+${downloadPageUrl}
+
+This link is valid for 30 days.
+
+What's in your kit (9 fillable PDFs):
+- Amazon Brand Registry IP Report
+- Amazon Rights and Protections Report
+- TikTok Shop IPR Report
+- AliExpress IPP Notice
+- Pinterest IP Report
+- Shopify and Standalone Website DMCA Notice
+- Gumroad, Creative Market, Redbubble DMCA
+- Other Website and Google Deindex Notice
+- Multi-Platform Infringement Evidence Log
+
+Questions? Reply to this email or contact us at hello@sellerdefensekit.com.
+30-day money-back guarantee.
+
+---
+Seller Defense Kit, a product of The Starter Group
+2967 Dundas St W, Toronto, ON M6P 1Z2, Canada
+You received this email because you purchased the Platform IP Enforcement Kit.
+Unsubscribe: ${unsubscribeUrl}`;
+  }
 }

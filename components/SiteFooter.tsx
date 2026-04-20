@@ -40,7 +40,13 @@ export default function SiteFooter() {
           >
             Trademark Protection Kit ($47)
           </Link>
-          {/* Add Product 3 here when PAGE_LIVE: <span className="text-gray-600 mx-2">|</span><Link ...>Platform-Specific Filing Toolkit ($67)</Link> */}
+          <span className="text-gray-600 mx-2">|</span>
+          <Link
+            href="/platform-ip-kit?utm_source=footer&utm_medium=website&utm_campaign=product-suite"
+            className="text-amber-400 hover:text-amber-300 transition-colors"
+          >
+            Platform IP Enforcement Kit ($67)
+          </Link>
         </p>
 
         {/* Row 3: Nav links — dot-separated */}

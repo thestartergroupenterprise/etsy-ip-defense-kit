@@ -48,10 +48,10 @@ export async function POST(req: NextRequest) {
   const rawBody = await req.text();
   const signature = req.headers.get("stripe-signature");
 
-  const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET_P3;
+  const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET || process.env.STRIPE_WEBHOOK_SECRET_P3;
   const resendApiKey = process.env.RESEND_API_KEY;
-  const blobUrl = process.env.PRODUCT_P3_BLOB_URL || "https://mjmzu6hzzkfzgjso.public.blob.vercel-storage.com/products/p3-platform-ip-enforcement-toolkit/p3-platform-ip-enforcement-toolkit.zip";
-  const expectedProductId = process.env.STRIPE_P3_PRODUCT_ID;
+  const blobUrl = "https://mjmzu6hzzkfzgjso.public.blob.vercel-storage.com/products/p3-platform-ip-enforcement-toolkit/p3-platform-ip-enforcement-toolkit.zip";
+  const expectedProductId = "prod_UMqLUXJV0Qb1DC";
   const fromEmail = process.env.FROM_EMAIL || "hello@sellerdefensekit.com";
 
   if (!webhookSecret) {

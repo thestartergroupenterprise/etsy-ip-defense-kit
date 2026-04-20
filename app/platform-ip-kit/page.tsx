@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { UTMCaptureClient } from "@/app/components/UTMCaptureClient";
 
-const STRIPE_P3_PAYMENT_LINK = process.env.NEXT_PUBLIC_STRIPE_P3_PAYMENT_LINK || "#";
+const STRIPE_P3_PAYMENT_LINK = "https://buy.stripe.com/bJecN58Tr2Ut1ix3vi2Fa02";
 
 export const metadata: Metadata = {
   title: "Platform IP Enforcement Kit | File Infringement Reports Correctly | Seller Defense Kit",

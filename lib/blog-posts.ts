@@ -272,6 +272,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>For background on copyright law protections, see the <a href="https://www.copyright.gov/help/faq/faq-general.html" target="_blank" rel="noopener noreferrer">U.S. Copyright Office FAQ</a>. To register your copyrights, visit <a href="https://www.copyright.gov/registration/" target="_blank" rel="noopener noreferrer">copyright.gov/registration</a>. For the full toolkit to protect your shop, see the <a href="/">Etsy IP Defense Kit homepage</a>.</p>
     `,
+    keyTakeaway: "Acting fast is critical - every hour a copycat listing stays live, they earn revenue from your work. Document everything immediately before it disappears, then file your DMCA through etsy.com/legal/ip/report with all 6 required legal elements. Most valid notices result in removal within 24-72 hours.",
     faq: [
       {
         q: "What should I do first if I find someone copied my Etsy listing?",
@@ -402,6 +403,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>The legal requirements for DMCA notices come from <a href="https://www.law.cornell.edu/uscode/text/17/512" target="_blank" rel="noopener noreferrer">17 U.S.C. Section 512</a>. Read Etsy's IP policy at <a href="https://www.etsy.com/legal/intellectual-property/" target="_blank" rel="noopener noreferrer">etsy.com/legal/intellectual-property</a>. For ready-to-file templates with the correct statutory language, visit the <a href="/">Etsy IP Defense Kit homepage</a>.</p>
     `,
+    keyTakeaway: "A DMCA notice that's missing even one required element gets dismissed automatically. All 6 elements under 17 U.S.C. 512(c)(3) are legally required: your contact information, specific description of your original work, the infringing URL, a good faith statement, an accuracy statement under penalty of perjury, and your signature. Use exact statutory language, not a paraphrase.",
     faq: [
       {
         q: "What are the 6 required elements of a DMCA notice?",
@@ -549,6 +551,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>For DMCA procedures and seller rights, see <a href="https://www.copyright.gov/dmca/" target="_blank" rel="noopener noreferrer">copyright.gov/dmca</a>. Etsy's full IP reporting policy is at <a href="https://www.etsy.com/legal/intellectual-property/" target="_blank" rel="noopener noreferrer">etsy.com/legal/intellectual-property</a>. For step-by-step templates for every stage of the process, visit the <a href="/">Etsy IP Defense Kit homepage</a>.</p>
     `,
+    keyTakeaway: "Copyright infringement on Etsy means someone copied your original photos, text, or designs without permission. Copyright protects your creative work automatically when you create it - no registration needed. Report through etsy.com/legal/ip/report (not the general Report button), be specific about what was copied, and expect removal within 24-72 hours for valid claims.",
     faq: [
       {
         q: "How do I report copyright infringement on Etsy?",
@@ -692,6 +695,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>File Google DMCA notices at <a href="https://reportcontent.google.com/forms/dmca" target="_blank" rel="noopener noreferrer">reportcontent.google.com</a>. Learn about the Copyright Claims Board at <a href="https://ccb.gov" target="_blank" rel="noopener noreferrer">ccb.gov</a>. For ready-to-file legal templates for every stage of the escalation process, see the <a href="/">Etsy IP Defense Kit homepage</a>.</p>
     `,
+    keyTakeaway: "When DMCA takedowns aren't enough, escalate by sending a formal Cease and Desist letter directly to the seller citing potential statutory damages up to $150,000 per willful infringement. Document every successful takedown and invoke Etsy's Repeat Infringer Policy by referencing case numbers. Copyright registration costs $35-$55 and dramatically increases your legal leverage.",
     faq: [
       {
         q: "What can I do if Etsy keeps restoring a stolen listing?",

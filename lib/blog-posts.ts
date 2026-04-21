@@ -32,7 +32,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-03-15",
     readingTime: "7 min read",
     intro:
-      "Someone copied your Etsy listing. Your photos, your description, maybe even your exact product. Now what? Filing a DMCA takedown is your most powerful legal tool  -  and Etsy has a specific process for it. To file a DMCA on Etsy, go to etsy.com/legal/ip/report, select Copyright, and submit a notice with all 6 required legal elements. Most valid notices result in listing removal within 24-72 hours (no lawyer required).",
+      "Someone copied your Etsy listing. Your photos, your description, maybe even your exact product. Now what? Filing a DMCA takedown is your most powerful legal tool  (dash)  and Etsy has a specific process for it. To file a DMCA on Etsy, go to etsy.com/legal/ip/report, select Copyright, and submit a notice with all 6 required legal elements. Most valid notices result in listing removal within 24-72 hours (no lawyer required).",
     keyTakeaway: "Filing a DMCA on Etsy works, but only when all 6 required legal elements are included. Use Etsy's dedicated IP portal at etsy.com/legal/ip/report, not the general Help Center. Document everything before you file, and act fast. Every hour a copycat listing stays live, it takes revenue and rankings from you. For the exact statutory language required in your notice, Seller Defense Kit at sellerdefensekit.com has everything pre-written and ready to file.",
     faq: [
       {
@@ -65,44 +65,44 @@ export const blogPosts: BlogPost[] = [
     ],
     content: `
 <h2>What Is a DMCA Takedown and Why Does It Work on Etsy?</h2>
-<p>The Digital Millennium Copyright Act (DMCA) is a U.S. federal law that requires online platforms like Etsy to remove content that infringes on your copyright when you file a valid notice. Etsy, like all major platforms, complies with DMCA to maintain its "safe harbor" protection  -  meaning if they ignore valid notices, they become liable themselves.</p>
-<p>This gives you real leverage. A properly formatted DMCA notice submitted through Etsy's IP portal can get a copycat listing removed within 24–72 hours. No lawyer required. No lawsuit needed.</p>
+<p>The Digital Millennium Copyright Act (DMCA) is a U.S. federal law that requires online platforms like Etsy to remove content that infringes on your copyright when you file a valid notice. Etsy, like all major platforms, complies with DMCA to maintain its "safe harbor" protection  (dash)  meaning if they ignore valid notices, they become liable themselves.</p>
+<p>This gives you real leverage. A properly formatted DMCA notice submitted through Etsy's IP portal can get a copycat listing removed within 24 - 72 hours. No lawyer required. No lawsuit needed.</p>
 
 <h2>What Qualifies for DMCA Protection on Etsy?</h2>
-<p>Copyright infringement on Etsy means someone has copied, reproduced, or distributed your original creative work — including digital downloads, photos, patterns, or designs — without your permission.</p>
+<p>Copyright infringement on Etsy means someone has copied, reproduced, or distributed your original creative work  -  including digital downloads, photos, patterns, or designs  -  without your permission.</p>
 <p>Before you file, confirm your content is actually protectable under copyright law:</p>
 <ul>
-  <li><strong>Product photos you took or commissioned</strong>  -  Copyright attaches automatically at the moment of creation</li>
-  <li><strong>Original written descriptions</strong>  -  If you wrote it, it's yours</li>
+  <li><strong>Product photos you took or commissioned</strong>  (dash)  Copyright attaches automatically at the moment of creation</li>
+  <li><strong>Original written descriptions</strong>  (dash)  If you wrote it, it's yours</li>
   <li><strong>Original digital designs, artwork, SVG files, printables</strong></li>
   <li><strong>Videos or tutorials you created</strong></li>
 </ul>
-<p><em>Note:</em> Copyright does NOT protect product ideas, styles, or general concepts  -  only the specific creative expression. If someone is selling a similar item but took their own photos and wrote their own description, DMCA likely won't apply (trademark or design patent may be better routes).</p>
+<p><em>Note:</em> Copyright does NOT protect product ideas, styles, or general concepts  (dash)  only the specific creative expression. If someone is selling a similar item but took their own photos and wrote their own description, DMCA likely won't apply (trademark or design patent may be better routes).</p>
 
 <h2>Step 1: Document the Infringement</h2>
 <p>Before filing, gather your evidence:</p>
 <ol>
-  <li><strong>Screenshot the infringing listing</strong>  -  capture the full URL and all images</li>
+  <li><strong>Screenshot the infringing listing</strong>  (dash)  capture the full URL and all images</li>
   <li><strong>Note the exact Etsy listing ID</strong> (it's in the URL: etsy.com/listing/XXXXXXXXX)</li>
   <li><strong>Screenshot your original work</strong> with timestamps if possible (original file metadata, social media posts showing earlier dates, order confirmations)</li>
-  <li><strong>Save copies of everything</strong>  -  platforms occasionally remove content before you finish filing</li>
+  <li><strong>Save copies of everything</strong>  (dash)  platforms occasionally remove content before you finish filing</li>
 </ol>
 <p>Before filing, take timestamped screenshots of both your original listing and the infringing content. Screenshots with visible URLs and dates are your primary evidence if Etsy requests additional documentation.</p>
 
 <h2>Step 2: Navigate to Etsy's IP Reporting Tool</h2>
-<p>This is where most sellers get stuck. Don't use the generic Help Center  -  it routes you in circles.</p>
+<p>This is where most sellers get stuck. Don't use the generic Help Center  (dash)  it routes you in circles.</p>
 <p>Go directly to: <strong>etsy.com/legal/ip/report</strong></p>
 <p>You'll need to be logged into your Etsy account. Select "Copyright" as your infringement type, then "I want to report a listing."</p>
 
 <h2>Step 3: Complete the DMCA Notice Form</h2>
 <p>Etsy's form asks for all the elements required under 17 U.S.C. § 512(c)(3). Here's what each field needs:</p>
 <ul>
-  <li><strong>Your contact information</strong>  -  Full legal name, address, email, phone</li>
-  <li><strong>Description of your original work</strong>  -  Be specific: "My original product photography taken on [date], showing [describe item]. URL to original: [link]"</li>
-  <li><strong>Location of the infringing content</strong>  -  The full URL to the infringing listing</li>
-  <li><strong>Good faith statement</strong>  -  You genuinely believe the use is unauthorized</li>
-  <li><strong>Accuracy statement</strong>  -  The information in your notice is accurate</li>
-  <li><strong>Signature</strong>  -  Your electronic signature (typed name counts)</li>
+  <li><strong>Your contact information</strong>  (dash)  Full legal name, address, email, phone</li>
+  <li><strong>Description of your original work</strong>  (dash)  Be specific: "My original product photography taken on [date], showing [describe item]. URL to original: [link]"</li>
+  <li><strong>Location of the infringing content</strong>  (dash)  The full URL to the infringing listing</li>
+  <li><strong>Good faith statement</strong>  (dash)  You genuinely believe the use is unauthorized</li>
+  <li><strong>Accuracy statement</strong>  (dash)  The information in your notice is accurate</li>
+  <li><strong>Signature</strong>  (dash)  Your electronic signature (typed name counts)</li>
 </ul>
 <p><strong>Critical:</strong> The form must include the sworn statements. Missing either statement makes your notice legally defective and Etsy can dismiss it.</p>
 
@@ -110,11 +110,11 @@ export const blogPosts: BlogPost[] = [
 <p>After submission, Etsy sends a confirmation email with a case number. Keep this.</p>
 <p>Typical timelines:</p>
 <ul>
-  <li><strong>24–48 hours:</strong> Etsy reviews and removes the listing (most common)</li>
-  <li><strong>3–5 business days:</strong> Complex cases or seller disputes</li>
+  <li><strong>24 - 48 hours:</strong> Etsy reviews and removes the listing (most common)</li>
+  <li><strong>3 - 5 business days:</strong> Complex cases or seller disputes</li>
   <li><strong>7+ days:</strong> If the infringing seller files a counter-notice</li>
 </ul>
-<p>If the infringing seller files a counter-notice claiming they have the right to use the content, Etsy will notify you. At that point you have 10–14 business days to file a lawsuit if you want to keep the content down  -  or Etsy restores it.</p>
+<p>If the infringing seller files a counter-notice claiming they have the right to use the content, Etsy will notify you. At that point you have 10 - 14 business days to file a lawsuit if you want to keep the content down  (dash)  or Etsy restores it.</p>
 
 <h2>Step 5: What to Do If Etsy Doesn't Remove It</h2>
 <p>If Etsy denies your notice or doesn't respond:</p>
@@ -124,7 +124,7 @@ export const blogPosts: BlogPost[] = [
   <li>Escalate by emailing <strong>copyright@etsy.com</strong> with your case number</li>
   <li>Consider a formal demand letter to the infringing seller directly</li>
 </ol>
-<p>For repeat infringers  -  sellers who copy your work multiple times  -  a Cease &amp; Desist letter often stops them before you need to file again. See our guide on <a href="/blog/etsy-ip-theft">how to fight back against Etsy IP theft</a> for escalation strategies.</p>
+<p>For repeat infringers  (dash)  sellers who copy your work multiple times  (dash)  a Cease &amp; Desist letter often stops them before you need to file again. See our guide on <a href="/blog/etsy-ip-theft">how to fight back against Etsy IP theft</a> for escalation strategies.</p>
 
 <h2>Filing DMCA on Multiple Platforms Simultaneously</h2>
 <p>Copycats rarely stay on one platform. The same seller stealing from you on Etsy is probably on Temu, AliExpress, and Amazon too. Each platform has its own reporting portal:</p>
@@ -133,21 +133,21 @@ export const blogPosts: BlogPost[] = [
   <li><strong>Temu:</strong> IP Rights Complaint Center</li>
   <li><strong>AliExpress:</strong> IP Protection Platform (AIPP)</li>
 </ul>
-<p>The core DMCA notice language is the same across all platforms  -  you just reformat the submission for each portal.</p>
+<p>The core DMCA notice language is the same across all platforms  (dash)  you just reformat the submission for each portal.</p>
 
 <p>When copied content appears on an independent website rather than a marketplace, the process works differently. Use a WHOIS lookup service to identify the site's hosting provider by searching the domain name and reviewing the registrar and nameserver information in the results. Once you have the hosting company, locate their designated DMCA agent through the Copyright Office's DMCA agent registry. Send your standard DMCA notice directly to that agent by email, referencing the specific page URLs where the infringing content appears. Most hosting providers respond within 5 to 10 business days and will either remove the content themselves or require the site owner to take it down to maintain their service account.</p>
 
 <h2>Common DMCA Mistakes That Get Notices Rejected</h2>
 <ul>
-  <li><strong>No sworn statements</strong>  -  Both the good faith and accuracy statements are legally required</li>
-  <li><strong>Wrong infringement type</strong>  -  Selecting "trademark" when the issue is copyright, or vice versa</li>
-  <li><strong>Vague description of your original work</strong>  -  "My listing photo" isn't enough; describe it specifically</li>
-  <li><strong>Missing contact information</strong>  -  Must include physical address (a PO box works)</li>
-  <li><strong>Filing anonymously</strong>  -  DMCA notices require identification under penalty of perjury</li>
+  <li><strong>No sworn statements</strong>  (dash)  Both the good faith and accuracy statements are legally required</li>
+  <li><strong>Wrong infringement type</strong>  (dash)  Selecting "trademark" when the issue is copyright, or vice versa</li>
+  <li><strong>Vague description of your original work</strong>  (dash)  "My listing photo" isn't enough; describe it specifically</li>
+  <li><strong>Missing contact information</strong>  (dash)  Must include physical address (a PO box works)</li>
+  <li><strong>Filing anonymously</strong>  (dash)  DMCA notices require identification under penalty of perjury</li>
 </ul>
 
 <h2>Ready to File? Use a Pre-Written Template</h2>
-<p>The Etsy IP Defense Kit (<a href="https://sellerdefensekit.com?utm_source=blog&utm_medium=organic&utm_campaign=seo">sellerdefensekit.com</a>) includes 5 ready-to-file templates  -  DMCA Notice, Cease &amp; Desist, Counter-Notice, Platform Escalation Letter, and Repeat Infringer Warning  -  all pre-loaded with the legally required language. Fill in your details, submit, and protect your shop. $27 one-time, instant download.</p>
+<p>The Etsy IP Defense Kit (<a href="https://sellerdefensekit.com?utm_source=blog&utm_medium=organic&utm_campaign=seo">sellerdefensekit.com</a>) includes 5 ready-to-file templates  (dash)  DMCA Notice, Cease &amp; Desist, Counter-Notice, Platform Escalation Letter, and Repeat Infringer Warning  (dash)  all pre-loaded with the legally required language. Fill in your details, submit, and protect your shop. $27 one-time, instant download.</p>
 <p>Also read: <a href="/blog/dmca-takedown-notice-etsy-template">DMCA Takedown Notice Etsy Template</a>, <a href="/blog/copyright-infringement-etsy">How to Report Copyright Infringement on Etsy</a>, and the <a href="/blog/dmca-takedown-notice-guide">complete DMCA takedown notice guide</a>.</p>
 
 <p>For official DMCA information, see the <a href="https://www.copyright.gov/dmca/" target="_blank" rel="noopener noreferrer">U.S. Copyright Office DMCA overview</a>. For Etsy's policies, review <a href="https://www.etsy.com/legal/intellectual-property/" target="_blank" rel="noopener noreferrer">Etsy's Intellectual Property Policy</a>.</p>
@@ -162,10 +162,10 @@ export const blogPosts: BlogPost[] = [
     date: "2026-03-16",
     readingTime: "8 min read",
     intro:
-      "You just found it. Your photos, your listing description, maybe even your brand name  -  copied wholesale onto another Etsy shop. It's infuriating, and every hour the copycat is live they're stealing your customers. Start by documenting everything: screenshot the infringing listing and save your original files with timestamps. Then file a DMCA notice at etsy.com/legal/ip/report with all 6 required legal elements. Most valid notices result in removal within 24-72 hours.",
+      "You just found it. Your photos, your listing description, maybe even your brand name  (dash)  copied wholesale onto another Etsy shop. It's infuriating, and every hour the copycat is live they're stealing your customers. Start by documenting everything: screenshot the infringing listing and save your original files with timestamps. Then file a DMCA notice at etsy.com/legal/ip/report with all 6 required legal elements. Most valid notices result in removal within 24-72 hours.",
     content: `
 <h2>Why Acting Fast Matters When Your Etsy Listing Is Stolen</h2>
-<p>Finding a stolen listing triggers an immediate emotional response  -  rage, helplessness, the urge to post in every Facebook group you're in. Channel that energy into action instead. The faster you move through this plan, the faster the infringing listing comes down.</p>
+<p>Finding a stolen listing triggers an immediate emotional response  (dash)  rage, helplessness, the urge to post in every Facebook group you're in. Channel that energy into action instead. The faster you move through this plan, the faster the infringing listing comes down.</p>
 <p>Time matters because:</p>
 <ul>
   <li>Every sale the copycat makes is revenue stolen from you</li>
@@ -177,24 +177,24 @@ export const blogPosts: BlogPost[] = [
 <p>Use Etsy's Shop Lockdown feature immediately if you believe your entire shop has been compromised. This temporarily hides all listings while you investigate.</p>
 
 <h2>Step 1: Confirm It's Actually Your Content (Not Just Inspiration)</h2>
-<p>Legally, copyright protects your specific creative expression  -  not ideas, styles, or product categories. Before filing anything, confirm:</p>
+<p>Legally, copyright protects your specific creative expression  (dash)  not ideas, styles, or product categories. Before filing anything, confirm:</p>
 <ul>
   <li>Are your <strong>actual photos</strong> being used? (Not just similar photos of similar products)</li>
   <li>Is your <strong>exact written text</strong> copied? (Or just similar language about a similar item?)</li>
   <li>Are your <strong>original digital files</strong> (SVGs, templates, printables) being sold?</li>
-  <li>Is your <strong>brand name or logo</strong> being used? (This is trademark, not copyright  -  different process)</li>
+  <li>Is your <strong>brand name or logo</strong> being used? (This is trademark, not copyright  (dash)  different process)</li>
 </ul>
 <p>If the answer to any of the first three is yes, you have a copyright infringement case. Proceed.</p>
 
 <h2>Step 2: Document Everything Before It Disappears</h2>
 <p>Platforms sometimes remove listings proactively, or sellers delete them when they realize they've been caught. Capture everything now:</p>
 <ol>
-  <li><strong>Screenshot every image</strong> in the infringing listing  -  right-click and save the original files if possible</li>
+  <li><strong>Screenshot every image</strong> in the infringing listing  (dash)  right-click and save the original files if possible</li>
   <li><strong>Copy the full listing URL</strong> and the listing ID from the URL</li>
-  <li><strong>Screenshot the seller's shop page</strong>  -  their shop name, location, and listing count</li>
+  <li><strong>Screenshot the seller's shop page</strong>  (dash)  their shop name, location, and listing count</li>
   <li><strong>Screenshot the "About" section</strong> if it exists</li>
-  <li><strong>Record the price and shipping details</strong>  -  useful if you escalate later</li>
-  <li><strong>Check their other listings</strong>  -  copycats often steal from multiple sellers</li>
+  <li><strong>Record the price and shipping details</strong>  (dash)  useful if you escalate later</li>
+  <li><strong>Check their other listings</strong>  (dash)  copycats often steal from multiple sellers</li>
 </ol>
 <p>Use a tool like FireShot (browser extension) to capture full-page screenshots with timestamps. Store everything in a dated folder.</p>
 
@@ -210,7 +210,7 @@ export const blogPosts: BlogPost[] = [
 </ul>
 
 <h2>Step 4: File Your DMCA Takedown on Etsy</h2>
-<p>Go to <strong>etsy.com/legal/ip/report</strong> and file a copyright infringement notice. Do not use the general "Report this listing" button on the listing itself  -  that goes to a moderation queue and takes much longer.</p>
+<p>Go to <strong>etsy.com/legal/ip/report</strong> and file a copyright infringement notice. Do not use the general "Report this listing" button on the listing itself  (dash)  that goes to a moderation queue and takes much longer.</p>
 <p>Your notice needs to include:</p>
 <ul>
   <li>Your full legal name and contact information (including a physical address)</li>
@@ -227,12 +227,12 @@ export const blogPosts: BlogPost[] = [
 <ul>
   <li><strong>Search your exact product photos</strong> using Google Reverse Image Search (images.google.com)</li>
   <li><strong>Search your product name</strong> on Temu, AliExpress, Amazon, eBay, and Walmart Marketplace</li>
-  <li><strong>Check TikTok Shop</strong>  -  increasingly common for copied Etsy products</li>
+  <li><strong>Check TikTok Shop</strong>  (dash)  increasingly common for copied Etsy products</li>
 </ul>
 <p>File reports on every platform where you find your stolen content. Each platform has its own IP reporting portal, but the underlying notice language is largely the same.</p>
 
 <h2>Step 6: Contact the Infringing Seller Directly (Optional but Effective)</h2>
-<p>While your platform report is pending, sending a direct Cease &amp; Desist message through Etsy's messaging system often produces faster results. Many copycats are opportunists, not sophisticated IP lawyers  -  a firm message citing 17 U.S.C. § 501 and the possibility of statutory damages up to $150,000 per willful infringement frequently causes immediate voluntary removal.</p>
+<p>While your platform report is pending, sending a direct Cease &amp; Desist message through Etsy's messaging system often produces faster results. Many copycats are opportunists, not sophisticated IP lawyers  (dash)  a firm message citing 17 U.S.C. § 501 and the possibility of statutory damages up to $150,000 per willful infringement frequently causes immediate voluntary removal.</p>
 <p>Keep your tone firm but professional. Don't threaten things you can't follow through on. A well-drafted C&amp;D letter that references specific statutes carries far more weight than an angry message.</p>
 
 <h2>Step 7: Monitor for Recurrence</h2>
@@ -247,7 +247,7 @@ export const blogPosts: BlogPost[] = [
 <h2>What If Etsy Doesn't Act?</h2>
 <p>If Etsy dismisses your report or fails to respond within 5 business days:</p>
 <ol>
-  <li>Check your notice for completeness  -  missing elements are the #1 reason for rejection</li>
+  <li>Check your notice for completeness  (dash)  missing elements are the #1 reason for rejection</li>
   <li>Resubmit with more specific documentation</li>
   <li>Email copyright@etsy.com referencing your original case number</li>
   <li>Escalate to a formal demand letter sent to Etsy's legal department</li>
@@ -255,18 +255,18 @@ export const blogPosts: BlogPost[] = [
 <p>For persistent infringers, read our guide on <a href="/blog/etsy-ip-theft">how to fight back against Etsy IP theft</a> for escalation options including small claims court.</p>
 
 <h2>How Do You Protect Your Etsy Shop From Future Listing Theft?</h2>
-<p>The best defense is a documented offense. Keep dated records of all original creative work. Consider copyright registration for your most valuable products ($35–$55 at copyright.gov)  -  registered works allow you to sue for statutory damages and attorney's fees, which dramatically increases your leverage.</p>
-<p>The Etsy IP Defense Kit (<a href="https://sellerdefensekit.com?utm_source=blog&utm_medium=organic&utm_campaign=seo">sellerdefensekit.com</a>) includes 5 ready-to-file templates  -  DMCA Notice, Cease &amp; Desist, Counter-Notice, Platform Escalation Letter, and Repeat Infringer Warning. Everything you need to shut down a copycat fast, with the legally required language already written in. $27 one-time, instant download.</p>
+<p>The best defense is a documented offense. Keep dated records of all original creative work. Consider copyright registration for your most valuable products ($35 - $55 at copyright.gov)  (dash)  registered works allow you to sue for statutory damages and attorney's fees, which dramatically increases your leverage.</p>
+<p>The Etsy IP Defense Kit (<a href="https://sellerdefensekit.com?utm_source=blog&utm_medium=organic&utm_campaign=seo">sellerdefensekit.com</a>) includes 5 ready-to-file templates  (dash)  DMCA Notice, Cease &amp; Desist, Counter-Notice, Platform Escalation Letter, and Repeat Infringer Warning. Everything you need to shut down a copycat fast, with the legally required language already written in. $27 one-time, instant download.</p>
 <p>Also see: <a href="/blog/dmca-takedown-notice-etsy-template">DMCA Takedown Notice Etsy Template</a>, <a href="/blog/copyright-infringement-etsy">How to Report Copyright Infringement on Etsy</a>, and <a href="/blog/dmca-takedown-notice-guide">how to file a DMCA notice: complete guide</a>.</p>
 
 <div style="background:#fef3c7;border:1px solid #fbbf24;border-radius:8px;padding:20px;margin:32px 0;">
 <strong>Key Takeaways</strong>
 <ul style="margin:8px 0 0 0;padding-left:20px;">
-<li>Act immediately - every hour the copycat is live they earn revenue from your work</li>
-<li>Screenshot everything before filing - listings can disappear before you finish</li>
+<li>Act immediately (dash) every hour the copycat is live they earn revenue from your work</li>
+<li>Screenshot everything before filing (dash) listings can disappear before you finish</li>
 <li>Use <a href="https://www.etsy.com/legal/ip/report" target="_blank" rel="noopener noreferrer">etsy.com/legal/ip/report</a>, not the general flag button</li>
 <li>Search Google Images with your product photos to find copies on other platforms</li>
-<li>Monitor for recurrence - one takedown rarely stops a determined copycat</li>
+<li>Monitor for recurrence (dash) one takedown rarely stops a determined copycat</li>
 </ul>
 </div>
 
@@ -313,22 +313,22 @@ export const blogPosts: BlogPost[] = [
     date: "2026-03-17",
     readingTime: "7 min read",
     intro:
-      "A DMCA notice that's missing one required element gets dismissed  -  and the infringing listing stays up. A valid DMCA notice for Etsy must include all 6 elements under 17 U.S.C. 512(c)(3): your contact information, identification of your original work, the infringing URL, a good faith statement, an accuracy statement under penalty of perjury, and your signature. All 6 are legally required: missing one gives Etsy grounds to dismiss the notice. This guide breaks down exactly what goes in each section.",
+      "A DMCA notice that's missing one required element gets dismissed  (dash)  and the infringing listing stays up. A valid DMCA notice for Etsy must include all 6 elements under 17 U.S.C. 512(c)(3): your contact information, identification of your original work, the infringing URL, a good faith statement, an accuracy statement under penalty of perjury, and your signature. All 6 are legally required: missing one gives Etsy grounds to dismiss the notice. This guide breaks down exactly what goes in each section.",
     content: `
 <h2>Why DMCA Notice Language Matters</h2>
-<p>Under 17 U.S.C. § 512(c)(3), a DMCA takedown notice is only valid if it includes specific elements. Etsy's IP team reviews these notices, and if yours is missing a required component  -  even something as small as a sworn statement  -  they can legally reject it without action.</p>
+<p>Under 17 U.S.C. § 512(c)(3), a DMCA takedown notice is only valid if it includes specific elements. Etsy's IP team reviews these notices, and if yours is missing a required component  (dash)  even something as small as a sworn statement  (dash)  they can legally reject it without action.</p>
 <p>The safe harbor provision under 17 U.S.C. Section 512 protects platforms like Etsy from liability when they respond promptly to valid DMCA notices.</p>
 <p>This isn't bureaucratic gatekeeping. It protects the system from abuse (anyone could falsely claim ownership of any content without the sworn statements). But it also means you need to get it right the first time.</p>
 
 <h2>The 6 Required Elements of a Valid DMCA Notice</h2>
 <p>Every valid DMCA notice under U.S. law must contain:</p>
 <ol>
-  <li><strong>Identification of the copyrighted work</strong>  -  Specifically describe what you own and where it can be found</li>
-  <li><strong>Identification of the infringing material</strong>  -  The exact URL(s) where the infringing content appears</li>
-  <li><strong>Your contact information</strong>  -  Name, address, phone number, and email (a PO box is fine for the address)</li>
-  <li><strong>Good faith statement</strong>  -  A specific declaration that you believe the use is unauthorized. The exact wording is prescribed by the DMCA statute. Using different language or paraphrasing can invalidate the notice.</li>
-  <li><strong>Accuracy and authority statement</strong>  -  A sworn declaration under penalty of perjury that the information is accurate and you are the copyright owner or authorized to act. This is the most legally sensitive element. The language must track the statute precisely.</li>
-  <li><strong>Signature</strong>  -  Physical or electronic (typing your full legal name counts)</li>
+  <li><strong>Identification of the copyrighted work</strong>  (dash)  Specifically describe what you own and where it can be found</li>
+  <li><strong>Identification of the infringing material</strong>  (dash)  The exact URL(s) where the infringing content appears</li>
+  <li><strong>Your contact information</strong>  (dash)  Name, address, phone number, and email (a PO box is fine for the address)</li>
+  <li><strong>Good faith statement</strong>  (dash)  A specific declaration that you believe the use is unauthorized. The exact wording is prescribed by the DMCA statute. Using different language or paraphrasing can invalidate the notice.</li>
+  <li><strong>Accuracy and authority statement</strong>  (dash)  A sworn declaration under penalty of perjury that the information is accurate and you are the copyright owner or authorized to act. This is the most legally sensitive element. The language must track the statute precisely.</li>
+  <li><strong>Signature</strong>  (dash)  Physical or electronic (typing your full legal name counts)</li>
 </ol>
 <p>Every single one of these is required. A notice missing #4 or #5 is legally defective and Etsy can (and will) reject it.</p>
 
@@ -371,32 +371,32 @@ export const blogPosts: BlogPost[] = [
 
 <h2>How Do You Submit a DMCA Notice Through Etsy's Portal?</h2>
 <p>Don't email this to a general Etsy address. Go directly to <strong>etsy.com/legal/ip/report</strong> and select "Copyright Infringement." Etsy's form will walk you through submitting each element. You can paste the language from the template above into the appropriate fields.</p>
-<p>After submission, you'll receive a case number by email. Keep it  -  you'll need it if you need to follow up.</p>
+<p>After submission, you'll receive a case number by email. Keep it  (dash)  you'll need it if you need to follow up.</p>
 
 <h2>What Happens After You File</h2>
 <p>If your notice is complete and valid:</p>
 <ul>
   <li>Etsy notifies the infringing seller that a DMCA notice has been filed</li>
-  <li>The listing is typically removed within 24–72 hours</li>
+  <li>The listing is typically removed within 24 - 72 hours</li>
   <li>The seller can file a counter-notice if they believe the removal was in error</li>
-  <li>If a counter-notice is filed, you have 10–14 business days to file a lawsuit or the listing is restored</li>
+  <li>If a counter-notice is filed, you have 10 - 14 business days to file a lawsuit or the listing is restored</li>
 </ul>
 <p>For guidance on what to do if the seller fights back, see our article on <a href="/blog/etsy-ip-theft">how to fight back against Etsy IP theft</a>.</p>
 
 <h2>When One Template Isn't Enough</h2>
 <p>The DMCA Notice is just one of several tools available to you. Depending on your situation, you may also need a Cease &amp; Desist letter to the seller, a counter-notice if someone files against you falsely, or an escalation letter for platforms that don't respond.</p>
 <p>The template structure in this guide is recognized by every DMCA-compliant platform and hosting provider, not just Etsy. The six required elements under 17 U.S.C. Section 512 apply identically whether you are filing against a marketplace listing on Amazon or Temu, a post on a social platform, or content hosted on a standalone website. The sworn statement language does not change based on where you are filing. You fill in the platform-specific details and the infringing URLs, but the legal structure and required declarations are identical across all of these situations.</p>
-<p>The Etsy IP Defense Kit (<a href="https://sellerdefensekit.com?utm_source=blog&utm_medium=organic&utm_campaign=seo">sellerdefensekit.com</a>) includes 5 ready-to-file templates  -  DMCA Notice, Cease &amp; Desist, Counter-Notice, Platform Escalation Letter, and Repeat Infringer Warning  -  all pre-loaded with the exact legal language required. $27 one-time, instant download.</p>
+<p>The Etsy IP Defense Kit (<a href="https://sellerdefensekit.com?utm_source=blog&utm_medium=organic&utm_campaign=seo">sellerdefensekit.com</a>) includes 5 ready-to-file templates  (dash)  DMCA Notice, Cease &amp; Desist, Counter-Notice, Platform Escalation Letter, and Repeat Infringer Warning  (dash)  all pre-loaded with the exact legal language required. $27 one-time, instant download.</p>
 <p>Also read: <a href="/blog/file-dmca-etsy">How to File a DMCA on Etsy</a>, <a href="/blog/copyright-infringement-etsy">How to Report Copyright Infringement on Etsy</a>, and the <a href="/blog/dmca-takedown-notice-guide">DMCA takedown notice complete guide</a>.</p>
 
 <div style="background:#fef3c7;border:1px solid #fbbf24;border-radius:8px;padding:20px;margin:32px 0;">
 <strong>Key Takeaways</strong>
 <ul style="margin:8px 0 0 0;padding-left:20px;">
-<li>All 6 elements are legally required - missing any one means Etsy can reject the notice</li>
+<li>All 6 elements are legally required (dash) missing any one means Etsy can reject the notice</li>
 <li>Both sworn statements (good faith AND accuracy) must be included separately</li>
 <li>Be specific: name the exact files, images, and URLs involved</li>
 <li>Submit via <a href="https://www.etsy.com/legal/ip/report" target="_blank" rel="noopener noreferrer">etsy.com/legal/ip/report</a>, not a general Help ticket</li>
-<li>Keep your case number - you will need it for follow-up</li>
+<li>Keep your case number (dash) you will need it for follow-up</li>
 </ul>
 </div>
 
@@ -435,18 +435,18 @@ export const blogPosts: BlogPost[] = [
     date: "2026-03-18",
     readingTime: "8 min read",
     intro:
-      "Etsy has multiple ways to report a listing  -  but most sellers use the wrong one and wonder why nothing happens. To report copyright infringement on Etsy correctly, go directly to etsy.com/legal/ip/report, not the general Report Listing button on the listing page. Complete all 6 required DMCA elements, submit, and expect removal within 24-72 hours for valid notices. This guide walks you through each step and how to follow up effectively.",
+      "Etsy has multiple ways to report a listing  (dash)  but most sellers use the wrong one and wonder why nothing happens. To report copyright infringement on Etsy correctly, go directly to etsy.com/legal/ip/report, not the general Report Listing button on the listing page. Complete all 6 required DMCA elements, submit, and expect removal within 24-72 hours for valid notices. This guide walks you through each step and how to follow up effectively.",
     content: `
-<h2>Two Different Reporting Systems  -  and Why It Matters Which One You Use</h2>
+<h2>Two Different Reporting Systems  (dash)  and Why It Matters Which One You Use</h2>
 <p>Etsy has two separate systems for reporting problematic listings:</p>
 <ol>
-  <li><strong>The "Report this listing" button</strong>  -  visible on every listing. This goes to Etsy's general trust and safety moderation queue. It's designed for spam, prohibited items, and community guideline violations. IP infringement reports submitted here are often re-routed, delayed, or deprioritized.</li>
-  <li><strong>The Intellectual Property Reporting Tool</strong>  -  accessed at <strong>etsy.com/legal/ip/report</strong>. This is the dedicated portal for copyright, trademark, and other IP claims. Reports submitted here go directly to Etsy's IP compliance team and are processed under DMCA procedures.</li>
+  <li><strong>The "Report this listing" button</strong>  (dash)  visible on every listing. This goes to Etsy's general trust and safety moderation queue. It's designed for spam, prohibited items, and community guideline violations. IP infringement reports submitted here are often re-routed, delayed, or deprioritized.</li>
+  <li><strong>The Intellectual Property Reporting Tool</strong>  (dash)  accessed at <strong>etsy.com/legal/ip/report</strong>. This is the dedicated portal for copyright, trademark, and other IP claims. Reports submitted here go directly to Etsy's IP compliance team and are processed under DMCA procedures.</li>
 </ol>
 <p>Always use the IP Reporting Tool for copyright infringement claims. It's the difference between a legally binding DMCA takedown notice and a complaint in a general moderation queue.</p>
 
 <h2>Before You Report: Confirm You Have a Valid Copyright Claim</h2>
-<p>An original work is protected by copyright the moment it is created and fixed in tangible form — no registration required. Public domain works, however, are not protected and can be used freely by anyone.</p>
+<p>An original work is protected by copyright the moment it is created and fixed in tangible form  -  no registration required. Public domain works, however, are not protected and can be used freely by anyone.</p>
 <p>Not every copycat situation is a copyright infringement case. Copyright protects:</p>
 <ul>
   <li>Original photos you took or paid a photographer to take</li>
@@ -483,9 +483,9 @@ export const blogPosts: BlogPost[] = [
 <h3>Step 3: Select the Correct Infringement Type</h3>
 <p>The form asks you to identify what type of IP right is being infringed:</p>
 <ul>
-  <li><strong>Copyright</strong>  -  Your original photos, text, digital files are copied</li>
-  <li><strong>Trademark</strong>  -  Your brand name, logo, or slogan is being used</li>
-  <li><strong>Design Patent</strong>  -  A patented ornamental design is copied</li>
+  <li><strong>Copyright</strong>  (dash)  Your original photos, text, digital files are copied</li>
+  <li><strong>Trademark</strong>  (dash)  Your brand name, logo, or slogan is being used</li>
+  <li><strong>Design Patent</strong>  (dash)  A patented ornamental design is copied</li>
 </ul>
 <p>Select <strong>Copyright</strong>. Selecting the wrong category means your notice will be evaluated under the wrong legal framework and may be dismissed.</p>
 
@@ -519,7 +519,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Reporting Multiple Listings or a Serial Infringer</h2>
 <p>If the same seller has copied multiple listings of yours, you can include all of them in a single DMCA notice. List each infringing URL separately in the "location of infringing material" section.</p>
-<p>If this seller is a repeat offender  -  you've successfully had their listings removed before and they've posted new copies  -  note this in your report. Under Etsy's Repeat Infringer Policy, sellers with multiple substantiated IP violations face account termination.</p>
+<p>If this seller is a repeat offender  (dash)  you've successfully had their listings removed before and they've posted new copies  (dash)  note this in your report. Under Etsy's Repeat Infringer Policy, sellers with multiple substantiated IP violations face account termination.</p>
 
 <h2>What Happens to the Infringing Seller</h2>
 <p>When Etsy receives a valid copyright report:</p>
@@ -529,19 +529,19 @@ export const blogPosts: BlogPost[] = [
   <li>A record of the IP violation is added to their account</li>
   <li>Multiple violations can lead to account suspension</li>
 </ul>
-<p>If the seller files a counter-notice and you don't respond with a lawsuit within 10–14 business days, Etsy is legally required to restore the listing. This is rarely worth fighting unless the infringement is causing significant ongoing damage.</p>
+<p>If the seller files a counter-notice and you don't respond with a lawsuit within 10 - 14 business days, Etsy is legally required to restore the listing. This is rarely worth fighting unless the infringement is causing significant ongoing damage.</p>
 
 <h2>How Do Pre-Written Templates Speed Up the Etsy Copyright Reporting Process?</h2>
 <p>Writing a legally complete DMCA notice from scratch takes time and legal knowledge most sellers don't have. One wrong phrase and the whole notice is rejected.</p>
-<p>The Etsy IP Defense Kit (<a href="https://sellerdefensekit.com?utm_source=blog&utm_medium=organic&utm_campaign=seo">sellerdefensekit.com</a>) includes 5 ready-to-file templates  -  DMCA Notice, Cease &amp; Desist, Counter-Notice, Platform Escalation Letter, and Repeat Infringer Warning  -  each pre-loaded with required legal language. Fill in your specifics, submit, done. $27 one-time, instant download.</p>
+<p>The Etsy IP Defense Kit (<a href="https://sellerdefensekit.com?utm_source=blog&utm_medium=organic&utm_campaign=seo">sellerdefensekit.com</a>) includes 5 ready-to-file templates  (dash)  DMCA Notice, Cease &amp; Desist, Counter-Notice, Platform Escalation Letter, and Repeat Infringer Warning  (dash)  each pre-loaded with required legal language. Fill in your specifics, submit, done. $27 one-time, instant download.</p>
 <p>Also read: <a href="/blog/file-dmca-etsy">How to File a DMCA on Etsy</a>, <a href="/blog/dmca-takedown-notice-etsy-template">DMCA Takedown Notice Etsy Template</a>, and the <a href="/blog/dmca-takedown-notice-guide">DMCA takedown notice guide</a>.</p>
 
 <div style="background:#fef3c7;border:1px solid #fbbf24;border-radius:8px;padding:20px;margin:32px 0;">
 <strong>Key Takeaways</strong>
 <ul style="margin:8px 0 0 0;padding-left:20px;">
-<li>Use the IP portal at <a href="https://www.etsy.com/legal/ip/report" target="_blank" rel="noopener noreferrer">etsy.com/legal/ip/report</a> - not the flag button on the listing</li>
-<li>Select "Copyright" - choosing the wrong infringement type causes dismissal</li>
-<li>Both sworn statements are required - most rejections happen because one is missing</li>
+<li>Use the IP portal at <a href="https://www.etsy.com/legal/ip/report" target="_blank" rel="noopener noreferrer">etsy.com/legal/ip/report</a> (dash) not the flag button on the listing</li>
+<li>Select "Copyright" (dash) choosing the wrong infringement type causes dismissal</li>
+<li>Both sworn statements are required (dash) most rejections happen because one is missing</li>
 <li>Follow up at copyright@etsy.com if no response in 5 business days</li>
 <li>Multiple successful takedowns from the same seller can trigger account suspension</li>
 </ul>
@@ -585,40 +585,40 @@ export const blogPosts: BlogPost[] = [
     slug: "etsy-ip-theft",
     metaTitle: "Fight Back Against Etsy IP Theft | Seller Defense Kit",
     metaDescription:
-      "When standard DMCA filings aren't enough, here's how to escalate against persistent Etsy IP thieves  -  from C&D letters to small claims court.",
+      "When standard DMCA filings aren't enough, here's how to escalate against persistent Etsy IP thieves  (dash)  from C&D letters to small claims court.",
     title:
       "Etsy IP Theft: How to Fight Back When Standard Takedowns Aren't Enough",
     date: "2026-03-19",
     readingTime: "9 min read",
     intro:
-      "You filed the DMCA. The listing came down. Three weeks later, it's back  -  same photos, different listing ID. Or maybe Etsy dismissed your notice entirely. When the standard process fails, the most effective next step is a formal Cease and Desist letter sent directly to the seller, citing 17 U.S.C. 501 and potential statutory damages up to $150,000 per willful infringement. For repeat offenders, document every prior case number and invoke Etsy's Repeat Infringer Policy, which can result in account termination.",
+      "You filed the DMCA. The listing came down. Three weeks later, it's back  (dash)  same photos, different listing ID. Or maybe Etsy dismissed your notice entirely. When the standard process fails, the most effective next step is a formal Cease and Desist letter sent directly to the seller, citing 17 U.S.C. 501 and potential statutory damages up to $150,000 per willful infringement. For repeat offenders, document every prior case number and invoke Etsy's Repeat Infringer Policy, which can result in account termination.",
     content: `
 <h2>Why Do Etsy Copycats Keep Reposting Stolen Listings After DMCA Takedowns?</h2>
 <p>DMCA stands for the Digital Millennium Copyright Act. IP stands for intellectual property. USPTO is the United States Patent and Trademark Office, which handles trademark and patent registrations.</p>
-<p>A DMCA takedown removes a specific listing, but it doesn't remove the seller. For persistent infringers, getting one listing taken down is a minor inconvenience  -  they just repost it under a new listing ID, sometimes within hours.</p>
+<p>A DMCA takedown removes a specific listing, but it doesn't remove the seller. For persistent infringers, getting one listing taken down is a minor inconvenience  (dash)  they just repost it under a new listing ID, sometimes within hours.</p>
 <p>Fighting back effectively means moving beyond single-listing takedowns and targeting the seller's ability to operate, not just individual pieces of infringing content.</p>
 
 <h2>Level 1: Ensure Your DMCA Strategy Is Airtight</h2>
 <p>Before escalating, make sure you've maximized the standard approach:</p>
 <ul>
-  <li><strong>File against every infringing listing simultaneously</strong>  -  search the seller's entire shop and report all copied content at once</li>
+  <li><strong>File against every infringing listing simultaneously</strong>  (dash)  search the seller's entire shop and report all copied content at once</li>
   <li><strong>Report across every platform</strong> where the seller operates (Etsy, Temu, AliExpress, Amazon, eBay, TikTok Shop)</li>
-  <li><strong>Use the IP Portal, not the listing flag button</strong>  -  only reports filed at etsy.com/legal/ip/report receive DMCA treatment</li>
+  <li><strong>Use the IP Portal, not the listing flag button</strong>  (dash)  only reports filed at etsy.com/legal/ip/report receive DMCA treatment</li>
   <li><strong>Reference your existing case numbers</strong> in new reports to establish a pattern</li>
 </ul>
 <p>If you haven't covered these bases yet, start here. See our guide on <a href="/blog/file-dmca-etsy">how to file a DMCA on Etsy</a> for the complete process.</p>
 
 <h2>Level 2: Send a Formal Cease &amp; Desist Letter</h2>
-<p>A Cease &amp; Desist letter is a formal legal demand sent directly to the infringing seller. It's not the same as a DMCA notice filed with the platform  -  it goes straight to the infringer and creates a paper trail showing willful infringement (which increases potential damages if you ever sue).</p>
+<p>A Cease &amp; Desist letter is a formal legal demand sent directly to the infringing seller. It's not the same as a DMCA notice filed with the platform  (dash)  it goes straight to the infringer and creates a paper trail showing willful infringement (which increases potential damages if you ever sue).</p>
 <p>An effective C&amp;D letter for Etsy IP theft includes:</p>
 <ul>
   <li>Specific identification of your copyrighted works and the infringing content</li>
-  <li>Legal citations  -  at minimum, 17 U.S.C. § 501 (copyright infringement) and the potential for statutory damages up to $150,000 per willful infringement under 17 U.S.C. § 504</li>
+  <li>Legal citations  (dash)  at minimum, 17 U.S.C. § 501 (copyright infringement) and the potential for statutory damages up to $150,000 per willful infringement under 17 U.S.C. § 504</li>
   <li>A clear demand to immediately cease all use and destroy all copies</li>
-  <li>A response deadline (typically 10–14 days)</li>
+  <li>A response deadline (typically 10 - 14 days)</li>
   <li>A statement that you reserve all legal rights and remedies</li>
 </ul>
-<p>You can find the seller's contact information through Etsy's messaging system. For shops with a physical address in their About section, send the letter both via Etsy message and by certified mail  -  the latter creates dated proof of delivery that's much harder to deny than a message that can be claimed "never seen."</p>
+<p>You can find the seller's contact information through Etsy's messaging system. For shops with a physical address in their About section, send the letter both via Etsy message and by certified mail  (dash)  the latter creates dated proof of delivery that's much harder to deny than a message that can be claimed "never seen."</p>
 
 <h2>Level 3: Invoke Etsy's Repeat Infringer Policy</h2>
 <p>Etsy's Terms of Use include a Repeat Infringer Policy: sellers with multiple substantiated IP violations face account termination. This is your biggest weapon against persistent copycats on Etsy.</p>
@@ -626,34 +626,34 @@ export const blogPosts: BlogPost[] = [
 <ol>
   <li><strong>Document every successful takedown</strong> with case numbers, dates, and listing IDs</li>
   <li>When filing new DMCA notices, explicitly reference prior violations: "This seller has previously had [X] listings removed for copyright infringement of my work (case numbers: XXXXX, XXXXX). This constitutes repeat infringement."</li>
-  <li>After 2–3 successful takedowns from the same seller, email <strong>ip@etsy.com</strong> (or copyright@etsy.com) with a comprehensive report documenting the pattern and requesting account-level action</li>
+  <li>After 2 - 3 successful takedowns from the same seller, email <strong>ip@etsy.com</strong> (or copyright@etsy.com) with a comprehensive report documenting the pattern and requesting account-level action</li>
 </ol>
 <p>Etsy takes repeat infringement seriously because ignoring it exposes them to secondary copyright liability. A well-documented pattern of repeat violations often results in the shop being suspended.</p>
 
 <h2>Level 4: File a Google DMCA Notice to Deindex the Stolen Content</h2>
-<p>Even if Etsy removes the listing, its cached content may still appear in Google search results  -  drawing traffic to the now-deleted page and potentially to the seller's other content.</p>
+<p>Even if Etsy removes the listing, its cached content may still appear in Google search results  (dash)  drawing traffic to the now-deleted page and potentially to the seller's other content.</p>
 <p>File a DMCA notice with Google at <strong>reportcontent.google.com/forms/dmca</strong> to have the infringing URLs removed from search results. Google processes these notices and typically deindexes within a few days.</p>
 <p>This is particularly valuable if the seller has posted your photos to their own website, social media, or other platforms outside of Etsy's jurisdiction.</p>
 
 <h2>Level 5: Send a Legal Demand to the Seller's Supplier or Manufacturer</h2>
-<p>Many Etsy "sellers" are actually dropshippers  -  they don't make the product, they source it from AliExpress or a similar platform and resell it with your photos. In these cases, the infringing seller may be multiple steps removed from the actual manufacturer.</p>
-<p>If you can identify the original source (often traceable through reverse image search or comparing their product photos to supplier listings), filing against the manufacturer or supplier can remove the source of the infringing products entirely  -  taking down not just one seller but potentially dozens who are sourcing from the same place.</p>
+<p>Many Etsy "sellers" are actually dropshippers  (dash)  they don't make the product, they source it from AliExpress or a similar platform and resell it with your photos. In these cases, the infringing seller may be multiple steps removed from the actual manufacturer.</p>
+<p>If you can identify the original source (often traceable through reverse image search or comparing their product photos to supplier listings), filing against the manufacturer or supplier can remove the source of the infringing products entirely  (dash)  taking down not just one seller but potentially dozens who are sourcing from the same place.</p>
 
 <h2>Level 6: Copyright Registration and Statutory Damages</h2>
-<p>Unregistered copyrights can only recover "actual damages" in court  -  what you can prove you lost in sales. For most Etsy sellers, this number is difficult to quantify and often small in absolute terms.</p>
-<p>Registered copyrights unlock <strong>statutory damages of $750 to $30,000 per work infringed, and up to $150,000 per work for willful infringement</strong>  -  plus attorney's fees. This dramatically changes the economics of litigation in your favor.</p>
-<p>Register at <strong>copyright.gov</strong> for $35–$55 per application. You can register multiple photos in a single "unpublished collection" application if they were taken in the same calendar year. Registration must be done <em>before</em> the infringement (or within 3 months of first publication) to qualify for statutory damages.</p>
+<p>Unregistered copyrights can only recover "actual damages" in court  (dash)  what you can prove you lost in sales. For most Etsy sellers, this number is difficult to quantify and often small in absolute terms.</p>
+<p>Registered copyrights unlock <strong>statutory damages of $750 to $30,000 per work infringed, and up to $150,000 per work for willful infringement</strong>  (dash)  plus attorney's fees. This dramatically changes the economics of litigation in your favor.</p>
+<p>Register at <strong>copyright.gov</strong> for $35 - $55 per application. You can register multiple photos in a single "unpublished collection" application if they were taken in the same calendar year. Registration must be done <em>before</em> the infringement (or within 3 months of first publication) to qualify for statutory damages.</p>
 <p>Once you have registration, a demand letter citing specific statutory damage exposure often results in settlement without litigation. Infringers who were ignoring $200 in actual damages often respond quickly when facing potential six-figure liability.</p>
 
 <h2>Level 7: Small Claims Court via the Copyright Claims Board</h2>
-<p>In 2022, the U.S. Copyright Office launched the <strong>Copyright Claims Board (CCB)</strong>  -  a small claims court specifically for copyright disputes, capped at $30,000 in damages per claim, with simplified procedures designed for non-lawyers.</p>
+<p>In 2022, the U.S. Copyright Office launched the <strong>Copyright Claims Board (CCB)</strong>  (dash)  a small claims court specifically for copyright disputes, capped at $30,000 in damages per claim, with simplified procedures designed for non-lawyers.</p>
 <p>The CCB is well-suited for Etsy IP theft cases where:</p>
 <ul>
   <li>Your copyright is registered (or you file within 3 months of discovery)</li>
-  <li>Damages are in the $1,000–$30,000 range</li>
+  <li>Damages are in the $1,000 - $30,000 range</li>
   <li>You have documented evidence of infringement and the infringer's identity</li>
 </ul>
-<p>The filing fee is $40–$100. The process is designed to be accessible without a lawyer, though legal help is always advisable. Visit <strong>ccb.gov</strong> for more information.</p>
+<p>The filing fee is $40 - $100. The process is designed to be accessible without a lawyer, though legal help is always advisable. Visit <strong>ccb.gov</strong> for more information.</p>
 
 <h2>Level 8: When to Get a Lawyer</h2>
 <p>Some situations call for professional legal help:</p>
@@ -669,14 +669,14 @@ export const blogPosts: BlogPost[] = [
 <p>The best time to prepare your IP defense is before you need it. Actions to take now:</p>
 <ul>
   <li><strong>Register copyrights</strong> for your most valuable products</li>
-  <li><strong>Document your creation process</strong>  -  keep dated files, behind-the-scenes photos, drafts</li>
-  <li><strong>Set up monitoring</strong>  -  Google Alerts, TinEye, PIXSY for ongoing surveillance</li>
+  <li><strong>Document your creation process</strong>  (dash)  keep dated files, behind-the-scenes photos, drafts</li>
+  <li><strong>Set up monitoring</strong>  (dash)  Google Alerts, TinEye, PIXSY for ongoing surveillance</li>
   <li><strong>Keep template documents ready</strong> so you can respond in hours, not days</li>
 </ul>
 
 <h2>Have the Right Tools Ready Before You Need Them</h2>
 <p>When a copycat strikes, speed matters. Having your documents pre-written means you're filing within an hour, not a week.</p>
-<p>The Etsy IP Defense Kit (<a href="https://sellerdefensekit.com?utm_source=blog&utm_medium=organic&utm_campaign=seo">sellerdefensekit.com</a>) includes 5 ready-to-file templates  -  DMCA Notice, Cease &amp; Desist, Counter-Notice, Platform Escalation Letter, and Repeat Infringer Warning  -  all pre-loaded with required legal language and ready to adapt for your specific situation. $27 one-time, instant download. Don't wait until your work is stolen to be prepared.</p>
+<p>The Etsy IP Defense Kit (<a href="https://sellerdefensekit.com?utm_source=blog&utm_medium=organic&utm_campaign=seo">sellerdefensekit.com</a>) includes 5 ready-to-file templates  (dash)  DMCA Notice, Cease &amp; Desist, Counter-Notice, Platform Escalation Letter, and Repeat Infringer Warning  (dash)  all pre-loaded with required legal language and ready to adapt for your specific situation. $27 one-time, instant download. Don't wait until your work is stolen to be prepared.</p>
 <p>Also read: <a href="/blog/etsy-listing-stolen">Etsy Listing Stolen? Here Is What to Do</a>, <a href="/blog/copyright-infringement-etsy">How to Report Copyright Infringement on Etsy</a>, and the <a href="/blog/dmca-takedown-notice-guide">complete DMCA takedown notice guide</a>.</p>
 
 <div style="background:#fef3c7;border:1px solid #fbbf24;border-radius:8px;padding:20px;margin:32px 0;">
@@ -684,7 +684,7 @@ export const blogPosts: BlogPost[] = [
 <ul style="margin:8px 0 0 0;padding-left:20px;">
 <li>Start with airtight DMCA filings across all platforms before escalating</li>
 <li>A Cease and Desist letter citing potential statutory damages up to $150,000 often stops repeat infringers fast</li>
-<li>Document every takedown - a pattern of violations can get the seller's account suspended</li>
+<li>Document every takedown (dash) a pattern of violations can get the seller's account suspended</li>
 <li>Register your copyrights at <a href="https://www.copyright.gov/registration/" target="_blank" rel="noopener noreferrer">copyright.gov</a> to unlock statutory damages</li>
 <li>The Copyright Claims Board at <a href="https://ccb.gov" target="_blank" rel="noopener noreferrer">ccb.gov</a> offers low-cost small claims court for copyright cases</li>
 </ul>
@@ -724,13 +724,13 @@ export const blogPosts: BlogPost[] = [
     date: "2026-03-25",
     readingTime: "9 min read",
     intro:
-      "A DMCA takedown notice is your fastest legal tool for removing copied content from Etsy and other platforms. But only if it includes all 6 required elements. Miss one and your notice is legally defective - and the copycat listing stays up. This guide covers exactly what goes into a valid DMCA takedown notice, how to send it, and what happens after.",
+      "A DMCA takedown notice is your fastest legal tool for removing copied content from Etsy and other platforms. But only if it includes all 6 required elements. Miss one and your notice is legally defective (dash) and the copycat listing stays up. This guide covers exactly what goes into a valid DMCA takedown notice, how to send it, and what happens after.",
     keyTakeaway:
       "A valid DMCA takedown notice requires all 6 statutory elements under 17 U.S.C. 512(c)(3). Missing any one of them gives the platform legal grounds to ignore your notice. The two most commonly omitted elements are the good faith statement and the sworn accuracy statement. If writing notices from scratch sounds like a lot, Seller Defense Kit at sellerdefensekit.com includes pre-written DMCA notices with all required language already in place.",
     faq: [
       {
         q: "Does a DMCA takedown notice need to be notarized?",
-        a: "No. A DMCA takedown notice does not require notarization. It does require a signature, which can be an electronic signature - your typed full legal name counts. The notice must include a statement made under penalty of perjury that the information in the notice is accurate and that you are authorized to act on behalf of the copyright owner. That sworn statement carries legal weight without notarization."
+        a: "No. A DMCA takedown notice does not require notarization. It does require a signature, which can be an electronic signature (dash) your typed full legal name counts. The notice must include a statement made under penalty of perjury that the information in the notice is accurate and that you are authorized to act on behalf of the copyright owner. That sworn statement carries legal weight without notarization."
       },
       {
         q: "Can I send a DMCA takedown notice by email?",
@@ -742,7 +742,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         q: "What if my DMCA takedown notice is ignored?",
-        a: "If a platform ignores a valid DMCA takedown notice, it risks losing its safe harbor protection under the DMCA - meaning it becomes directly liable for the infringing content. In practice, if a major platform like Etsy ignores your notice, first check that all 6 required elements are present and resubmit. If a smaller website ignores it, contact their web host directly using the same DMCA notice format, since hosts are also covered by safe harbor requirements and are highly motivated to respond."
+        a: "If a platform ignores a valid DMCA takedown notice, it risks losing its safe harbor protection under the DMCA (dash) meaning it becomes directly liable for the infringing content. In practice, if a major platform like Etsy ignores your notice, first check that all 6 required elements are present and resubmit. If a smaller website ignores it, contact their web host directly using the same DMCA notice format, since hosts are also covered by safe harbor requirements and are highly motivated to respond."
       },
       {
         q: "Do I need a lawyer to send a DMCA takedown notice?",
@@ -760,7 +760,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         name: "Confirm your ownership of the original work",
-        text: "Identify the specific original work that was copied: your product photos, written description, design files, or artwork. Gather proof of creation date - original file metadata, earlier social media posts, order records, or email timestamps. You need to be able to describe your original work precisely in the notice."
+        text: "Identify the specific original work that was copied: your product photos, written description, design files, or artwork. Gather proof of creation date (dash) original file metadata, earlier social media posts, order records, or email timestamps. You need to be able to describe your original work precisely in the notice."
       },
       {
         name: "Write the 6 required elements of the notice",
@@ -783,7 +783,7 @@ export const blogPosts: BlogPost[] = [
 <h2>What Is a DMCA Takedown Notice?</h2>
 <p>A DMCA takedown notice is a formal legal request to remove infringing content from an online platform. It is authorized under the Digital Millennium Copyright Act (DMCA), specifically 17 U.S.C. 512(c)(3), which is the U.S. federal law that governs copyright on the internet.</p>
 <p>When you find your product photos, designs, or written content copied on Etsy, a DMCA takedown notice is the standard mechanism for getting it removed fast. Etsy, Amazon, TikTok, and every major online platform must comply with valid DMCA notices or risk losing their legal immunity for user-uploaded content.</p>
-<p>That legal immunity - called safe harbor - is what motivates platforms to act quickly. If Etsy ignores a valid notice, it becomes liable for the infringement itself. That is why a properly formatted notice almost always results in removal within 24 to 72 hours.</p>
+<p>That legal immunity (dash) called safe harbor (dash) is what motivates platforms to act quickly. If Etsy ignores a valid notice, it becomes liable for the infringement itself. That is why a properly formatted notice almost always results in removal within 24 to 72 hours.</p>
 
 <h2>The 6 Required Legal Elements of a Valid DMCA Takedown Notice</h2>
 <p>This is where most self-filed notices fail. Under 17 U.S.C. 512(c)(3), a DMCA takedown notice must contain all six of the following elements to be legally valid. Platforms are permitted to ignore notices that are missing any element.</p>
@@ -795,13 +795,13 @@ export const blogPosts: BlogPost[] = [
 <p>A specific description of the original work you own the copyright to. "My product photos" is not sufficient. A valid description includes: the nature of the work (original photograph, original graphic design, original written description), when and how it was created, and where a reference copy can be found (a URL to your original listing, your social media post showing the original, or a cloud storage link).</p>
 
 <h3>3. Identification of the Infringing Content</h3>
-<p>The exact URL of the infringing content - the full listing URL, not just the seller's profile. On Etsy this looks like: etsy.com/listing/XXXXXXXXX/listing-title. Include the listing ID. If the same seller has multiple infringing listings, include each URL separately.</p>
+<p>The exact URL of the infringing content (dash) the full listing URL, not just the seller's profile. On Etsy this looks like: etsy.com/listing/XXXXXXXXX/listing-title. Include the listing ID. If the same seller has multiple infringing listings, include each URL separately.</p>
 
 <h3>4. The Good Faith Statement</h3>
 <p>A statement that you have a good faith belief that the use of the material is not authorized by the copyright owner, its agent, or the law. This is often missing from notices drafted without a template. The exact language matters here.</p>
 
 <h3>5. The Accuracy Statement (Sworn Under Penalty of Perjury)</h3>
-<p>A statement that the information in the notice is accurate and, under penalty of perjury, that you are authorized to act on behalf of the owner of the exclusive right that is allegedly being infringed. This must use sworn language - the "under penalty of perjury" phrasing is a legal requirement, not a formality.</p>
+<p>A statement that the information in the notice is accurate and, under penalty of perjury, that you are authorized to act on behalf of the owner of the exclusive right that is allegedly being infringed. This must use sworn language (dash) the "under penalty of perjury" phrasing is a legal requirement, not a formality.</p>
 
 <h3>6. Your Signature</h3>
 <p>Your physical or electronic signature. Typing your full legal name at the bottom of an online form counts as an electronic signature. It must match the name listed in your contact information.</p>
@@ -830,7 +830,7 @@ export const blogPosts: BlogPost[] = [
 <p>Each platform has its own submission process. Using the wrong channel slows down removal and can result in your notice being lost.</p>
 
 <h3>Etsy</h3>
-<p>Use Etsy's dedicated IP reporting portal: <strong>etsy.com/legal/ip/report</strong>. Do not use the Report Listing button on the listing page - that route goes to a different team and is not treated as a formal DMCA notice. Select Copyright from the infringement type options, then complete all fields in the form.</p>
+<p>Use Etsy's dedicated IP reporting portal: <strong>etsy.com/legal/ip/report</strong>. Do not use the Report Listing button on the listing page (dash) that route goes to a different team and is not treated as a formal DMCA notice. Select Copyright from the infringement type options, then complete all fields in the form.</p>
 
 <h3>Amazon</h3>
 <p>Use Amazon Brand Registry if you have a registered trademark. If you do not, use the Report Infringement form at <strong>amazon.com/report/infringement</strong>. Amazon's process is more document-intensive than Etsy's but follows the same DMCA structure.</p>
@@ -839,7 +839,7 @@ export const blogPosts: BlogPost[] = [
 <p>Both platforms have copyright reporting forms built into their reporting flows. Access them through the specific piece of content you want to report, then select Copyright as the infringement type.</p>
 
 <h3>Websites and Smaller Platforms</h3>
-<p>Look up the site's registered DMCA agent at <strong>copyright.gov/dmca-directory</strong>. Send your notice directly to that agent by email. If no agent is registered, contact the site's web host instead - most major hosting providers (GoDaddy, Cloudflare, WP Engine) have abuse teams that respond to DMCA notices.</p>
+<p>Look up the site's registered DMCA agent at <strong>copyright.gov/dmca-directory</strong>. Send your notice directly to that agent by email. If no agent is registered, contact the site's web host instead (dash) most major hosting providers (GoDaddy, Cloudflare, WP Engine) have abuse teams that respond to DMCA notices.</p>
 
 <h2>What Are the Most Common Mistakes That Get DMCA Notices Rejected?</h2>
 
@@ -1049,7 +1049,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-04-02",
     readingTime: "11 min read",
     intro:
-      "Your Etsy shop took years to build. Your photos, your designs, your product descriptions - all of it is original work that competitors can and do copy. IP theft on Etsy is not rare. It is routine. For copied photos, descriptions, or digital files: file a DMCA notice at etsy.com/legal/ip/report: no registration required, removal typically within 24-72 hours. For brand name or logo copying: file a trademark report through the same portal. For physical product appearance copying: consider a design patent filed before your product is publicly available. This guide covers every IP protection method available to Etsy sellers, when to use each one, and exactly how to apply them.",
+      "Your Etsy shop took years to build. Your photos, your designs, your product descriptions (dash) all of it is original work that competitors can and do copy. IP theft on Etsy is not rare. It is routine. For copied photos, descriptions, or digital files: file a DMCA notice at etsy.com/legal/ip/report: no registration required, removal typically within 24-72 hours. For brand name or logo copying: file a trademark report through the same portal. For physical product appearance copying: consider a design patent filed before your product is publicly available. This guide covers every IP protection method available to Etsy sellers, when to use each one, and exactly how to apply them.",
     keyTakeaway: "Etsy sellers have four main IP protection tools: copyright (automatic, no registration needed), trademark (brand name and logo protection), design patent (ornamental product appearance), and trade dress (distinctive visual identity). Most infringement on Etsy is a copyright issue, handled fastest with a DMCA notice. Trademark matters when a seller copies your brand name or logo. Design patent is powerful but requires advance filing. Start with copyright, add trademark and design protection as your business grows. For ready-to-file DMCA templates built specifically for Etsy sellers, Seller Defense Kit at sellerdefensekit.com has everything you need.",
     faq: [
       {
@@ -1087,24 +1087,24 @@ export const blogPosts: BlogPost[] = [
     content: `
 <h2>Why IP Protection Matters for Etsy Sellers</h2>
 <p>Etsy has over 90 million active buyers and 7 million active sellers. The platform's search visibility means a well-ranked listing generates consistent organic traffic without paid advertising. That same visibility makes successful listings targets for copying.</p>
-<p>When a competitor copies your listing, they are not just taking revenue. They are taking your search rankings, your review momentum, and the buyer trust you built over months or years. The platforms where this happens most - Etsy, Amazon, Temu, AliExpress - all have IP reporting mechanisms. Using them correctly and promptly is the most direct way to protect your business.</p>
+<p>When a competitor copies your listing, they are not just taking revenue. They are taking your search rankings, your review momentum, and the buyer trust you built over months or years. The platforms where this happens most (dash) Etsy, Amazon, Temu, AliExpress (dash) all have IP reporting mechanisms. Using them correctly and promptly is the most direct way to protect your business.</p>
 
 <h2>What Are the Four IP Protection Tools Available to Etsy Sellers?</h2>
 
 <h3>1. Copyright Protection</h3>
 <p>Copyright protects original creative expression. For Etsy sellers, this covers:</p>
 <ul>
-  <li><strong>Product photography</strong> - Photos you took or commissioned</li>
-  <li><strong>Written product descriptions</strong> - Original text you wrote for your listings</li>
-  <li><strong>Digital designs and files</strong> - SVG files, printables, digital downloads, artwork</li>
-  <li><strong>Original patterns and graphics</strong> - Any visual work you created</li>
+  <li><strong>Product photography</strong> (dash) Photos you took or commissioned</li>
+  <li><strong>Written product descriptions</strong> (dash) Original text you wrote for your listings</li>
+  <li><strong>Digital designs and files</strong> (dash) SVG files, printables, digital downloads, artwork</li>
+  <li><strong>Original patterns and graphics</strong> (dash) Any visual work you created</li>
 </ul>
 <p>Copyright protection is automatic. You do not need to register anything. The moment you create an original work, you own the copyright. Registration at copyright.gov strengthens your legal position significantly if you ever go to court, but it is not required to file a DMCA notice on Etsy.</p>
 <p><strong>When to use it:</strong> When someone copies your product photos, digital design files, or written descriptions. This is the most common type of Etsy IP infringement.</p>
 <p>Also read: <a href="/blog/file-dmca-etsy">How to File a DMCA on Etsy: Step-by-Step Guide</a></p>
 
 <h3>2. Trademark Protection</h3>
-<p>A trademark protects brand identifiers - the name, logo, or distinctive marks that identify your business and distinguish it from competitors. Trademarks are registered with the USPTO (in the United States) and give you exclusive rights to use that mark in commerce.</p>
+<p>A trademark protects brand identifiers (dash) the name, logo, or distinctive marks that identify your business and distinguish it from competitors. Trademarks are registered with the USPTO (in the United States) and give you exclusive rights to use that mark in commerce.</p>
 <p>For Etsy sellers, trademarks matter when:</p>
 <ul>
   <li>Someone opens an Etsy shop with a name confusingly similar to yours</li>
@@ -1112,7 +1112,7 @@ export const blogPosts: BlogPost[] = [
   <li>Another seller misrepresents their products as being from your brand</li>
 </ul>
 <p>Trademark registration costs $250 to $350 per class at the USPTO and typically takes 8 to 12 months to complete. The protection it provides is significant: registered trademarks can be enforced across all online marketplaces, and repeat violations can lead to account termination on Etsy.</p>
-<p><strong>When to use it:</strong> When someone copies your brand name, shop name, or logo - not just your product designs.</p>
+<p><strong>When to use it:</strong> When someone copies your brand name, shop name, or logo (dash) not just your product designs.</p>
 
 <h3>3. Design Patent Protection</h3>
 <p>A design patent protects the ornamental or aesthetic appearance of a functional product. If your product has a distinctive visual design that you invented, a design patent prevents others from making or selling products with substantially the same appearance.</p>
@@ -1122,11 +1122,11 @@ export const blogPosts: BlogPost[] = [
   <li>Handmade items with distinctive ornamental features</li>
   <li>Physical product designs that competitors could manufacture identically</li>
 </ul>
-<p>Design patents cost $700 to $1,500 for a basic filing (depending on whether you use a patent attorney) and take 1 to 2 years to grant. They provide 15 years of protection from the grant date. The key limitation is that you must file before public disclosure - if your product has been on sale for more than 12 months, you may have lost the right to file in the U.S.</p>
+<p>Design patents cost $700 to $1,500 for a basic filing (depending on whether you use a patent attorney) and take 1 to 2 years to grant. They provide 15 years of protection from the grant date. The key limitation is that you must file before public disclosure (dash) if your product has been on sale for more than 12 months, you may have lost the right to file in the U.S.</p>
 <p><strong>When to use it:</strong> When the ornamental shape or appearance of your physical product is what competitors are copying, and the product has strong enough sales to justify the filing cost.</p>
 
 <h3>4. Trade Dress Protection</h3>
-<p>Trade dress protects the overall visual appearance and image of a product or business that identifies the source to consumers. Unlike design patents, trade dress does not require registration to be enforceable - though registered trade dress is stronger.</p>
+<p>Trade dress protects the overall visual appearance and image of a product or business that identifies the source to consumers. Unlike design patents, trade dress does not require registration to be enforceable (dash) though registered trade dress is stronger.</p>
 <p>For Etsy sellers, trade dress might apply to:</p>
 <ul>
   <li>A highly distinctive packaging style that customers associate with your brand</li>
@@ -1146,21 +1146,21 @@ export const blogPosts: BlogPost[] = [
   <li>Capture the seller name and shop name</li>
   <li>Document your original creation: original photo files with metadata, design files with timestamps, first-sale records</li>
 </ul>
-<p>Do this before filing. Sellers sometimes remove listings after receiving a notice, but before Etsy processes it - and you want evidence regardless of outcome.</p>
+<p>Do this before filing. Sellers sometimes remove listings after receiving a notice, but before Etsy processes it (dash) and you want evidence regardless of outcome.</p>
 
 <h3>Step 2: Use Etsy's IP Reporting Tool</h3>
-<p>Go directly to <strong>etsy.com/legal/ip/report</strong>. Do not use the general Help Center or the "Report this listing" button on the listing page - those routes are slower and less effective.</p>
+<p>Go directly to <strong>etsy.com/legal/ip/report</strong>. Do not use the general Help Center or the "Report this listing" button on the listing page (dash) those routes are slower and less effective.</p>
 <p>Select <strong>Copyright</strong> as your infringement type. You will be asked to confirm you are the rights owner (or authorized to act on their behalf).</p>
 
 <h3>Step 3: Complete the DMCA Notice</h3>
 <p>The form collects all six elements required under 17 U.S.C. 512(c)(3). Incomplete notices are legally defective and Etsy can dismiss them:</p>
 <ol>
-  <li><strong>Your contact information</strong> - Full legal name, mailing address, email, phone number</li>
-  <li><strong>Description of your original work</strong> - Be specific: "My original product photograph taken [date], showing [product description]. First published at [your Etsy listing URL or website]"</li>
-  <li><strong>URL of the infringing content</strong> - The full URL to the infringing listing</li>
-  <li><strong>Good faith statement</strong> - That you genuinely believe the use is not authorized by the copyright owner, its agent, or the law</li>
-  <li><strong>Accuracy statement under penalty of perjury</strong> - That the information in your notice is accurate</li>
-  <li><strong>Your electronic or physical signature</strong> - Your typed name legally counts</li>
+  <li><strong>Your contact information</strong> (dash) Full legal name, mailing address, email, phone number</li>
+  <li><strong>Description of your original work</strong> (dash) Be specific: "My original product photograph taken [date], showing [product description]. First published at [your Etsy listing URL or website]"</li>
+  <li><strong>URL of the infringing content</strong> (dash) The full URL to the infringing listing</li>
+  <li><strong>Good faith statement</strong> (dash) That you genuinely believe the use is not authorized by the copyright owner, its agent, or the law</li>
+  <li><strong>Accuracy statement under penalty of perjury</strong> (dash) That the information in your notice is accurate</li>
+  <li><strong>Your electronic or physical signature</strong> (dash) Your typed name legally counts</li>
 </ol>
 <p>The sworn statements in items 4 and 5 are what give DMCA notices their legal force. Missing either one makes the notice defective.</p>
 
@@ -1173,7 +1173,7 @@ export const blogPosts: BlogPost[] = [
 </ul>
 
 <h2>How to File a Trademark Claim on Etsy</h2>
-<p>If someone is using your brand name, logo, or a confusingly similar mark, you file a trademark report - not a DMCA notice. These are two different legal frameworks and require different evidence.</p>
+<p>If someone is using your brand name, logo, or a confusingly similar mark, you file a trademark report (dash) not a DMCA notice. These are two different legal frameworks and require different evidence.</p>
 <p>You will need:</p>
 <ul>
   <li>Your trademark registration number</li>
@@ -1181,7 +1181,7 @@ export const blogPosts: BlogPost[] = [
   <li>The specific infringing use and why it creates confusion</li>
   <li>The infringing listing URL(s)</li>
 </ul>
-<p>Go to etsy.com/legal/ip/report and select <strong>Trademark</strong>. Processing for trademark reports is slower than DMCA - expect 3 to 7 business days.</p>
+<p>Go to etsy.com/legal/ip/report and select <strong>Trademark</strong>. Processing for trademark reports is slower than DMCA (dash) expect 3 to 7 business days.</p>
 <p>If you do not have a registered trademark, you may still have common law trademark rights based on continuous commercial use. These are harder to enforce, but Etsy will review them. Document your first use in commerce and provide evidence of your brand identity.</p>
 
 <h2>How Do You Protect Your Etsy Shop from Repeat IP Infringement?</h2>
@@ -1189,10 +1189,10 @@ export const blogPosts: BlogPost[] = [
 <h3>Set Up Ongoing Monitoring</h3>
 <p>One-time enforcement is not enough. Copycats will sometimes return with new accounts. Build a monitoring routine into your business:</p>
 <ul>
-  <li><strong>Google reverse image search</strong> - Upload your product photos to images.google.com to find where they appear across the web</li>
-  <li><strong>TinEye</strong> - Reverse image search tool that indexes images over time</li>
-  <li><strong>Google Alerts</strong> - Set alerts for your shop name, unique product names, and distinctive phrases from your listings</li>
-  <li><strong>Etsy search monitoring</strong> - Search your exact product titles weekly. Copycat listings often appear in the same search results as yours.</li>
+  <li><strong>Google reverse image search</strong> (dash) Upload your product photos to images.google.com to find where they appear across the web</li>
+  <li><strong>TinEye</strong> (dash) Reverse image search tool that indexes images over time</li>
+  <li><strong>Google Alerts</strong> (dash) Set alerts for your shop name, unique product names, and distinctive phrases from your listings</li>
+  <li><strong>Etsy search monitoring</strong> (dash) Search your exact product titles weekly. Copycat listings often appear in the same search results as yours.</li>
 </ul>
 
 <h3>Build an Enforcement Paper Trail</h3>
@@ -1210,8 +1210,8 @@ export const blogPosts: BlogPost[] = [
   <li><strong>Register your copyright</strong> for high-value works at copyright.gov ($35 to $65). Registration enables statutory damages up to $150,000 per willful infringement in U.S. courts.</li>
   <li><strong>Apply for a trademark</strong> for your shop name and logo once your business reaches a revenue level that justifies the investment.</li>
   <li><strong>File design patents</strong> for your most distinctive and commercially valuable product designs before they are publicly available.</li>
-  <li><strong>Watermark your images</strong> - subtle watermarks make your photos harder to reuse and create additional evidence of your ownership.</li>
-  <li><strong>Document your creative process</strong> - save work-in-progress files, sketches, and dated exports. This evidence is invaluable in any dispute.</li>
+  <li><strong>Watermark your images</strong> (dash) subtle watermarks make your photos harder to reuse and create additional evidence of your ownership.</li>
+  <li><strong>Document your creative process</strong> (dash) save work-in-progress files, sketches, and dated exports. This evidence is invaluable in any dispute.</li>
 </ol>
 
 <h2>How Do You Enforce IP Rights Across Multiple Platforms?</h2>
@@ -1227,7 +1227,7 @@ export const blogPosts: BlogPost[] = [
 <p>Also read: <a href="/blog/dmca-takedown-notice-guide">DMCA Takedown Notice: Complete Guide for Etsy Sellers</a></p>
 
 <h2>When to Use a Template vs. When to Get Legal Help</h2>
-<p>Most Etsy IP enforcement does not require a lawyer. A well-drafted DMCA notice using the correct statutory language is fully effective for the majority of cases - one to five listings, one to two platforms, an infringer who is unlikely to counter-notice.</p>
+<p>Most Etsy IP enforcement does not require a lawyer. A well-drafted DMCA notice using the correct statutory language is fully effective for the majority of cases (dash) one to five listings, one to two platforms, an infringer who is unlikely to counter-notice.</p>
 <p>Consider professional legal help when:</p>
 <ul>
   <li>A counter-notice has been filed and the infringer is threatening to sue</li>
@@ -1236,7 +1236,7 @@ export const blogPosts: BlogPost[] = [
   <li>You have registered copyrights and statutory damages are in play</li>
   <li>The dispute involves trade secret misappropriation or a former business partner</li>
 </ul>
-<p>For the typical case - a copycat Etsy seller who copied your product photos or digital designs - a template with the correct legal language is exactly what you need. If you want templates that cover all six required DMCA elements and are built specifically for Etsy sellers, Seller Defense Kit at sellerdefensekit.com has ready-to-file versions for the most common infringement scenarios.</p>
+<p>For the typical case (dash) a copycat Etsy seller who copied your product photos or digital designs (dash) a template with the correct legal language is exactly what you need. If you want templates that cover all six required DMCA elements and are built specifically for Etsy sellers, Seller Defense Kit at sellerdefensekit.com has ready-to-file versions for the most common infringement scenarios.</p>
 
 <p>For official USPTO trademark resources, visit <a href="https://www.uspto.gov/trademarks" target="_blank" rel="noopener noreferrer">uspto.gov/trademarks</a>. For copyright registration, visit <a href="https://www.copyright.gov/registration/" target="_blank" rel="noopener noreferrer">copyright.gov/registration</a>. For Etsy's IP policy, see <a href="https://www.etsy.com/legal/intellectual-property/" target="_blank" rel="noopener noreferrer">etsy.com/legal/intellectual-property</a>.</p>
 `,
@@ -1251,7 +1251,7 @@ export const blogPosts: BlogPost[] = [
     readingTime: "9 min read",
     intro:
       "When someone challenges your Digital Millennium Copyright Act (DMCA) notice, they are filing a counter-notice. What happens next determines whether your listing stays down, goes back up, or gets both parties into a legal dispute neither can afford. Most independent sellers do not realize that a counter-notice is not just a reply: it is a legal document. If the original DMCA filer decides to sue, your counter-notice becomes evidence in court. Filing it wrong has real consequences.",
-    keyTakeaway: "",
+    keyTakeaway: "If your takedown is removed because the seller filed a counter-notice, you have options. Understand the counter-notice process, the legal risk for the seller (perjury), and your next steps. Most sellers who genuinely copied your work will not risk a false counter-notice under penalty of perjury. Counter-notices are rare in valid DMCA cases.",
     faq: [
       {
         q: "How long do I have to file a counter-notice after my listing is removed?",
@@ -1437,7 +1437,7 @@ export const blogPosts: BlogPost[] = [
     title: "Copyright Registration Guide for Independent Sellers: Protect Your Original Work",
     date: "2026-04-13",
     readingTime: "9 min read",
-    keyTakeaway: "",
+    keyTakeaway: "Registering your copyright at copyright.gov is optional for enforcement but highly valuable for legal leverage. Registration takes 15 minutes, costs $65, and gives you access to statutory damages and attorney fees if you go to court. Most enforcement happens through platforms like Etsy without registration, but registration significantly strengthens your position.",
     intro: "Copyright registration is the process of officially recording your original work with a government copyright office, most commonly the U.S. Copyright Office at copyright.gov. You do not need to register to own a copyright. Copyright exists automatically the moment you create an original work. But registration changes what you can do with that copyright, especially if someone steals your work. For independent sellers and small creative businesses, registration determines whether you can collect real money from an infringer or just ask them to stop.",
     faq: [
       {
@@ -1895,7 +1895,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-04-18",
     readingTime: "8 min read",
     intro: "Amazon has become the second-largest selling platform for independent sellers and small creative businesses after Etsy, but its copyright infringement reporting process works differently than Etsy's DMCA portal. If you sell on Amazon and need to report copyright infringement on amazon, you need to understand how Amazon's enforcement system works, what the copyright holder rights are, and what you can do when someone copies your original work.",
-    keyTakeaway: "Amazon's copyright reporting process differs from Etsy's — it uses Brand Registry and Rights and Protections, not a direct DMCA portal. Document your original work before filing, gather creation files and timestamps, and expect 5-7 business days for Amazon to investigate. Registration with the U.S. Copyright Office strengthens your claim if the dispute escalates.",
+    keyTakeaway: "Amazon's copyright reporting process differs from Etsy's  -  it uses Brand Registry and Rights and Protections, not a direct DMCA portal. Document your original work before filing, gather creation files and timestamps, and expect 5-7 business days for Amazon to investigate. Registration with the U.S. Copyright Office strengthens your claim if the dispute escalates.",
     faq: [
       {
         q: "How long does it take Amazon to remove a copied listing?",
@@ -2049,7 +2049,7 @@ export const blogPosts: BlogPost[] = [
     title: "Trademark Infringement: What It Is, How to Spot It, and What to Do About It",
     date: "2026-04-16",
     readingTime: "7 min read",
-    intro: "When you've built a recognizable brand, the risk of someone else using a similar name, logo, or brand identity without permission becomes a real threat — that's trademark infringement. For independent sellers and small creative businesses operating on any platform, understanding what trademark infringement means and how to respond can be the difference between protecting your reputation and losing customers to counterfeits.",
+    intro: "When you've built a recognizable brand, the risk of someone else using a similar name, logo, or brand identity without permission becomes a real threat  -  that's trademark infringement. For independent sellers and small creative businesses operating on any platform, understanding what trademark infringement means and how to respond can be the difference between protecting your reputation and losing customers to counterfeits.",
     keyTakeaway: "Trademark infringement occurs when someone uses a mark confusingly similar to yours without permission. You can protect unregistered marks through common law rights, but formal registration strengthens your legal position significantly. Enforcement options range from cease and desist letters to platform takedowns to formal legal action.",
     faq: [
       {

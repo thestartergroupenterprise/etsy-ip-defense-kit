@@ -18,7 +18,7 @@ import { useSearchParams } from 'next/navigation';
 import { getAttributionForAPI, clearAttribution, getStoredAttribution, isAttributionStale } from '@/lib/attribution-capture';
 
 interface AttributionLoggerProps {
-  product: 'p1' | 'p2';
+  product: 'p1' | 'p2' | 'p3' | 'p4';
   amount: number;
 }
 

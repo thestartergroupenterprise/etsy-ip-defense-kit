@@ -47,6 +47,13 @@ export default function SiteFooter() {
           >
             Platform IP Enforcement Kit ($67)
           </Link>
+          <span className="text-gray-600 mx-2">|</span>
+          <Link
+            href="/escalation-framework?utm_source=footer&utm_medium=website&utm_campaign=product-suite"
+            className="text-amber-400 hover:text-amber-300 transition-colors"
+          >
+            Escalation Framework ($77)
+          </Link>
         </p>
 
         {/* Row 3: Nav links — dot-separated */}

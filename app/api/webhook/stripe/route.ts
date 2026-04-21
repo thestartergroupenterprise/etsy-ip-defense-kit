@@ -33,9 +33,71 @@
 
 import { NextRequest, NextResponse } from "next/server";
 import { generateDownloadToken } from "@/lib/download-token";
+import { promises as fs } from "fs";
+import path from "path";
 
 const DOWNLOAD_BASE = "https://sellerdefensekit.com/api/download";
 const FOUNDER_CHAT_ID = "8493404368";
+const PROSPECTS_FILE = "/data/openclaw-system/data/prospect_verified.json";
+
+function addDays(isoDate: string, days: number): string {
+  const d = new Date(isoDate);
+  d.setDate(d.getDate() + days);
+  return d.toISOString().slice(0, 10);
+}
+
+async function updateProspectForPurchase(
+  customerEmail: string,
+  productId: string,
+): Promise<void> {
+  try {
+    const data = JSON.parse(await fs.readFile(PROSPECTS_FILE, "utf8"));
+    const contacts = data.contacts || [];
+    
+    // Case-insensitive email matching
+    const contact = contacts.find(
+      (c: any) => c.email.toLowerCase() === customerEmail.toLowerCase()
+    );
+    
+    if (!contact) {
+      console.log(
+        `[webhook-unified] Contact not found in prospect_verified.json for ${customerEmail} (product: ${productId})`
+      );
+      return;
+    }
+
+    const today = new Date().toISOString().slice(0, 10);
+
+    if (productId === "prod_UIWdonnmxXAE0K") {
+      // P2 Purchase: Set completed_purchased + P3 eligibility
+      contact.sequence_status = contact.sequence_status || {};
+      contact.sequence_status.product_2 = "completed_purchased";
+      contact.p3_eligible_date = addDays(today, 5);
+      contact.p3_track = "track_2";
+      console.log(
+        `[webhook-unified] Updated ${customerEmail}: P2 marked completed_purchased, P3 Track 2 eligible on ${contact.p3_eligible_date}`
+      );
+    } else if (productId === "prod_UMqLUXJV0Qb1DC") {
+      // P3 Purchase: Set completed_purchased + P4 eligibility
+      contact.sequence_status = contact.sequence_status || {};
+      contact.sequence_status.product_3 = "completed_purchased";
+      contact.p4_eligible_date = addDays(today, 5);
+      console.log(
+        `[webhook-unified] Updated ${customerEmail}: P3 marked completed_purchased, P4 eligible on ${contact.p4_eligible_date}`
+      );
+    }
+
+    // Write updated data back to file
+    data.last_updated = today;
+    await fs.writeFile(PROSPECTS_FILE, JSON.stringify(data, null, 2));
+  } catch (err) {
+    console.error(
+      `[webhook-unified] Failed to update prospect for ${customerEmail}:`,
+      err
+    );
+    // Non-fatal: purchase delivery email already sent successfully
+  }
+}
 
 // Product Configuration Map
 const PRODUCT_CONFIG: {
@@ -43,7 +105,7 @@ const PRODUCT_CONFIG: {
     name: string;
     blobUrl: string;
     emailSubject: string;
-    emailTemplateType: "p1" | "p2" | "p3";
+    emailTemplateType: "p1" | "p2" | "p3" | "p4";
     sendNurtureQueue: boolean;
   };
 } = {
@@ -71,6 +133,16 @@ const PRODUCT_CONFIG: {
       "https://mjmzu6hzzkfzgjso.public.blob.vercel-storage.com/products/p3-platform-ip-enforcement-toolkit/p3-platform-ip-enforcement-toolkit.zip",
     emailSubject: "Your Platform IP Enforcement Kit is ready — 9 templates inside",
     emailTemplateType: "p3",
+    sendNurtureQueue: false,
+  },
+  // Product 4: Escalation Framework
+  prod_UNKnXuzKPtzgaD: {
+    name: "Escalation Framework",
+    blobUrl:
+      process.env.PRODUCT_4_BLOB_URL ||
+      "https://mjmzu6hzzkfzgjso.public.blob.vercel-storage.com/products/p4-escalation-framework.zip",
+    emailSubject: "Your Escalation Framework is ready — 7 templates inside",
+    emailTemplateType: "p4",
     sendNurtureQueue: false,
   },
 };
@@ -251,6 +323,11 @@ export async function POST(req: NextRequest) {
       console.log(
         `[webhook-unified] Delivery email sent to ${customerEmail} for ${productConfig.name} (${detectedProductId})`
       );
+
+      // Update prospect_verified.json with purchase status and next product eligibility
+      // For P2 purchases: set completed_purchased + P3 Track 2 eligibility
+      // For P3 purchases: set completed_purchased + P4 eligibility (future-proofing)
+      await updateProspectForPurchase(customerEmail, detectedProductId);
     } catch (emailErr) {
       console.error("[webhook-unified] Failed to send delivery email:", emailErr);
       return NextResponse.json({ error: "Email delivery failed" }, { status: 500 });

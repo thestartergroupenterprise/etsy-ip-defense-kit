@@ -1387,7 +1387,7 @@ export const blogPosts: BlogPost[] = [
   <li>If you are uncertain about any part of the counter-notice, do not file it</li>
 </ul>
 <p>Your counter-notice must include a digital signature and a statement made under penalty of perjury that you have a good faith belief the content was removed by mistake.</p>
-<p>For independent sellers on tight budgets: a 30-minute consultation with an IP lawyer ($50-$150) is much cheaper than the $150,000 liability of a false counter-notice. The <a href="https://sellerdefensekit.com/dmca-enforcement-kit?utm_source=blog&utm_medium=organic&utm_campaign=seo">Seller Defense Kit DMCA Enforcement Kit</a> includes counter-notice templates with the correct statutory language already written, so you can file with confidence rather than guessing at the required legal language.</p>
+<p>For independent sellers on tight budgets: a 30-minute consultation with an IP lawyer ($50-$150) is much cheaper than the $150,000 liability of a false counter-notice. The <a href="https://sellerdefensekit.com?utm_source=blog&utm_medium=organic&utm_campaign=seo">Seller Defense Kit DMCA Enforcement Kit</a> includes counter-notice templates with the correct statutory language already written, so you can file with confidence rather than guessing at the required legal language.</p>
 
 <h2>When to File a Counter-Notice (And When Not To)</h2>
 <p>Not every DMCA takedown deserves a counter-notice. Know when to fight and when to let it go.</p>
@@ -1601,7 +1601,7 @@ export const blogPosts: BlogPost[] = [
 <p>A DMCA notice does not require registration. You can file a DMCA takedown on any platform regardless of registration status, and most platforms will comply with a properly formatted notice. This is often the fastest and most practical solution for a single instance of infringement.</p>
 <p>You can still register after infringement. The registration will be effective going forward and will matter for any future copying of the same work. It also strengthens your position in any ongoing dispute, even if it does not enable statutory damages for the original incident.</p>
 <p>Document everything immediately. If you have not registered and infringement has occurred, gather every piece of evidence showing you created the work first: file metadata, early social media posts showing the work, customer orders predating the infringement, email threads, version history from cloud storage. This documentation supports your actual damages claim and strengthens any platform dispute.</p>
-<p>The <a href="https://sellerdefensekit.com/dmca-enforcement-kit?utm_source=blog&utm_medium=organic&utm_campaign=seo">Seller Defense Kit DMCA Enforcement Kit</a> includes templates for filing DMCA notices across platforms and a cease-and-desist template for direct contact with infringers, both of which work whether or not your copyright is registered.</p>
+<p>The <a href="https://sellerdefensekit.com?utm_source=blog&utm_medium=organic&utm_campaign=seo">Seller Defense Kit DMCA Enforcement Kit</a> includes templates for filing DMCA notices across platforms and a cease-and-desist template for direct contact with infringers, both of which work whether or not your copyright is registered.</p>
 
 <h2>How to Register Copyright: A Practical Summary</h2>
 <p>For independent sellers ready to start protecting original work, the process is manageable without legal help for most straightforward cases.</p>
@@ -1694,7 +1694,7 @@ export const blogPosts: BlogPost[] = [
 <p><strong>1. Protect Your Work Through Copyright</strong></p>
 <p>Your work is automatically copyrighted. But you should understand the <a href="/blog/file-dmca-etsy">DMCA process</a> so you can enforce it when infringement happens.</p>
 <p>When you discover a competitor selling a copy of your work, file a DMCA notice. The notice must be filed correctly with all six required legal elements. If you are uncertain about the structure, a professional DMCA template or attorney will ensure the notice works.</p>
-<p>See our guide on <a href="/blog/copyright-registration">copyright registration</a> to understand how registering your copyright strengthens your legal position. The <a href="https://sellerdefensekit.com/dmca-enforcement-kit?utm_source=blog&utm_medium=organic&utm_campaign=seo">DMCA Enforcement Kit</a> provides templates and filing guides so you can file without a lawyer.</p>
+<p>See our guide on <a href="/blog/copyright-registration">copyright registration</a> to understand how registering your copyright strengthens your legal position. The <a href="https://sellerdefensekit.com?utm_source=blog&utm_medium=organic&utm_campaign=seo">DMCA Enforcement Kit</a> provides templates and filing guides so you can file without a lawyer.</p>
 
 <p><strong>2. Consider Trademark Registration for Your Brand</strong></p>
 <p>If you have a distinct brand name, consider federal trademark registration. The cost is reasonable for the protection it provides. The Trademark Protection Kit walks you through the registration process.</p>
@@ -1842,7 +1842,7 @@ export const blogPosts: BlogPost[] = [
 <p>The person who posted the content can then file a counter-notice, claiming the removal was an error or that they have the right to use the material. If they submit a valid counter-notice, the platform typically waits 10 to 14 business days before restoring the content. During that window, you must initiate a lawsuit to prevent restoration. This is where copyright registration becomes critical: registration grants standing to file a federal infringement lawsuit and makes statutory damages (up to $150,000 per willful infringement, plus attorney's fees) available as a remedy. Without registration, litigation is financially impractical in most situations.</p>
 <p>A **copyright notice** on your original work is the foundation of this entire process. It does not guarantee that no one will ever copy your work. But it establishes, in writing and in public, that ownership was clearly communicated long before any dispute began. That documented clarity is worth more than it appears when you are sitting across from a platform's dispute review team.</p>
 
-<p>For sellers ready to take the next step, see our guides on <a href="/blog/copyright-registration">copyright registration</a> to strengthen your legal position, and <a href="/blog/file-dmca-etsy">how to file a DMCA takedown</a> when you discover infringement. For comprehensive protection, the <a href="https://sellerdefensekit.com/dmca-enforcement-kit?utm_source=blog&utm_medium=organic&utm_campaign=seo">DMCA Enforcement Kit</a> includes ready-to-use templates so you can take action immediately when needed.</p>
+<p>For sellers ready to take the next step, see our guides on <a href="/blog/copyright-registration">copyright registration</a> to strengthen your legal position, and <a href="/blog/file-dmca-etsy">how to file a DMCA takedown</a> when you discover infringement. For comprehensive protection, the <a href="https://sellerdefensekit.com?utm_source=blog&utm_medium=organic&utm_campaign=seo">DMCA Enforcement Kit</a> includes ready-to-use templates so you can take action immediately when needed.</p>
 
 <p>For legal resources on copyright protection, see the <a href="https://www.copyright.gov/" target="_blank" rel="noopener noreferrer">U.S. Copyright Office</a> and the <a href="https://www.copyright.gov/dmca/" target="_blank" rel="noopener noreferrer">DMCA guidance documentation</a>.</p>`,
   },
@@ -2001,7 +2001,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>For sellers dealing with <a href="/blog/copyright-infringement-etsy">copyright infringement</a> or trademark disputes, a cease and desist letter is often your first direct action before filing a <a href="/blog/file-dmca-etsy">DMCA takedown notice</a> with a platform. This approach keeps the dispute private and gives the infringer a chance to comply without platform involvement or counter-notice escalation. For trademark violations and brand protection, see our guide on <a href="/blog/trademark-infringement">trademark infringement enforcement</a>.</p>
 
-<p>For legal references on cease and desist procedures, see the <a href="https://www.copyright.gov/dmca/" target="_blank" rel="noopener noreferrer">DMCA guidance from copyright.gov</a> and the <a href="https://www.justice.gov/atr/antitrust-criminal-enforcement" target="_blank" rel="noopener noreferrer">Department of Justice resources on enforcement</a>.</p>
+<p>For legal references on cease and desist procedures, see the <a href="https://www.copyright.gov/dmca/" target="_blank" rel="noopener noreferrer">DMCA guidance from copyright.gov</a> and the <a href="https://www.justice.gov/atr" target="_blank" rel="noopener noreferrer">Department of Justice Antitrust Division</a>.</p>
 
 <p>The cost is worth the result.</p>
     `,

@@ -349,7 +349,7 @@ export async function POST(req: NextRequest) {
 function buildEmailHtml(
   downloadPageUrl: string,
   customerEmail: string,
-  templateType: "p1" | "p2" | "p3"
+  templateType: "p1" | "p2" | "p3" | "p4"
 ): string {
   const unsubscribeUrl = `https://sellerdefensekit.com/unsubscribe?email=${encodeURIComponent(customerEmail)}`;
 
@@ -556,7 +556,7 @@ function buildEmailHtml(
 function buildEmailText(
   downloadPageUrl: string,
   customerEmail: string,
-  templateType: "p1" | "p2" | "p3"
+  templateType: "p1" | "p2" | "p3" | "p4"
 ): string {
   const unsubscribeUrl = `https://sellerdefensekit.com/unsubscribe?email=${encodeURIComponent(customerEmail)}`;
 

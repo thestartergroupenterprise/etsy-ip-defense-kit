@@ -1432,6 +1432,63 @@ export const blogPosts: BlogPost[] = [
 </div>
 
 <p>For DMCA procedures and seller rights, see <a href="https://www.copyright.gov/dmca/" target="_blank" rel="noopener noreferrer">copyright.gov/dmca</a>. For Etsy's IP policy, see <a href="https://www.etsy.com/legal/intellectual-property/" target="_blank" rel="noopener noreferrer">etsy.com/legal/intellectual-property</a>.</p>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long do I have to file a counter-notice after my listing is removed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "14 days from when the platform notifies you. After 14 days, you lose the right to file a counter-notice. Some platforms count calendar days rather than business days. Check your specific platform's policy before assuming you have the full 14 days."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "If I file a counter-notice, will the original DMCA filer definitely sue me?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not always. Many filers are fishing. They file DMCA claims hoping sellers will not respond. A counter-notice often scares them away because it signals you are prepared to defend yourself legally. But serious filers, such as legitimate brand holders, may pursue it further. There is no way to know for certain until they decide."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I file a counter-notice anonymously or under my business name instead of my legal name?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. A counter-notice requires your full legal name and address. Using only a business name or a fake name makes the counter-notice legally invalid in court. A business address or PO box is acceptable if that is your actual mailing address, but your full legal name is required."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I file a counter-notice and then realize I do not actually have the right to use the content?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Request to withdraw it immediately. You have already signed a document under penalty of perjury. The best outcome is that the platform allows you to withdraw it quietly. The worst outcome is the filer uses your counter-notice as evidence in a lawsuit. Consult a lawyer immediately if this happens."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a way to avoid counter-notices altogether?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Send a cease-and-desist letter to the seller before filing a DMCA notice. A cease-and-desist is a private letter that demands the seller stop using your work. Many sellers comply without escalating to DMCA territory. This keeps the dispute private and avoids platform involvement and counter-notice risk entirely."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "If the original DMCA filer does not respond to my counter-notice at all, what does that mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It typically means they are not willing to pursue legal action. After 10 business days with no lawsuit filing, your listing automatically goes back live depending on the platform. Confirm this with the platform directly. Do not assume your listing is restored until you can verify it is actually live again."
+      }
+    }
+  ]
+}
+</script>
     `,
   },
   {

@@ -1692,9 +1692,9 @@ export const blogPosts: BlogPost[] = [
 <p>If you sell creative work or products online, you have exposure to intellectual property theft and your intellectual property rights are at risk. Here is what you can do immediately.</p>
 
 <p><strong>1. Protect Your Work Through Copyright</strong></p>
-<p>Your work is automatically copyrighted. But you should understand the DMCA process so you can enforce it when infringement happens.</p>
+<p>Your work is automatically copyrighted. But you should understand the <a href="/blog/file-dmca-etsy">DMCA process</a> so you can enforce it when infringement happens.</p>
 <p>When you discover a competitor selling a copy of your work, file a DMCA notice. The notice must be filed correctly with all six required legal elements. If you are uncertain about the structure, a professional DMCA template or attorney will ensure the notice works.</p>
-<p>The DMCA Enforcement Kit provides the five templates and filing guides you need. Product links, platform-specific guidance, and step-by-step instructions are included so you can file without a lawyer.</p>
+<p>See our guide on <a href="/blog/copyright-registration">copyright registration</a> to understand how registering your copyright strengthens your legal position. The <a href="https://sellerdefensekit.com/dmca-enforcement-kit?utm_source=blog&utm_medium=organic&utm_campaign=seo">DMCA Enforcement Kit</a> provides templates and filing guides so you can file without a lawyer.</p>
 
 <p><strong>2. Consider Trademark Registration for Your Brand</strong></p>
 <p>If you have a distinct brand name, consider federal trademark registration. The cost is reasonable for the protection it provides. The Trademark Protection Kit walks you through the registration process.</p>
@@ -1715,6 +1715,8 @@ export const blogPosts: BlogPost[] = [
 <p>The sellers who recover fastest from intellectual property theft are the ones who act within days of discovery. The ones who wait, lose sales and ranking authority while the infringing listing competes against them.</p>
 <p>Start now. Understand your protection. Monitor your listings. Act fast when infringement happens.</p>
 <p>Your work has value. Protect it.</p>
+
+<p>For additional resources on intellectual property rights, see the <a href="https://www.copyright.gov/" target="_blank" rel="noopener noreferrer">U.S. Copyright Office</a> and the <a href="https://www.uspto.gov/trademarks" target="_blank" rel="noopener noreferrer">USPTO Trademark Database</a>. For platform-specific IP enforcement, see <a href="https://www.etsy.com/legal/intellectual-property/" target="_blank" rel="noopener noreferrer">Etsy's intellectual property policy</a>.</p>
     `,
     faq: [
       {
@@ -1992,6 +1994,11 @@ export const blogPosts: BlogPost[] = [
 <p>A generic cease and desist letter that is not customized to your specific situation often falls short. The recipient may dismiss it as amateur. They may not comply.</p>
 <p>The difference between a letter that gets ignored and a letter that gets results is professionalism, clarity, and credibility.</p>
 <p>If you have a valid legal claim and you need to enforce it, use a professionally structured cease and desist letter. If the situation is complex or stakes are high, have an attorney draft it.</p>
+
+<p>For sellers dealing with <a href="/blog/copyright-infringement-etsy">copyright infringement</a> or trademark disputes, a cease and desist letter is often your first direct action before filing a <a href="/blog/file-dmca-etsy">DMCA takedown notice</a> with a platform. This approach keeps the dispute private and gives the infringer a chance to comply without platform involvement or counter-notice escalation. For trademark violations and brand protection, see our guide on <a href="/blog/trademark-infringement">trademark infringement enforcement</a>.</p>
+
+<p>For legal references on cease and desist procedures, see the <a href="https://www.copyright.gov/dmca/" target="_blank" rel="noopener noreferrer">DMCA guidance from copyright.gov</a> and the <a href="https://www.justice.gov/atr/antitrust-criminal-enforcement" target="_blank" rel="noopener noreferrer">Department of Justice resources on enforcement</a>.</p>
+
 <p>The cost is worth the result.</p>
     `,
     faq: [

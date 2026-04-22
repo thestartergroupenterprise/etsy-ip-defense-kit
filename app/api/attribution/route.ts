@@ -36,11 +36,14 @@ export interface AttributionLogRequest {
   product: string;
   amount: number;
   timestamp: string;
+  stale?: boolean; // Optional flag indicating localStorage data was >30 days old
+  age_days?: number; // Optional age in days of the captured attribution data
 }
 
 export interface AttributionLogEntry extends AttributionLogRequest {
   logged_at: string;
   id: string;
+  // stale and age_days pass through from request if present
 }
 
 export async function POST(request: NextRequest) {
@@ -88,10 +91,13 @@ export async function POST(request: NextRequest) {
     }
 
     // Create log entry with metadata
+    // Pass through optional stale/age_days fields if present in request
     const entry: AttributionLogEntry = {
       ...data,
       logged_at: new Date().toISOString(),
       id: `${data.session_id}-${Date.now()}`,
+      ...(data.stale !== undefined && { stale: data.stale }),
+      ...(data.age_days !== undefined && { age_days: data.age_days }),
     };
 
     // Append to Redis list using lpush (prepend to list)
@@ -104,6 +110,8 @@ export async function POST(request: NextRequest) {
         product: entry.product,
         utm_campaign: entry.utm_campaign,
         amount: entry.amount,
+        stale: entry.stale || false,
+        age_days: entry.age_days || 0,
       });
 
       return NextResponse.json(

@@ -113,8 +113,12 @@ export function clearAttribution(): void {
 }
 
 /**
- * Check if stored attribution is stale (older than 2 hours)
+ * Check if stored attribution is stale (older than 30 days)
  * Returns true if stale, false if fresh or null
+ * 
+ * Updated 2026-04-22: Changed from 2-hour window (too strict for B2B cycles)
+ * to 30-day window. B2B purchases routinely exceed 2 hours between click and purchase.
+ * See: FINDING 3 in attribution code review (48-hour purchase gap scenario)
  */
 export function isAttributionStale(attribution: UTMAttribution | null): boolean {
   if (!attribution) {
@@ -124,9 +128,9 @@ export function isAttributionStale(attribution: UTMAttribution | null): boolean 
   try {
     const storedTime = new Date(attribution.timestamp).getTime();
     const now = new Date().getTime();
-    const twoHoursMs = 2 * 60 * 60 * 1000;
+    const thirtyDaysMs = 30 * 24 * 60 * 60 * 1000;
     
-    return (now - storedTime) > twoHoursMs;
+    return (now - storedTime) > thirtyDaysMs;
   } catch (error) {
     console.error('[Attribution] Error checking staleness:', error);
     return true;
@@ -135,13 +139,22 @@ export function isAttributionStale(attribution: UTMAttribution | null): boolean 
 
 /**
  * Get attribution for API call (handles stale data)
- * If attribution is stale, returns organic/direct defaults
+ * 
+ * Updated 2026-04-22: When attribution is stale (>30 days), we now preserve
+ * the original UTM values instead of replacing them with organic defaults.
+ * This prevents B2B sales from being mis-attributed to organic after a
+ * purchase cycle >2 hours (old logic) or >30 days (new logic).
+ * 
+ * Behavior:
+ * - Fresh (<30 days): Return original UTMs, no flags
+ * - Stale (>=30 days): Return original UTMs + stale=true flag + age_days metric
+ * - Missing: Return organic defaults (honest answer — no click was captured)
  */
-export function getAttributionForAPI(): Omit<UTMAttribution, 'timestamp'> {
+export function getAttributionForAPI(): Omit<UTMAttribution, 'timestamp'> & { stale?: boolean; age_days?: number } {
   const stored = getStoredAttribution();
   
-  if (isAttributionStale(stored)) {
-    // Stale — return organic defaults
+  if (!stored) {
+    // Not found — return organic defaults (correct behavior)
     return {
       utm_source: 'organic',
       utm_medium: 'referral',
@@ -151,14 +164,23 @@ export function getAttributionForAPI(): Omit<UTMAttribution, 'timestamp'> {
     };
   }
 
-  if (!stored) {
-    // Not found — return organic defaults
+  // Check staleness
+  const isStale = isAttributionStale(stored);
+  
+  if (isStale) {
+    // Stale — preserve original UTMs with metadata flags
+    const storedTime = new Date(stored.timestamp).getTime();
+    const now = new Date().getTime();
+    const ageDays = Math.floor((now - storedTime) / (24 * 60 * 60 * 1000));
+    
     return {
-      utm_source: 'organic',
-      utm_medium: 'referral',
-      utm_campaign: 'organic',
-      utm_content: 'direct',
-      referrer: 'unknown',
+      utm_source: stored.utm_source,
+      utm_medium: stored.utm_medium,
+      utm_campaign: stored.utm_campaign,
+      utm_content: stored.utm_content,
+      referrer: stored.referrer,
+      stale: true,
+      age_days: ageDays,
     };
   }
 

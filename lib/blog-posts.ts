@@ -2278,6 +2278,175 @@ export const blogPosts: BlogPost[] = [
 <p>For independent sellers and small business owners on any platform, trademark infringement is a real and actionable legal risk. The good news is that you have legal tools to protect yourself from trademark infringement, starting with a simple cease and desist letter. Understanding what trademark infringement is, how to spot trademark infringement early, and how to respond puts you in control of protecting your brand from unauthorized use.</p>
     `,
   },
+  {
+    slug: "trademark-vs-copyright",
+    metaTitle: "Trademark vs Copyright: What Every Independent Seller Needs to Know | Seller Defense Kit",
+    metaDescription: "Trademark protects your brand name and logo. Copyright protects your creative work. Learn the exact differences, costs, and which protection your business actually needs.",
+    title: "Trademark vs Copyright: What Every Independent Seller Needs to Know",
+    date: "2026-04-22",
+    readingTime: "8 min read",
+    intro: "Trademark protects your brand identity (your business name, logo, and slogan) from being used by competitors in the same industry. Copyright protects original creative works (your product designs, photos, written content, and artwork) from being directly copied. These two protections apply to different assets, operate under different laws, and require different steps to enforce.",
+    keyTakeaway: "Trademark and copyright protect different things: trademark protects your brand identity (name, logo, slogan used in commerce), while copyright automatically protects original creative works the moment you create them. Most independent sellers need both protections, applied to the right assets.",
+    faq: [
+      {
+        q: "Do I need both a trademark and copyright?",
+        a: "Many independent sellers need both, but for different assets. You need copyright for original creative work (product designs, photos, written descriptions). You need a trademark if you want exclusive rights to your brand name or logo across your entire industry. A branded shop selling original designs benefits from both protections applied to separate assets."
+      },
+      {
+        q: "Can I trademark my logo and also copyright it?",
+        a: "Yes. A logo with original artistic elements can receive both trademark protection (for its role as a brand identifier) and copyright protection (for its creative expression). The protections serve different functions: trademark prevents competitors from using a confusingly similar logo in your industry, while copyright prevents direct copying of the artwork itself."
+      },
+      {
+        q: "How much does it cost to trademark vs copyright?",
+        a: "Copyright registration costs $65 for a single work filed online at copyright.gov. Trademark registration through the USPTO costs $350 per class of goods or services for the standard TEAS Plus application. Trademark registration is more expensive because it requires an active examination process and ongoing maintenance fees every 10 years."
+      },
+      {
+        q: "Does copyright protect my brand name?",
+        a: "No. Copyright protects creative expression, not words, names, slogans, or short phrases used to identify a brand. To protect your brand name from being used by competitors in the same industry, you need a trademark. Copyright and trademark protect fundamentally different things."
+      },
+      {
+        q: "How long does trademark protection last vs copyright?",
+        a: "Trademark protection lasts indefinitely as long as you continue using the mark in commerce and file renewal paperwork every 10 years with the USPTO. Copyright protection lasts for the life of the author plus 70 years for works created after 1978. For works made for hire, copyright lasts 95 years from publication or 120 years from creation, whichever is shorter."
+      }
+    ],
+    content: `
+<h2>The Core Difference in One Sentence</h2>
+<p>Trademark = who you are as a business. Copyright = what you created as an artist or designer.</p>
+<p>That single distinction answers most of the confusion independent sellers have about trademark vs copyright when deciding which protection they need. A shop name is a trademark question. A product design is a copyright question. A branded logo can involve both.</p>
+
+<h2>What Trademark Protects</h2>
+<p>The trademark vs copyright distinction starts with understanding what each protection covers. A trademark is any word, name, symbol, or device that identifies the source of goods or services and distinguishes them from competitors. The Lanham Act (15 U.S.C. Chapter 22) governs federal trademark law in the United States.</p>
+<p>Trademark protection covers:</p>
+<ul>
+  <li>Business and brand names (the name you sell under)</li>
+  <li>Product names and collection names</li>
+  <li>Logos and visual brand marks</li>
+  <li>Slogans used consistently in marketing</li>
+  <li>Trade dress (the distinctive visual appearance of a product or packaging)</li>
+</ul>
+<p>What trademark does NOT cover:</p>
+<ul>
+  <li>Generic or descriptive terms (you cannot trademark "Blue Handmade Mugs")</li>
+  <li>Product designs or artistic content (that is copyright territory)</li>
+  <li>Functional product features (that is patent territory)</li>
+  <li>Ideas or concepts</li>
+</ul>
+<p>Trademark rights exist on a spectrum. You acquire some common law rights simply by using a mark in commerce. But federal registration with the USPTO gives you nationwide protection, the legal presumption that you own the mark, and the right to use the registered trademark symbol (R).</p>
+
+<h2>How Trademark Registration Works</h2>
+<p>Registering a trademark with the USPTO involves five steps:</p>
+<ol>
+  <li>Search the USPTO trademark database (TESS) to confirm your mark is not already registered by another seller in your class of goods.</li>
+  <li>Identify the correct international class for your goods or services (there are 45 classes covering everything from handmade goods to digital downloads).</li>
+  <li>File a TEAS Plus application at USPTO.gov for $350 per class of goods, providing a specimen showing the mark in use.</li>
+  <li>Respond to any Office Actions from a USPTO examining attorney, who reviews the application for legal compliance and conflicts.</li>
+  <li>Survive the 30-day public opposition period after approval, then receive your federal registration certificate.</li>
+</ol>
+<p>The entire process typically takes 12 to 18 months from filing to registration for straightforward applications.</p>
+
+<h2>What Copyright Protects</h2>
+<p>On the copyright side of the trademark vs copyright equation, protection covers original works of authorship fixed in a tangible medium. Under 17 U.S.C. (the Copyright Act), this includes visual art, written works, photographs, graphic designs, and digital content.</p>
+<p>Copyright protection covers:</p>
+<ul>
+  <li>Product designs with original creative expression</li>
+  <li>Photographs and product photography</li>
+  <li>Written descriptions, blog posts, and website copy</li>
+  <li>Graphic and surface pattern designs</li>
+  <li>Original artwork and illustrations</li>
+  <li>Videos, courses, and digital downloads with creative content</li>
+</ul>
+<p>Copyright does NOT cover:</p>
+<ul>
+  <li>Brand names, slogans, or short phrases (trademark territory)</li>
+  <li>Facts, ideas, or styles (no one owns a general aesthetic)</li>
+  <li>Works lacking original creative expression (a plain white mug with your shop name is not a copyrightable design)</li>
+  <li>Functional aspects of a product (patent territory)</li>
+</ul>
+<p>The critical advantage of copyright is that it exists automatically. The moment you create an original work and fix it in a tangible form (a saved design file, a published photograph, a printed pattern) copyright protection begins with no registration required.</p>
+
+<h2>Why Copyright Registration Still Matters</h2>
+<p>Automatic copyright exists whether you register or not, but registration with the U.S. Copyright Office provides three meaningful advantages:</p>
+<ol>
+  <li>It creates a public record of your ownership with a date stamp, which is powerful evidence in disputes.</li>
+  <li>It enables you to file a federal lawsuit to enforce your rights against infringers.</li>
+  <li>If you register before infringement occurs (or within three months of publication), you become eligible for statutory damages up to $150,000 per infringement and attorney fees, rather than only actual damages.</li>
+</ol>
+<p>Copyright registration costs $65 for a single work filed online at copyright.gov. Many sellers register groups of related works together (pattern collections, product photography sets) using a single registration, which significantly reduces per-work costs.</p>
+
+<h2>Trademark vs Copyright: Side-by-Side Comparison</h2>
+<table>
+  <thead>
+    <tr><th>Feature</th><th>Trademark</th><th>Copyright</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>What it protects</td><td>Brand identity (name, logo, slogan)</td><td>Creative works (designs, photos, text)</td></tr>
+    <tr><td>How you get it</td><td>Use in commerce (common law) or register with USPTO</td><td>Automatically at creation; register for enforcement advantages</td></tr>
+    <tr><td>Registration cost</td><td>$350 per class at USPTO</td><td>$65 per work at copyright.gov</td></tr>
+    <tr><td>Duration</td><td>Indefinite with continued use and renewal</td><td>Life of author plus 70 years</td></tr>
+    <tr><td>Governing law</td><td>Lanham Act (15 U.S.C.)</td><td>Copyright Act (17 U.S.C.)</td></tr>
+    <tr><td>What it stops</td><td>Confusingly similar marks in same industry</td><td>Direct copying of the protected work</td></tr>
+    <tr><td>Enforcement</td><td>Send cease and desist, file federal lawsuit, file with USPTO</td><td>Send DMCA notice, file federal lawsuit, file with Copyright Office</td></tr>
+  </tbody>
+</table>
+
+<h2>Which Protection Does Your Business Actually Need?</h2>
+<p>Understanding the trademark vs copyright distinction is what lets you apply the right protection to the right asset. Most independent sellers benefit from both protections, applied to the right assets. Here is how to think through which protections apply to your situation.</p>
+<p><strong>You need copyright protection for:</strong></p>
+<ul>
+  <li>Any original design you sell as a product or print-on-demand item</li>
+  <li>Product photography you created</li>
+  <li>Written descriptions, guides, or digital content you sell</li>
+  <li>Your logo design (as a creative work, separate from trademark protection)</li>
+</ul>
+<p>Copyright costs $65 per registration and starts automatically. If you sell original designs, your creative work is already protected. Registration is about giving yourself enforcement tools.</p>
+<p><strong>You need trademark protection for:</strong></p>
+<ul>
+  <li>Your shop or brand name, once you are committed to it long-term</li>
+  <li>A distinctive logo used consistently to identify your business</li>
+  <li>A product line name or collection name that identifies your business as the source</li>
+  <li>Any slogan you use in marketing</li>
+</ul>
+<p>Trademark registration costs $350 per class and takes 12 to 18 months. It is a deliberate investment in brand name protection, not something every new seller needs immediately.</p>
+<p><strong>You need both if:</strong></p>
+<ul>
+  <li>Your logo contains original artistic elements (the logo design gets copyright; the logo as a brand identifier gets trademark)</li>
+  <li>You sell designs that also represent your brand (the design itself gets copyright; the brand name on your shop gets trademark)</li>
+</ul>
+
+<h2>The Scenario That Trips Up Most Sellers</h2>
+<p>A seller creates an original illustration and sells it on mugs and prints. A competitor copies the illustration exactly. A second competitor opens a shop using a very similar name in the same product category.</p>
+<p>These are two separate problems, and the trademark vs copyright distinction determines exactly how to respond to each one:</p>
+<ul>
+  <li>The copied illustration is a copyright infringement. The response is a DMCA notice (for online platforms) or a cease and desist letter targeting the specific copied work.</li>
+  <li>The similar shop name is a trademark issue. If the original seller has a registered trademark, the response is a trademark infringement complaint. If they only have common law rights from using the name, enforcement is more complex.</li>
+</ul>
+<p>Without understanding the trademark vs copyright distinction, sellers often file the wrong type of complaint or fail to file at all. For detailed guidance on trademark infringement specifically, see our article on <a href="/blog/trademark-infringement">trademark infringement and how to respond to it</a>.</p>
+
+<h2>Common Misconceptions</h2>
+<p><strong>Misconception: Registering my business name with my state protects it nationally.</strong><br />
+Reality: State business name registration does not create intellectual property rights. It only prevents other businesses from using the same name in that state for filing purposes. Federal trademark registration is what gives you national IP protection.</p>
+<p><strong>Misconception: I automatically own a trademark just because I used the name first.</strong><br />
+Reality: Common law trademark rights from use in commerce are limited in scope and geography. Federal registration provides nationwide protection and is much easier to enforce on online platforms.</p>
+<p><strong>Misconception: My copyright also protects my brand name.</strong><br />
+Reality: Copyright law explicitly does not protect titles, names, slogans, or short phrases. Brand name protection requires trademark law, not copyright.</p>
+
+<h2>Protecting Your IP on Online Selling Platforms</h2>
+<p>One practical area where the trademark vs copyright distinction matters most is how platforms handle infringement reports. Etsy, Amazon, Shopify, and similar platforms have different complaint processes depending on the type of intellectual property involved.</p>
+<p>For copyright infringement (someone copies your original product design or photography), the correct process is a DMCA takedown notice. Platforms operating under the Digital Millennium Copyright Act are required to remove infringing content when a valid notice is received. Creative work protection through copyright gives you the legal standing to file that notice. Without copyright (registered or automatic), you have no basis for a DMCA claim.</p>
+<p>For trademark infringement (someone uses your brand name or a confusingly similar logo to sell competing products), most major platforms have a separate brand registry or trademark complaint process. Amazon Brand Registry, Etsy's trademark infringement reporting form, and similar programs all require you to provide a trademark registration number. Brand name protection through federal trademark registration is what enables you to use these enforcement channels.</p>
+<p>Sellers who skip creative work protection often discover that platforms will not act on vague requests to remove competing listings. You need to cite the specific right being infringed, provide evidence of your ownership, and use the platform's designated process. Knowing the trademark vs copyright distinction is what allows you to do this correctly the first time instead of submitting rejected complaints.</p>
+
+<h2>Taking Action: Priority Order</h2>
+<p>For most independent sellers, applying the trademark vs copyright framework to their specific business leads to a clear priority order:</p>
+<ol>
+  <li><strong>Copyright first, today.</strong> Your original creative work is already protected automatically. Register key designs and photography at copyright.gov for $65 to establish enforcement rights. This is low-cost and provides immediate protection for what you are already creating.</li>
+  <li><strong>Trademark when your brand name matters to your business.</strong> Once you have identified a brand name you are committed to and are using consistently in commerce, file a trademark application. The 12-to-18-month process starts the clock running, so earlier is generally better. Learn more about the copyright registration process in our dedicated <a href="/blog/copyright-registration">copyright registration guide</a>.</li>
+  <li><strong>Review your full IP portfolio annually.</strong> As your business grows, new designs need copyright coverage and your trademark portfolio may need expansion into additional product classes.</li>
+</ol>
+<p>For a broader view of how trademark and copyright fit into your overall IP strategy, see our comprehensive guide on <a href="/blog/intellectual-property-rights">intellectual property rights for independent sellers</a>.</p>
+<p>The USPTO provides official guidance on trademark registration at <a href="https://www.uspto.gov/trademarks" target="_blank" rel="noopener noreferrer">uspto.gov/trademarks</a>, including the fee schedule, class descriptions, and searchable database of existing marks.</p>
+    `,
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPost | undefined {

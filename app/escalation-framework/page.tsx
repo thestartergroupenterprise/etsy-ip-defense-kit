@@ -84,7 +84,7 @@ export default function EscalationFramework() {
             </h3>
             <p className="text-gray-600">
               Overseas sellers, anonymous shops, and determined infringers routinely ignore DMCA
-              takedowns and cease and desist letters - especially when they&apos;re operating on
+              takedowns and cease and desist letters, especially when they&apos;re operating on
               foreign hosting or behind anonymous storefronts. The first notice puts them on notice.
               The escalation is what actually forces action.
             </p>
@@ -212,7 +212,7 @@ export default function EscalationFramework() {
               </h3>
               <p className="text-gray-600">
                 If you sent a takedown notice and the infringer is still selling your work, this kit
-                is your next step. The second notice is legally different from the first - it
+                is your next step. The second notice is legally different from the first: it
                 establishes willfulness, which increases potential damages from $750 to $150,000 per
                 work under federal copyright law.
               </p>
@@ -243,7 +243,7 @@ export default function EscalationFramework() {
 
             <div>
               <h3 className="font-bold text-lg text-gray-900 mb-2">
-                Sellers facing a repeat infringer - same design stolen multiple times
+                Sellers facing a repeat infringer: same design stolen multiple times
               </h3>
               <p className="text-gray-600">
                 Pattern evidence is legally significant. A single infringement is an incident.
@@ -270,7 +270,7 @@ export default function EscalationFramework() {
                 My DMCA was filed 2 weeks ago and the listing is still up. What do I do?
               </h3>
               <p className="text-gray-600 text-sm">
-                First, screenshot everything again today - you need dated proof the infringement
+                First, screenshot everything again today. You need dated proof the infringement
                 is ongoing after notice. Then send an escalation notice (Document 1 in this kit)
                 and re-file with the platform using Document 5, which cites your original ticket
                 number and invokes the platform&apos;s repeat infringer policy. Platforms treat
@@ -283,7 +283,7 @@ export default function EscalationFramework() {
                 The infringer is in China. Is there any point escalating?
               </h3>
               <p className="text-gray-600 text-sm">
-                Yes - through the platform, not through the infringer. Platforms have repeat
+                Yes, through the platform, not through the infringer. Platforms have repeat
                 infringer policies that can result in account suspension regardless of where the
                 seller is located. Payment processor complaints (PayPal, Stripe, Etsy Payments)
                 are also effective for overseas sellers. Legal action against the individual is
@@ -309,7 +309,7 @@ export default function EscalationFramework() {
                 Do I need a copyright registration to file with the Copyright Claims Board?
               </h3>
               <p className="text-gray-600 text-sm">
-                No - unregistered works can be filed with the CCB. However, registered works
+                No, unregistered works can be filed with the CCB. However, registered works
                 have access to statutory damages of up to $30,000 per work (vs. only actual damages
                 for unregistered works). The CCB is free to start ($100 filing fee) and handles
                 claims up to $30,000 without requiring a lawyer. Document 3 in this kit walks you
@@ -322,7 +322,7 @@ export default function EscalationFramework() {
                 I&apos;ve sold over $2 million on the platform and they&apos;re just ignoring my infringement report. Is this normal?
               </h3>
               <p className="text-gray-600 text-sm">
-                Unfortunately, yes - platform support is often generic and unresponsive to
+                Unfortunately, yes, platform support is often generic and unresponsive to
                 first reports, regardless of your seller status. The difference is in how you
                 escalate. A second filing that explicitly references your original case number,
                 cites the platform&apos;s repeat infringer policy, and mentions DMCA safe harbor

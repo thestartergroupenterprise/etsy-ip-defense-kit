@@ -85,6 +85,13 @@ async function updateProspectForPurchase(
       console.log(
         `[webhook-unified] Updated ${customerEmail}: P3 marked completed_purchased, P4 eligible on ${contact.p4_eligible_date}`
       );
+    } else if (productId === "prod_UNKnXuzKPtzgaD") {
+      // P4 Purchase: Set completed_purchased
+      contact.sequence_status = contact.sequence_status || {};
+      contact.sequence_status.product_4 = "completed_purchased";
+      console.log(
+        `[webhook-unified] Updated ${customerEmail}: P4 marked completed_purchased`
+      );
     }
 
     // Write updated data back to file
@@ -482,7 +489,7 @@ function buildEmailHtml(
 
 </body>
 </html>`;
-  } else {
+  } else if (templateType === "p3") {
     // P3: Platform IP Enforcement Kit
     return `<!DOCTYPE html>
 <html>
@@ -550,6 +557,77 @@ function buildEmailHtml(
 
 </body>
 </html>`;
+  } else {
+    // P4: Escalation Framework
+    return `<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Escalation Framework</title>
+</head>
+<body style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; color: #111;">
+
+  <h1 style="color: #d97706; font-size: 24px; margin-bottom: 8px;">
+    Your Escalation Framework is ready.
+  </h1>
+
+  <p style="font-size: 16px; color: #555; margin-bottom: 24px;">
+    Thank you for your purchase. Your 7-template post-DMCA escalation toolkit is ready to download.
+  </p>
+
+  <div style="text-align: center; margin: 32px 0;">
+    <a href="${downloadPageUrl}"
+       style="background-color: #d97706; color: white; padding: 16px 32px;
+              border-radius: 8px; text-decoration: none; font-size: 18px;
+              font-weight: bold; display: inline-block;">
+      Download Your 7 Templates Now
+    </a>
+  </div>
+
+  <p style="font-size: 14px; color: #777;">
+    Or copy this link into your browser:<br>
+    <a href="${downloadPageUrl}" style="color: #d97706; word-break: break-all;">${downloadPageUrl}</a>
+  </p>
+
+  <hr style="border: none; border-top: 1px solid #eee; margin: 32px 0;">
+
+  <h2 style="font-size: 16px; color: #111;">What's in your kit (7 fillable PDFs):</h2>
+  <ul style="color: #555; font-size: 14px; line-height: 1.8;">
+    <li>01 Escalation Notice Letter (formal second notice, willful infringement)</li>
+    <li>02 Evidence Packaging Checklist (40-row file index, court-ready)</li>
+    <li>03 Small Claims Court Preparation (CCB and state small claims)</li>
+    <li>04 Lawyer Handoff Documentation (attorney consultation prep)</li>
+    <li>05 Platform Re-Filing Template (Etsy, Amazon, eBay, Shopify, TikTok)</li>
+    <li>06 Escalation Decision Tree (stage assessment and action log)</li>
+    <li>07 Repeat Infringer Documentation Log (11 incidents, pattern analysis)</li>
+  </ul>
+
+  <p style="font-size: 13px; color: #555; margin-top: 24px;">
+    <strong>Start with Document 06 (the Decision Tree)</strong> -- it tells you which of the
+    7 templates to prioritize for your specific situation.
+  </p>
+
+  <p style="font-size: 13px; color: #999; margin-top: 24px;">
+    This download link is valid for 30 days.<br>
+    Questions? Reply to this email or contact us at
+    <a href="mailto:hello@sellerdefensekit.com" style="color: #d97706;">
+      hello@sellerdefensekit.com
+    </a>.<br>
+    30-day money-back guarantee.
+  </p>
+
+  <hr style="border: none; border-top: 1px solid #eee; margin: 24px 0;">
+
+  <p style="font-size: 11px; color: #bbb; line-height: 1.6;">
+    This email was sent by <strong>Seller Defense Kit, a product of The Starter Group</strong><br>
+    2967 Dundas St W, Toronto, ON M6P 1Z2, Canada<br>
+    You received this email because you purchased the Escalation Framework.<br>
+    <a href="${unsubscribeUrl}" style="color: #bbb;">Unsubscribe</a>
+  </p>
+
+</body>
+</html>`;
   }
 }
 
@@ -607,7 +685,7 @@ Seller Defense Kit, a product of The Starter Group
 2967 Dundas St W, Toronto, ON M6P 1Z2, Canada
 You received this email because you purchased the Trademark Protection Kit.
 Unsubscribe: ${unsubscribeUrl}`;
-  } else {
+  } else if (templateType === "p3") {
     return `Your Platform IP Enforcement Kit is ready.
 
 Thank you for your purchase. Download your 9-template enforcement toolkit here:
@@ -633,6 +711,33 @@ Questions? Reply to this email or contact us at hello@sellerdefensekit.com.
 Seller Defense Kit, a product of The Starter Group
 2967 Dundas St W, Toronto, ON M6P 1Z2, Canada
 You received this email because you purchased the Platform IP Enforcement Kit.
+Unsubscribe: ${unsubscribeUrl}`;
+  } else {
+    return `Your Escalation Framework is ready.
+
+Thank you for your purchase. Download your 7-template post-DMCA escalation toolkit here:
+${downloadPageUrl}
+
+This link is valid for 30 days.
+
+What's in your kit (7 fillable PDFs):
+01 - Escalation Notice Letter (formal second notice, willful infringement)
+02 - Evidence Packaging Checklist (40-row file index, court-ready)
+03 - Small Claims Court Preparation (CCB and state small claims)
+04 - Lawyer Handoff Documentation (attorney consultation prep)
+05 - Platform Re-Filing Template (Etsy, Amazon, eBay, Shopify, TikTok)
+06 - Escalation Decision Tree (stage assessment and action log)
+07 - Repeat Infringer Documentation Log (11 incidents, pattern analysis)
+
+Start with Document 06 (the Decision Tree) -- it tells you which templates to prioritize.
+
+Questions? Reply to this email or contact us at hello@sellerdefensekit.com.
+30-day money-back guarantee.
+
+---
+Seller Defense Kit, a product of The Starter Group
+2967 Dundas St W, Toronto, ON M6P 1Z2, Canada
+You received this email because you purchased the Escalation Framework.
 Unsubscribe: ${unsubscribeUrl}`;
   }
 }

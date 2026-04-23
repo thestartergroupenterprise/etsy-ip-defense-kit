@@ -1,23 +1,29 @@
 /**
- * Unsubscribe Route, CASL Compliance
+ * Unsubscribe Route, CASL Compliance (v2 - Fixed)
  *
  * Handles unsubscribe requests from email footer links.
  * Format: GET /unsubscribe?email=encoded@example.com
  *
  * On request:
  *   1. Validates email param
- *   2. Adds to Resend audience as unsubscribed (if RESEND_AUDIENCE_ID is set)
- *   3. Logs the unsubscribe to Vercel Blob as a JSONL audit trail
- *   4. Returns a plain HTML confirmation page
+ *   2. Adds to Resend audience as unsubscribed (REQUIRED for suppression list)
+ *   3. Logs the unsubscribe to Vercel Blob as audit trail (REQUIRED for compliance)
+ *   4. Calls backend webhook to update prospect_verified.json do_not_mail flag (async, non-blocking)
+ *   5. Returns HTML confirmation page
+ *
+ * Error handling:
+ *   - If Resend write fails: return HTTP 500 (critical)
+ *   - If Blob write fails: return HTTP 500 (critical)
+ *   - If backend webhook fails: log but return 200 (non-critical, synced nightly via cron)
  *
  * Required env vars:
- *   RESEND_API_KEY           Resend API key (already used by webhook)
- *   RESEND_AUDIENCE_ID       Resend audience ID (optional, set when audience is created)
- *   UNSUBSCRIBE_BLOB_TOKEN   Vercel Blob token for writing the audit log (optional)
+ *   RESEND_API_KEY           Resend API key
+ *   RESEND_AUDIENCE_ID       Resend audience ID
+ *   BACKEND_WEBHOOK_URL      VPS endpoint for prospect_verified.json sync (optional)
  *
  * CASL note:
  *   Unsubscribe requests must be honoured within 10 business days (CASL s.11(3)).
- *   This route processes them immediately.
+ *   This route processes Resend + Blob synchronously. prospect_verified.json synced nightly.
  */
 
 import { NextRequest, NextResponse } from "next/server";
@@ -40,56 +46,82 @@ export async function GET(req: NextRequest) {
   }
 
   const results: string[] = [];
+  const timestamp = new Date().toISOString();
 
-  // 1. Add to Resend audience as unsubscribed
+  // CRITICAL: 1. Add to Resend audience as unsubscribed
   const resendApiKey = process.env.RESEND_API_KEY;
   const audienceId = process.env.RESEND_AUDIENCE_ID;
 
-  if (resendApiKey && audienceId) {
-    try {
-      const { Resend } = await import("resend");
-      const resend = new Resend(resendApiKey);
-      await resend.contacts.create({
-        audienceId,
-        email,
-        unsubscribed: true,
-      });
-      results.push("resend:ok");
-      console.log(`[unsubscribe] Resend suppression added for ${email}`);
-    } catch (err) {
-      // Non-fatal, log and continue
-      results.push("resend:error");
-      console.error("[unsubscribe] Resend contacts.create failed:", err);
-    }
-  } else {
-    results.push("resend:skipped (RESEND_AUDIENCE_ID not set)");
-    console.log(`[unsubscribe] RESEND_AUDIENCE_ID not set, skipping Resend suppression for ${email}`);
+  if (!resendApiKey || !audienceId) {
+    const msg = `[unsubscribe] CRITICAL: Missing RESEND_API_KEY or RESEND_AUDIENCE_ID for ${email}`;
+    console.error(msg);
+    return htmlResponse(buildErrorHtml("Configuration error. Please try again or email hello@sellerdefensekit.com."), 500);
   }
 
-  // 2. Append to Vercel Blob audit log
+  try {
+    const { Resend } = await import("resend");
+    const resend = new Resend(resendApiKey);
+    await resend.contacts.create({
+      audienceId,
+      email,
+      unsubscribed: true,
+    });
+    results.push("resend:ok");
+    console.log(`[unsubscribe] ✓ Resend suppression added for ${email}`);
+  } catch (err) {
+    const errMsg = `[unsubscribe] ✗ CRITICAL: Resend write failed for ${email}: ${err instanceof Error ? err.message : String(err)}`;
+    console.error(errMsg);
+    results.push("resend:error");
+    return htmlResponse(buildErrorHtml("Failed to process unsubscribe. Please try again."), 500);
+  }
+
+  // CRITICAL: 2. Append to Vercel Blob audit log
   try {
     const { put } = await import("@vercel/blob");
     const record = JSON.stringify({
       email,
-      unsubscribedAt: new Date().toISOString(),
+      unsubscribedAt: timestamp,
       source: "email-footer-link",
       ip: req.headers.get("x-forwarded-for") ?? "unknown",
     });
 
-    // Store each unsubscribe as its own blob for easy lookup
     const blobKey = `unsubscribes/${email.replace("@", "_at_")}.json`;
     await put(blobKey, record, {
       access: "private" as Parameters<typeof put>[2]["access"],
       addRandomSuffix: false,
     });
     results.push("blob:ok");
-    console.log(`[unsubscribe] Blob audit record written for ${email}`);
+    console.log(`[unsubscribe] ✓ Blob audit record written for ${email}`);
   } catch (err) {
+    const errMsg = `[unsubscribe] ✗ CRITICAL: Blob write failed for ${email}: ${err instanceof Error ? err.message : String(err)}`;
+    console.error(errMsg);
     results.push("blob:error");
-    console.error("[unsubscribe] Blob write failed:", err);
+    return htmlResponse(buildErrorHtml("Failed to log unsubscribe. Please try again."), 500);
   }
 
-  console.log(`[unsubscribe] ${email}, results: ${results.join(", ")}`);
+  // NON-CRITICAL: 3. Call backend webhook to update prospect_verified.json (async, fire-and-forget)
+  const backendWebhookUrl = process.env.BACKEND_WEBHOOK_URL;
+  if (backendWebhookUrl) {
+    try {
+      fetch(backendWebhookUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, timestamp, source: "email-footer-link" }),
+      }).catch((err) => {
+        console.warn(`[unsubscribe] Backend webhook failed (non-critical): ${err.message}`);
+      });
+      results.push("backend:queued");
+      console.log(`[unsubscribe] Backend webhook call queued for ${email}`);
+    } catch (err) {
+      // Non-fatal, just log
+      results.push("backend:skipped");
+      console.log(`[unsubscribe] Backend webhook call skipped for ${email}`);
+    }
+  } else {
+    results.push("backend:not-configured");
+  }
+
+  console.log(`[unsubscribe] ${email} [${timestamp}] - Final results: ${results.join(", ")}`);
 
   return htmlResponse(buildConfirmationHtml(email), 200);
 }

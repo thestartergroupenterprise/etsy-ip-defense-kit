@@ -96,7 +96,7 @@ I swear, under penalty of perjury, that the information in this notification is 
 3. You do NOT need to paste this full letter, Etsy's form will prompt you for each field
 4. Use this document as your source of truth for every answer
 5. In the "Description" field, use the language from the IDENTIFICATION OF INFRINGING MATERIAL section above
-6. Submit. You will receive a case number by email within 24–48 hours.
+6. Submit. You will receive a case number by email within 24 - 48 hours.
 7. If you don't receive a case number, the form did not submit correctly. Try again or email copyright@etsy.com with this full notice.
 
 **Etsy's DMCA Agent (for email submissions):**
@@ -115,7 +115,7 @@ Email: copyright@etsy.com
 2. Select "Copyright"
 3. Fill in each field using this document as your source
 4. Upload screenshots of both your original and their infringing listing side-by-side
-5. Temu typically responds within 3–5 business days
+5. Temu typically responds within 3 - 5 business days
 
 **Temu IP Email (backup):** ip@temu.com
 
@@ -129,7 +129,7 @@ Email: copyright@etsy.com
 2. Select "Copyright" → "Create Complaint"
 3. Upload proof of ownership (your original file with metadata, or your Etsy listing with original publication date)
 4. Paste infringing URLs into the provided field
-5. AliExpress typically responds within 5–7 business days
+5. AliExpress typically responds within 5 - 7 business days
 
 **AliExpress IP Email (backup):** aliexpress.ip@alibaba-inc.com
 

@@ -23,7 +23,7 @@ Run the weekly sweep below every 7 days. The full sweep takes 20 to 30 minutes. 
 
 ---
 
-### WEEKLY SWEEP (20–30 minutes)
+### WEEKLY SWEEP (20 - 30 minutes)
 
 Run every 7 days. Use the log at the bottom to record findings.
 
@@ -99,7 +99,7 @@ Results: [ ] No new applications [ ] New application found, [DESCRIBE: applicant
 
 ---
 
-### MONTHLY DEEP SCAN (30–45 minutes, run on the 1st of each month)
+### MONTHLY DEEP SCAN (30 - 45 minutes, run on the 1st of each month)
 
 ---
 

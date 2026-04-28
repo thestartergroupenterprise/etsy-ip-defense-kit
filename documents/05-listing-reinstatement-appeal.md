@@ -9,7 +9,7 @@
 
 ## HOW TO USE THIS TEMPLATE
 
-This template is for a specific and infuriating scenario: a thief steals your photos, someone reports THEIR listing to Etsy using YOUR images as "evidence," and Etsy's automated system suspends YOUR listing, the original. Or: Etsy removes your listing after a copyright complaint you believe is fraudulent or made in error. Fill in every [BRACKETED] field. This appeal is sent via Etsy's case system or via email to copyright@etsy.com. Response time varies (3–10 business days). Stay factual, calm, and evidence-heavy. Emotional appeals have lower success rates than evidence-based ones.
+This template is for a specific and infuriating scenario: a thief steals your photos, someone reports THEIR listing to Etsy using YOUR images as "evidence," and Etsy's automated system suspends YOUR listing, the original. Or: Etsy removes your listing after a copyright complaint you believe is fraudulent or made in error. Fill in every [BRACKETED] field. This appeal is sent via Etsy's case system or via email to copyright@etsy.com. Response time varies (3 - 10 business days). Stay factual, calm, and evidence-heavy. Emotional appeals have lower success rates than evidence-based ones.
 
 ---
 

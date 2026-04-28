@@ -9,7 +9,7 @@
 
 ## HOW TO USE THIS CHECKLIST
 
-Run this checklist once per week for active shops, or once per month at minimum. The goal is to catch theft early, before the copycat builds sales momentum with your photos. Budget 30–45 minutes per monitoring session. Bookmark all the search links in this document. The faster you catch it, the faster you can file. Log every finding in your tracker table at the bottom.
+Run this checklist once per week for active shops, or once per month at minimum. The goal is to catch theft early, before the copycat builds sales momentum with your photos. Budget 30 - 45 minutes per monitoring session. Bookmark all the search links in this document. The faster you catch it, the faster you can file. Log every finding in your tracker table at the bottom.
 
 ---
 
@@ -17,9 +17,9 @@ Run this checklist once per week for active shops, or once per month at minimum.
 
 Have these ready before each monitoring session:
 
-- [ ] **Image files saved locally:** Keep a folder of your 3–5 most distinctive product photos (the ones thieves most often steal) saved on your computer. You'll upload these to reverse image search tools.
-- [ ] **Your exact listing titles:** Copy your top 5–10 listing titles into a notes file. You'll search these verbatim.
-- [ ] **Your most distinctive phrases:** Any unique copy you wrote (product descriptions, taglines, shop announcements). Keep 2–3 ready to search.
+- [ ] **Image files saved locally:** Keep a folder of your 3 - 5 most distinctive product photos (the ones thieves most often steal) saved on your computer. You'll upload these to reverse image search tools.
+- [ ] **Your exact listing titles:** Copy your top 5 - 10 listing titles into a notes file. You'll search these verbatim.
+- [ ] **Your most distinctive phrases:** Any unique copy you wrote (product descriptions, taglines, shop announcements). Keep 2 - 3 ready to search.
 - [ ] **Your shop name and variations:** Including common misspellings or close variants.
 
 ---
@@ -46,7 +46,7 @@ Also try:
 2. Search your **exact listing title** (copy-paste, no modifications)
 3. Sort by "Most Recent", new copycat shops often appear at the bottom
 4. Scroll through results: do any listings use your photos? Your exact copy?
-5. **Repeat with 2–3 variations** of your title
+5. **Repeat with 2 - 3 variations** of your title
 
 ### Step 1.3, Etsy Title & Description Text Search
 

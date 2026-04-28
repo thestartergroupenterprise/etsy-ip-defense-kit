@@ -9,7 +9,7 @@
 
 ## HOW TO USE THIS GUIDE
 
-This is the step-by-step "no more spinning your wheels" guide. Each section gives you the exact URL, exact form fields, and what to paste where, for every major platform. Use this alongside Document 1 (DMCA Takedown Notice) as your source material. Read the platform section before you open the form so you know what's coming. Most platforms respond within 3–7 business days. File, log your case number, and move on.
+This is the step-by-step "no more spinning your wheels" guide. Each section gives you the exact URL, exact form fields, and what to paste where, for every major platform. Use this alongside Document 1 (DMCA Takedown Notice) as your source material. Read the platform section before you open the form so you know what's coming. Most platforms respond within 3 - 7 business days. File, log your case number, and move on.
 
 ---
 
@@ -28,7 +28,7 @@ Etsy has TWO different IP reporting paths. One works. One doesn't.
 
 ### Etsy Filing, Step by Step
 
-**Time required:** 10–15 minutes per report
+**Time required:** 10 - 15 minutes per report
 
 **Step 1: Navigate to the IP portal**
 Go to: https://www.etsy.com/legal/ip/
@@ -57,7 +57,7 @@ Go to: https://www.etsy.com/legal/ip/
 | **Electronic signature** | Type [YOUR FULL NAME] |
 
 **Step 4: Submit**
-Click Submit. You will see a confirmation page and receive a confirmation email with a case number within 24–48 hours.
+Click Submit. You will see a confirmation page and receive a confirmation email with a case number within 24 - 48 hours.
 
 **Step 5: Log your case number**
 Write down: Case #, Date filed, Listing URL. Use the monitoring log in Document 3.
@@ -71,8 +71,8 @@ Body: "I submitted a copyright infringement report on [DATE] regarding [INFRINGI
 
 ### What Happens Next (Etsy Timeline)
 
-- **Day 1–2:** Confirmation email with case number
-- **Day 3–7:** Etsy reviews. If valid, they send a takedown notice to the infringer.
+- **Day 1 - 2:** Confirmation email with case number
+- **Day 3 - 7:** Etsy reviews. If valid, they send a takedown notice to the infringer.
 - **The infringer has 10 days** to file a counter-notice.
 - **If no counter-notice:** Etsy removes the content. You get a resolution email.
 - **If counter-notice filed:** Etsy notifies you. You then have 10 business days to file a court action or the content goes back up.
@@ -100,7 +100,7 @@ Temu's IP portal requires no account to file. However, your contact information 
 
 ### Temu Filing, Step by Step
 
-**Time required:** 15–20 minutes per report
+**Time required:** 15 - 20 minutes per report
 
 **Step 1: Navigate to the IP portal**
 Go to: https://www.temu.com/ip-protect.html
@@ -132,7 +132,7 @@ Upload these files in the "Supporting Materials" field.
 **Step 5: Electronic signature + submit**
 Check the declaration boxes, type your name as signature, and submit.
 
-**Temu's response time:** 3–5 business days
+**Temu's response time:** 3 - 5 business days
 **Backup contact:** ip@temu.com
 
 ---
@@ -149,7 +149,7 @@ AliExpress requires a free account to file. You cannot submit a report without o
 
 ### AliExpress Filing, Step by Step
 
-**Time required:** 20–30 minutes first time (account creation + report); 10–15 minutes after that
+**Time required:** 20 - 30 minutes first time (account creation + report); 10 - 15 minutes after that
 
 **Step 1: Create your IPP account (one-time)**
 1. Go to: https://ipp.alibabagroup.com/
@@ -175,7 +175,7 @@ AliExpress requires a free account to file. You cannot submit a report without o
 
 **Step 4: Submit and await review**
 
-AliExpress IPP typically responds within **5–7 business days** for copyright complaints.
+AliExpress IPP typically responds within **5 - 7 business days** for copyright complaints.
 
 **Escalation email:** aliexpress.ip@alibaba-inc.com
 Subject line: "Copyright Infringement, Case #[YOUR CASE NUMBER], Follow-up"
@@ -199,7 +199,7 @@ Both options are covered below.
 
 **Amazon IP Infringement Report Form:** https://www.amazon.com/report/infringement
 
-**Time required:** 15–20 minutes
+**Time required:** 15 - 20 minutes
 
 **Step 1: Navigate to the form**
 Go to: https://www.amazon.com/report/infringement
@@ -223,7 +223,7 @@ Go to: https://www.amazon.com/report/infringement
 **Step 4: Declaration and submit**
 Check all required declaration boxes and submit.
 
-**Amazon's response time:** 3–5 business days for clear-cut copyright cases.
+**Amazon's response time:** 3 - 5 business days for clear-cut copyright cases.
 
 ---
 
@@ -238,7 +238,7 @@ If you have an Amazon Seller account with Brand Registry enrolled:
 5. Select **"Copyright"** → "Product image or content"
 6. Fill in the description and submit
 
-Brand Registry reports are reviewed faster (often 24–48 hours) and receive higher priority.
+Brand Registry reports are reviewed faster (often 24 - 48 hours) and receive higher priority.
 
 ---
 
@@ -269,10 +269,10 @@ Set a reminder for 7 days after filing. If you haven't received a resolution, se
 
 | Platform | Portal URL | Response Time | Account Required | Evidence Needed |
 |----------|-----------|--------------|-----------------|-----------------|
-| Etsy | etsy.com/legal/ip/ | 3–7 days | No (but must be logged in to track) | Original URL + description |
-| Temu | temu.com/ip-protect.html | 3–5 days | No | Screenshots required |
-| AliExpress | ipp.alibabagroup.com | 5–7 days | Yes (free) | Proof of ownership upload |
-| Amazon | amazon.com/report/infringement | 3–5 days | No (Brand Registry faster) | ASIN + description |
+| Etsy | etsy.com/legal/ip/ | 3 - 7 days | No (but must be logged in to track) | Original URL + description |
+| Temu | temu.com/ip-protect.html | 3 - 5 days | No | Screenshots required |
+| AliExpress | ipp.alibabagroup.com | 5 - 7 days | Yes (free) | Proof of ownership upload |
+| Amazon | amazon.com/report/infringement | 3 - 5 days | No (Brand Registry faster) | ASIN + description |
 
 ---
 
